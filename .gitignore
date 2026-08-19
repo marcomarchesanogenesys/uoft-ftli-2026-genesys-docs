@@ -1,0 +1,90 @@
+# ─────────────────────────────────────────────────────────────────────────────
+# Datasets — NEVER COMMITTED.
+#
+# This repo distributes *links and documentation*, not data. Two reasons:
+#   1. Size — the three primary corpora are ~3.2 GB on disk.
+#   2. Licence — twcs is CC BY-NC-SA 4.0. Pushing it to a public repo is
+#      redistribution, which would drag share-alike and attribution
+#      obligations onto this repository.
+#
+# Download each dataset from the source URLs in ATTRIBUTION.md.
+# ─────────────────────────────────────────────────────────────────────────────
+
+01-harper-valley-bank/
+02-abcd/
+03-twitter-twcs/
+
+# Secondary corpora, if a contributor pulls them locally
+secondary/
+callcenter-en-90k/
+anonymousbank/
+apptek/
+
+# Loose dataset archives and bulk data formats
+*.wav
+*.mp3
+*.rar
+*.zip
+*.tar
+*.tar.gz
+*.tgz
+*.7z
+*.mdb
+*.parquet
+*.arrow
+*.pt
+*.bin
+
+# Large text/tabular data — but keep small docs-adjacent CSVs reviewable by
+# force-adding them: `git add -f path/to/small.csv`
+*.csv
+*.tsv
+*.jsonl
+
+# ─────────────────────────────────────────────────────────────────────────────
+# Python
+# ─────────────────────────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+env/
+.kgvenv/
+.ipynb_checkpoints/
+
+# ─────────────────────────────────────────────────────────────────────────────
+# Node
+# ─────────────────────────────────────────────────────────────────────────────
+node_modules/
+npm-debug.log*
+yarn-error.log*
+
+# ─────────────────────────────────────────────────────────────────────────────
+# Credentials — never commit. Datasets that need auth (e.g. Kaggle) read
+# these from the user's home directory, not from the repo.
+# ─────────────────────────────────────────────────────────────────────────────
+.env
+.env.*
+!.env.example
+kaggle.json
+access_token
+*.pem
+*.key
+credentials
+
+# ─────────────────────────────────────────────────────────────────────────────
+# OS / editor
+# ─────────────────────────────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+*.swp
+.idea/
+.vscode/
+
+# ─────────────────────────────────────────────────────────────────────────────
+# Agent / tooling scratch
+# ─────────────────────────────────────────────────────────────────────────────
+.kiro/
+_probes/
+/tmp/
