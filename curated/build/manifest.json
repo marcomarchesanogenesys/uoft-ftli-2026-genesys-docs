@@ -1,0 +1,21 @@
+{
+  "_comment": [
+    "Curation manifest. Selection only.",
+    "",
+    "Each entry names a conversation to include. Conversations are chosen for being",
+    "complete and readable -- NOT for illustrating anything. No commentary, ratings,",
+    "tags or teaching points: students draw their own conclusions from the raw data.",
+    "",
+    "'modifications' records any deliberate alteration to the source interaction.",
+    "Leave it empty for verbatim conversations.",
+    "",
+    "To grow the set, append entries and re-run build_curated.py."
+  ],
+  "conversations": [
+    { "id": "CC-0001", "source": { "dataset": "HarperValleyBank", "original_id": "01cefd6f5c044a6f" }, "modifications": [] },
+    { "id": "CC-0002", "source": { "dataset": "HarperValleyBank", "original_id": "3fbefc0e3be346fe" }, "modifications": [] },
+    { "id": "CC-0003", "source": { "dataset": "ABCD", "original_id": "9796" }, "modifications": [] },
+    { "id": "CC-0004", "source": { "dataset": "ABCD", "original_id": "1418" }, "modifications": [] },
+    { "id": "CC-0005", "source": { "dataset": "twcs", "original_id": "VirginTrains-HP-booking-reference" }, "modifications": [] }
+  ]
+}

@@ -1,0 +1,95 @@
+{
+  "id": "CC-0003",
+  "source": {
+    "dataset": "ABCD",
+    "original_id": "9796",
+    "licence": "MIT",
+    "url": "https://github.com/asappresearch/abcd",
+    "citation": "Chen et al. (2021), NAACL, arXiv:2104.00783"
+  },
+  "modifications": [],
+  "channel": "chat",
+  "agent_id": null,
+  "customer_id": null,
+  "turns": [
+    {
+      "n": 1,
+      "speaker": "agent",
+      "text": "Hello, AcmeBrands customer service here. How may I help?"
+    },
+    {
+      "n": 2,
+      "speaker": "customer",
+      "text": "Hi. I was hoping I view the history of my orders but I seem to have lost my username. Can you help me?"
+    },
+    {
+      "n": 3,
+      "speaker": "agent",
+      "text": "Sure thing, can I have your name please?"
+    },
+    {
+      "n": 4,
+      "speaker": "customer",
+      "text": "It's Norman Bouchard."
+    },
+    {
+      "n": 5,
+      "speaker": "system_action",
+      "text": "Account has been pulled up for Norman Bouchard."
+    },
+    {
+      "n": 6,
+      "speaker": "agent",
+      "text": "I will also need two of the following: zip code/phone number/email address"
+    },
+    {
+      "n": 7,
+      "speaker": "customer",
+      "text": "My zip is 39633 and the phone number is (042) 975-9546."
+    },
+    {
+      "n": 8,
+      "speaker": "system_action",
+      "text": "Identity verification in progress ..."
+    },
+    {
+      "n": 9,
+      "speaker": "agent",
+      "text": "Looks like your username is nbouchard1"
+    },
+    {
+      "n": 10,
+      "speaker": "customer",
+      "text": "Oh perfect! I just lose track of them so easily. So many different accounts."
+    },
+    {
+      "n": 11,
+      "speaker": "customer",
+      "text": "Thank you!"
+    },
+    {
+      "n": 12,
+      "speaker": "agent",
+      "text": "You're welcome, have a nice day."
+    }
+  ],
+  "source_fields": {
+    "flow": "account_access",
+    "subflow": "recover_username",
+    "actions_taken": [
+      "pull-up-account",
+      "verify-identity"
+    ],
+    "scenario_order": {
+      "street_address": "9149 circle drive",
+      "full_address": "9149 circle drive  brighton, tx 39633",
+      "city": "brighton",
+      "state": "tx",
+      "zip_code": "39633"
+    },
+    "scenario_product": {
+      "names": [],
+      "amounts": []
+    }
+  }
+}
