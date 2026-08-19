@@ -4,7 +4,7 @@ Real customer-service interactions taken from the three source corpora. Generate
 
 These are presented **as raw data, without commentary or scoring.** No conversation here is labelled good or bad, and nothing is flagged for your attention — reading and interpreting them is the exercise. See `curated/SCHEMA.md` for the field reference.
 
-> **Not included here: `CC-0005`.** Those come from a source whose licence does not permit redistribution under this repository's terms. Generate them on your own machine with `python3 curated/build/build_curated.py` once you have downloaded the source datasets — they will appear in `curated/conversations-local/`.
+> **Not included here: `CC-0005`, `CC-0006`, `CC-0007`, `CC-0008`, `CC-0009`.** Those come from a source whose licence does not permit redistribution under this repository's terms. Generate them on your own machine with `python3 curated/build/build_curated.py` once you have downloaded the source datasets — they will appear in `curated/conversations-local/`.
 
 ## Index
 

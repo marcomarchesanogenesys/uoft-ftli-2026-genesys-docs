@@ -32,6 +32,7 @@ ROOT = Path(__file__).resolve().parents[2]
 HVB = ROOT / "01-harper-valley-bank" / "data"
 ABCD = ROOT / "02-abcd" / "data" / "abcd_v1.1.json"
 TWCS = ROOT / "03-twitter-twcs" / "twcs.csv"
+APPTEK = ROOT / "04-apptek" / "diarization"
 OUT_JSON = ROOT / "curated" / "conversations"
 OUT_LOCAL = ROOT / "curated" / "conversations-local"
 OUT_MD = ROOT / "curated" / "CONVERSATIONS.md"
@@ -54,6 +55,18 @@ SOURCES = {
         # MIT grants copy/publish/distribute provided the copyright and permission
         # notice are retained -- see NOTICE in CONVERSATIONS.md.
         "redistributable": True,
+    },
+    "AppTek": {
+        "licence": "CC BY-SA 4.0",
+        "url": "https://huggingface.co/datasets/apptek-com/apptek_callcenter_dialogues",
+        "citation": "AppTek Call-Centre Dialogues, arXiv:2604.27543",
+        "copyright": "AppTek",
+        # NOT committed by default. BY-SA permits redistribution but requires
+        # derivatives stay BY-SA, which conflicts with this repo's CC BY 4.0.
+        # Unlike twcs there is no NonCommercial term and the interactions are
+        # role-played (no real customer data), so a BY-SA carve-out for these
+        # files would be straightforward if we decide to publish them.
+        "redistributable": False,
     },
     "twcs": {
         "licence": "CC BY-NC-SA 4.0",
@@ -153,6 +166,59 @@ def load_abcd(convo_id: str, _cache: dict = {}) -> dict:
             "scenario_product": c["scenario"].get("product"),
         },
     }
+
+
+def load_apptek(stem: str) -> dict:
+    """Load one AppTek conversation from the diarization split.
+
+    Segments are time-stamped and may OVERLAP across speakers -- 17% of adjacent
+    cross-role pairs do. Turns are ordered by start time and `start_s`/`end_s` are
+    preserved so that overlap stays visible rather than being flattened away.
+    """
+    target = f"audio/{stem}.wav"
+    for mp in sorted(APPTEK.glob("*/metadata.jsonl")):
+        for line in mp.read_text().splitlines():
+            if not line.strip():
+                continue
+            c = json.loads(line)
+            if c["file_name"] != target:
+                continue
+
+            segs = sorted(c["segments"], key=lambda x: (x["start"], x["end"]))
+            turns = []
+            for n, sg in enumerate(segs, 1):
+                turns.append(
+                    {
+                        "n": n,
+                        "speaker": sg["role"],  # agent | customer
+                        "text": sg["text"].strip(),
+                        "start_s": sg["start"],
+                        "end_s": sg["end"],
+                        "speaker_id": sg["speaker_id"],
+                    }
+                )
+
+            agent_ids = sorted({sg["speaker_id"] for sg in segs if sg["role"] == "agent"})
+            return {
+                "channel": "voice",
+                "agent_id": agent_ids[0] if len(agent_ids) == 1 else (agent_ids or None),
+                "customer_id": next(
+                    (sg["speaker_id"] for sg in segs if sg["role"] == "customer"), None
+                ),
+                "turns": turns,
+                "source_fields": {
+                    "duration_s": c["duration"],
+                    "domain": c["domain"],
+                    "accent": c["accent"],
+                    "agent_gender": next(
+                        (sg["gender"] for sg in segs if sg["role"] == "agent"), None
+                    ),
+                    "customer_gender": next(
+                        (sg["gender"] for sg in segs if sg["role"] == "customer"), None
+                    ),
+                },
+            }
+    raise SystemExit(f"AppTek: no conversation named {target!r}")
 
 
 TWCS_SIG = re.compile(r"\^\s*([A-Za-z]{2,3})\s*$")
@@ -294,7 +360,12 @@ def render_markdown(convos: list[dict], local_only: list[dict] | None = None) ->
                 L.append(f"{t['n']}. *(system: {t['text']})*")
                 continue
             who = "**Agent**" if t["speaker"] == "agent" else "Customer"
-            L.append(f"{t['n']}. {who}: {t['text']}")
+            stamp = (
+                f"  <sub>{t['start_s']:.1f}–{t['end_s']:.1f}s</sub>"
+                if t.get("start_s") is not None
+                else ""
+            )
+            L.append(f"{t['n']}. {who}: {t['text']}{stamp}")
         L.append("")
 
         L.append("### Source fields\n")
@@ -337,7 +408,13 @@ def render_markdown(convos: list[dict], local_only: list[dict] | None = None) ->
 def main() -> int:
     manifest = json.loads((Path(__file__).parent / "manifest.json").read_text())
 
-    for p in (HVB, ABCD, TWCS):
+    needed = {e["source"]["dataset"] for e in manifest["conversations"]}
+    required = [
+        p
+        for p, ds in ((HVB, "HarperValleyBank"), (ABCD, "ABCD"), (TWCS, "twcs"), (APPTEK, "AppTek"))
+        if ds in needed
+    ]
+    for p in required:
         if not p.exists():
             print(
                 f"ERROR: missing {p}\n  Datasets are gitignored — see ATTRIBUTION.md.",
@@ -357,6 +434,8 @@ def main() -> int:
             core = load_harper_valley(oid)
         elif ds == "ABCD":
             core = load_abcd(oid)
+        elif ds == "AppTek":
+            core = load_apptek(oid)
         elif ds == "twcs":
             core = load_twcs("VirginTrains", "HP", "booking reference")
         else:
