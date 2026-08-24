@@ -1,0 +1,251 @@
+{
+  "id": "HVB-0001",
+  "source": {
+    "dataset": "HarperValleyBank",
+    "original_id": "004860b1ab2e4c88",
+    "licence": "CC BY 4.0",
+    "url": "https://github.com/cricketclub/gridspace-stanford-harper-valley",
+    "citation": "Wu, Nafziger, Scodary & Maas (2020), arXiv:2010.13929"
+  },
+  "channel": "voice",
+  "agent_id": "hvb-speaker-17",
+  "customer_id": "hvb-speaker-44",
+  "customer_record": {
+    "customer_name": "Mary Smith",
+    "captured_by_agent": {
+      "replacement card type": "credit"
+    }
+  },
+  "turns": [
+    {
+      "n": 1,
+      "speaker": "customer",
+      "text": "[noise]",
+      "asr_text": "[noise]",
+      "start_ms": 1490,
+      "duration_ms": 150,
+      "dialog_acts": [
+        "greeting"
+      ]
+    },
+    {
+      "n": 2,
+      "speaker": "agent",
+      "text": "hello this is harper valley national bank my name is robert how can i help you today",
+      "asr_text": "hello this is happy valley national bank my name is robert how can i help you today",
+      "start_ms": 3729,
+      "duration_ms": 4830,
+      "dialog_acts": [
+        "greeting"
+      ]
+    },
+    {
+      "n": 3,
+      "speaker": "customer",
+      "text": "hi my name is mary smith",
+      "asr_text": "hi my name is mary smith",
+      "start_ms": 9890,
+      "duration_ms": 1410,
+      "dialog_acts": [
+        "greeting"
+      ]
+    },
+    {
+      "n": 4,
+      "speaker": "customer",
+      "text": "i lost my credit card",
+      "asr_text": "i lost my credit card",
+      "start_ms": 12020,
+      "duration_ms": 1080,
+      "dialog_acts": [
+        "response",
+        "problem_description"
+      ]
+    },
+    {
+      "n": 5,
+      "speaker": "agent",
+      "text": "[noise]",
+      "asr_text": "mm hmm",
+      "start_ms": 12959,
+      "duration_ms": 180,
+      "dialog_acts": [
+        "acknowledgement",
+        "other"
+      ]
+    },
+    {
+      "n": 6,
+      "speaker": "customer",
+      "text": "can you send me a new one",
+      "asr_text": "you send me a new one",
+      "start_ms": 13620,
+      "duration_ms": 990,
+      "dialog_acts": [
+        "response",
+        "problem_description"
+      ]
+    },
+    {
+      "n": 7,
+      "speaker": "agent",
+      "text": "[noise]",
+      "asr_text": "[noise]",
+      "start_ms": 15189,
+      "duration_ms": 30,
+      "dialog_acts": [
+        "other",
+        "filler_disfluency"
+      ]
+    },
+    {
+      "n": 8,
+      "speaker": "agent",
+      "text": "sure i can help you with that",
+      "asr_text": "sure i can help you with that",
+      "start_ms": 15929,
+      "duration_ms": 1620,
+      "dialog_acts": [
+        "other"
+      ]
+    },
+    {
+      "n": 9,
+      "speaker": "agent",
+      "text": "uh which card would you like to replace",
+      "asr_text": "uh which card were you wanted to replace",
+      "start_ms": 18089,
+      "duration_ms": 2220,
+      "dialog_acts": [
+        "data_question",
+        "other"
+      ]
+    },
+    {
+      "n": 10,
+      "speaker": "customer",
+      "text": "my credit card",
+      "asr_text": "my credit card",
+      "start_ms": 21890,
+      "duration_ms": 810,
+      "dialog_acts": [
+        "response",
+        "problem_description"
+      ]
+    },
+    {
+      "n": 11,
+      "speaker": "agent",
+      "text": "okay so i have ordered your replacement credit card and you should be able to receive it in three to five business days",
+      "asr_text": "okay so i have order your replacement credit card and you should be able to receive a in three to five business days",
+      "start_ms": 25059,
+      "duration_ms": 6180,
+      "dialog_acts": [
+        "procedure_explanation"
+      ]
+    },
+    {
+      "n": 12,
+      "speaker": "agent",
+      "text": "is there anything else i can help you with",
+      "asr_text": "is there anything else i can help you with",
+      "start_ms": 31689,
+      "duration_ms": 2190,
+      "dialog_acts": [
+        "open_question"
+      ]
+    },
+    {
+      "n": 13,
+      "speaker": "customer",
+      "text": "no that was gonna be it",
+      "asr_text": "no that was gonna be it",
+      "start_ms": 35520,
+      "duration_ms": 1140,
+      "dialog_acts": [
+        "other"
+      ]
+    },
+    {
+      "n": 14,
+      "speaker": "agent",
+      "text": "thank you for calling have a great day",
+      "asr_text": "thank you for calling have a great day",
+      "start_ms": 38189,
+      "duration_ms": 1860,
+      "dialog_acts": [
+        "closing"
+      ]
+    },
+    {
+      "n": 15,
+      "speaker": "customer",
+      "text": "<unk> [noise]",
+      "asr_text": "[noise]",
+      "start_ms": 41220,
+      "duration_ms": 450,
+      "dialog_acts": [
+        "thanks",
+        "closing"
+      ]
+    },
+    {
+      "n": 16,
+      "speaker": "customer",
+      "text": "[noise]",
+      "asr_text": "[laughter]",
+      "start_ms": 42590,
+      "duration_ms": 900,
+      "dialog_acts": [
+        "other",
+        "closing"
+      ]
+    },
+    {
+      "n": 17,
+      "speaker": "agent",
+      "text": "bye",
+      "asr_text": "well",
+      "start_ms": 43319,
+      "duration_ms": 390,
+      "dialog_acts": [
+        "closing"
+      ]
+    },
+    {
+      "n": 18,
+      "speaker": "customer",
+      "text": "[noise]",
+      "asr_text": "[noise]",
+      "start_ms": 44190,
+      "duration_ms": 390,
+      "dialog_acts": [
+        "other",
+        "thanks"
+      ]
+    }
+  ],
+  "source_fields": {
+    "task_assigned": [
+      "replace card"
+    ],
+    "task_logged_by_agent": [
+      "replace card"
+    ],
+    "labels": {
+      "lhvb_script": 5.0,
+      "caller_mos": 3.0,
+      "agent_mos": 3.0
+    },
+    "session": "Little Harper Valley 2",
+    "agent_survey_response": {
+      "ease_of_connection": "10",
+      "partner_rating": "10"
+    },
+    "customer_survey_response": {
+      "ease_of_connection": "10",
+      "partner_rating": "10"
+    }
+  },
+  "modifications": []
+}

@@ -1,0 +1,121 @@
+{
+  "id": "ABCD-0093",
+  "source": {
+    "dataset": "ABCD",
+    "original_id": "3283",
+    "licence": "MIT",
+    "url": "https://github.com/asappresearch/abcd",
+    "citation": "Chen et al. (2021), NAACL, arXiv:2104.00783"
+  },
+  "channel": "chat",
+  "customer_id": "dw337918",
+  "customer_record": {
+    "customer_name": "david williams",
+    "username": "dw337918",
+    "email": "dw337918@email.com",
+    "phone": "(144) 548-8035",
+    "member_level": "silver",
+    "address": {
+      "street": "9212 brushwick dr",
+      "city": "la fayette",
+      "state": "tx",
+      "zip_code": "1059",
+      "full_address": "9212 brushwick dr  la fayette, tx 1059"
+    },
+    "order": {
+      "num_products": "1",
+      "products": [
+        {
+          "brand": "michael_kors",
+          "product_type": "boots",
+          "amount": 59
+        }
+      ]
+    }
+  },
+  "turns": [
+    {
+      "n": 1,
+      "speaker": "agent",
+      "text": "HI, how can I help you>"
+    },
+    {
+      "n": 2,
+      "speaker": "customer",
+      "text": "the website is running really alos, i would like to know why the website is not usable to this speed"
+    },
+    {
+      "n": 3,
+      "speaker": "agent",
+      "text": "I am sorry about that."
+    },
+    {
+      "n": 4,
+      "speaker": "agent",
+      "text": "I will report the speed to our web team"
+    },
+    {
+      "n": 5,
+      "speaker": "system_action",
+      "text": "The  has been notified."
+    },
+    {
+      "n": 6,
+      "speaker": "customer",
+      "text": "Do you have any suggestions on why the website, or how to fix it"
+    },
+    {
+      "n": 7,
+      "speaker": "customer",
+      "text": "is running slow"
+    },
+    {
+      "n": 8,
+      "speaker": "agent",
+      "text": "You can log out and back in"
+    },
+    {
+      "n": 9,
+      "speaker": "customer",
+      "text": "okay i tried that still moving at the slow pace"
+    },
+    {
+      "n": 10,
+      "speaker": "agent",
+      "text": "Can you visit anouther website to see if it isslow there as well"
+    },
+    {
+      "n": 11,
+      "speaker": "customer",
+      "text": "Okay, i did that and came back to the website and it seems to being moving at its normal speed again, thank you for your help"
+    },
+    {
+      "n": 12,
+      "speaker": "agent",
+      "text": "You are welcome, let us know if there is anything else you need"
+    },
+    {
+      "n": 13,
+      "speaker": "customer",
+      "text": "Okay i will, but for now that was everything,"
+    },
+    {
+      "n": 14,
+      "speaker": "customer",
+      "text": "Have a great day"
+    },
+    {
+      "n": 15,
+      "speaker": "agent",
+      "text": "Have a nice day"
+    }
+  ],
+  "source_fields": {
+    "flow": "troubleshoot_site",
+    "subflow": "slow_speed",
+    "actions_taken": [
+      "notify-team"
+    ]
+  },
+  "modifications": []
+}

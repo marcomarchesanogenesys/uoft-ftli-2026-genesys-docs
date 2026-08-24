@@ -1,0 +1,160 @@
+{
+  "id": "ABCD-0062",
+  "source": {
+    "dataset": "ABCD",
+    "original_id": "1601",
+    "licence": "MIT",
+    "url": "https://github.com/asappresearch/abcd",
+    "citation": "Chen et al. (2021), NAACL, arXiv:2104.00783"
+  },
+  "channel": "chat",
+  "customer_record": {
+    "customer_name": "norman bouchard",
+    "phone": "(360) 233-6118",
+    "member_level": "guest",
+    "address": {
+      "street": "9353 kennedy st",
+      "city": "raleigh",
+      "state": "ca",
+      "zip_code": "87622",
+      "full_address": "9353 kennedy st  raleigh, ca 87622"
+    },
+    "order": {
+      "num_products": "1",
+      "products": [
+        {
+          "brand": "michael_kors",
+          "product_type": "boots",
+          "amount": 69
+        }
+      ]
+    }
+  },
+  "turns": [
+    {
+      "n": 1,
+      "speaker": "agent",
+      "text": "Thanks for contacting Acme.  How may I help you today?"
+    },
+    {
+      "n": 2,
+      "speaker": "customer",
+      "text": "I'm looking at a pair of boots on your website and the size I want says unavailable."
+    },
+    {
+      "n": 3,
+      "speaker": "agent",
+      "text": "Oh, I'm sorry to hear that.  Let me see what I can do"
+    },
+    {
+      "n": 4,
+      "speaker": "agent",
+      "text": "I may be able to help with this, may I ask your full name and account ID before we begin?"
+    },
+    {
+      "n": 5,
+      "speaker": "customer",
+      "text": "Norman Bouchard"
+    },
+    {
+      "n": 6,
+      "speaker": "agent",
+      "text": "I might not be able to find the item for you, but I should still be able to let our purchasing department know what it is that you were looking for"
+    },
+    {
+      "n": 7,
+      "speaker": "customer",
+      "text": "I don't have my account ID"
+    },
+    {
+      "n": 8,
+      "speaker": "system_action",
+      "text": "Account has been pulled up for Norman Bouchard."
+    },
+    {
+      "n": 9,
+      "speaker": "agent",
+      "text": "Ah, that shouldn't be a problem, I can see your account now, Mr. Bouchard"
+    },
+    {
+      "n": 10,
+      "speaker": "customer",
+      "text": "I'm looking for the Michael Kors boots in a size 9"
+    },
+    {
+      "n": 11,
+      "speaker": "system_action",
+      "text": "The Michael Kors boots Size 9 has been notified."
+    },
+    {
+      "n": 12,
+      "speaker": "agent",
+      "text": "Okay, I have notified our purchasing department about the missing items, and hopefully they can do a better job next time."
+    },
+    {
+      "n": 13,
+      "speaker": "customer",
+      "text": "Ok thank you.  Will they notify me if they are in stock?"
+    },
+    {
+      "n": 14,
+      "speaker": "agent",
+      "text": "I'm sorry we couldn't have that item available for you.  They should notify you when it is in stock, or, if you'd prefer I can put in a back-order for you?"
+    },
+    {
+      "n": 15,
+      "speaker": "customer",
+      "text": "Yes, please put it on backorder"
+    },
+    {
+      "n": 16,
+      "speaker": "agent",
+      "text": "If I place the order for you now, it would ship automatically as soon as we get it in, if that's okay"
+    },
+    {
+      "n": 17,
+      "speaker": "customer",
+      "text": "That is fine."
+    },
+    {
+      "n": 18,
+      "speaker": "agent",
+      "text": "Excellent, if you would like to use the same credit card that we already have on file, I can do that for you right now"
+    },
+    {
+      "n": 19,
+      "speaker": "customer",
+      "text": "Yes please"
+    },
+    {
+      "n": 20,
+      "speaker": "system_action",
+      "text": "A purchase of Michael Kors boots, size 9 was made."
+    },
+    {
+      "n": 21,
+      "speaker": "agent",
+      "text": "Okay, your order is placed, and it should be on its way to you as soon as possible.  Is there anything else I can help you with today?"
+    },
+    {
+      "n": 22,
+      "speaker": "customer",
+      "text": "That's everything.  Thanks for your help."
+    },
+    {
+      "n": 23,
+      "speaker": "agent",
+      "text": "You're very welcome.  Have a great day"
+    }
+  ],
+  "source_fields": {
+    "flow": "single_item_query",
+    "subflow": "boots_other_3",
+    "actions_taken": [
+      "pull-up-account",
+      "notify-team",
+      "make-purchase"
+    ]
+  },
+  "modifications": []
+}

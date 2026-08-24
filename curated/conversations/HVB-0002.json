@@ -1,0 +1,229 @@
+{
+  "id": "HVB-0002",
+  "source": {
+    "dataset": "HarperValleyBank",
+    "original_id": "00d676d7058c49bb",
+    "licence": "CC BY 4.0",
+    "url": "https://github.com/cricketclub/gridspace-stanford-harper-valley",
+    "citation": "Wu, Nafziger, Scodary & Maas (2020), arXiv:2010.13929"
+  },
+  "channel": "voice",
+  "agent_id": "hvb-speaker-17",
+  "customer_id": "hvb-speaker-60",
+  "customer_record": {
+    "customer_name": "Robert Johnson",
+    "captured_by_agent": {
+      "transfer destination account": "checking",
+      "transfer amount": "135",
+      "transfer source account": "savings"
+    }
+  },
+  "turns": [
+    {
+      "n": 1,
+      "speaker": "customer",
+      "text": "[noise]",
+      "asr_text": "[noise]",
+      "start_ms": 890,
+      "duration_ms": 450,
+      "dialog_acts": [
+        "greeting"
+      ]
+    },
+    {
+      "n": 2,
+      "speaker": "agent",
+      "text": "hello this is happy valley national bank my name is jennifer how can i help you today",
+      "asr_text": "hello this is happy valley national bank my name is jennifer how can i help you today",
+      "start_ms": 1689,
+      "duration_ms": 5010,
+      "dialog_acts": [
+        "greeting",
+        "open_question"
+      ]
+    },
+    {
+      "n": 3,
+      "speaker": "customer",
+      "text": "hi my name is robert johnson i would like to transfer money between my accounts",
+      "asr_text": "hi my name is robert johnson i would like to transfer money between my accounts",
+      "start_ms": 7820,
+      "duration_ms": 4290,
+      "dialog_acts": [
+        "other",
+        "problem_description"
+      ]
+    },
+    {
+      "n": 4,
+      "speaker": "agent",
+      "text": "oh sure i can help you with that",
+      "asr_text": "oh sure i can help you with that",
+      "start_ms": 12989,
+      "duration_ms": 1530,
+      "dialog_acts": [
+        "other"
+      ]
+    },
+    {
+      "n": 5,
+      "speaker": "agent",
+      "text": "uh what is the transfer amount",
+      "asr_text": "uh what is the transfer amount",
+      "start_ms": 15019,
+      "duration_ms": 1710,
+      "dialog_acts": [
+        "data_question",
+        "other"
+      ]
+    },
+    {
+      "n": 6,
+      "speaker": "customer",
+      "text": "uh the amount is one hundred and thirty five dollars",
+      "asr_text": "uh the amount is one hundred and thirty five dollars",
+      "start_ms": 18170,
+      "duration_ms": 3120,
+      "dialog_acts": [
+        "other",
+        "problem_description"
+      ]
+    },
+    {
+      "n": 7,
+      "speaker": "agent",
+      "text": "okay what is the source of the account",
+      "asr_text": "okay what is the source of the account",
+      "start_ms": 22519,
+      "duration_ms": 1980,
+      "dialog_acts": [
+        "data_question"
+      ]
+    },
+    {
+      "n": 8,
+      "speaker": "customer",
+      "text": "savings",
+      "asr_text": "savings",
+      "start_ms": 25830,
+      "duration_ms": 720,
+      "dialog_acts": [
+        "response",
+        "other"
+      ]
+    },
+    {
+      "n": 9,
+      "speaker": "agent",
+      "text": "and what is the destination account",
+      "asr_text": "and what is the destination accounts",
+      "start_ms": 28119,
+      "duration_ms": 2100,
+      "dialog_acts": [
+        "data_question"
+      ]
+    },
+    {
+      "n": 10,
+      "speaker": "customer",
+      "text": "checking",
+      "asr_text": "checking",
+      "start_ms": 31420,
+      "duration_ms": 480,
+      "dialog_acts": [
+        "confirm_data",
+        "bear_with_me"
+      ]
+    },
+    {
+      "n": 11,
+      "speaker": "agent",
+      "text": "okay",
+      "asr_text": "okay",
+      "start_ms": 33289,
+      "duration_ms": 570,
+      "dialog_acts": [
+        "acknowledgement"
+      ]
+    },
+    {
+      "n": 12,
+      "speaker": "agent",
+      "text": "so uh one hundred and thirty five dollars has been transferred from your savings account to your checking account is there anything else i can help you with",
+      "asr_text": "so uh one hundred and thirty five dollars has been transfer from your savings account to your checking account is there anything else i can help you with",
+      "start_ms": 35689,
+      "duration_ms": 9000,
+      "dialog_acts": [
+        "open_question"
+      ]
+    },
+    {
+      "n": 13,
+      "speaker": "customer",
+      "text": "no thank you",
+      "asr_text": "no thank you",
+      "start_ms": 45720,
+      "duration_ms": 690,
+      "dialog_acts": [
+        "thanks",
+        "other"
+      ]
+    },
+    {
+      "n": 14,
+      "speaker": "agent",
+      "text": "thank you for calling have a great day",
+      "asr_text": "thank you for calling have a great day",
+      "start_ms": 47589,
+      "duration_ms": 1740,
+      "dialog_acts": [
+        "closing"
+      ]
+    },
+    {
+      "n": 15,
+      "speaker": "customer",
+      "text": "you too bye bye",
+      "asr_text": "you too bye bye",
+      "start_ms": 50220,
+      "duration_ms": 990,
+      "dialog_acts": [
+        "closing"
+      ]
+    },
+    {
+      "n": 16,
+      "speaker": "agent",
+      "text": "bye",
+      "asr_text": "right",
+      "start_ms": 52189,
+      "duration_ms": 180,
+      "dialog_acts": [
+        "closing"
+      ]
+    }
+  ],
+  "source_fields": {
+    "task_assigned": [
+      "transfer money"
+    ],
+    "task_logged_by_agent": [
+      "transfer money"
+    ],
+    "labels": {
+      "lhvb_script": 5.0,
+      "caller_mos": 5.0,
+      "agent_mos": 5.0
+    },
+    "session": "Little Harper Valley 3",
+    "agent_survey_response": {
+      "ease_of_connection": "10",
+      "partner_rating": "10"
+    },
+    "customer_survey_response": {
+      "ease_of_connection": "10",
+      "partner_rating": "10"
+    }
+  },
+  "modifications": []
+}

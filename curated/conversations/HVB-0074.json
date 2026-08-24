@@ -1,0 +1,260 @@
+{
+  "id": "HVB-0074",
+  "source": {
+    "dataset": "HarperValleyBank",
+    "original_id": "0b590e61350b4b53",
+    "licence": "CC BY 4.0",
+    "url": "https://github.com/cricketclub/gridspace-stanford-harper-valley",
+    "citation": "Wu, Nafziger, Scodary & Maas (2020), arXiv:2010.13929"
+  },
+  "channel": "voice",
+  "agent_id": "hvb-speaker-56",
+  "customer_id": "hvb-speaker-40",
+  "customer_record": {
+    "customer_name": "Elizabeth Williams",
+    "captured_by_agent": {
+      "home address": "500 1st  Forest Ranch, Oregon 46896"
+    }
+  },
+  "turns": [
+    {
+      "n": 1,
+      "speaker": "agent",
+      "text": "[noise]",
+      "asr_text": "[noise]",
+      "start_ms": 4259,
+      "duration_ms": 480,
+      "dialog_acts": [
+        "greeting"
+      ]
+    },
+    {
+      "n": 2,
+      "speaker": "agent",
+      "text": "hello uh this is harper valley national bank my name is john how can i help you today",
+      "asr_text": "hello uh this is carson valley national bank my name is john how can i help you today",
+      "start_ms": 5819,
+      "duration_ms": 6090,
+      "dialog_acts": [
+        "greeting"
+      ]
+    },
+    {
+      "n": 3,
+      "speaker": "customer",
+      "text": "hi my name is elizabeth williams",
+      "asr_text": "hi my name is elizabeth williams",
+      "start_ms": 17990,
+      "duration_ms": 2100,
+      "dialog_acts": [
+        "greeting",
+        "problem_description"
+      ]
+    },
+    {
+      "n": 4,
+      "speaker": "customer",
+      "text": "i need a new checkbook",
+      "asr_text": "i needed a new checkbook",
+      "start_ms": 21990,
+      "duration_ms": 1170,
+      "dialog_acts": [
+        "problem_description"
+      ]
+    },
+    {
+      "n": 5,
+      "speaker": "agent",
+      "text": "[noise] okay",
+      "asr_text": "[noise] okay",
+      "start_ms": 24189,
+      "duration_ms": 840,
+      "dialog_acts": [
+        "acknowledgement",
+        "other"
+      ]
+    },
+    {
+      "n": 6,
+      "speaker": "agent",
+      "text": "uh what is your address",
+      "asr_text": "uh what is your address",
+      "start_ms": 25589,
+      "duration_ms": 1320,
+      "dialog_acts": [
+        "data_question"
+      ]
+    },
+    {
+      "n": 7,
+      "speaker": "customer",
+      "text": "my address is five hundred first street",
+      "asr_text": "my address is five hundred first street",
+      "start_ms": 29020,
+      "duration_ms": 3180,
+      "dialog_acts": [
+        "data_response"
+      ]
+    },
+    {
+      "n": 8,
+      "speaker": "customer",
+      "text": "forest ranch",
+      "asr_text": "forrest ranch",
+      "start_ms": 33620,
+      "duration_ms": 1080,
+      "dialog_acts": [
+        "data_communication",
+        "data_response"
+      ]
+    },
+    {
+      "n": 9,
+      "speaker": "customer",
+      "text": "oregon",
+      "asr_text": "oregon",
+      "start_ms": 35320,
+      "duration_ms": 600,
+      "dialog_acts": [
+        "data_communication",
+        "data_response"
+      ]
+    },
+    {
+      "n": 10,
+      "speaker": "customer",
+      "text": "four six eight nine six",
+      "asr_text": "four sixty eight nine six",
+      "start_ms": 37090,
+      "duration_ms": 2280,
+      "dialog_acts": [
+        "data_communication",
+        "data_response"
+      ]
+    },
+    {
+      "n": 11,
+      "speaker": "customer",
+      "text": "[noise]",
+      "asr_text": "[noise]",
+      "start_ms": 41290,
+      "duration_ms": 1020,
+      "dialog_acts": [
+        "other",
+        "data_communication"
+      ]
+    },
+    {
+      "n": 12,
+      "speaker": "agent",
+      "text": "can you repeat the zip code please",
+      "asr_text": "can you repeat that zip code please",
+      "start_ms": 42139,
+      "duration_ms": 1860,
+      "dialog_acts": [
+        "data_question"
+      ]
+    },
+    {
+      "n": 13,
+      "speaker": "customer",
+      "text": "four six eight nine six",
+      "asr_text": "four six eight nine six",
+      "start_ms": 45950,
+      "duration_ms": 2490,
+      "dialog_acts": [
+        "data_communication",
+        "data_response"
+      ]
+    },
+    {
+      "n": 14,
+      "speaker": "agent",
+      "text": "okay um a new check book has been sent to your home address",
+      "asr_text": "okay um a new check book has been sent to your home address",
+      "start_ms": 52179,
+      "duration_ms": 3330,
+      "dialog_acts": [
+        "data_question"
+      ]
+    },
+    {
+      "n": 15,
+      "speaker": "customer",
+      "text": "[noise]",
+      "asr_text": "[noise]",
+      "start_ms": 56090,
+      "duration_ms": 990,
+      "dialog_acts": [
+        "filler_disfluency",
+        "data_response"
+      ]
+    },
+    {
+      "n": 16,
+      "speaker": "agent",
+      "text": "is there anything else i can do for you today",
+      "asr_text": "is there anything else i can do for you today",
+      "start_ms": 57219,
+      "duration_ms": 2460,
+      "dialog_acts": [
+        "open_question"
+      ]
+    },
+    {
+      "n": 17,
+      "speaker": "customer",
+      "text": "nope that's gonna be it",
+      "asr_text": "nope that's going to be uh",
+      "start_ms": 61520,
+      "duration_ms": 1170,
+      "dialog_acts": [
+        "other",
+        "problem_description"
+      ]
+    },
+    {
+      "n": 18,
+      "speaker": "agent",
+      "text": "great thank you for calling have a great day",
+      "asr_text": "great thank you for calling have a great day",
+      "start_ms": 64079,
+      "duration_ms": 2310,
+      "dialog_acts": [
+        "other",
+        "closing"
+      ]
+    },
+    {
+      "n": 19,
+      "speaker": "customer",
+      "text": "you too",
+      "asr_text": "you too",
+      "start_ms": 67620,
+      "duration_ms": 510,
+      "dialog_acts": [
+        "other",
+        "closing"
+      ]
+    }
+  ],
+  "source_fields": {
+    "task_assigned": [
+      "order checks"
+    ],
+    "task_logged_by_agent": [
+      "order checks"
+    ],
+    "labels": {
+      "lhvb_script": 5.0,
+      "caller_mos": 5.0,
+      "agent_mos": 5.0
+    },
+    "session": "Little Harper Valley 3",
+    "agent_survey_response": {
+      "ease_of_connection": "10",
+      "partner_rating": "10"
+    }
+  },
+  "modifications": []
+}

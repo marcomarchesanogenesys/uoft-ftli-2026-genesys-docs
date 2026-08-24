@@ -1,0 +1,179 @@
+{
+  "id": "ABCD-0091",
+  "source": {
+    "dataset": "ABCD",
+    "original_id": "1928",
+    "licence": "MIT",
+    "url": "https://github.com/asappresearch/abcd",
+    "citation": "Chen et al. (2021), NAACL, arXiv:2104.00783"
+  },
+  "channel": "chat",
+  "customer_id": "rd776091",
+  "customer_record": {
+    "customer_name": "rodriguez domingo",
+    "username": "rd776091",
+    "email": "rd776091@email.com",
+    "phone": "(619) 236-5199",
+    "member_level": "gold",
+    "address": {
+      "street": "8116 lexington ave",
+      "city": "san mateo",
+      "state": "ca",
+      "zip_code": "76462",
+      "full_address": "8116 lexington ave  san mateo, ca 76462"
+    },
+    "order": {
+      "num_products": "1",
+      "products": [
+        {
+          "brand": "calvin_klein",
+          "product_type": "jacket",
+          "amount": 59
+        }
+      ]
+    }
+  },
+  "turns": [
+    {
+      "n": 1,
+      "speaker": "agent",
+      "text": "Hello! Thank you for contacting us today. How can I help you?"
+    },
+    {
+      "n": 2,
+      "speaker": "customer",
+      "text": "I was wondering if there is a known issue with the website because I cannot get it to work"
+    },
+    {
+      "n": 3,
+      "speaker": "agent",
+      "text": "Sure I can look into that for you. Can I get your name?"
+    },
+    {
+      "n": 4,
+      "speaker": "customer",
+      "text": "Rodriguez Domingo"
+    },
+    {
+      "n": 5,
+      "speaker": "agent",
+      "text": "Thank you, Rodriguez. Are you having an issue with the search function not working or the website going too slow?"
+    },
+    {
+      "n": 6,
+      "speaker": "customer",
+      "text": "Website is going too slow"
+    },
+    {
+      "n": 7,
+      "speaker": "agent",
+      "text": "Perfect. First let me send a report of the slow speeds to our Website Team quickly."
+    },
+    {
+      "n": 8,
+      "speaker": "system_action",
+      "text": "The website team has been notified."
+    },
+    {
+      "n": 9,
+      "speaker": "agent",
+      "text": "Alright. Now can you try to log out of your account and then log back in?"
+    },
+    {
+      "n": 10,
+      "speaker": "system_action",
+      "text": "Agent is looking for solutions ..."
+    },
+    {
+      "n": 11,
+      "speaker": "customer",
+      "text": "Sure One minute please"
+    },
+    {
+      "n": 12,
+      "speaker": "customer",
+      "text": "I did that and it is still slow"
+    },
+    {
+      "n": 13,
+      "speaker": "agent",
+      "text": "Alright. Can you try visiting another website and seeing if the issue persists?"
+    },
+    {
+      "n": 14,
+      "speaker": "system_action",
+      "text": "Agent is looking for solutions ..."
+    },
+    {
+      "n": 15,
+      "speaker": "agent",
+      "text": "Are you still there?"
+    },
+    {
+      "n": 16,
+      "speaker": "customer",
+      "text": "Yes checking other sites now"
+    },
+    {
+      "n": 17,
+      "speaker": "customer",
+      "text": "No its only your site"
+    },
+    {
+      "n": 18,
+      "speaker": "agent",
+      "text": "Alright, one last thing to try. Can you make sure to close all other tabs and any background programs you may have running and let me know if that helps."
+    },
+    {
+      "n": 19,
+      "speaker": "system_action",
+      "text": "Agent is looking for solutions ..."
+    },
+    {
+      "n": 20,
+      "speaker": "customer",
+      "text": "Okay let me try that"
+    },
+    {
+      "n": 21,
+      "speaker": "customer",
+      "text": "Ok that seems to have resolved the issue."
+    },
+    {
+      "n": 22,
+      "speaker": "customer",
+      "text": "Thank you"
+    },
+    {
+      "n": 23,
+      "speaker": "agent",
+      "text": "Great. Can I help you with anything else today?"
+    },
+    {
+      "n": 24,
+      "speaker": "customer",
+      "text": "Nope"
+    },
+    {
+      "n": 25,
+      "speaker": "agent",
+      "text": "Thank you and have a great day!"
+    },
+    {
+      "n": 26,
+      "speaker": "customer",
+      "text": "Thanks"
+    }
+  ],
+  "source_fields": {
+    "flow": "troubleshoot_site",
+    "subflow": "slow_speed",
+    "actions_taken": [
+      "notify-team",
+      "log-out-in",
+      "try-again",
+      "instructions"
+    ]
+  },
+  "modifications": []
+}

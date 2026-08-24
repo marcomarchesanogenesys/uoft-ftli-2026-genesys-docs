@@ -1,0 +1,187 @@
+{
+  "id": "HVB-0027",
+  "source": {
+    "dataset": "HarperValleyBank",
+    "original_id": "138abf543c7248d1",
+    "licence": "CC BY 4.0",
+    "url": "https://github.com/cricketclub/gridspace-stanford-harper-valley",
+    "citation": "Wu, Nafziger, Scodary & Maas (2020), arXiv:2010.13929"
+  },
+  "channel": "voice",
+  "agent_id": "hvb-speaker-24",
+  "customer_id": "hvb-speaker-41",
+  "customer_record": {
+    "customer_name": "James Rodriguez",
+    "captured_by_agent": {
+      "balance check account type": "checking"
+    }
+  },
+  "turns": [
+    {
+      "n": 1,
+      "speaker": "agent",
+      "text": "hello this is harper valley national bank my name is mary how can i help you today",
+      "asr_text": "hello this is harper valley national bank my name is mary how can i help you today",
+      "start_ms": 8980,
+      "duration_ms": 4680,
+      "dialog_acts": [
+        "greeting"
+      ]
+    },
+    {
+      "n": 2,
+      "speaker": "customer",
+      "text": "hi my name is james rodriguez and i need to check my account balance",
+      "asr_text": "hi my name is james broad regas and i need to check my account balance",
+      "start_ms": 17420,
+      "duration_ms": 4530,
+      "dialog_acts": [
+        "greeting",
+        "problem_description"
+      ]
+    },
+    {
+      "n": 3,
+      "speaker": "agent",
+      "text": "which one would you like to check",
+      "asr_text": "which one would you like to charge",
+      "start_ms": 25700,
+      "duration_ms": 1500,
+      "dialog_acts": [
+        "data_question"
+      ]
+    },
+    {
+      "n": 4,
+      "speaker": "agent",
+      "text": "your checking or your savings",
+      "asr_text": "your checking or your savings",
+      "start_ms": 27820,
+      "duration_ms": 1440,
+      "dialog_acts": [
+        "other",
+        "confirm_data"
+      ]
+    },
+    {
+      "n": 5,
+      "speaker": "customer",
+      "text": "my checking account",
+      "asr_text": "my checking account",
+      "start_ms": 30380,
+      "duration_ms": 1260,
+      "dialog_acts": [
+        "response",
+        "data_response"
+      ]
+    },
+    {
+      "n": 6,
+      "speaker": "agent",
+      "text": "the checking account balance is one hundred and three dollars",
+      "asr_text": "the checking account balance is one hundred and three dollars",
+      "start_ms": 34200,
+      "duration_ms": 3150,
+      "dialog_acts": [
+        "confirm_data"
+      ]
+    },
+    {
+      "n": 7,
+      "speaker": "customer",
+      "text": "okay perfect thank you s~",
+      "asr_text": "okay perfect thank you sir",
+      "start_ms": 40620,
+      "duration_ms": 1650,
+      "dialog_acts": [
+        "thanks",
+        "data_response"
+      ]
+    },
+    {
+      "n": 8,
+      "speaker": "agent",
+      "text": "is there anything else we <unk>",
+      "asr_text": "is there anything else we can",
+      "start_ms": 38950,
+      "duration_ms": 990,
+      "dialog_acts": [
+        "open_question"
+      ]
+    },
+    {
+      "n": 9,
+      "speaker": "customer",
+      "text": "um no that's all thank you",
+      "asr_text": "um no that's all thank you",
+      "start_ms": 43720,
+      "duration_ms": 1620,
+      "dialog_acts": [
+        "thanks"
+      ]
+    },
+    {
+      "n": 10,
+      "speaker": "agent",
+      "text": "okay thank you for calling have a great day",
+      "asr_text": "okay thank you for calling have a great day",
+      "start_ms": 44350,
+      "duration_ms": 1980,
+      "dialog_acts": [
+        "closing"
+      ]
+    },
+    {
+      "n": 11,
+      "speaker": "customer",
+      "text": "you too bye",
+      "asr_text": "you too bye",
+      "start_ms": 49220,
+      "duration_ms": 840,
+      "dialog_acts": [
+        "closing"
+      ]
+    },
+    {
+      "n": 12,
+      "speaker": "agent",
+      "text": "bye",
+      "asr_text": "but",
+      "start_ms": 50450,
+      "duration_ms": 330,
+      "dialog_acts": [
+        "closing"
+      ]
+    },
+    {
+      "n": 13,
+      "speaker": "agent",
+      "text": "[noise]",
+      "asr_text": "[noise]",
+      "start_ms": 54820,
+      "duration_ms": 90,
+      "dialog_acts": [
+        "closing"
+      ]
+    }
+  ],
+  "source_fields": {
+    "task_assigned": [
+      "check balance"
+    ],
+    "task_logged_by_agent": [
+      "check balance"
+    ],
+    "labels": {
+      "lhvb_script": 5.0,
+      "caller_mos": 4.0,
+      "agent_mos": 4.0
+    },
+    "session": "Little Harper Valley 2",
+    "agent_survey_response": {
+      "ease_of_connection": "10",
+      "partner_rating": "10"
+    }
+  },
+  "modifications": []
+}

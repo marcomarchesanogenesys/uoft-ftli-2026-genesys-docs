@@ -1,0 +1,171 @@
+{
+  "id": "ABCD-0047",
+  "source": {
+    "dataset": "ABCD",
+    "original_id": "6211",
+    "licence": "MIT",
+    "url": "https://github.com/asappresearch/abcd",
+    "citation": "Chen et al. (2021), NAACL, arXiv:2104.00783"
+  },
+  "channel": "chat",
+  "customer_id": "dwilliams990",
+  "customer_record": {
+    "customer_name": "david williams",
+    "username": "dwilliams990",
+    "email": "dwilliams990@email.com",
+    "phone": "(361) 425-1863",
+    "member_level": "guest",
+    "address": {
+      "street": "4731 circle drive",
+      "city": "monterey",
+      "state": "wa",
+      "zip_code": "54294",
+      "full_address": "4731 circle drive  monterey, wa 54294"
+    },
+    "order": {
+      "order_id": "7414237241",
+      "num_products": "1",
+      "products": [
+        {
+          "brand": "guess",
+          "product_type": "shirt",
+          "amount": 84
+        }
+      ]
+    }
+  },
+  "turns": [
+    {
+      "n": 1,
+      "speaker": "agent",
+      "text": "Good afternoon, how can I help you today?"
+    },
+    {
+      "n": 2,
+      "speaker": "customer",
+      "text": "Hi! I'm trying to figure out if there is a way to order a particular item that seems to be out of stock at the moment"
+    },
+    {
+      "n": 3,
+      "speaker": "agent",
+      "text": "I'd be happy to look in to that for you."
+    },
+    {
+      "n": 4,
+      "speaker": "agent",
+      "text": "Can I get your full name or Account ID?"
+    },
+    {
+      "n": 5,
+      "speaker": "customer",
+      "text": "sure, my name is David Williams"
+    },
+    {
+      "n": 6,
+      "speaker": "agent",
+      "text": "Thanks David. I'll just pull your account up."
+    },
+    {
+      "n": 7,
+      "speaker": "system_action",
+      "text": "Account has been pulled up for David Williams."
+    },
+    {
+      "n": 8,
+      "speaker": "agent",
+      "text": "What item were you trying to get David?"
+    },
+    {
+      "n": 9,
+      "speaker": "customer",
+      "text": "It's the white guess shirt listed for $84"
+    },
+    {
+      "n": 10,
+      "speaker": "system_action",
+      "text": "A reason of white guess shirt has been recorded."
+    },
+    {
+      "n": 11,
+      "speaker": "agent",
+      "text": "David, I am going to write up a report and send it to the Purchasing department so they can get a better handle on how much is needed!"
+    },
+    {
+      "n": 12,
+      "speaker": "customer",
+      "text": "thank you so much"
+    },
+    {
+      "n": 13,
+      "speaker": "system_action",
+      "text": "The Purchasing Department has been notified."
+    },
+    {
+      "n": 14,
+      "speaker": "agent",
+      "text": "In the meantime, would you like me to order the item so it is shipped to you as soon as it is in stock?"
+    },
+    {
+      "n": 15,
+      "speaker": "customer",
+      "text": "that would be great, yes!"
+    },
+    {
+      "n": 16,
+      "speaker": "agent",
+      "text": "I'll do that for you right now. One moment please."
+    },
+    {
+      "n": 17,
+      "speaker": "customer",
+      "text": "okay thanks :)"
+    },
+    {
+      "n": 18,
+      "speaker": "system_action",
+      "text": "Details of White Guess shirt have been entered."
+    },
+    {
+      "n": 19,
+      "speaker": "agent",
+      "text": "Should I put this on the card you have on file?"
+    },
+    {
+      "n": 20,
+      "speaker": "customer",
+      "text": "yes, that'll be fine thank you"
+    },
+    {
+      "n": 21,
+      "speaker": "system_action",
+      "text": "A purchase of White Guess Shirt was made."
+    },
+    {
+      "n": 22,
+      "speaker": "agent",
+      "text": "I have back ordered the shirt for you David. Hopefully it arrives soon. Is there anything else you need today?"
+    },
+    {
+      "n": 23,
+      "speaker": "customer",
+      "text": "no, that was all! Thank you again"
+    },
+    {
+      "n": 24,
+      "speaker": "agent",
+      "text": "Thanks David, have a great weekend."
+    }
+  ],
+  "source_fields": {
+    "flow": "purchase_dispute",
+    "subflow": "out_of_stock_one_item",
+    "actions_taken": [
+      "pull-up-account",
+      "record-reason",
+      "notify-team",
+      "enter-details",
+      "make-purchase"
+    ]
+  },
+  "modifications": []
+}

@@ -1,0 +1,136 @@
+{
+  "id": "ABCD-0029",
+  "source": {
+    "dataset": "ABCD",
+    "original_id": "9636",
+    "licence": "MIT",
+    "url": "https://github.com/asappresearch/abcd",
+    "citation": "Chen et al. (2021), NAACL, arXiv:2104.00783"
+  },
+  "channel": "chat",
+  "customer_record": {
+    "customer_name": "joseph banter",
+    "phone": "(269) 058-8789",
+    "member_level": "gold",
+    "address": {
+      "street": "3609 lexington ave",
+      "city": "la fayette",
+      "state": "ca",
+      "zip_code": "71334",
+      "full_address": "3609 lexington ave  la fayette, ca 71334"
+    },
+    "order": {
+      "order_id": "7393719521",
+      "num_products": "1",
+      "products": [
+        {
+          "brand": "michael_kors",
+          "product_type": "jeans",
+          "amount": 99
+        }
+      ]
+    }
+  },
+  "turns": [
+    {
+      "n": 1,
+      "speaker": "agent",
+      "text": "Hi, how can I help you?"
+    },
+    {
+      "n": 2,
+      "speaker": "customer",
+      "text": "My email confirmation says that I ordered 2 items, but I only ordered 1."
+    },
+    {
+      "n": 3,
+      "speaker": "agent",
+      "text": "Oh no, let me fix that for you! Can I get your full name to pull up your account?"
+    },
+    {
+      "n": 4,
+      "speaker": "customer",
+      "text": "Joseph Banter"
+    },
+    {
+      "n": 5,
+      "speaker": "system_action",
+      "text": "Account has been pulled up for Joseph Banter."
+    },
+    {
+      "n": 6,
+      "speaker": "agent",
+      "text": "Thanks! Can I have your account ID and order ID to look up your order?"
+    },
+    {
+      "n": 7,
+      "speaker": "customer",
+      "text": "X7IFTF8QUQ   7393719521"
+    },
+    {
+      "n": 8,
+      "speaker": "system_action",
+      "text": "Identity verification in progress ..."
+    },
+    {
+      "n": 9,
+      "speaker": "system_action",
+      "text": "Querying the system for an answer ..."
+    },
+    {
+      "n": 10,
+      "speaker": "agent",
+      "text": "Got it. Unfortunately there is an error on our end. Do you know the shipping status of your order?"
+    },
+    {
+      "n": 11,
+      "speaker": "customer",
+      "text": "In transit"
+    },
+    {
+      "n": 12,
+      "speaker": "agent",
+      "text": "It looks like we'll have to process your refund as a return after your receive the item. I am so sorry for this inconvenience!"
+    },
+    {
+      "n": 13,
+      "speaker": "customer",
+      "text": "Ok. So I guess I'll get back to you after I receive it."
+    },
+    {
+      "n": 14,
+      "speaker": "agent",
+      "text": "That's right, just contact customer service after you've received your order."
+    },
+    {
+      "n": 15,
+      "speaker": "customer",
+      "text": "Ok. thank you."
+    },
+    {
+      "n": 16,
+      "speaker": "agent",
+      "text": "Of course, and I'm sorry again for the inconvenience. Is there anything else I can do for you?"
+    },
+    {
+      "n": 17,
+      "speaker": "customer",
+      "text": "No, that's all"
+    },
+    {
+      "n": 18,
+      "speaker": "agent",
+      "text": "Okay, have a great day!"
+    }
+  ],
+  "source_fields": {
+    "flow": "order_issue",
+    "subflow": "status_quantity",
+    "actions_taken": [
+      "pull-up-account",
+      "verify-identity",
+      "ask-the-oracle"
+    ]
+  },
+  "modifications": []
+}

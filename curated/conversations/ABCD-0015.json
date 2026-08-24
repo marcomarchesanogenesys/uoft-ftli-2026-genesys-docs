@@ -1,0 +1,134 @@
+{
+  "id": "ABCD-0015",
+  "source": {
+    "dataset": "ABCD",
+    "original_id": "3187",
+    "licence": "MIT",
+    "url": "https://github.com/asappresearch/abcd",
+    "citation": "Chen et al. (2021), NAACL, arXiv:2104.00783"
+  },
+  "channel": "chat",
+  "customer_record": {
+    "customer_name": "norman bouchard",
+    "member_level": "gold",
+    "address": {
+      "street": "3551 lincoln ave",
+      "city": "brighton",
+      "state": "mi",
+      "zip_code": "45378",
+      "full_address": "3551 lincoln ave  brighton, mi 45378"
+    },
+    "order": {
+      "num_products": "1",
+      "products": [
+        {
+          "brand": "guess",
+          "product_type": "jeans",
+          "amount": 49
+        }
+      ]
+    }
+  },
+  "turns": [
+    {
+      "n": 1,
+      "speaker": "agent",
+      "text": "Hello, how may I help you?"
+    },
+    {
+      "n": 2,
+      "speaker": "customer",
+      "text": "Hi"
+    },
+    {
+      "n": 3,
+      "speaker": "customer",
+      "text": "I have the premium subscription shopping service"
+    },
+    {
+      "n": 4,
+      "speaker": "customer",
+      "text": "I just heard from my husband that the subscription has been removed from my account and wanted to check the status of my account"
+    },
+    {
+      "n": 5,
+      "speaker": "agent",
+      "text": "I can look into this for you. Could I please have your full name?"
+    },
+    {
+      "n": 6,
+      "speaker": "customer",
+      "text": "Norman Bouchard"
+    },
+    {
+      "n": 7,
+      "speaker": "system_action",
+      "text": "Account has been pulled up for Norman Bouchard."
+    },
+    {
+      "n": 8,
+      "speaker": "agent",
+      "text": "Hi Norman, I have your account pulled up here. And you said you heard about this issue from your husband, correct?"
+    },
+    {
+      "n": 9,
+      "speaker": "system_action",
+      "text": "A reason of spouse has been recorded."
+    },
+    {
+      "n": 10,
+      "speaker": "customer",
+      "text": "Yes"
+    },
+    {
+      "n": 11,
+      "speaker": "system_action",
+      "text": "Querying the system for an answer ..."
+    },
+    {
+      "n": 12,
+      "speaker": "customer",
+      "text": "I would still like to keep the subscription and so i wanted to check whats happening"
+    },
+    {
+      "n": 13,
+      "speaker": "agent",
+      "text": "It shows here that your premium subscription is still active and has not been removed from your account. It is possible that your spouse misheard or misread. But rest assured there's no need to worry and your subscription is in tact."
+    },
+    {
+      "n": 14,
+      "speaker": "customer",
+      "text": "Thank you"
+    },
+    {
+      "n": 15,
+      "speaker": "customer",
+      "text": "appreciate it"
+    },
+    {
+      "n": 16,
+      "speaker": "agent",
+      "text": "Is there anything else I can do for you?"
+    },
+    {
+      "n": 17,
+      "speaker": "customer",
+      "text": "thats all. thank you"
+    },
+    {
+      "n": 18,
+      "speaker": "agent",
+      "text": "Have a great day!"
+    }
+  ],
+  "source_fields": {
+    "flow": "manage_account",
+    "subflow": "status_service_removed",
+    "actions_taken": [
+      "pull-up-account",
+      "record-reason",
+      "ask-the-oracle"
+    ]
+  },
+  "modifications": []
+}

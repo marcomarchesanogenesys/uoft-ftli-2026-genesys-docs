@@ -1,0 +1,165 @@
+{
+  "id": "HVB-0055",
+  "source": {
+    "dataset": "HarperValleyBank",
+    "original_id": "151522e9f4704fa0",
+    "licence": "CC BY 4.0",
+    "url": "https://github.com/cricketclub/gridspace-stanford-harper-valley",
+    "citation": "Wu, Nafziger, Scodary & Maas (2020), arXiv:2010.13929"
+  },
+  "channel": "voice",
+  "agent_id": "hvb-speaker-44",
+  "customer_id": "hvb-speaker-7",
+  "customer_record": {
+    "customer_name": "Elizabeth Wilson",
+    "captured_by_agent": {
+      "replacement card type": "debit"
+    }
+  },
+  "turns": [
+    {
+      "n": 1,
+      "speaker": "agent",
+      "text": "hello this is harper valley national bank my name is jennifer how can i help you today",
+      "asr_text": "hello this is harper valley national bank my name is jennifer how can i help you today",
+      "start_ms": 1549,
+      "duration_ms": 4290,
+      "dialog_acts": [
+        "greeting"
+      ]
+    },
+    {
+      "n": 2,
+      "speaker": "customer",
+      "text": "hi my name is elizabeth wilson",
+      "asr_text": "hi my name is elizabeth wilson",
+      "start_ms": 9120,
+      "duration_ms": 2640,
+      "dialog_acts": [
+        "greeting",
+        "problem_description"
+      ]
+    },
+    {
+      "n": 3,
+      "speaker": "customer",
+      "text": "i lost my debit card can you send me a new one",
+      "asr_text": "i lost my debit card can you send me a new one",
+      "start_ms": 12490,
+      "duration_ms": 2940,
+      "dialog_acts": [
+        "problem_description"
+      ]
+    },
+    {
+      "n": 4,
+      "speaker": "agent",
+      "text": "which card would you like to replace",
+      "asr_text": "which card would you like to replace",
+      "start_ms": 16419,
+      "duration_ms": 1500,
+      "dialog_acts": [
+        "other"
+      ]
+    },
+    {
+      "n": 5,
+      "speaker": "customer",
+      "text": "my debit card",
+      "asr_text": "my debit card",
+      "start_ms": 21120,
+      "duration_ms": 1080,
+      "dialog_acts": [
+        "problem_description"
+      ]
+    },
+    {
+      "n": 6,
+      "speaker": "agent",
+      "text": "i've ordered your replacement debit card",
+      "asr_text": "i've ordered your replacement debit card",
+      "start_ms": 22819,
+      "duration_ms": 1740,
+      "dialog_acts": [
+        "other",
+        "procedure_explanation"
+      ]
+    },
+    {
+      "n": 7,
+      "speaker": "agent",
+      "text": "is there anything else i can help you with today",
+      "asr_text": "is there anything else i can help you with today",
+      "start_ms": 25849,
+      "duration_ms": 1680,
+      "dialog_acts": [
+        "open_question"
+      ]
+    },
+    {
+      "n": 8,
+      "speaker": "customer",
+      "text": "that's it thank you so much",
+      "asr_text": "that's it thank you so much",
+      "start_ms": 31190,
+      "duration_ms": 1710,
+      "dialog_acts": [
+        "thanks"
+      ]
+    },
+    {
+      "n": 9,
+      "speaker": "agent",
+      "text": "thank you for calling have a great day",
+      "asr_text": "thank you for calling have a great day",
+      "start_ms": 32049,
+      "duration_ms": 1470,
+      "dialog_acts": [
+        "thanks",
+        "closing"
+      ]
+    },
+    {
+      "n": 10,
+      "speaker": "customer",
+      "text": "you too take care",
+      "asr_text": "you too take care",
+      "start_ms": 36420,
+      "duration_ms": 870,
+      "dialog_acts": [
+        "thanks",
+        "closing"
+      ]
+    },
+    {
+      "n": 11,
+      "speaker": "agent",
+      "text": "okay",
+      "asr_text": "okay",
+      "start_ms": 36259,
+      "duration_ms": 180,
+      "dialog_acts": [
+        "acknowledgement"
+      ]
+    }
+  ],
+  "source_fields": {
+    "task_assigned": [
+      "replace card"
+    ],
+    "task_logged_by_agent": [
+      "replace card"
+    ],
+    "labels": {
+      "lhvb_script": 5.0,
+      "caller_mos": 4.0,
+      "agent_mos": 3.0
+    },
+    "session": "Little Harper Valley 1",
+    "agent_survey_response": {
+      "ease_of_connection": "10",
+      "partner_rating": "10"
+    }
+  },
+  "modifications": []
+}

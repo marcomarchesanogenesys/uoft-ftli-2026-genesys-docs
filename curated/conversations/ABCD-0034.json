@@ -1,0 +1,182 @@
+{
+  "id": "ABCD-0034",
+  "source": {
+    "dataset": "ABCD",
+    "original_id": "3993",
+    "licence": "MIT",
+    "url": "https://github.com/asappresearch/abcd",
+    "citation": "Chen et al. (2021), NAACL, arXiv:2104.00783"
+  },
+  "channel": "chat",
+  "customer_id": "rdomingo602",
+  "customer_record": {
+    "customer_name": "rodriguez domingo",
+    "username": "rdomingo602",
+    "email": "rdomingo602@email.com",
+    "phone": "(423) 913-0728",
+    "member_level": "silver",
+    "address": {
+      "street": "3976 woodshore st",
+      "city": "monterey",
+      "state": "wa",
+      "zip_code": "96987",
+      "full_address": "3976 woodshore st  monterey, wa 96987"
+    },
+    "order": {
+      "order_id": "0598261718",
+      "purchase_date": "2019-09-20",
+      "payment_method": "paypal",
+      "packaging": "yes",
+      "num_products": "1",
+      "products": [
+        {
+          "brand": "tommy_hilfiger",
+          "product_type": "jacket",
+          "amount": 89
+        }
+      ]
+    }
+  },
+  "turns": [
+    {
+      "n": 1,
+      "speaker": "agent",
+      "text": "AcmeBrands, how may I help you?"
+    },
+    {
+      "n": 2,
+      "speaker": "customer",
+      "text": "Hi, i would like to know information about a product"
+    },
+    {
+      "n": 3,
+      "speaker": "agent",
+      "text": "Let me help you with that."
+    },
+    {
+      "n": 4,
+      "speaker": "customer",
+      "text": "I would like to return an item because it has a stain"
+    },
+    {
+      "n": 5,
+      "speaker": "agent",
+      "text": "Ok"
+    },
+    {
+      "n": 6,
+      "speaker": "agent",
+      "text": "Could I have your full name or account id?"
+    },
+    {
+      "n": 7,
+      "speaker": "customer",
+      "text": "Rodriguez Domingo"
+    },
+    {
+      "n": 8,
+      "speaker": "system_action",
+      "text": "Account has been pulled up for Rodriguez Domingo."
+    },
+    {
+      "n": 9,
+      "speaker": "agent",
+      "text": "Could I have your username, email address and order id to validate your purchase?"
+    },
+    {
+      "n": 10,
+      "speaker": "customer",
+      "text": "Username: rdomingo602"
+    },
+    {
+      "n": 11,
+      "speaker": "customer",
+      "text": "Order ID: 0598261718"
+    },
+    {
+      "n": 12,
+      "speaker": "agent",
+      "text": "And your email address?"
+    },
+    {
+      "n": 13,
+      "speaker": "customer",
+      "text": "rdomingo602@email.com"
+    },
+    {
+      "n": 14,
+      "speaker": "system_action",
+      "text": "Purchase validation in progress ..."
+    },
+    {
+      "n": 15,
+      "speaker": "agent",
+      "text": "Thank you"
+    },
+    {
+      "n": 16,
+      "speaker": "agent",
+      "text": "What is your membership level?"
+    },
+    {
+      "n": 17,
+      "speaker": "customer",
+      "text": "silver"
+    },
+    {
+      "n": 18,
+      "speaker": "system_action",
+      "text": "Membership level of Silver has been noted."
+    },
+    {
+      "n": 19,
+      "speaker": "agent",
+      "text": "Could you tell if the product was purchased within the last 6 months?"
+    },
+    {
+      "n": 20,
+      "speaker": "customer",
+      "text": "2019-09-20"
+    },
+    {
+      "n": 21,
+      "speaker": "agent",
+      "text": "I am sorry, it was bought more than 6 months ago, so I will be unable to process a return."
+    },
+    {
+      "n": 22,
+      "speaker": "customer",
+      "text": "Okay thank you for your help"
+    },
+    {
+      "n": 23,
+      "speaker": "agent",
+      "text": "Can I help you with anything else?"
+    },
+    {
+      "n": 24,
+      "speaker": "customer",
+      "text": "No that is everything, thank you again"
+    },
+    {
+      "n": 25,
+      "speaker": "agent",
+      "text": "Have a good day."
+    },
+    {
+      "n": 26,
+      "speaker": "customer",
+      "text": "Have a good day"
+    }
+  ],
+  "source_fields": {
+    "flow": "product_defect",
+    "subflow": "return_stain",
+    "actions_taken": [
+      "pull-up-account",
+      "validate-purchase",
+      "membership"
+    ]
+  },
+  "modifications": []
+}

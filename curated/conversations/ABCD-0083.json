@@ -1,0 +1,129 @@
+{
+  "id": "ABCD-0083",
+  "source": {
+    "dataset": "ABCD",
+    "original_id": "3163",
+    "licence": "MIT",
+    "url": "https://github.com/asappresearch/abcd",
+    "citation": "Chen et al. (2021), NAACL, arXiv:2104.00783"
+  },
+  "channel": "chat",
+  "customer_record": {
+    "customer_name": "joseph banter",
+    "phone": "(287) 940-8427",
+    "member_level": "bronze",
+    "address": {
+      "street": "9642 lexington ave",
+      "city": "newark",
+      "state": "ca",
+      "zip_code": "8520",
+      "full_address": "9642 lexington ave  newark, ca 8520"
+    },
+    "order": {
+      "order_id": "6238541609"
+    }
+  },
+  "turns": [
+    {
+      "n": 1,
+      "speaker": "agent",
+      "text": "Hello, how may I help you today?"
+    },
+    {
+      "n": 2,
+      "speaker": "customer",
+      "text": "Hi, I want to know when my annual subscription fee is due"
+    },
+    {
+      "n": 3,
+      "speaker": "customer",
+      "text": "My name is Joseph Banter"
+    },
+    {
+      "n": 4,
+      "speaker": "customer",
+      "text": "Account ID: SS68H8TXK5"
+    },
+    {
+      "n": 5,
+      "speaker": "system_action",
+      "text": "Account has been pulled up for Joseph Banter."
+    },
+    {
+      "n": 6,
+      "speaker": "agent",
+      "text": "Okay, Joseph. Let's look at your subscription fee due date."
+    },
+    {
+      "n": 7,
+      "speaker": "agent",
+      "text": "I need your order ID."
+    },
+    {
+      "n": 8,
+      "speaker": "customer",
+      "text": "Order ID: 6238541609"
+    },
+    {
+      "n": 9,
+      "speaker": "system_action",
+      "text": "Identity verification in progess ..."
+    },
+    {
+      "n": 10,
+      "speaker": "system_action",
+      "text": "Querying the system for subscription status ..."
+    },
+    {
+      "n": 11,
+      "speaker": "agent",
+      "text": "Your payment is due three days from now."
+    },
+    {
+      "n": 12,
+      "speaker": "customer",
+      "text": "Oh okay, I will pay it later then."
+    },
+    {
+      "n": 13,
+      "speaker": "agent",
+      "text": "Here is a link to your account login page so you can view your information when needed."
+    },
+    {
+      "n": 14,
+      "speaker": "system_action",
+      "text": "A link will be sent."
+    },
+    {
+      "n": 15,
+      "speaker": "customer",
+      "text": "Great, thank you"
+    },
+    {
+      "n": 16,
+      "speaker": "agent",
+      "text": "Will that be all?"
+    },
+    {
+      "n": 17,
+      "speaker": "customer",
+      "text": "Yes, that's all. Thank you for helping me"
+    },
+    {
+      "n": 18,
+      "speaker": "agent",
+      "text": "No problem, have a great day."
+    }
+  ],
+  "source_fields": {
+    "flow": "subscription_inquiry",
+    "subflow": "status_due_date",
+    "actions_taken": [
+      "pull-up-account",
+      "verify-identity",
+      "subscription-status",
+      "send-link"
+    ]
+  },
+  "modifications": []
+}

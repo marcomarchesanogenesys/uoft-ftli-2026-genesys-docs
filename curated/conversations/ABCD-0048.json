@@ -1,0 +1,161 @@
+{
+  "id": "ABCD-0048",
+  "source": {
+    "dataset": "ABCD",
+    "original_id": "7480",
+    "licence": "MIT",
+    "url": "https://github.com/asappresearch/abcd",
+    "citation": "Chen et al. (2021), NAACL, arXiv:2104.00783"
+  },
+  "channel": "chat",
+  "customer_id": "alessandrophoenix543",
+  "customer_record": {
+    "customer_name": "alessandro phoenix",
+    "username": "alessandrophoenix543",
+    "email": "alessandrophoenix543@email.com",
+    "phone": "(319) 151-0701",
+    "member_level": "bronze",
+    "address": {
+      "street": "4146 circle drive",
+      "city": "raleigh",
+      "state": "tx",
+      "zip_code": "62499",
+      "full_address": "4146 circle drive  raleigh, tx 62499"
+    },
+    "order": {
+      "order_id": "2643034282",
+      "num_products": "1",
+      "products": [
+        {
+          "brand": "calvin_klein",
+          "product_type": "shirt",
+          "amount": 59
+        }
+      ]
+    }
+  },
+  "turns": [
+    {
+      "n": 1,
+      "speaker": "agent",
+      "text": "Hello. How may I help you today?"
+    },
+    {
+      "n": 2,
+      "speaker": "customer",
+      "text": "I hope someone can help"
+    },
+    {
+      "n": 3,
+      "speaker": "customer",
+      "text": "I wanted to buy this Calvin Klein t shirt, but the price at Acme is much higher than the competition"
+    },
+    {
+      "n": 4,
+      "speaker": "agent",
+      "text": "Let me see. May I have your name please?"
+    },
+    {
+      "n": 5,
+      "speaker": "customer",
+      "text": "Alessandro Phoenix"
+    },
+    {
+      "n": 6,
+      "speaker": "system_action",
+      "text": "Account has been pulled up for Alessandro Phoenix."
+    },
+    {
+      "n": 7,
+      "speaker": "system_action",
+      "text": "A reason of competitor  has been recorded."
+    },
+    {
+      "n": 8,
+      "speaker": "customer",
+      "text": "I'm a bronze member there, so I'd like to do my shopping with Acme, but this price is outrageous"
+    },
+    {
+      "n": 9,
+      "speaker": "agent",
+      "text": "Can I have your account ID and order ID?"
+    },
+    {
+      "n": 10,
+      "speaker": "customer",
+      "text": "6VYT5V2JK6"
+    },
+    {
+      "n": 11,
+      "speaker": "customer",
+      "text": "2643034282"
+    },
+    {
+      "n": 12,
+      "speaker": "customer",
+      "text": "(in that order)"
+    },
+    {
+      "n": 13,
+      "speaker": "system_action",
+      "text": "Purchase validation in progress ..."
+    },
+    {
+      "n": 14,
+      "speaker": "system_action",
+      "text": "Identity verification in progress ..."
+    },
+    {
+      "n": 15,
+      "speaker": "agent",
+      "text": "Thank you. Unfortunately our prices may vary compared to if others are having sales or not."
+    },
+    {
+      "n": 16,
+      "speaker": "customer",
+      "text": "I see.  Well, I was hoping to keep my business with Acme instead of with the other guys. Are there any discounts available to members?"
+    },
+    {
+      "n": 17,
+      "speaker": "agent",
+      "text": "I can offer a promo code?"
+    },
+    {
+      "n": 18,
+      "speaker": "system_action",
+      "text": "A promo code has been created."
+    },
+    {
+      "n": 19,
+      "speaker": "agent",
+      "text": "ZHYTQ You can use that on your next check out."
+    },
+    {
+      "n": 20,
+      "speaker": "customer",
+      "text": "Yes, that would be good"
+    },
+    {
+      "n": 21,
+      "speaker": "agent",
+      "text": "Anything else I can help you with today?"
+    },
+    {
+      "n": 22,
+      "speaker": "customer",
+      "text": "No, that's all, thank you"
+    }
+  ],
+  "source_fields": {
+    "flow": "purchase_dispute",
+    "subflow": "bad_price_competitor",
+    "actions_taken": [
+      "pull-up-account",
+      "record-reason",
+      "validate-purchase",
+      "verify-identity",
+      "promo-code"
+    ]
+  },
+  "modifications": []
+}

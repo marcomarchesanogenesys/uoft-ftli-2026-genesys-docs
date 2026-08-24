@@ -1,0 +1,120 @@
+{
+  "id": "ABCD-0069",
+  "source": {
+    "dataset": "ABCD",
+    "original_id": "913",
+    "licence": "MIT",
+    "url": "https://github.com/asappresearch/abcd",
+    "citation": "Chen et al. (2021), NAACL, arXiv:2104.00783"
+  },
+  "channel": "chat",
+  "customer_record": {
+    "customer_name": "rodriguez domingo",
+    "phone": "(753) 280-7130",
+    "member_level": "silver",
+    "address": {
+      "street": "2039 lexington ave",
+      "city": "la fayette",
+      "state": "ca",
+      "zip_code": "3483",
+      "full_address": "2039 lexington ave  la fayette, ca 3483"
+    },
+    "order": {
+      "num_products": "1",
+      "products": [
+        {
+          "brand": "calvin_klein",
+          "product_type": "boots",
+          "amount": 59
+        }
+      ]
+    }
+  },
+  "turns": [
+    {
+      "n": 1,
+      "speaker": "agent",
+      "text": "Hi.  How can I help you today?"
+    },
+    {
+      "n": 2,
+      "speaker": "customer",
+      "text": "Hello, i would like to know more about an item i am thinking about buying"
+    },
+    {
+      "n": 3,
+      "speaker": "agent",
+      "text": "Ok, what is the item?"
+    },
+    {
+      "n": 4,
+      "speaker": "customer",
+      "text": "The product are calvin klien boots that are $59, i would like to know are they waterproof?"
+    },
+    {
+      "n": 5,
+      "speaker": "customer",
+      "text": "*klein"
+    },
+    {
+      "n": 6,
+      "speaker": "system_action",
+      "text": "Searching the FAQ pages ..."
+    },
+    {
+      "n": 7,
+      "speaker": "system_action",
+      "text": "System Action: search boots"
+    },
+    {
+      "n": 8,
+      "speaker": "system_action",
+      "text": "FAQ answer related to boots (other1) was selected."
+    },
+    {
+      "n": 9,
+      "speaker": "agent",
+      "text": "There should be some kind of paper that came with the boots and says if they are waterproof."
+    },
+    {
+      "n": 10,
+      "speaker": "agent",
+      "text": "I can't see if a particular pair is waterproof but most of the boots in the store are waterproof."
+    },
+    {
+      "n": 11,
+      "speaker": "customer",
+      "text": "okay thank you for helping me with this questions"
+    },
+    {
+      "n": 12,
+      "speaker": "agent",
+      "text": "Of course.  Is there anything else I can do for you?"
+    },
+    {
+      "n": 13,
+      "speaker": "customer",
+      "text": "no that will be everything, thank you again"
+    },
+    {
+      "n": 14,
+      "speaker": "agent",
+      "text": "Ok, I will end this conversation"
+    },
+    {
+      "n": 15,
+      "speaker": "customer",
+      "text": "ok"
+    }
+  ],
+  "source_fields": {
+    "flow": "single_item_query",
+    "subflow": "boots_other_1",
+    "actions_taken": [
+      "search-faq",
+      "search-boots",
+      "select-faq"
+    ]
+  },
+  "modifications": []
+}

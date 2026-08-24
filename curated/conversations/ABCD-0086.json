@@ -1,0 +1,152 @@
+{
+  "id": "ABCD-0086",
+  "source": {
+    "dataset": "ABCD",
+    "original_id": "6286",
+    "licence": "MIT",
+    "url": "https://github.com/asappresearch/abcd",
+    "citation": "Chen et al. (2021), NAACL, arXiv:2104.00783"
+  },
+  "channel": "chat",
+  "customer_record": {
+    "customer_name": "joseph banter",
+    "phone": "(685) 718-9037",
+    "member_level": "guest",
+    "address": {
+      "street": "9654 lincoln ave",
+      "city": "brighton",
+      "state": "ca",
+      "zip_code": "76512",
+      "full_address": "9654 lincoln ave  brighton, ca 76512"
+    },
+    "order": {
+      "order_id": "4900231374"
+    }
+  },
+  "turns": [
+    {
+      "n": 1,
+      "speaker": "agent",
+      "text": "Hello, how can i help you today"
+    },
+    {
+      "n": 2,
+      "speaker": "customer",
+      "text": "Hi, I want to pay my subscription fee today"
+    },
+    {
+      "n": 3,
+      "speaker": "agent",
+      "text": "Of course, could i get your full name or account ID please"
+    },
+    {
+      "n": 4,
+      "speaker": "agent",
+      "text": "I will also need your order ID"
+    },
+    {
+      "n": 5,
+      "speaker": "customer",
+      "text": "Yes my name is Joseph Banter"
+    },
+    {
+      "n": 6,
+      "speaker": "customer",
+      "text": "My order ID is 4900231374"
+    },
+    {
+      "n": 7,
+      "speaker": "system_action",
+      "text": "Account has been pulled up for Joseph Banter."
+    },
+    {
+      "n": 8,
+      "speaker": "agent",
+      "text": "I will also need your account ID sorry"
+    },
+    {
+      "n": 9,
+      "speaker": "system_action",
+      "text": "Identity verification in progress ..."
+    },
+    {
+      "n": 10,
+      "speaker": "system_action",
+      "text": "Querying the system for subscription status ..."
+    },
+    {
+      "n": 11,
+      "speaker": "customer",
+      "text": "93FCWEXWNV"
+    },
+    {
+      "n": 12,
+      "speaker": "system_action",
+      "text": "Identity verification in progress ..."
+    },
+    {
+      "n": 13,
+      "speaker": "system_action",
+      "text": "Querying the system for subscription status ..."
+    },
+    {
+      "n": 14,
+      "speaker": "agent",
+      "text": "Okay, your bill is $20 dollars and is due today"
+    },
+    {
+      "n": 15,
+      "speaker": "agent",
+      "text": "would you like me to pay it with the card on file"
+    },
+    {
+      "n": 16,
+      "speaker": "system_action",
+      "text": "Details of $20 have been entered."
+    },
+    {
+      "n": 17,
+      "speaker": "customer",
+      "text": "Yes that would be good"
+    },
+    {
+      "n": 18,
+      "speaker": "system_action",
+      "text": "Account has been updated with renew subscription."
+    },
+    {
+      "n": 19,
+      "speaker": "agent",
+      "text": "Okay got it"
+    },
+    {
+      "n": 20,
+      "speaker": "agent",
+      "text": "Is there anything else i can help you with"
+    },
+    {
+      "n": 21,
+      "speaker": "customer",
+      "text": "Nope, that's all. Thank you very much"
+    },
+    {
+      "n": 22,
+      "speaker": "agent",
+      "text": "Glad i could help, have a nice day"
+    }
+  ],
+  "source_fields": {
+    "flow": "subscription_inquiry",
+    "subflow": "manage_pay_bill",
+    "actions_taken": [
+      "pull-up-account",
+      "verify-identity",
+      "subscription-status",
+      "verify-identity",
+      "subscription-status",
+      "enter-details",
+      "update-account"
+    ]
+  },
+  "modifications": []
+}

@@ -1,0 +1,155 @@
+{
+  "id": "ABCD-0050",
+  "source": {
+    "dataset": "ABCD",
+    "original_id": "8412",
+    "licence": "MIT",
+    "url": "https://github.com/asappresearch/abcd",
+    "citation": "Chen et al. (2021), NAACL, arXiv:2104.00783"
+  },
+  "channel": "chat",
+  "customer_id": "normanb5",
+  "customer_record": {
+    "customer_name": "norman bouchard",
+    "username": "normanb5",
+    "email": "normanb5@email.com",
+    "phone": "(167) 229-6573",
+    "member_level": "silver",
+    "address": {
+      "street": "8652 lexington ave",
+      "city": "newark",
+      "state": "ny",
+      "zip_code": "91676",
+      "full_address": "8652 lexington ave  newark, ny 91676"
+    },
+    "order": {
+      "order_id": "5668063558",
+      "num_products": "1",
+      "products": [
+        {
+          "brand": "calvin_klein",
+          "product_type": "boots",
+          "amount": 79
+        }
+      ]
+    }
+  },
+  "turns": [
+    {
+      "n": 1,
+      "speaker": "agent",
+      "text": "Hello, how may I help you?"
+    },
+    {
+      "n": 2,
+      "speaker": "customer",
+      "text": "Hey, How dare you issue me a code that does not work!"
+    },
+    {
+      "n": 3,
+      "speaker": "customer",
+      "text": "I am livid right now"
+    },
+    {
+      "n": 4,
+      "speaker": "agent",
+      "text": "I understand your frustration, I'll do my best to help you right now."
+    },
+    {
+      "n": 5,
+      "speaker": "agent",
+      "text": "Can I have your name?"
+    },
+    {
+      "n": 6,
+      "speaker": "customer",
+      "text": "My name is Norman Bouchard"
+    },
+    {
+      "n": 7,
+      "speaker": "system_action",
+      "text": "Account has been pulled up for Norman Bouchard."
+    },
+    {
+      "n": 8,
+      "speaker": "agent",
+      "text": "Do you happen to know when you received the code?"
+    },
+    {
+      "n": 9,
+      "speaker": "customer",
+      "text": "I got this code 5 days ago! Why cant I use it? I had my eyes set on these boots but the moment i input the code and it said invalid! My heart was broken."
+    },
+    {
+      "n": 10,
+      "speaker": "system_action",
+      "text": "A promo code has been created."
+    },
+    {
+      "n": 11,
+      "speaker": "system_action",
+      "text": "Querying the system for an answer ..."
+    },
+    {
+      "n": 12,
+      "speaker": "agent",
+      "text": "There was a mistake in the system. I'm very sorry for the frustration."
+    },
+    {
+      "n": 13,
+      "speaker": "system_action",
+      "text": "A promo code has been created."
+    },
+    {
+      "n": 14,
+      "speaker": "agent",
+      "text": "I have generated a new promocode for you: MC9MS"
+    },
+    {
+      "n": 15,
+      "speaker": "agent",
+      "text": "This one should definitely work on your boots."
+    },
+    {
+      "n": 16,
+      "speaker": "customer",
+      "text": "Oh yes I will take this new code and my rage will be calmed."
+    },
+    {
+      "n": 17,
+      "speaker": "customer",
+      "text": "As long as I can get these boots for a discount."
+    },
+    {
+      "n": 18,
+      "speaker": "customer",
+      "text": "Thank you."
+    },
+    {
+      "n": 19,
+      "speaker": "agent",
+      "text": "Thank you for your patience. Is there anything else you need?"
+    },
+    {
+      "n": 20,
+      "speaker": "customer",
+      "text": "No, thanks."
+    },
+    {
+      "n": 21,
+      "speaker": "agent",
+      "text": "Okay, enjoy the rest of your day and those boots!"
+    }
+  ],
+  "source_fields": {
+    "flow": "purchase_dispute",
+    "subflow": "promo_code_invalid",
+    "actions_taken": [
+      "pull-up-account",
+      "promo-code",
+      "ask-the-oracle",
+      "promo-code"
+    ]
+  },
+  "modifications": []
+}

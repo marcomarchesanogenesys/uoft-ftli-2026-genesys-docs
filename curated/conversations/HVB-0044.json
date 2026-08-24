@@ -1,0 +1,316 @@
+{
+  "id": "HVB-0044",
+  "source": {
+    "dataset": "HarperValleyBank",
+    "original_id": "084d8144809747cc",
+    "licence": "CC BY 4.0",
+    "url": "https://github.com/cricketclub/gridspace-stanford-harper-valley",
+    "citation": "Wu, Nafziger, Scodary & Maas (2020), arXiv:2010.13929"
+  },
+  "channel": "voice",
+  "agent_id": "hvb-speaker-40",
+  "customer_id": "hvb-speaker-53",
+  "customer_record": {
+    "customer_name": "Mary Rodriguez",
+    "captured_by_agent": {
+      "company name": "Fossil Gas",
+      "money amount": "70",
+      "company address": "709 Main St. Harper Valley, California 78654"
+    }
+  },
+  "turns": [
+    {
+      "n": 1,
+      "speaker": "agent",
+      "text": "hello this is harper valley national bank",
+      "asr_text": "hello this is harper valley national bank",
+      "start_ms": 2250,
+      "duration_ms": 2370,
+      "dialog_acts": [
+        "greeting"
+      ]
+    },
+    {
+      "n": 2,
+      "speaker": "agent",
+      "text": "my name is linda",
+      "asr_text": "my name is linda",
+      "start_ms": 5110,
+      "duration_ms": 810,
+      "dialog_acts": [
+        "greeting"
+      ]
+    },
+    {
+      "n": 3,
+      "speaker": "agent",
+      "text": "how can i help you today",
+      "asr_text": "okay i help you today",
+      "start_ms": 7010,
+      "duration_ms": 930,
+      "dialog_acts": [
+        "greeting"
+      ]
+    },
+    {
+      "n": 4,
+      "speaker": "customer",
+      "text": "[noise] hi my name is mary rodriguez i would like to pay a bill",
+      "asr_text": "[noise] hi my name is mary rodriguez i would like to pay a bill",
+      "start_ms": 11360,
+      "duration_ms": 4290,
+      "dialog_acts": [
+        "greeting",
+        "problem_description"
+      ]
+    },
+    {
+      "n": 5,
+      "speaker": "agent",
+      "text": "what is the company name",
+      "asr_text": "really the company name",
+      "start_ms": 19960,
+      "duration_ms": 990,
+      "dialog_acts": [
+        "data_question"
+      ]
+    },
+    {
+      "n": 6,
+      "speaker": "customer",
+      "text": "uh the company is fossil gas",
+      "asr_text": "uh the company is possible gas",
+      "start_ms": 24320,
+      "duration_ms": 2190,
+      "dialog_acts": [
+        "response"
+      ]
+    },
+    {
+      "n": 7,
+      "speaker": "agent",
+      "text": "[noise]",
+      "asr_text": "[noise]",
+      "start_ms": 24680,
+      "duration_ms": 2100,
+      "dialog_acts": [
+        "acknowledgement",
+        "filler_disfluency"
+      ]
+    },
+    {
+      "n": 8,
+      "speaker": "agent",
+      "text": "what is the company address",
+      "asr_text": "what is the company address",
+      "start_ms": 28410,
+      "duration_ms": 1470,
+      "dialog_acts": [
+        "data_question"
+      ]
+    },
+    {
+      "n": 9,
+      "speaker": "customer",
+      "text": "the address is seven zero nine",
+      "asr_text": "the address is seven zero nine",
+      "start_ms": 33020,
+      "duration_ms": 2220,
+      "dialog_acts": [
+        "response",
+        "data_response"
+      ]
+    },
+    {
+      "n": 10,
+      "speaker": "customer",
+      "text": "main street",
+      "asr_text": "main street",
+      "start_ms": 35920,
+      "duration_ms": 930,
+      "dialog_acts": [
+        "response"
+      ]
+    },
+    {
+      "n": 11,
+      "speaker": "customer",
+      "text": "that's in harper valley",
+      "asr_text": "that's in harper valley",
+      "start_ms": 37820,
+      "duration_ms": 1650,
+      "dialog_acts": [
+        "response"
+      ]
+    },
+    {
+      "n": 12,
+      "speaker": "agent",
+      "text": "[noise]",
+      "asr_text": "[noise]",
+      "start_ms": 37380,
+      "duration_ms": 180,
+      "dialog_acts": [
+        "other",
+        "filler_disfluency"
+      ]
+    },
+    {
+      "n": 13,
+      "speaker": "customer",
+      "text": "california",
+      "asr_text": "california",
+      "start_ms": 40220,
+      "duration_ms": 960,
+      "dialog_acts": [
+        "response",
+        "problem_description"
+      ]
+    },
+    {
+      "n": 14,
+      "speaker": "customer",
+      "text": "and the zip is seven eight six five four",
+      "asr_text": "and the zip is seven eight six five four",
+      "start_ms": 43120,
+      "duration_ms": 3150,
+      "dialog_acts": [
+        "response",
+        "data_response"
+      ]
+    },
+    {
+      "n": 15,
+      "speaker": "agent",
+      "text": "[noise]",
+      "asr_text": "[noise]",
+      "start_ms": 46580,
+      "duration_ms": 30,
+      "dialog_acts": [
+        "other",
+        "filler_disfluency"
+      ]
+    },
+    {
+      "n": 16,
+      "speaker": "agent",
+      "text": "what is the bill amount",
+      "asr_text": "what is the bill tomorrow",
+      "start_ms": 53810,
+      "duration_ms": 960,
+      "dialog_acts": [
+        "data_question",
+        "data_response"
+      ]
+    },
+    {
+      "n": 17,
+      "speaker": "customer",
+      "text": "so the amount of the bill is seventy dollars",
+      "asr_text": "so the amount of the bill is seventy dollars",
+      "start_ms": 58120,
+      "duration_ms": 2070,
+      "dialog_acts": [
+        "data_communication",
+        "data_response"
+      ]
+    },
+    {
+      "n": 18,
+      "speaker": "agent",
+      "text": "[noise]",
+      "asr_text": "hmm",
+      "start_ms": 61010,
+      "duration_ms": 90,
+      "dialog_acts": [
+        "data_question",
+        "filler_disfluency"
+      ]
+    },
+    {
+      "n": 19,
+      "speaker": "agent",
+      "text": "we will send your payment to fossil gas",
+      "asr_text": "we will send your payment for some gas",
+      "start_ms": 63950,
+      "duration_ms": 2130,
+      "dialog_acts": [
+        "data_question",
+        "procedure_explanation"
+      ]
+    },
+    {
+      "n": 20,
+      "speaker": "agent",
+      "text": "is there anything else i can help you with",
+      "asr_text": "is there anything else i can help you with",
+      "start_ms": 68310,
+      "duration_ms": 1410,
+      "dialog_acts": [
+        "open_question"
+      ]
+    },
+    {
+      "n": 21,
+      "speaker": "customer",
+      "text": "[noise]",
+      "asr_text": "yeah",
+      "start_ms": 71320,
+      "duration_ms": 60,
+      "dialog_acts": [
+        "acknowledgement",
+        "yes_response"
+      ]
+    },
+    {
+      "n": 22,
+      "speaker": "customer",
+      "text": "no that should be it thank you",
+      "asr_text": "no it should be it thank you",
+      "start_ms": 72890,
+      "duration_ms": 1500,
+      "dialog_acts": [
+        "other",
+        "thanks"
+      ]
+    },
+    {
+      "n": 23,
+      "speaker": "agent",
+      "text": "thank you for calling have a great day",
+      "asr_text": "thank you for calling have a great day",
+      "start_ms": 73950,
+      "duration_ms": 1950,
+      "dialog_acts": [
+        "other",
+        "closing"
+      ]
+    },
+    {
+      "n": 24,
+      "speaker": "customer",
+      "text": "[noise]",
+      "asr_text": "[noise]",
+      "start_ms": 79290,
+      "duration_ms": 30,
+      "dialog_acts": [
+        "closing"
+      ]
+    }
+  ],
+  "source_fields": {
+    "task_assigned": [
+      "pay bill"
+    ],
+    "task_logged_by_agent": [
+      "pay bill"
+    ],
+    "labels": {
+      "lhvb_script": 5.0,
+      "caller_mos": 5.0,
+      "agent_mos": 5.0
+    },
+    "session": "Little Harper Valley 3"
+  },
+  "modifications": []
+}

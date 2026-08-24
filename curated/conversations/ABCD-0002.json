@@ -1,0 +1,124 @@
+{
+  "id": "ABCD-0002",
+  "source": {
+    "dataset": "ABCD",
+    "original_id": "1030",
+    "licence": "MIT",
+    "url": "https://github.com/asappresearch/abcd",
+    "citation": "Chen et al. (2021), NAACL, arXiv:2104.00783"
+  },
+  "channel": "chat",
+  "customer_record": {
+    "customer_name": "joseph banter",
+    "phone": "(562) 680-7722",
+    "member_level": "silver",
+    "address": {
+      "street": "9600 brushwick dr",
+      "city": "san mateo",
+      "state": "mi",
+      "zip_code": "2109",
+      "full_address": "9600 brushwick dr  san mateo, mi 2109"
+    }
+  },
+  "turns": [
+    {
+      "n": 1,
+      "speaker": "agent",
+      "text": "Hello, how may I help you today?"
+    },
+    {
+      "n": 2,
+      "speaker": "customer",
+      "text": "Hi! I recently placed an order. I would like to check my account for some information on it, but I cannot get on because I forgot my username. Can you help me, please?"
+    },
+    {
+      "n": 3,
+      "speaker": "agent",
+      "text": "May I have your full name or your account ID?"
+    },
+    {
+      "n": 4,
+      "speaker": "customer",
+      "text": "Joseph Banter and my account id is 78985"
+    },
+    {
+      "n": 5,
+      "speaker": "system_action",
+      "text": "Account has been pulled up for Joseph Banter."
+    },
+    {
+      "n": 6,
+      "speaker": "agent",
+      "text": "May I have your zip code and your phone number please?"
+    },
+    {
+      "n": 7,
+      "speaker": "customer",
+      "text": "2109"
+    },
+    {
+      "n": 8,
+      "speaker": "customer",
+      "text": "9600 Brushwick Dr"
+    },
+    {
+      "n": 9,
+      "speaker": "system_action",
+      "text": "Identity verification in progess ..."
+    },
+    {
+      "n": 10,
+      "speaker": "agent",
+      "text": "I can give you a new temporary username which you can change later."
+    },
+    {
+      "n": 11,
+      "speaker": "customer",
+      "text": "Thank you."
+    },
+    {
+      "n": 12,
+      "speaker": "agent",
+      "text": "jbanter1"
+    },
+    {
+      "n": 13,
+      "speaker": "customer",
+      "text": "Thank you."
+    },
+    {
+      "n": 14,
+      "speaker": "agent",
+      "text": "You can use this to log in now but we suggest changing it later."
+    },
+    {
+      "n": 15,
+      "speaker": "agent",
+      "text": "Is there anything else I can help you with?"
+    },
+    {
+      "n": 16,
+      "speaker": "customer",
+      "text": "I will. Thank you for helping me today. That is all I needed."
+    },
+    {
+      "n": 17,
+      "speaker": "agent",
+      "text": "Have a great day."
+    },
+    {
+      "n": 18,
+      "speaker": "customer",
+      "text": "You too."
+    }
+  ],
+  "source_fields": {
+    "flow": "account_access",
+    "subflow": "recover_username",
+    "actions_taken": [
+      "pull-up-account",
+      "verify-identity"
+    ]
+  },
+  "modifications": []
+}

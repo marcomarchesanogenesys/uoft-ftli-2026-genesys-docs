@@ -1,0 +1,186 @@
+{
+  "id": "ABCD-0057",
+  "source": {
+    "dataset": "ABCD",
+    "original_id": "4571",
+    "licence": "MIT",
+    "url": "https://github.com/asappresearch/abcd",
+    "citation": "Chen et al. (2021), NAACL, arXiv:2104.00783"
+  },
+  "channel": "chat",
+  "customer_id": "joycew07",
+  "customer_record": {
+    "customer_name": "joyce wu",
+    "username": "joycew07",
+    "email": "joycew07@email.com",
+    "phone": "(341) 890-8672",
+    "member_level": "guest",
+    "address": {
+      "street": "6070 primrose ave",
+      "city": "baltimore",
+      "state": "wa",
+      "zip_code": "51732",
+      "full_address": "6070 primrose ave  baltimore, wa 51732"
+    },
+    "order": {
+      "order_id": "7809477440",
+      "purchase_date": "2019-09-09",
+      "num_products": "2",
+      "products": [
+        {
+          "brand": "michael_kors",
+          "product_type": "jacket",
+          "amount": 74
+        },
+        {
+          "brand": "tommy_hilfiger",
+          "product_type": "shirt",
+          "amount": 49
+        }
+      ]
+    }
+  },
+  "turns": [
+    {
+      "n": 1,
+      "speaker": "agent",
+      "text": "Hello"
+    },
+    {
+      "n": 2,
+      "speaker": "customer",
+      "text": "I have a question about my account."
+    },
+    {
+      "n": 3,
+      "speaker": "customer",
+      "text": "I just got my shipping confirmation but I was surprised how high the shipping cost is. Can I cancel my order so I can the shipping fees refunded back?"
+    },
+    {
+      "n": 4,
+      "speaker": "agent",
+      "text": "Sorry about this"
+    },
+    {
+      "n": 5,
+      "speaker": "agent",
+      "text": "Give me your full name"
+    },
+    {
+      "n": 6,
+      "speaker": "customer",
+      "text": "Joyce Wu"
+    },
+    {
+      "n": 7,
+      "speaker": "system_action",
+      "text": "Account has been pulled up for Joyce Wu."
+    },
+    {
+      "n": 8,
+      "speaker": "agent",
+      "text": "Send me your username, email, order id"
+    },
+    {
+      "n": 9,
+      "speaker": "customer",
+      "text": "joycew07"
+    },
+    {
+      "n": 10,
+      "speaker": "customer",
+      "text": "joycew07@email.com"
+    },
+    {
+      "n": 11,
+      "speaker": "customer",
+      "text": "7809477440"
+    },
+    {
+      "n": 12,
+      "speaker": "system_action",
+      "text": "Purchase validation in progress ..."
+    },
+    {
+      "n": 13,
+      "speaker": "agent",
+      "text": "What's the status of the order?"
+    },
+    {
+      "n": 14,
+      "speaker": "customer",
+      "text": "In transit"
+    },
+    {
+      "n": 15,
+      "speaker": "system_action",
+      "text": "Shipping status of In transit has been noted."
+    },
+    {
+      "n": 16,
+      "speaker": "agent",
+      "text": "I will help you cancel the order"
+    },
+    {
+      "n": 17,
+      "speaker": "customer",
+      "text": "ok grat"
+    },
+    {
+      "n": 18,
+      "speaker": "customer",
+      "text": "great"
+    },
+    {
+      "n": 19,
+      "speaker": "system_action",
+      "text": "Order has been updated with Cancel order."
+    },
+    {
+      "n": 20,
+      "speaker": "agent",
+      "text": "Order canceled"
+    },
+    {
+      "n": 21,
+      "speaker": "customer",
+      "text": "great so I should see a refund of the shipping costs?"
+    },
+    {
+      "n": 22,
+      "speaker": "agent",
+      "text": "Yes"
+    },
+    {
+      "n": 23,
+      "speaker": "customer",
+      "text": "ok cool"
+    },
+    {
+      "n": 24,
+      "speaker": "customer",
+      "text": "thanks so much"
+    },
+    {
+      "n": 25,
+      "speaker": "agent",
+      "text": "Would that be all for today?"
+    },
+    {
+      "n": 26,
+      "speaker": "customer",
+      "text": "that's it"
+    }
+  ],
+  "source_fields": {
+    "flow": "shipping_issue",
+    "subflow": "cost",
+    "actions_taken": [
+      "pull-up-account",
+      "validate-purchase",
+      "shipping-status",
+      "update-order"
+    ]
+  },
+  "modifications": []
+}

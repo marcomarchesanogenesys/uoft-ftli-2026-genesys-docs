@@ -1,0 +1,148 @@
+{
+  "id": "ABCD-0097",
+  "source": {
+    "dataset": "ABCD",
+    "original_id": "6583",
+    "licence": "MIT",
+    "url": "https://github.com/asappresearch/abcd",
+    "citation": "Chen et al. (2021), NAACL, arXiv:2104.00783"
+  },
+  "channel": "chat",
+  "customer_id": "asanders086",
+  "customer_record": {
+    "customer_name": "albert sanders",
+    "username": "asanders086",
+    "email": "asanders086@email.com",
+    "phone": "(922) 303-0230",
+    "member_level": "gold",
+    "address": {
+      "street": "6629 1st ave",
+      "city": "raleigh",
+      "state": "mi",
+      "zip_code": "19314",
+      "full_address": "6629 1st ave  raleigh, mi 19314"
+    },
+    "order": {
+      "num_products": "1",
+      "products": [
+        {
+          "brand": "tommy_hilfiger",
+          "product_type": "shirt",
+          "amount": 94
+        }
+      ]
+    }
+  },
+  "turns": [
+    {
+      "n": 1,
+      "speaker": "agent",
+      "text": "Thank you for contacting AcmeBrands! How can I help you today?"
+    },
+    {
+      "n": 2,
+      "speaker": "customer",
+      "text": "I am trying to use your website, but it is running so lowly that it's not usable."
+    },
+    {
+      "n": 3,
+      "speaker": "customer",
+      "text": "running so slowly"
+    },
+    {
+      "n": 4,
+      "speaker": "agent",
+      "text": "I'm sorry you're having issues with our website. Is it the whole website?"
+    },
+    {
+      "n": 5,
+      "speaker": "customer",
+      "text": "Yes, the whole thing won't work right."
+    },
+    {
+      "n": 6,
+      "speaker": "system_action",
+      "text": "Agent is looking for solutions ..."
+    },
+    {
+      "n": 7,
+      "speaker": "agent",
+      "text": "Try logging out of your account and then back in to see if it improves."
+    },
+    {
+      "n": 8,
+      "speaker": "customer",
+      "text": "Ok, I'll try it."
+    },
+    {
+      "n": 9,
+      "speaker": "customer",
+      "text": "I tried it, but it's still doing the same thing."
+    },
+    {
+      "n": 10,
+      "speaker": "system_action",
+      "text": "Agent is looking for solutions ..."
+    },
+    {
+      "n": 11,
+      "speaker": "agent",
+      "text": "Okay. Can you visit another website and let me know if it's working. It may be more than just our website and could be your internet connection."
+    },
+    {
+      "n": 12,
+      "speaker": "customer",
+      "text": "Let me check."
+    },
+    {
+      "n": 13,
+      "speaker": "customer",
+      "text": "Other websites are working fine."
+    },
+    {
+      "n": 14,
+      "speaker": "system_action",
+      "text": "Agent is looking for solutions ..."
+    },
+    {
+      "n": 15,
+      "speaker": "agent",
+      "text": "Try closing all other browser tabs and any programs that are running in the background. Then try our website again please."
+    },
+    {
+      "n": 16,
+      "speaker": "customer",
+      "text": "Ok, I'll try."
+    },
+    {
+      "n": 17,
+      "speaker": "customer",
+      "text": "That seemed to have worked, and it seems to be working ok now."
+    },
+    {
+      "n": 18,
+      "speaker": "agent",
+      "text": "Great! Is there anything else I can help you with today?"
+    },
+    {
+      "n": 19,
+      "speaker": "customer",
+      "text": "No, that was all!"
+    },
+    {
+      "n": 20,
+      "speaker": "agent",
+      "text": "I hope you enjoy the rest of your day!"
+    }
+  ],
+  "source_fields": {
+    "flow": "troubleshoot_site",
+    "subflow": "slow_speed",
+    "actions_taken": [
+      "log-out-in",
+      "try-again",
+      "instructions"
+    ]
+  },
+  "modifications": []
+}

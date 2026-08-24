@@ -1,0 +1,176 @@
+{
+  "id": "ABCD-0052",
+  "source": {
+    "dataset": "ABCD",
+    "original_id": "2396",
+    "licence": "MIT",
+    "url": "https://github.com/asappresearch/abcd",
+    "citation": "Chen et al. (2021), NAACL, arXiv:2104.00783"
+  },
+  "channel": "chat",
+  "customer_id": "as762339",
+  "customer_record": {
+    "customer_name": "albert sanders",
+    "username": "as762339",
+    "email": "as762339@email.com",
+    "phone": "(930) 109-7147",
+    "member_level": "gold",
+    "address": {
+      "street": "5321 primrose ave",
+      "city": "newark",
+      "state": "mi",
+      "zip_code": "16406",
+      "full_address": "5321 primrose ave  newark, mi 16406"
+    },
+    "order": {
+      "order_id": "3752400475",
+      "purchase_date": "2020-02-25",
+      "num_products": "2",
+      "products": [
+        {
+          "brand": "guess",
+          "product_type": "boots",
+          "amount": 99
+        },
+        {
+          "brand": "michael_kors",
+          "product_type": "shirt",
+          "amount": 94
+        }
+      ]
+    }
+  },
+  "turns": [
+    {
+      "n": 1,
+      "speaker": "agent",
+      "text": "Hello, how may I help you today?"
+    },
+    {
+      "n": 2,
+      "speaker": "customer",
+      "text": "Hi, I am trying to check on my shipping status. I never received my boots."
+    },
+    {
+      "n": 3,
+      "speaker": "agent",
+      "text": "That is not optimal, let's see what we can do about this."
+    },
+    {
+      "n": 4,
+      "speaker": "agent",
+      "text": "May I have your full name or Account ID?"
+    },
+    {
+      "n": 5,
+      "speaker": "customer",
+      "text": "Albert Sanders"
+    },
+    {
+      "n": 6,
+      "speaker": "system_action",
+      "text": "Account has been pulled up for Albert Sanders."
+    },
+    {
+      "n": 7,
+      "speaker": "agent",
+      "text": "May I have your account ID and Order ID/"
+    },
+    {
+      "n": 8,
+      "speaker": "customer",
+      "text": "My order ID is 3752400475"
+    },
+    {
+      "n": 9,
+      "speaker": "system_action",
+      "text": "Identity verification in progess ..."
+    },
+    {
+      "n": 10,
+      "speaker": "agent",
+      "text": "Well, lets try some more identifiers.  How about your Username and Email Address."
+    },
+    {
+      "n": 11,
+      "speaker": "customer",
+      "text": "as762339@email.com"
+    },
+    {
+      "n": 12,
+      "speaker": "customer",
+      "text": "as762339"
+    },
+    {
+      "n": 13,
+      "speaker": "system_action",
+      "text": "Purchase validation in progress ..."
+    },
+    {
+      "n": 14,
+      "speaker": "agent",
+      "text": "How long have you been waiting for these boots?"
+    },
+    {
+      "n": 15,
+      "speaker": "customer",
+      "text": "5 days. I'm getting anxious"
+    },
+    {
+      "n": 16,
+      "speaker": "system_action",
+      "text": "A reason of 5 has been recorded."
+    },
+    {
+      "n": 17,
+      "speaker": "agent",
+      "text": "I see, well currently if you have been waiting for less than a week (7 real days) in our system the package is mismarked as delivered.  It will usually arrive within a couple days."
+    },
+    {
+      "n": 18,
+      "speaker": "agent",
+      "text": "If after 7 days it still has not gotten to you, please don't hesitate to recontact us."
+    },
+    {
+      "n": 19,
+      "speaker": "customer",
+      "text": "Ook thankd"
+    },
+    {
+      "n": 20,
+      "speaker": "agent",
+      "text": "Apologies for your anxiousness!'"
+    },
+    {
+      "n": 21,
+      "speaker": "agent",
+      "text": "Is there anything else I can help you with today?"
+    },
+    {
+      "n": 22,
+      "speaker": "customer",
+      "text": "Nope I think that's all"
+    },
+    {
+      "n": 23,
+      "speaker": "agent",
+      "text": "Thank you and I hope you have a wonderful rest of your day!"
+    },
+    {
+      "n": 24,
+      "speaker": "customer",
+      "text": "Thanks"
+    }
+  ],
+  "source_fields": {
+    "flow": "shipping_issue",
+    "subflow": "missing",
+    "actions_taken": [
+      "pull-up-account",
+      "verify-identity",
+      "validate-purchase",
+      "record-reason"
+    ]
+  },
+  "modifications": []
+}

@@ -1,0 +1,114 @@
+{
+  "id": "ABCD-0008",
+  "source": {
+    "dataset": "ABCD",
+    "original_id": "6812",
+    "licence": "MIT",
+    "url": "https://github.com/asappresearch/abcd",
+    "citation": "Chen et al. (2021), NAACL, arXiv:2104.00783"
+  },
+  "channel": "chat",
+  "customer_record": {
+    "customer_name": "crystal minh",
+    "phone": "(790) 158-1881",
+    "member_level": "guest",
+    "address": {
+      "street": "8253 primrose ave",
+      "city": "newark",
+      "state": "tx",
+      "zip_code": "80371",
+      "full_address": "8253 primrose ave  newark, tx 80371"
+    }
+  },
+  "turns": [
+    {
+      "n": 1,
+      "speaker": "agent",
+      "text": "Hi! How can i help you today?"
+    },
+    {
+      "n": 2,
+      "speaker": "customer",
+      "text": "Good morning. I am trying to look at my shopping history on the site but I can't remember my username."
+    },
+    {
+      "n": 3,
+      "speaker": "agent",
+      "text": "sure!"
+    },
+    {
+      "n": 4,
+      "speaker": "agent",
+      "text": "what is your name please?"
+    },
+    {
+      "n": 5,
+      "speaker": "customer",
+      "text": "it's Crystal Ming."
+    },
+    {
+      "n": 6,
+      "speaker": "customer",
+      "text": "sorry, Minh"
+    },
+    {
+      "n": 7,
+      "speaker": "system_action",
+      "text": "Account has been pulled up for Crystal Minh."
+    },
+    {
+      "n": 8,
+      "speaker": "agent",
+      "text": "Can i please have your zip code, email and phone number to verify your identity"
+    },
+    {
+      "n": 9,
+      "speaker": "customer",
+      "text": "sure, my zip is 80371, my email is cminh@email.com and my phone number is 790-158-1881"
+    },
+    {
+      "n": 10,
+      "speaker": "system_action",
+      "text": "Identity verification in progress ..."
+    },
+    {
+      "n": 11,
+      "speaker": "agent",
+      "text": "Great thanks"
+    },
+    {
+      "n": 12,
+      "speaker": "agent",
+      "text": "your user name is"
+    },
+    {
+      "n": 13,
+      "speaker": "agent",
+      "text": "cminh1"
+    },
+    {
+      "n": 14,
+      "speaker": "agent",
+      "text": "Do you need anything else?"
+    },
+    {
+      "n": 15,
+      "speaker": "customer",
+      "text": "ok thanks! nope that's it!"
+    },
+    {
+      "n": 16,
+      "speaker": "agent",
+      "text": "have a good day"
+    }
+  ],
+  "source_fields": {
+    "flow": "account_access",
+    "subflow": "recover_username",
+    "actions_taken": [
+      "pull-up-account",
+      "verify-identity"
+    ]
+  },
+  "modifications": []
+}

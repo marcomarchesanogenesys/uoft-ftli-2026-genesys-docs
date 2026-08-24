@@ -1,0 +1,148 @@
+{
+  "id": "ABCD-0037",
+  "source": {
+    "dataset": "ABCD",
+    "original_id": "8570",
+    "licence": "MIT",
+    "url": "https://github.com/asappresearch/abcd",
+    "citation": "Chen et al. (2021), NAACL, arXiv:2104.00783"
+  },
+  "channel": "chat",
+  "customer_id": "sa168344",
+  "customer_record": {
+    "customer_name": "sanya afzal",
+    "username": "sa168344",
+    "email": "sa168344@email.com",
+    "phone": "(281) 615-0805",
+    "member_level": "gold",
+    "address": {
+      "street": "3836 kennedy st",
+      "city": "newark",
+      "state": "mi",
+      "zip_code": "8620",
+      "full_address": "3836 kennedy st  newark, mi 8620"
+    },
+    "order": {
+      "order_id": "9865688813",
+      "purchase_date": "2020-03-23",
+      "payment_method": "credit card",
+      "packaging": "no",
+      "num_products": "1",
+      "products": [
+        {
+          "brand": "guess",
+          "product_type": "jeans",
+          "amount": 74
+        }
+      ]
+    }
+  },
+  "turns": [
+    {
+      "n": 1,
+      "speaker": "agent",
+      "text": "Thank you for shopping with AcmeBrands! How may I assist you?"
+    },
+    {
+      "n": 2,
+      "speaker": "customer",
+      "text": "i changd my mind about wanting a pair of jeans and i want a refund."
+    },
+    {
+      "n": 3,
+      "speaker": "agent",
+      "text": "I can help you with that. May I have your full name?"
+    },
+    {
+      "n": 4,
+      "speaker": "customer",
+      "text": "Sanya Afzal"
+    },
+    {
+      "n": 5,
+      "speaker": "system_action",
+      "text": "Account has been pulled up for Sanya Afzal."
+    },
+    {
+      "n": 6,
+      "speaker": "agent",
+      "text": "Thanks! I need to validate your purchase. May I also have your username, email address, and order ID?"
+    },
+    {
+      "n": 7,
+      "speaker": "customer",
+      "text": "sa168344  sa168344@email.com  9865688813"
+    },
+    {
+      "n": 8,
+      "speaker": "system_action",
+      "text": "Purchase validation in progress ..."
+    },
+    {
+      "n": 9,
+      "speaker": "agent",
+      "text": "How would you like your refund to be processed?"
+    },
+    {
+      "n": 10,
+      "speaker": "customer",
+      "text": "returned to my credit card"
+    },
+    {
+      "n": 11,
+      "speaker": "agent",
+      "text": "Certainly! May I have your account ID to process that?"
+    },
+    {
+      "n": 12,
+      "speaker": "customer",
+      "text": "Y99YGSXEYL"
+    },
+    {
+      "n": 13,
+      "speaker": "system_action",
+      "text": "Details of Y99YGSXEYL have been entered."
+    },
+    {
+      "n": 14,
+      "speaker": "agent",
+      "text": "How much did you pay for the jeans?"
+    },
+    {
+      "n": 15,
+      "speaker": "customer",
+      "text": "$74"
+    },
+    {
+      "n": 16,
+      "speaker": "system_action",
+      "text": "A refund has been made for the amount of $74."
+    },
+    {
+      "n": 17,
+      "speaker": "agent",
+      "text": "Your refund has been processed. You should see $74 credited back to your card shortly. Is there anything else I can help you with?"
+    },
+    {
+      "n": 18,
+      "speaker": "customer",
+      "text": "you were helpful.  thanks"
+    },
+    {
+      "n": 19,
+      "speaker": "agent",
+      "text": "You're welcome! Have a wonderful day."
+    }
+  ],
+  "source_fields": {
+    "flow": "product_defect",
+    "subflow": "refund_initiate",
+    "actions_taken": [
+      "pull-up-account",
+      "validate-purchase",
+      "enter-details",
+      "offer-refund"
+    ]
+  },
+  "modifications": []
+}

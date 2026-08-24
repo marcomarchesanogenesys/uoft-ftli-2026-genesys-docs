@@ -1,88 +1,65 @@
 {
   "_comment": [
-    "Curation manifest. Selection only.",
+    "Curation manifest \u2014 declarative sampling, not a hand-listed set.",
     "",
-    "Each entry names a conversation to include. Conversations are chosen for being",
-    "complete and readable -- NOT for illustrating anything. No commentary, ratings,",
-    "tags or teaching points: students draw their own conclusions from the raw data.",
+    "'seed' makes stratified selection reproducible. Agent-volume selection is fully",
+    "deterministic and ignores it.",
     "",
-    "'modifications' records any deliberate alteration to the source interaction.",
-    "Leave it empty for verbatim conversations.",
+    "STRATEGIES",
+    "  agent_volume \u2014 rank agents by how many conversations they have, then take up to",
+    "    'max_per_agent' from each, busiest first, until 'count' is reached. The cap is",
+    "    what keeps the set usable in both directions: without it the top one or two",
+    "    agents swallow the whole budget (one twcs agent has 1,954 threads), leaving too",
+    "    few agents to compare. At 10 you get ~10 agents with ~10 conversations each.",
+    "    so the last agent usually pushes the total slightly past 'count'.",
+    "    Use this when the work is per-agent: scorecards, comparison, improvement.",
     "",
-    "To grow the set, append entries and re-run build_curated.py."
+    "  stratified \u2014 spread picks evenly across a neutral stratum (task / flow / domain).",
+    "    Guarantees coverage of every interaction type. Use this when the work is about",
+    "    the interactions rather than the people handling them.",
+    "",
+    "ABCD carries no agent identity of any kind, so it cannot use agent_volume and is",
+    "stratified by flow instead. The build says so when it runs.",
+    "",
+    "Filters are structural only \u2014 enough turns to be a conversation, both speakers",
+    "present, a complete transcript. Nothing about content or quality.",
+    "",
+    "'pinned' forces specific conversations into the set regardless of sampling."
   ],
-  "conversations": [
+  "seed": 20260824,
+  "samples": [
     {
-      "id": "CC-0001",
-      "source": {
-        "dataset": "HarperValleyBank",
-        "original_id": "01cefd6f5c044a6f"
-      },
-      "modifications": []
+      "dataset": "HarperValleyBank",
+      "count": 100,
+      "strategy": "agent_volume",
+      "min_turns": 8,
+      "max_turns": 400,
+      "max_per_agent": 10
     },
     {
-      "id": "CC-0002",
-      "source": {
-        "dataset": "HarperValleyBank",
-        "original_id": "3fbefc0e3be346fe"
-      },
-      "modifications": []
+      "dataset": "ABCD",
+      "count": 100,
+      "strategy": "stratified",
+      "stratify_by": "flow",
+      "min_turns": 8,
+      "max_turns": 60
     },
     {
-      "id": "CC-0003",
-      "source": {
-        "dataset": "ABCD",
-        "original_id": "9796"
-      },
-      "modifications": []
+      "dataset": "AppTek",
+      "count": 100,
+      "strategy": "agent_volume",
+      "min_turns": 20,
+      "max_turns": 400,
+      "max_per_agent": 10
     },
     {
-      "id": "CC-0004",
-      "source": {
-        "dataset": "ABCD",
-        "original_id": "1418"
-      },
-      "modifications": []
-    },
-    {
-      "id": "CC-0005",
-      "source": {
-        "dataset": "twcs",
-        "original_id": "VirginTrains-HP-booking-reference"
-      },
-      "modifications": []
-    },
-    {
-      "id": "CC-0006",
-      "source": {
-        "dataset": "AppTek",
-        "original_id": "en_ZA_Banking_1582349"
-      },
-      "modifications": []
-    },
-    {
-      "id": "CC-0007",
-      "source": {
-        "dataset": "AppTek",
-        "original_id": "en_US_Aave_Finance_1593113"
-      },
-      "modifications": []
-    },
-    {
-      "id": "CC-0008",
-      "source": {
-        "dataset": "AppTek",
-        "original_id": "en_SG_Health_1588795"
-      },
-      "modifications": []
-    },
-    {
-      "id": "CC-0009",
-      "source": {
-        "dataset": "AppTek",
-        "original_id": "en_GB_WLS_Entertainment_1581855"
-      },
-      "modifications": []
+      "dataset": "twcs",
+      "count": 100,
+      "strategy": "agent_volume",
+      "min_turns": 3,
+      "max_turns": 12,
+      "max_per_agent": 10
     }
-  ]
+  ],
+  "pinned": []
 }

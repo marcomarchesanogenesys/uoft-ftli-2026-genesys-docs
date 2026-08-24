@@ -1,0 +1,191 @@
+{
+  "id": "ABCD-0055",
+  "source": {
+    "dataset": "ABCD",
+    "original_id": "3598",
+    "licence": "MIT",
+    "url": "https://github.com/asappresearch/abcd",
+    "citation": "Chen et al. (2021), NAACL, arXiv:2104.00783"
+  },
+  "channel": "chat",
+  "customer_id": "alessandrop575",
+  "customer_record": {
+    "customer_name": "alessandro phoenix",
+    "username": "alessandrop575",
+    "email": "alessandrop575@email.com",
+    "phone": "(272) 908-5495",
+    "member_level": "bronze",
+    "address": {
+      "street": "5750 2nd ave",
+      "city": "brighton",
+      "state": "tx",
+      "zip_code": "52388",
+      "full_address": "5750 2nd ave  brighton, tx 52388"
+    },
+    "order": {
+      "order_id": "8222773854",
+      "purchase_date": "2020-01-10",
+      "num_products": "2",
+      "products": [
+        {
+          "brand": "michael_kors",
+          "product_type": "jacket",
+          "amount": 69
+        },
+        {
+          "brand": "guess",
+          "product_type": "jacket",
+          "amount": 64
+        }
+      ]
+    }
+  },
+  "turns": [
+    {
+      "n": 1,
+      "speaker": "customer",
+      "text": "I would like to check my order status because the cost go shipping is way to high"
+    },
+    {
+      "n": 2,
+      "speaker": "agent",
+      "text": "Welcome"
+    },
+    {
+      "n": 3,
+      "speaker": "customer",
+      "text": "Im a bronze member haven't had to pay for shipping this high before"
+    },
+    {
+      "n": 4,
+      "speaker": "agent",
+      "text": "I am very sorry to hear about this"
+    },
+    {
+      "n": 5,
+      "speaker": "agent",
+      "text": "Give me your full name or account id"
+    },
+    {
+      "n": 6,
+      "speaker": "customer",
+      "text": "Am I able to cancel this order and get a refund?"
+    },
+    {
+      "n": 7,
+      "speaker": "customer",
+      "text": "Alessandro Phoenix"
+    },
+    {
+      "n": 8,
+      "speaker": "system_action",
+      "text": "Account has been pulled up for Alessandro Phoenix."
+    },
+    {
+      "n": 9,
+      "speaker": "agent",
+      "text": "Now I need to validate your purchase"
+    },
+    {
+      "n": 10,
+      "speaker": "customer",
+      "text": "Okay"
+    },
+    {
+      "n": 11,
+      "speaker": "agent",
+      "text": "Give me your username, email and order id"
+    },
+    {
+      "n": 12,
+      "speaker": "customer",
+      "text": "Username: alessandrop575 | Email Address: alessandrop575@email.com"
+    },
+    {
+      "n": 13,
+      "speaker": "customer",
+      "text": "Order ID: 8222773854"
+    },
+    {
+      "n": 14,
+      "speaker": "system_action",
+      "text": "Purchase validation in progress ..."
+    },
+    {
+      "n": 15,
+      "speaker": "agent",
+      "text": "Purchase validated"
+    },
+    {
+      "n": 16,
+      "speaker": "agent",
+      "text": "What is the shipping status?"
+    },
+    {
+      "n": 17,
+      "speaker": "customer",
+      "text": "In Transit"
+    },
+    {
+      "n": 18,
+      "speaker": "system_action",
+      "text": "Shipping status of In Transit has been noted."
+    },
+    {
+      "n": 19,
+      "speaker": "agent",
+      "text": "I will cancel the order since it is still in transit"
+    },
+    {
+      "n": 20,
+      "speaker": "customer",
+      "text": "Okay"
+    },
+    {
+      "n": 21,
+      "speaker": "system_action",
+      "text": "Order has been updated with Cancel order."
+    },
+    {
+      "n": 22,
+      "speaker": "agent",
+      "text": "It has been canceled .is okay now. All"
+    },
+    {
+      "n": 23,
+      "speaker": "agent",
+      "text": "All is okay now"
+    },
+    {
+      "n": 24,
+      "speaker": "customer",
+      "text": "Yes, thank you for all your help today"
+    },
+    {
+      "n": 25,
+      "speaker": "agent",
+      "text": "You're welcome"
+    },
+    {
+      "n": 26,
+      "speaker": "agent",
+      "text": "Have a nice day"
+    },
+    {
+      "n": 27,
+      "speaker": "customer",
+      "text": "You too"
+    }
+  ],
+  "source_fields": {
+    "flow": "shipping_issue",
+    "subflow": "cost",
+    "actions_taken": [
+      "pull-up-account",
+      "validate-purchase",
+      "shipping-status",
+      "update-order"
+    ]
+  },
+  "modifications": []
+}

@@ -1,0 +1,95 @@
+{
+  "id": "ABCD-0074",
+  "source": {
+    "dataset": "ABCD",
+    "original_id": "4203",
+    "licence": "MIT",
+    "url": "https://github.com/asappresearch/abcd",
+    "citation": "Chen et al. (2021), NAACL, arXiv:2104.00783"
+  },
+  "channel": "chat",
+  "customer_record": {
+    "customer_name": "joseph banter",
+    "phone": "(804) 426-7560",
+    "member_level": "guest",
+    "address": {
+      "street": "9701 woodshore st",
+      "city": "monterey",
+      "state": "ca",
+      "zip_code": "91428",
+      "full_address": "9701 woodshore st  monterey, ca 91428"
+    }
+  },
+  "turns": [
+    {
+      "n": 1,
+      "speaker": "agent",
+      "text": "hello, how can i help you"
+    },
+    {
+      "n": 2,
+      "speaker": "customer",
+      "text": "Hi I was wondering what the return policy is."
+    },
+    {
+      "n": 3,
+      "speaker": "agent",
+      "text": "I will be happy to help you with that."
+    },
+    {
+      "n": 4,
+      "speaker": "system_action",
+      "text": "Searching the FAQ pages ..."
+    },
+    {
+      "n": 5,
+      "speaker": "system_action",
+      "text": "System Action: search policy"
+    },
+    {
+      "n": 6,
+      "speaker": "agent",
+      "text": "The policy is depended on what level you are. If gold You get unlimited returns. If silver you are allowed to return only within the last 6 months and with bronze you are limited within the last 90 days but with guest you can only return within the l"
+    },
+    {
+      "n": 7,
+      "speaker": "system_action",
+      "text": "FAQ answer related to policy (question1) was selected."
+    },
+    {
+      "n": 8,
+      "speaker": "agent",
+      "text": "last 30 days"
+    },
+    {
+      "n": 9,
+      "speaker": "customer",
+      "text": "Thank you!"
+    },
+    {
+      "n": 10,
+      "speaker": "agent",
+      "text": "Do you need anymore help?"
+    },
+    {
+      "n": 11,
+      "speaker": "customer",
+      "text": "No that's all."
+    },
+    {
+      "n": 12,
+      "speaker": "agent",
+      "text": "Have a great day."
+    }
+  ],
+  "source_fields": {
+    "flow": "storewide_query",
+    "subflow": "policy_1",
+    "actions_taken": [
+      "search-faq",
+      "search-policy",
+      "select-faq"
+    ]
+  },
+  "modifications": []
+}

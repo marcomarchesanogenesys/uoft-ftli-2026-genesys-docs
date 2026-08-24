@@ -1,0 +1,148 @@
+{
+  "id": "ABCD-0023",
+  "source": {
+    "dataset": "ABCD",
+    "original_id": "2801",
+    "licence": "MIT",
+    "url": "https://github.com/asappresearch/abcd",
+    "citation": "Chen et al. (2021), NAACL, arXiv:2104.00783"
+  },
+  "channel": "chat",
+  "customer_record": {
+    "customer_name": "rodriguez domingo",
+    "phone": "(237) 209-5138",
+    "member_level": "bronze",
+    "address": {
+      "street": "1646 lexington ave",
+      "city": "raleigh",
+      "state": "ny",
+      "zip_code": "98239",
+      "full_address": "1646 lexington ave  raleigh, ny 98239"
+    },
+    "order": {
+      "order_id": "0929208660",
+      "num_products": "1",
+      "products": [
+        {
+          "brand": "michael_kors",
+          "product_type": "boots",
+          "amount": 69
+        }
+      ]
+    }
+  },
+  "turns": [
+    {
+      "n": 1,
+      "speaker": "agent",
+      "text": "Hello, how may I help you?"
+    },
+    {
+      "n": 2,
+      "speaker": "customer",
+      "text": "yes i would like to check the status of my order because i recieved an email that saying i order 2 items when i only order 1"
+    },
+    {
+      "n": 3,
+      "speaker": "agent",
+      "text": "I can help with that. Can I get your account ID, full name, and order ID please."
+    },
+    {
+      "n": 4,
+      "speaker": "customer",
+      "text": "My name is Rodriguez Domingo, my Account ID: M6EBXQJR5M and my order id is  0929208660"
+    },
+    {
+      "n": 5,
+      "speaker": "system_action",
+      "text": "Identity verification in progess ..."
+    },
+    {
+      "n": 6,
+      "speaker": "system_action",
+      "text": "Account has been pulled up for M6EBXQJR5M ."
+    },
+    {
+      "n": 7,
+      "speaker": "system_action",
+      "text": "Querying the system for an answer ..."
+    },
+    {
+      "n": 8,
+      "speaker": "agent",
+      "text": "It looks like that was an error on our part, can I get the shipping status on the item?"
+    },
+    {
+      "n": 9,
+      "speaker": "customer",
+      "text": "Its saying out for delivery"
+    },
+    {
+      "n": 10,
+      "speaker": "system_action",
+      "text": "Shipping status of out for delivery has been noted."
+    },
+    {
+      "n": 11,
+      "speaker": "agent",
+      "text": "Hello, once the item arrives you will need to call back to the customer service line to start the return process. However, I will go ahead and issue the refund for the item now. How much did it cost?"
+    },
+    {
+      "n": 12,
+      "speaker": "customer",
+      "text": "okay, great it was $69"
+    },
+    {
+      "n": 13,
+      "speaker": "customer",
+      "text": "I would like that to be put back on the card i already have on file with you guys"
+    },
+    {
+      "n": 14,
+      "speaker": "system_action",
+      "text": "A refund has been made for the amount of $69."
+    },
+    {
+      "n": 15,
+      "speaker": "agent",
+      "text": "Of course, I went ahead and refunded $69 to the card on file for you."
+    },
+    {
+      "n": 16,
+      "speaker": "customer",
+      "text": "thank you"
+    },
+    {
+      "n": 17,
+      "speaker": "customer",
+      "text": "hello"
+    },
+    {
+      "n": 18,
+      "speaker": "agent",
+      "text": "Is there anything else I can help you with?"
+    },
+    {
+      "n": 19,
+      "speaker": "customer",
+      "text": "that will be all"
+    },
+    {
+      "n": 20,
+      "speaker": "agent",
+      "text": "Have a great day!"
+    }
+  ],
+  "source_fields": {
+    "flow": "order_issue",
+    "subflow": "status_quantity",
+    "actions_taken": [
+      "verify-identity",
+      "pull-up-account",
+      "ask-the-oracle",
+      "shipping-status",
+      "offer-refund"
+    ]
+  },
+  "modifications": []
+}

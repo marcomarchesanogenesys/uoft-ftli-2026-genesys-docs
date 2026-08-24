@@ -1,0 +1,205 @@
+{
+  "id": "HVB-0056",
+  "source": {
+    "dataset": "HarperValleyBank",
+    "original_id": "196f8bde51ef4618",
+    "licence": "CC BY 4.0",
+    "url": "https://github.com/cricketclub/gridspace-stanford-harper-valley",
+    "citation": "Wu, Nafziger, Scodary & Maas (2020), arXiv:2010.13929"
+  },
+  "channel": "voice",
+  "agent_id": "hvb-speaker-44",
+  "customer_id": "hvb-speaker-11",
+  "customer_record": {
+    "customer_name": "Michael Davis"
+  },
+  "turns": [
+    {
+      "n": 1,
+      "speaker": "customer",
+      "text": "[noise]",
+      "asr_text": "[noise]",
+      "start_ms": 30,
+      "duration_ms": 420,
+      "dialog_acts": [
+        "greeting"
+      ]
+    },
+    {
+      "n": 2,
+      "speaker": "agent",
+      "text": "hello this is harper valley national bank my name is john",
+      "asr_text": "hello this is harper valley national bank my name is john",
+      "start_ms": 1458,
+      "duration_ms": 3330,
+      "dialog_acts": [
+        "greeting"
+      ]
+    },
+    {
+      "n": 3,
+      "speaker": "agent",
+      "text": "how can i help you today",
+      "asr_text": "how can i help you today",
+      "start_ms": 5308,
+      "duration_ms": 990,
+      "dialog_acts": [
+        "greeting"
+      ]
+    },
+    {
+      "n": 4,
+      "speaker": "agent",
+      "text": "[noise]",
+      "asr_text": "[noise]",
+      "start_ms": 6778,
+      "duration_ms": 60,
+      "dialog_acts": [
+        "greeting",
+        "filler_disfluency"
+      ]
+    },
+    {
+      "n": 5,
+      "speaker": "customer",
+      "text": "hi my name is michael davis uh and i'm calling what are your local branch hours",
+      "asr_text": "hi my name is michael davis and i'm calling what are your local branch hours",
+      "start_ms": 9410,
+      "duration_ms": 5760,
+      "dialog_acts": [
+        "greeting",
+        "problem_description"
+      ]
+    },
+    {
+      "n": 6,
+      "speaker": "agent",
+      "text": "the branch hours are nine thirty am to five o'clock p m",
+      "asr_text": "the garage hours are nine thirty am to five o'clock p m",
+      "start_ms": 14978,
+      "duration_ms": 4260,
+      "dialog_acts": [
+        "response"
+      ]
+    },
+    {
+      "n": 7,
+      "speaker": "customer",
+      "text": "alright great thank you",
+      "asr_text": "alright great thank you",
+      "start_ms": 23120,
+      "duration_ms": 1110,
+      "dialog_acts": [
+        "thanks"
+      ]
+    },
+    {
+      "n": 8,
+      "speaker": "agent",
+      "text": "is there anything else i can help you with",
+      "asr_text": "is there anything else i can help you with",
+      "start_ms": 24708,
+      "duration_ms": 1770,
+      "dialog_acts": [
+        "open_question"
+      ]
+    },
+    {
+      "n": 9,
+      "speaker": "customer",
+      "text": "uh no there isn't but thank you so much",
+      "asr_text": "uh no there isn't but thank you so much",
+      "start_ms": 30220,
+      "duration_ms": 2940,
+      "dialog_acts": [
+        "other",
+        "thanks"
+      ]
+    },
+    {
+      "n": 10,
+      "speaker": "agent",
+      "text": "thank you have a great rest of your day",
+      "asr_text": "thank you have a great rest of your day",
+      "start_ms": 32508,
+      "duration_ms": 1650,
+      "dialog_acts": [
+        "closing"
+      ]
+    },
+    {
+      "n": 11,
+      "speaker": "customer",
+      "text": "you too",
+      "asr_text": "you too",
+      "start_ms": 36690,
+      "duration_ms": 600,
+      "dialog_acts": [
+        "closing"
+      ]
+    },
+    {
+      "n": 12,
+      "speaker": "customer",
+      "text": "goodbye",
+      "asr_text": "goodbye",
+      "start_ms": 37820,
+      "duration_ms": 450,
+      "dialog_acts": [
+        "closing"
+      ]
+    },
+    {
+      "n": 13,
+      "speaker": "agent",
+      "text": "[noise]",
+      "asr_text": "mm hmm",
+      "start_ms": 36478,
+      "duration_ms": 660,
+      "dialog_acts": [
+        "closing"
+      ]
+    },
+    {
+      "n": 14,
+      "speaker": "customer",
+      "text": "[noise]",
+      "asr_text": "<unk>",
+      "start_ms": 39860,
+      "duration_ms": 240,
+      "dialog_acts": [
+        "closing"
+      ]
+    },
+    {
+      "n": 15,
+      "speaker": "agent",
+      "text": "[noise]",
+      "asr_text": "[noise]",
+      "start_ms": 38278,
+      "duration_ms": 240,
+      "dialog_acts": [
+        "closing"
+      ]
+    }
+  ],
+  "source_fields": {
+    "task_assigned": [
+      "get branch hours"
+    ],
+    "task_logged_by_agent": [
+      "get branch hours"
+    ],
+    "labels": {
+      "lhvb_script": 5.0,
+      "caller_mos": 5.0,
+      "agent_mos": 5.0
+    },
+    "session": "Little Harper Valley 1",
+    "customer_survey_response": {
+      "ease_of_connection": "10",
+      "partner_rating": "10"
+    }
+  },
+  "modifications": []
+}

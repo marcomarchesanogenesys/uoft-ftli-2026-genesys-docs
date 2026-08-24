@@ -1,0 +1,167 @@
+{
+  "id": "ABCD-0027",
+  "source": {
+    "dataset": "ABCD",
+    "original_id": "8620",
+    "licence": "MIT",
+    "url": "https://github.com/asappresearch/abcd",
+    "citation": "Chen et al. (2021), NAACL, arXiv:2104.00783"
+  },
+  "channel": "chat",
+  "customer_record": {
+    "customer_name": "joseph banter",
+    "phone": "(674) 186-6300",
+    "member_level": "silver",
+    "address": {
+      "street": "4315 lexington ave",
+      "city": "san lima",
+      "state": "mi",
+      "zip_code": "57711",
+      "full_address": "4315 lexington ave  san lima, mi 57711"
+    },
+    "order": {
+      "order_id": "6136684420",
+      "num_products": "1",
+      "products": [
+        {
+          "brand": "tommy_hilfiger",
+          "product_type": "jacket",
+          "amount": 59
+        }
+      ]
+    }
+  },
+  "turns": [
+    {
+      "n": 1,
+      "speaker": "agent",
+      "text": "Hi! How can I help you today?"
+    },
+    {
+      "n": 2,
+      "speaker": "customer",
+      "text": "Hello, can you help me with upgrading my shipping"
+    },
+    {
+      "n": 3,
+      "speaker": "customer",
+      "text": "I want to get my order as soon as possible"
+    },
+    {
+      "n": 4,
+      "speaker": "agent",
+      "text": "Sure, I can help you with that. Can I please have your full name, account ID, and order ID?"
+    },
+    {
+      "n": 5,
+      "speaker": "customer",
+      "text": "My name is Joseph Banter"
+    },
+    {
+      "n": 6,
+      "speaker": "customer",
+      "text": "Account ID: Z9YPVZDFVY"
+    },
+    {
+      "n": 7,
+      "speaker": "customer",
+      "text": "Order ID: 6136684420"
+    },
+    {
+      "n": 8,
+      "speaker": "system_action",
+      "text": "Account has been pulled up for Joseph Banter."
+    },
+    {
+      "n": 9,
+      "speaker": "system_action",
+      "text": "Identity verification in progress ..."
+    },
+    {
+      "n": 10,
+      "speaker": "agent",
+      "text": "And what is the shipping status on your order?"
+    },
+    {
+      "n": 11,
+      "speaker": "customer",
+      "text": "Oh! it looks like it's received."
+    },
+    {
+      "n": 12,
+      "speaker": "customer",
+      "text": "Maybe my wife got it at home."
+    },
+    {
+      "n": 13,
+      "speaker": "agent",
+      "text": "Okay, that means it hasn't shipped yet. It will say delivered once you receive it on your end :)"
+    },
+    {
+      "n": 14,
+      "speaker": "customer",
+      "text": "ahhhhh"
+    },
+    {
+      "n": 15,
+      "speaker": "agent",
+      "text": "What is your membership level?"
+    },
+    {
+      "n": 16,
+      "speaker": "customer",
+      "text": "Silver"
+    },
+    {
+      "n": 17,
+      "speaker": "system_action",
+      "text": "Membership level of Silver has been noted."
+    },
+    {
+      "n": 18,
+      "speaker": "agent",
+      "text": "Okay, it will be $20 to upgrade the shipping. Would you like me to charge the card on file?"
+    },
+    {
+      "n": 19,
+      "speaker": "customer",
+      "text": "yes please"
+    },
+    {
+      "n": 20,
+      "speaker": "system_action",
+      "text": "Order has been updated with tomorrow."
+    },
+    {
+      "n": 21,
+      "speaker": "agent",
+      "text": "Okay, your order will be shipped out within the next 24 hours! Is there anything else I can help you with?"
+    },
+    {
+      "n": 22,
+      "speaker": "customer",
+      "text": "that's it thank you!!!"
+    },
+    {
+      "n": 23,
+      "speaker": "customer",
+      "text": "I really appreciate it"
+    },
+    {
+      "n": 24,
+      "speaker": "agent",
+      "text": "You're very welcome! Have a great day."
+    }
+  ],
+  "source_fields": {
+    "flow": "order_issue",
+    "subflow": "manage_upgrade",
+    "actions_taken": [
+      "pull-up-account",
+      "verify-identity",
+      "membership",
+      "update-order"
+    ]
+  },
+  "modifications": []
+}

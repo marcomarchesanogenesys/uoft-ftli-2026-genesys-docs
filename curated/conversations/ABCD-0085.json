@@ -1,0 +1,154 @@
+{
+  "id": "ABCD-0085",
+  "source": {
+    "dataset": "ABCD",
+    "original_id": "5512",
+    "licence": "MIT",
+    "url": "https://github.com/asappresearch/abcd",
+    "citation": "Chen et al. (2021), NAACL, arXiv:2104.00783"
+  },
+  "channel": "chat",
+  "customer_record": {
+    "customer_name": "joyce wu",
+    "phone": "(927) 596-0244",
+    "member_level": "silver",
+    "address": {
+      "street": "4943 lincoln ave",
+      "city": "baltimore",
+      "state": "wa",
+      "zip_code": "92486",
+      "full_address": "4943 lincoln ave  baltimore, wa 92486"
+    },
+    "order": {
+      "order_id": "6537620649"
+    }
+  },
+  "turns": [
+    {
+      "n": 1,
+      "speaker": "agent",
+      "text": "Hello, how can I help you?"
+    },
+    {
+      "n": 2,
+      "speaker": "customer",
+      "text": "Hi"
+    },
+    {
+      "n": 3,
+      "speaker": "customer",
+      "text": "I'm curious about the status of my subscription"
+    },
+    {
+      "n": 4,
+      "speaker": "customer",
+      "text": "I should have a premium subscription and I'd like to keep it"
+    },
+    {
+      "n": 5,
+      "speaker": "agent",
+      "text": "May I have your full name and account ID?"
+    },
+    {
+      "n": 6,
+      "speaker": "customer",
+      "text": "Joyce Wu"
+    },
+    {
+      "n": 7,
+      "speaker": "customer",
+      "text": "Account ID: 5GI2BKXPH7"
+    },
+    {
+      "n": 8,
+      "speaker": "system_action",
+      "text": "Account has been pulled up for Joyce Wu."
+    },
+    {
+      "n": 9,
+      "speaker": "agent",
+      "text": "And do you have an order ID?"
+    },
+    {
+      "n": 10,
+      "speaker": "customer",
+      "text": "6537620649"
+    },
+    {
+      "n": 11,
+      "speaker": "system_action",
+      "text": "Identity verification in progress ..."
+    },
+    {
+      "n": 12,
+      "speaker": "system_action",
+      "text": "Querying the system for subscription status ..."
+    },
+    {
+      "n": 13,
+      "speaker": "agent",
+      "text": "My system shows your account has expired."
+    },
+    {
+      "n": 14,
+      "speaker": "agent",
+      "text": "You can renew with a $14 dollar payment within 3 days."
+    },
+    {
+      "n": 15,
+      "speaker": "customer",
+      "text": "Oh, I see"
+    },
+    {
+      "n": 16,
+      "speaker": "system_action",
+      "text": "A link will be sent."
+    },
+    {
+      "n": 17,
+      "speaker": "customer",
+      "text": "I will pay it tomorrow then"
+    },
+    {
+      "n": 18,
+      "speaker": "agent",
+      "text": "I have sent you a link which will provide you with account information."
+    },
+    {
+      "n": 19,
+      "speaker": "agent",
+      "text": "Do you have a username?"
+    },
+    {
+      "n": 20,
+      "speaker": "customer",
+      "text": "yes"
+    },
+    {
+      "n": 21,
+      "speaker": "agent",
+      "text": "Ok, great. Is ther anything else I can assist you with?"
+    },
+    {
+      "n": 22,
+      "speaker": "customer",
+      "text": "No, that's it for now"
+    },
+    {
+      "n": 23,
+      "speaker": "agent",
+      "text": "Have a great day."
+    }
+  ],
+  "source_fields": {
+    "flow": "subscription_inquiry",
+    "subflow": "status_due_date",
+    "actions_taken": [
+      "pull-up-account",
+      "verify-identity",
+      "subscription-status",
+      "send-link"
+    ]
+  },
+  "modifications": []
+}

@@ -1,0 +1,104 @@
+{
+  "id": "ABCD-0066",
+  "source": {
+    "dataset": "ABCD",
+    "original_id": "3984",
+    "licence": "MIT",
+    "url": "https://github.com/asappresearch/abcd",
+    "citation": "Chen et al. (2021), NAACL, arXiv:2104.00783"
+  },
+  "channel": "chat",
+  "customer_record": {
+    "customer_name": "norman bouchard",
+    "phone": "(899) 070-0476",
+    "member_level": "silver",
+    "address": {
+      "street": "5343 lexington ave",
+      "city": "newark",
+      "state": "ny",
+      "zip_code": "10973",
+      "full_address": "5343 lexington ave  newark, ny 10973"
+    },
+    "order": {
+      "num_products": "1",
+      "products": [
+        {
+          "brand": "calvin_klein",
+          "product_type": "boots",
+          "amount": 84
+        }
+      ]
+    }
+  },
+  "turns": [
+    {
+      "n": 1,
+      "speaker": "agent",
+      "text": "Hello, how may I help you?"
+    },
+    {
+      "n": 2,
+      "speaker": "customer",
+      "text": "Hi, I'm looking for some info on some boots I'm thinking about getting"
+    },
+    {
+      "n": 3,
+      "speaker": "system_action",
+      "text": "Searching the FAQ pages ..."
+    },
+    {
+      "n": 4,
+      "speaker": "agent",
+      "text": "Sure, what specifically would you like to know?"
+    },
+    {
+      "n": 5,
+      "speaker": "system_action",
+      "text": "System Action: search boots"
+    },
+    {
+      "n": 6,
+      "speaker": "customer",
+      "text": "It's the Calvin Klein boots. Are the laces black or dark brown?"
+    },
+    {
+      "n": 7,
+      "speaker": "agent",
+      "text": "Laces for the Calvin Klein boots are black only."
+    },
+    {
+      "n": 8,
+      "speaker": "agent",
+      "text": "They're very stylish."
+    },
+    {
+      "n": 9,
+      "speaker": "customer",
+      "text": "Ok, great! That's all I needed. I do like them a lot!"
+    },
+    {
+      "n": 10,
+      "speaker": "agent",
+      "text": "They might wear a little bit over time, so there might be a dark brown touch later."
+    },
+    {
+      "n": 11,
+      "speaker": "customer",
+      "text": "Ok, that's fine."
+    },
+    {
+      "n": 12,
+      "speaker": "agent",
+      "text": "Great, have a nice day."
+    }
+  ],
+  "source_fields": {
+    "flow": "single_item_query",
+    "subflow": "boots_other_2",
+    "actions_taken": [
+      "search-faq",
+      "search-boots"
+    ]
+  },
+  "modifications": []
+}

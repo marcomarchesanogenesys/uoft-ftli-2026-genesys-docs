@@ -1,0 +1,169 @@
+{
+  "id": "ABCD-0036",
+  "source": {
+    "dataset": "ABCD",
+    "original_id": "7921",
+    "licence": "MIT",
+    "url": "https://github.com/asappresearch/abcd",
+    "citation": "Chen et al. (2021), NAACL, arXiv:2104.00783"
+  },
+  "channel": "chat",
+  "customer_id": "normanbouchard195",
+  "customer_record": {
+    "customer_name": "norman bouchard",
+    "username": "normanbouchard195",
+    "email": "normanbouchard195@email.com",
+    "phone": "(507) 745-0132",
+    "member_level": "guest",
+    "address": {
+      "street": "7801 woodshore st",
+      "city": "la fayette",
+      "state": "ny",
+      "zip_code": "55714",
+      "full_address": "7801 woodshore st  la fayette, ny 55714"
+    },
+    "order": {
+      "order_id": "7800407924",
+      "purchase_date": "2020-01-28",
+      "payment_method": "credit card",
+      "packaging": "no",
+      "num_products": "1",
+      "products": [
+        {
+          "brand": "guess",
+          "product_type": "shirt",
+          "amount": 79
+        }
+      ]
+    }
+  },
+  "turns": [
+    {
+      "n": 1,
+      "speaker": "agent",
+      "text": "Good afternoon, how can I help you today?"
+    },
+    {
+      "n": 2,
+      "speaker": "customer",
+      "text": "Hi!"
+    },
+    {
+      "n": 3,
+      "speaker": "customer",
+      "text": "I need to return an item"
+    },
+    {
+      "n": 4,
+      "speaker": "agent",
+      "text": "I can look in to that for you. May I ask what was wrong with the item?"
+    },
+    {
+      "n": 5,
+      "speaker": "customer",
+      "text": "I'm simply not liking it much. I looks so different form the picture they put on the description"
+    },
+    {
+      "n": 6,
+      "speaker": "agent",
+      "text": "No problem, just to verify, you have already received the item and you want to return it?"
+    },
+    {
+      "n": 7,
+      "speaker": "customer",
+      "text": "Actually, the item is not shipped yet"
+    },
+    {
+      "n": 8,
+      "speaker": "agent",
+      "text": "Ok, then this will be a refund. can I get your full name or account ID?"
+    },
+    {
+      "n": 9,
+      "speaker": "customer",
+      "text": "Norman Bouchard, and the id is EPFRFWVQE7"
+    },
+    {
+      "n": 10,
+      "speaker": "system_action",
+      "text": "Account has been pulled up for Norman Bouchard."
+    },
+    {
+      "n": 11,
+      "speaker": "agent",
+      "text": "Thanks Norman. I pulled up your account and need to validate the purchase. Do you have your username, email address and Order ID?"
+    },
+    {
+      "n": 12,
+      "speaker": "customer",
+      "text": "Sure, user name is normanbouchard195, email is normanbouchard195@email.com, and the order id is 7800407924"
+    },
+    {
+      "n": 13,
+      "speaker": "system_action",
+      "text": "Purchase validation in progress ..."
+    },
+    {
+      "n": 14,
+      "speaker": "agent",
+      "text": "I was able to validate your purchase. How would you like your refund?"
+    },
+    {
+      "n": 15,
+      "speaker": "customer",
+      "text": "I'd like it to be refunded to me credit card. thanks"
+    },
+    {
+      "n": 16,
+      "speaker": "system_action",
+      "text": "A reason of Credit Card has been recorded."
+    },
+    {
+      "n": 17,
+      "speaker": "system_action",
+      "text": "Details of EPFRFWVQE7 have been entered."
+    },
+    {
+      "n": 18,
+      "speaker": "agent",
+      "text": "What was the cost of the item Norman?"
+    },
+    {
+      "n": 19,
+      "speaker": "customer",
+      "text": "It was 79 bucks"
+    },
+    {
+      "n": 20,
+      "speaker": "system_action",
+      "text": "A refund has been made for the amount of $79."
+    },
+    {
+      "n": 21,
+      "speaker": "agent",
+      "text": "Alright, I have credited your card for $79. Is there anything else I can help you with today?"
+    },
+    {
+      "n": 22,
+      "speaker": "customer",
+      "text": "I really appreciate it. Thank you and have a great day."
+    },
+    {
+      "n": 23,
+      "speaker": "agent",
+      "text": "Thanks, you too!"
+    }
+  ],
+  "source_fields": {
+    "flow": "product_defect",
+    "subflow": "refund_initiate",
+    "actions_taken": [
+      "pull-up-account",
+      "validate-purchase",
+      "record-reason",
+      "enter-details",
+      "offer-refund"
+    ]
+  },
+  "modifications": []
+}

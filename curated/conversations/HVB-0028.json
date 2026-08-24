@@ -1,0 +1,171 @@
+{
+  "id": "HVB-0028",
+  "source": {
+    "dataset": "HarperValleyBank",
+    "original_id": "160200fdf7aa42c2",
+    "licence": "CC BY 4.0",
+    "url": "https://github.com/cricketclub/gridspace-stanford-harper-valley",
+    "citation": "Wu, Nafziger, Scodary & Maas (2020), arXiv:2010.13929"
+  },
+  "channel": "voice",
+  "agent_id": "hvb-speaker-24",
+  "customer_id": "hvb-speaker-29",
+  "customer_record": {
+    "customer_name": "Mary Johnson"
+  },
+  "turns": [
+    {
+      "n": 1,
+      "speaker": "agent",
+      "text": "[noise]",
+      "asr_text": "[noise]",
+      "start_ms": 180,
+      "duration_ms": 450,
+      "dialog_acts": [
+        "greeting"
+      ]
+    },
+    {
+      "n": 2,
+      "speaker": "agent",
+      "text": "hello this is harper valley national bank my name is robert how can i help you today",
+      "asr_text": "hello this is harper valley national bank my name is robert how can i help you today",
+      "start_ms": 8160,
+      "duration_ms": 4770,
+      "dialog_acts": [
+        "greeting"
+      ]
+    },
+    {
+      "n": 3,
+      "speaker": "customer",
+      "text": "hi my name is mary johnson",
+      "asr_text": "hi my name is mary johnson",
+      "start_ms": 16680,
+      "duration_ms": 2310,
+      "dialog_acts": [
+        "greeting"
+      ]
+    },
+    {
+      "n": 4,
+      "speaker": "customer",
+      "text": "what are your local branch hours",
+      "asr_text": "what are your local branch hours",
+      "start_ms": 20020,
+      "duration_ms": 1950,
+      "dialog_acts": [
+        "data_question",
+        "greeting"
+      ]
+    },
+    {
+      "n": 5,
+      "speaker": "agent",
+      "text": "the branch hours are nine thirty am until five o'clock p m",
+      "asr_text": "the branch hours are nine thirty am until five o'clock p m",
+      "start_ms": 25870,
+      "duration_ms": 5550,
+      "dialog_acts": [
+        "data_question",
+        "data_response"
+      ]
+    },
+    {
+      "n": 6,
+      "speaker": "customer",
+      "text": "alright thanks",
+      "asr_text": "alright thanks",
+      "start_ms": 37780,
+      "duration_ms": 810,
+      "dialog_acts": [
+        "thanks"
+      ]
+    },
+    {
+      "n": 7,
+      "speaker": "agent",
+      "text": "[noise]",
+      "asr_text": "[noise]",
+      "start_ms": 36850,
+      "duration_ms": 120,
+      "dialog_acts": [
+        "filler_disfluency"
+      ]
+    },
+    {
+      "n": 8,
+      "speaker": "agent",
+      "text": "is there anything else i can help you with",
+      "asr_text": "is there anything else i can help you with",
+      "start_ms": 37880,
+      "duration_ms": 1560,
+      "dialog_acts": [
+        "open_question"
+      ]
+    },
+    {
+      "n": 9,
+      "speaker": "customer",
+      "text": "no that was all",
+      "asr_text": "no that was on",
+      "start_ms": 42720,
+      "duration_ms": 750,
+      "dialog_acts": [
+        "other"
+      ]
+    },
+    {
+      "n": 10,
+      "speaker": "agent",
+      "text": "thank you for calling have a great day",
+      "asr_text": "thank you for calling have a great day",
+      "start_ms": 42980,
+      "duration_ms": 1950,
+      "dialog_acts": [
+        "closing"
+      ]
+    },
+    {
+      "n": 11,
+      "speaker": "customer",
+      "text": "you too",
+      "asr_text": "you too",
+      "start_ms": 48020,
+      "duration_ms": 450,
+      "dialog_acts": [
+        "closing"
+      ]
+    },
+    {
+      "n": 12,
+      "speaker": "agent",
+      "text": "thank you bye",
+      "asr_text": "thank you bye",
+      "start_ms": 47330,
+      "duration_ms": 1410,
+      "dialog_acts": [
+        "closing"
+      ]
+    }
+  ],
+  "source_fields": {
+    "task_assigned": [
+      "get branch hours"
+    ],
+    "task_logged_by_agent": [
+      "get branch hours"
+    ],
+    "labels": {
+      "lhvb_script": 5.0,
+      "caller_mos": 5.0,
+      "agent_mos": 5.0
+    },
+    "session": "Little Harper Valley 1",
+    "agent_survey_response": {
+      "ease_of_connection": "9",
+      "partner_rating": "10"
+    }
+  },
+  "modifications": []
+}

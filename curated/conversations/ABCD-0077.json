@@ -1,0 +1,105 @@
+{
+  "id": "ABCD-0077",
+  "source": {
+    "dataset": "ABCD",
+    "original_id": "7500",
+    "licence": "MIT",
+    "url": "https://github.com/asappresearch/abcd",
+    "citation": "Chen et al. (2021), NAACL, arXiv:2104.00783"
+  },
+  "channel": "chat",
+  "customer_record": {
+    "customer_name": "david williams",
+    "phone": "(385) 915-6976",
+    "member_level": "bronze",
+    "address": {
+      "street": "3289 primrose ave",
+      "city": "la fayette",
+      "state": "wa",
+      "zip_code": "45085",
+      "full_address": "3289 primrose ave  la fayette, wa 45085"
+    }
+  },
+  "turns": [
+    {
+      "n": 1,
+      "speaker": "agent",
+      "text": "Hello. Thanks for contacting the customer support team, how may I help you today?"
+    },
+    {
+      "n": 2,
+      "speaker": "customer",
+      "text": "Hi! I was looking at buying a few items and I was hoping you could help me with some information"
+    },
+    {
+      "n": 3,
+      "speaker": "customer",
+      "text": "I wanted to know when the annual sale begins"
+    },
+    {
+      "n": 4,
+      "speaker": "agent",
+      "text": "I'm happy to look that up for you. Can I please get your name?"
+    },
+    {
+      "n": 5,
+      "speaker": "system_action",
+      "text": "Searching the FAQ pages ..."
+    },
+    {
+      "n": 6,
+      "speaker": "customer",
+      "text": "David Williams"
+    },
+    {
+      "n": 7,
+      "speaker": "system_action",
+      "text": "System Action: search timing"
+    },
+    {
+      "n": 8,
+      "speaker": "system_action",
+      "text": "FAQ answer related to timing (question3) was selected."
+    },
+    {
+      "n": 9,
+      "speaker": "agent",
+      "text": "David, the annual sale occurs during the last week of January. This year it ran from 1/23 - 1/31."
+    },
+    {
+      "n": 10,
+      "speaker": "customer",
+      "text": "Oh I see"
+    },
+    {
+      "n": 11,
+      "speaker": "agent",
+      "text": "You can always stay up to date on our sales by subscribing to our newsletter."
+    },
+    {
+      "n": 12,
+      "speaker": "agent",
+      "text": "Is there anything else that I can help with today?"
+    },
+    {
+      "n": 13,
+      "speaker": "customer",
+      "text": "Thats all. Thanks for the information"
+    },
+    {
+      "n": 14,
+      "speaker": "agent",
+      "text": "We appreciate you shopping with Acme, have a tremendous day!"
+    }
+  ],
+  "source_fields": {
+    "flow": "storewide_query",
+    "subflow": "timing_3",
+    "actions_taken": [
+      "search-faq",
+      "search-timing",
+      "select-faq"
+    ]
+  },
+  "modifications": []
+}

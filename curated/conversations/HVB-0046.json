@@ -1,0 +1,170 @@
+{
+  "id": "HVB-0046",
+  "source": {
+    "dataset": "HarperValleyBank",
+    "original_id": "1578578b6c134bb6",
+    "licence": "CC BY 4.0",
+    "url": "https://github.com/cricketclub/gridspace-stanford-harper-valley",
+    "citation": "Wu, Nafziger, Scodary & Maas (2020), arXiv:2010.13929"
+  },
+  "channel": "voice",
+  "agent_id": "hvb-speaker-40",
+  "customer_id": "hvb-speaker-16",
+  "customer_record": {
+    "customer_name": "John Davis",
+    "captured_by_agent": {
+      "replacement card type": "debit"
+    }
+  },
+  "turns": [
+    {
+      "n": 1,
+      "speaker": "agent",
+      "text": "hello this is harper valley national bank my name is john",
+      "asr_text": "hello this is harper valley national bank my name is john",
+      "start_ms": 2014,
+      "duration_ms": 2850,
+      "dialog_acts": [
+        "greeting"
+      ]
+    },
+    {
+      "n": 2,
+      "speaker": "agent",
+      "text": "how can i help you today",
+      "asr_text": "how can i help you today",
+      "start_ms": 5504,
+      "duration_ms": 990,
+      "dialog_acts": [
+        "greeting"
+      ]
+    },
+    {
+      "n": 3,
+      "speaker": "customer",
+      "text": "hi my name is john davis i lost my debit card can you send me a new one",
+      "asr_text": "hi my name is john davis i lost my debit card can you send me a new one",
+      "start_ms": 10090,
+      "duration_ms": 4500,
+      "dialog_acts": [
+        "other",
+        "problem_description"
+      ]
+    },
+    {
+      "n": 4,
+      "speaker": "agent",
+      "text": "which card would you like to replace",
+      "asr_text": "which card or would you like to replace",
+      "start_ms": 17574,
+      "duration_ms": 1560,
+      "dialog_acts": [
+        "other"
+      ]
+    },
+    {
+      "n": 5,
+      "speaker": "customer",
+      "text": "my debit card",
+      "asr_text": "my debit card",
+      "start_ms": 22420,
+      "duration_ms": 930,
+      "dialog_acts": [
+        "other",
+        "problem_description"
+      ]
+    },
+    {
+      "n": 6,
+      "speaker": "agent",
+      "text": "i've ordered your replacement debit card",
+      "asr_text": "i've ordered your replacement debit card",
+      "start_ms": 30904,
+      "duration_ms": 2220,
+      "dialog_acts": [
+        "response",
+        "other"
+      ]
+    },
+    {
+      "n": 7,
+      "speaker": "agent",
+      "text": "is there anything else i can help you with",
+      "asr_text": "is there anything else i can help you with",
+      "start_ms": 34004,
+      "duration_ms": 1770,
+      "dialog_acts": [
+        "open_question"
+      ]
+    },
+    {
+      "n": 8,
+      "speaker": "customer",
+      "text": "no that was it thank you very much",
+      "asr_text": "no that was it thank you very much",
+      "start_ms": 39320,
+      "duration_ms": 1740,
+      "dialog_acts": [
+        "thanks",
+        "other"
+      ]
+    },
+    {
+      "n": 9,
+      "speaker": "agent",
+      "text": "[noise]",
+      "asr_text": "[noise]",
+      "start_ms": 39374,
+      "duration_ms": 30,
+      "dialog_acts": [
+        "other",
+        "closing"
+      ]
+    },
+    {
+      "n": 10,
+      "speaker": "agent",
+      "text": "thank you for calling have a great day",
+      "asr_text": "thank you for calling have a great day",
+      "start_ms": 40004,
+      "duration_ms": 1800,
+      "dialog_acts": [
+        "thanks",
+        "closing"
+      ]
+    },
+    {
+      "n": 11,
+      "speaker": "customer",
+      "text": "you too <unk>",
+      "asr_text": "and you too bye bye",
+      "start_ms": 45020,
+      "duration_ms": 960,
+      "dialog_acts": [
+        "closing"
+      ]
+    }
+  ],
+  "source_fields": {
+    "task_assigned": [
+      "replace card"
+    ],
+    "task_logged_by_agent": [
+      "replace card"
+    ],
+    "labels": {
+      "lhvb_script": 5.0,
+      "caller_mos": 3.0,
+      "agent_mos": 4.0
+    },
+    "session": "Little Harper Valley 1",
+    "agent_survey_response": {
+      "partner_rating": "9"
+    },
+    "customer_survey_response": {
+      "ease_of_connection": "10",
+      "partner_rating": "10"
+    }
+  },
+  "modifications": []
+}

@@ -1,0 +1,153 @@
+{
+  "id": "HVB-0073",
+  "source": {
+    "dataset": "HarperValleyBank",
+    "original_id": "08b6123117f54da7",
+    "licence": "CC BY 4.0",
+    "url": "https://github.com/cricketclub/gridspace-stanford-harper-valley",
+    "citation": "Wu, Nafziger, Scodary & Maas (2020), arXiv:2010.13929"
+  },
+  "channel": "voice",
+  "agent_id": "hvb-speaker-56",
+  "customer_id": "hvb-speaker-53",
+  "customer_record": {
+    "customer_name": "Michael Smith",
+    "captured_by_agent": {
+      "home address": "291 Main Street, Forest Ranch CA 02298"
+    }
+  },
+  "turns": [
+    {
+      "n": 1,
+      "speaker": "agent",
+      "text": "hello",
+      "asr_text": "hello",
+      "start_ms": 1980,
+      "duration_ms": 570,
+      "dialog_acts": [
+        "greeting"
+      ]
+    },
+    {
+      "n": 2,
+      "speaker": "agent",
+      "text": "this is harper valley national bank my name is robert how can i help you today",
+      "asr_text": "this is harper valley national bank my name is robert how can i help you today",
+      "start_ms": 4510,
+      "duration_ms": 5070,
+      "dialog_acts": [
+        "greeting"
+      ]
+    },
+    {
+      "n": 3,
+      "speaker": "customer",
+      "text": "[noise] hi my name is michael smith i need a new checkbook",
+      "asr_text": "[noise] hi my name is michael smith i need a new checkbook",
+      "start_ms": 12690,
+      "duration_ms": 3870,
+      "dialog_acts": [
+        "greeting"
+      ]
+    },
+    {
+      "n": 4,
+      "speaker": "agent",
+      "text": "okay what is your address",
+      "asr_text": "okay what is your address",
+      "start_ms": 16100,
+      "duration_ms": 2220,
+      "dialog_acts": [
+        "data_question"
+      ]
+    },
+    {
+      "n": 5,
+      "speaker": "customer",
+      "text": "my address is two nine one main street",
+      "asr_text": "my address is two nine one main street",
+      "start_ms": 21900,
+      "duration_ms": 3780,
+      "dialog_acts": [
+        "response",
+        "data_response"
+      ]
+    },
+    {
+      "n": 6,
+      "speaker": "customer",
+      "text": "in forest ranch california",
+      "asr_text": "in forest ranch california",
+      "start_ms": 26620,
+      "duration_ms": 2970,
+      "dialog_acts": [
+        "response"
+      ]
+    },
+    {
+      "n": 7,
+      "speaker": "customer",
+      "text": "zip code is gonna be zero two two nine eight",
+      "asr_text": "zip code is going to be zero two two nine eight",
+      "start_ms": 31220,
+      "duration_ms": 4440,
+      "dialog_acts": [
+        "response"
+      ]
+    },
+    {
+      "n": 8,
+      "speaker": "agent",
+      "text": "okay i have a new check book has been sent to your home address is there anything else i can help you with",
+      "asr_text": "okay i have new check book has been sent to your home address is there anything else i can help you with",
+      "start_ms": 34980,
+      "duration_ms": 5910,
+      "dialog_acts": [
+        "other",
+        "open_question"
+      ]
+    },
+    {
+      "n": 9,
+      "speaker": "customer",
+      "text": "that'll be all thank you",
+      "asr_text": "no that'll be all thank you",
+      "start_ms": 44570,
+      "duration_ms": 1200,
+      "dialog_acts": [
+        "other",
+        "closing"
+      ]
+    },
+    {
+      "n": 10,
+      "speaker": "agent",
+      "text": "thank you for calling have a great day",
+      "asr_text": "thank you for calling have a great day",
+      "start_ms": 45620,
+      "duration_ms": 1920,
+      "dialog_acts": [
+        "closing"
+      ]
+    }
+  ],
+  "source_fields": {
+    "task_assigned": [
+      "order checks"
+    ],
+    "task_logged_by_agent": [
+      "order checks"
+    ],
+    "labels": {
+      "lhvb_script": 4.0,
+      "caller_mos": 4.0,
+      "agent_mos": 3.0
+    },
+    "session": "Little Harper Valley 2",
+    "agent_survey_response": {
+      "ease_of_connection": "10",
+      "partner_rating": "10"
+    }
+  },
+  "modifications": []
+}

@@ -1,0 +1,179 @@
+{
+  "id": "ABCD-0033",
+  "source": {
+    "dataset": "ABCD",
+    "original_id": "2456",
+    "licence": "MIT",
+    "url": "https://github.com/asappresearch/abcd",
+    "citation": "Chen et al. (2021), NAACL, arXiv:2104.00783"
+  },
+  "channel": "chat",
+  "customer_id": "cm149696",
+  "customer_record": {
+    "customer_name": "crystal minh",
+    "username": "cm149696",
+    "email": "cm149696@email.com",
+    "phone": "(500) 463-2054",
+    "member_level": "gold",
+    "address": {
+      "street": "4453 primrose ave",
+      "city": "la fayette",
+      "state": "wa",
+      "zip_code": "50821",
+      "full_address": "4453 primrose ave  la fayette, wa 50821"
+    },
+    "order": {
+      "order_id": "8226176905",
+      "purchase_date": "2019-10-02",
+      "payment_method": "paypal",
+      "packaging": "no",
+      "num_products": "1",
+      "products": [
+        {
+          "brand": "guess",
+          "product_type": "jeans",
+          "amount": 84
+        }
+      ]
+    }
+  },
+  "turns": [
+    {
+      "n": 1,
+      "speaker": "agent",
+      "text": "Hello! Thank you for choosing AcmeBrands. How may I assist you?"
+    },
+    {
+      "n": 2,
+      "speaker": "customer",
+      "text": "Hello. I ordered some jeans but they are way too tight. I look like Robert Plant from 1973."
+    },
+    {
+      "n": 3,
+      "speaker": "agent",
+      "text": "I'm so sorry to hear that! Are you interested in returning the jeans?"
+    },
+    {
+      "n": 4,
+      "speaker": "customer",
+      "text": "Yes please."
+    },
+    {
+      "n": 5,
+      "speaker": "agent",
+      "text": "May I get your Full Name or Account ID, please?"
+    },
+    {
+      "n": 6,
+      "speaker": "customer",
+      "text": "Crystal Minh, Order ID: 8226176905"
+    },
+    {
+      "n": 7,
+      "speaker": "customer",
+      "text": "I don't have my account ID, sorry"
+    },
+    {
+      "n": 8,
+      "speaker": "system_action",
+      "text": "Account has been pulled up for Crystal Minh."
+    },
+    {
+      "n": 9,
+      "speaker": "agent",
+      "text": "No worries! Would you please provide your Username and Email Address?"
+    },
+    {
+      "n": 10,
+      "speaker": "customer",
+      "text": "Username: cm149696, Email Address: cm149696@email.com"
+    },
+    {
+      "n": 11,
+      "speaker": "system_action",
+      "text": "Purchase validation in progress ..."
+    },
+    {
+      "n": 12,
+      "speaker": "agent",
+      "text": "Perfect. And your Membership Level?"
+    },
+    {
+      "n": 13,
+      "speaker": "customer",
+      "text": "Gold all the way"
+    },
+    {
+      "n": 14,
+      "speaker": "system_action",
+      "text": "Membership level of Gold has been noted."
+    },
+    {
+      "n": 15,
+      "speaker": "agent",
+      "text": "Awesome! You get unlimited returns as a Gold member. Are you able to return the jeans to us?"
+    },
+    {
+      "n": 16,
+      "speaker": "customer",
+      "text": "Yes I can. I don't have the packaging though."
+    },
+    {
+      "n": 17,
+      "speaker": "agent",
+      "text": "No problem. Would you please provide your full street address so I may get you a shipping label?"
+    },
+    {
+      "n": 18,
+      "speaker": "customer",
+      "text": "4453 Primrose Ave  La Fayette, WA 50821"
+    },
+    {
+      "n": 19,
+      "speaker": "system_action",
+      "text": "Details of 4453 Primrose Ave La Fayette, WA 50821 have been entered."
+    },
+    {
+      "n": 20,
+      "speaker": "agent",
+      "text": "And how would you like to process your return? We can do By Mail, In Store, or through a Drop Off Center."
+    },
+    {
+      "n": 21,
+      "speaker": "customer",
+      "text": "I can do it in store. There is a cute clerk that works there. :-)"
+    },
+    {
+      "n": 22,
+      "speaker": "system_action",
+      "text": "Order has been updated with In Store."
+    },
+    {
+      "n": 23,
+      "speaker": "agent",
+      "text": "Nice! :) You're all set to return your jeans to the store that's most convenient to you. Is there anything more I may help with?"
+    },
+    {
+      "n": 24,
+      "speaker": "customer",
+      "text": "That's it, thanks for your help!"
+    },
+    {
+      "n": 25,
+      "speaker": "agent",
+      "text": "Thank you so much for contacting AcmeBrands customer service. Have a great day!"
+    }
+  ],
+  "source_fields": {
+    "flow": "product_defect",
+    "subflow": "return_size",
+    "actions_taken": [
+      "pull-up-account",
+      "validate-purchase",
+      "membership",
+      "enter-details",
+      "update-order"
+    ]
+  },
+  "modifications": []
+}

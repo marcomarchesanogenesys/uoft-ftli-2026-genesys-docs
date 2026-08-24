@@ -1,0 +1,135 @@
+{
+  "id": "HVB-0078",
+  "source": {
+    "dataset": "HarperValleyBank",
+    "original_id": "1318c617f2ed4b1d",
+    "licence": "CC BY 4.0",
+    "url": "https://github.com/cricketclub/gridspace-stanford-harper-valley",
+    "citation": "Wu, Nafziger, Scodary & Maas (2020), arXiv:2010.13929"
+  },
+  "channel": "voice",
+  "agent_id": "hvb-speaker-56",
+  "customer_id": "hvb-speaker-6",
+  "customer_record": {
+    "customer_name": "Mary Jones",
+    "captured_by_agent": {
+      "phone": "1798852605"
+    }
+  },
+  "turns": [
+    {
+      "n": 1,
+      "speaker": "agent",
+      "text": "hello this is harper valley national bank my name is james how can i help you today",
+      "asr_text": "hello this is her for valley national bank my name is james how can i help you today",
+      "start_ms": 3000,
+      "duration_ms": 4380,
+      "dialog_acts": [
+        "greeting",
+        "open_question"
+      ]
+    },
+    {
+      "n": 2,
+      "speaker": "customer",
+      "text": "hi my name is mary jones i would like to reset my password",
+      "asr_text": "hi my name is mary jones i would like to reset my password",
+      "start_ms": 10680,
+      "duration_ms": 4110,
+      "dialog_acts": [
+        "greeting",
+        "problem_description"
+      ]
+    },
+    {
+      "n": 3,
+      "speaker": "agent",
+      "text": "what is your phone number",
+      "asr_text": "what is your phone number",
+      "start_ms": 14780,
+      "duration_ms": 1200,
+      "dialog_acts": [
+        "data_question"
+      ]
+    },
+    {
+      "n": 4,
+      "speaker": "customer",
+      "text": "my phone number is one seven nine eight eight five",
+      "asr_text": "uh my phone number is one seven nine eight eight five",
+      "start_ms": 18890,
+      "duration_ms": 5100,
+      "dialog_acts": [
+        "response",
+        "data_response"
+      ]
+    },
+    {
+      "n": 5,
+      "speaker": "customer",
+      "text": "two six zero five",
+      "asr_text": "two six zero five",
+      "start_ms": 24490,
+      "duration_ms": 2010,
+      "dialog_acts": [
+        "data_communication",
+        "data_response"
+      ]
+    },
+    {
+      "n": 6,
+      "speaker": "agent",
+      "text": "your password link has been <unk> reset link has been sent to your phone is there anything else i can help you with",
+      "asr_text": "your password link has been reset link has been sent to your phone is there anything else i can help you with",
+      "start_ms": 32580,
+      "duration_ms": 6090,
+      "dialog_acts": [
+        "procedure_explanation",
+        "open_question"
+      ]
+    },
+    {
+      "n": 7,
+      "speaker": "customer",
+      "text": "no thank you",
+      "asr_text": "no thank you",
+      "start_ms": 41720,
+      "duration_ms": 630,
+      "dialog_acts": [
+        "thanks",
+        "problem_description"
+      ]
+    },
+    {
+      "n": 8,
+      "speaker": "agent",
+      "text": "thank you for calling have a great day",
+      "asr_text": "thank you for calling have a great day",
+      "start_ms": 42210,
+      "duration_ms": 1770,
+      "dialog_acts": [
+        "thanks",
+        "closing"
+      ]
+    }
+  ],
+  "source_fields": {
+    "task_assigned": [
+      "reset password"
+    ],
+    "task_logged_by_agent": [
+      "reset password"
+    ],
+    "labels": {
+      "lhvb_script": 5.0,
+      "caller_mos": 5.0,
+      "agent_mos": 5.0
+    },
+    "session": "Little Harper Valley 3",
+    "agent_survey_response": {
+      "ease_of_connection": "10",
+      "partner_rating": "10"
+    }
+  },
+  "modifications": []
+}

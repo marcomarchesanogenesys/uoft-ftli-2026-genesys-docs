@@ -1,0 +1,165 @@
+{
+  "id": "ABCD-0044",
+  "source": {
+    "dataset": "ABCD",
+    "original_id": "2189",
+    "licence": "MIT",
+    "url": "https://github.com/asappresearch/abcd",
+    "citation": "Chen et al. (2021), NAACL, arXiv:2104.00783"
+  },
+  "channel": "chat",
+  "customer_id": "crystalminh111",
+  "customer_record": {
+    "customer_name": "crystal minh",
+    "username": "crystalminh111",
+    "email": "crystalminh111@email.com",
+    "phone": "(412) 350-4690",
+    "member_level": "gold",
+    "address": {
+      "street": "6754 2nd ave",
+      "city": "monterey",
+      "state": "ca",
+      "zip_code": "87974",
+      "full_address": "6754 2nd ave  monterey, ca 87974"
+    },
+    "order": {
+      "order_id": "7569223589",
+      "num_products": "1",
+      "products": [
+        {
+          "brand": "tommy_hilfiger",
+          "product_type": "jeans",
+          "amount": 79
+        }
+      ]
+    }
+  },
+  "turns": [
+    {
+      "n": 1,
+      "speaker": "agent",
+      "text": "Hello, how may I help you?"
+    },
+    {
+      "n": 2,
+      "speaker": "customer",
+      "text": "HI, i have a promo code im trying to use but it is declared invalid and i got it 5 days ago"
+    },
+    {
+      "n": 3,
+      "speaker": "agent",
+      "text": "Let me help you with that."
+    },
+    {
+      "n": 4,
+      "speaker": "agent",
+      "text": "So your code was shown invalid even though it has been 7 days?"
+    },
+    {
+      "n": 5,
+      "speaker": "agent",
+      "text": "hasn't"
+    },
+    {
+      "n": 6,
+      "speaker": "customer",
+      "text": "Correct it hasn't been 7 days"
+    },
+    {
+      "n": 7,
+      "speaker": "agent",
+      "text": "Could I have your full name or account id?"
+    },
+    {
+      "n": 8,
+      "speaker": "customer",
+      "text": "Crystal Minh"
+    },
+    {
+      "n": 9,
+      "speaker": "system_action",
+      "text": "Account has been pulled up for Crystal Minh."
+    },
+    {
+      "n": 10,
+      "speaker": "agent",
+      "text": "Let me check the system to see what the problem is."
+    },
+    {
+      "n": 11,
+      "speaker": "system_action",
+      "text": "Querying the system for an answer ..."
+    },
+    {
+      "n": 12,
+      "speaker": "customer",
+      "text": "okay"
+    },
+    {
+      "n": 13,
+      "speaker": "agent",
+      "text": "Could I have your membership level?"
+    },
+    {
+      "n": 14,
+      "speaker": "customer",
+      "text": "Member Level: Gold"
+    },
+    {
+      "n": 15,
+      "speaker": "system_action",
+      "text": "Membership level of Gold has been noted."
+    },
+    {
+      "n": 16,
+      "speaker": "agent",
+      "text": "Let me generate a new promo code for you."
+    },
+    {
+      "n": 17,
+      "speaker": "customer",
+      "text": "okay, thank you"
+    },
+    {
+      "n": 18,
+      "speaker": "system_action",
+      "text": "A promo code has been created."
+    },
+    {
+      "n": 19,
+      "speaker": "agent",
+      "text": "Your new promo code is PX1CE"
+    },
+    {
+      "n": 20,
+      "speaker": "customer",
+      "text": "Okay, thank you"
+    },
+    {
+      "n": 21,
+      "speaker": "agent",
+      "text": "Can I help you with anything else?"
+    },
+    {
+      "n": 22,
+      "speaker": "customer",
+      "text": "No that was everything, thank you again for all your help"
+    },
+    {
+      "n": 23,
+      "speaker": "agent",
+      "text": "Have a good day."
+    }
+  ],
+  "source_fields": {
+    "flow": "purchase_dispute",
+    "subflow": "promo_code_invalid",
+    "actions_taken": [
+      "pull-up-account",
+      "ask-the-oracle",
+      "membership",
+      "promo-code"
+    ]
+  },
+  "modifications": []
+}

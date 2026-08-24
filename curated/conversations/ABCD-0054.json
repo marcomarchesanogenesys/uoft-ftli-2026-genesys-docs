@@ -1,0 +1,161 @@
+{
+  "id": "ABCD-0054",
+  "source": {
+    "dataset": "ABCD",
+    "original_id": "3169",
+    "licence": "MIT",
+    "url": "https://github.com/asappresearch/abcd",
+    "citation": "Chen et al. (2021), NAACL, arXiv:2104.00783"
+  },
+  "channel": "chat",
+  "customer_id": "jb676597",
+  "customer_record": {
+    "customer_name": "joseph banter",
+    "username": "jb676597",
+    "email": "jb676597@email.com",
+    "phone": "(923) 536-0124",
+    "member_level": "guest",
+    "address": {
+      "street": "2745 woodshore st",
+      "city": "brighton",
+      "state": "ny",
+      "zip_code": "26031",
+      "full_address": "2745 woodshore st  brighton, ny 26031"
+    },
+    "order": {
+      "order_id": "4114517459",
+      "purchase_date": "2019-12-02",
+      "num_products": "1",
+      "products": [
+        {
+          "brand": "michael_kors",
+          "product_type": "jacket",
+          "amount": 84
+        }
+      ]
+    }
+  },
+  "turns": [
+    {
+      "n": 1,
+      "speaker": "agent",
+      "text": "Hi.  How can I help you?"
+    },
+    {
+      "n": 2,
+      "speaker": "customer",
+      "text": "HI! i wanted to check the order status as the shipping cost is too high"
+    },
+    {
+      "n": 3,
+      "speaker": "agent",
+      "text": "Ok"
+    },
+    {
+      "n": 4,
+      "speaker": "customer",
+      "text": "I was wondering if the vendor made an error as I am a member and shouldn't have been charged this high fee"
+    },
+    {
+      "n": 5,
+      "speaker": "agent",
+      "text": "Can you tell me your name, your username, your email address, and your order ID from this order?"
+    },
+    {
+      "n": 6,
+      "speaker": "customer",
+      "text": "Joseph Banter"
+    },
+    {
+      "n": 7,
+      "speaker": "customer",
+      "text": "Username: jb676597"
+    },
+    {
+      "n": 8,
+      "speaker": "customer",
+      "text": "jb676597@email.com"
+    },
+    {
+      "n": 9,
+      "speaker": "customer",
+      "text": "Order ID: 4114517459"
+    },
+    {
+      "n": 10,
+      "speaker": "system_action",
+      "text": "Account has been pulled up for Joseph Banter."
+    },
+    {
+      "n": 11,
+      "speaker": "system_action",
+      "text": "Purchase validation in progress ..."
+    },
+    {
+      "n": 12,
+      "speaker": "agent",
+      "text": "What is the shipping status for this order?"
+    },
+    {
+      "n": 13,
+      "speaker": "customer",
+      "text": "In transit"
+    },
+    {
+      "n": 14,
+      "speaker": "system_action",
+      "text": "Shipping status of In Transit has been noted."
+    },
+    {
+      "n": 15,
+      "speaker": "system_action",
+      "text": "A refund has been made for the amount of $8."
+    },
+    {
+      "n": 16,
+      "speaker": "agent",
+      "text": "Ok the shipping fee has been refunded"
+    },
+    {
+      "n": 17,
+      "speaker": "customer",
+      "text": "Thank you"
+    },
+    {
+      "n": 18,
+      "speaker": "agent",
+      "text": "Of course"
+    },
+    {
+      "n": 19,
+      "speaker": "agent",
+      "text": "Is there anything else I can do for you today?"
+    },
+    {
+      "n": 20,
+      "speaker": "customer",
+      "text": "Thanks for your help"
+    },
+    {
+      "n": 21,
+      "speaker": "customer",
+      "text": "Thats all. Thank you"
+    },
+    {
+      "n": 22,
+      "speaker": "agent",
+      "text": "Ok, I'll end this chat now"
+    }
+  ],
+  "source_fields": {
+    "flow": "shipping_issue",
+    "subflow": "cost",
+    "actions_taken": [
+      "pull-up-account",
+      "validate-purchase",
+      "shipping-status",
+      "offer-refund"
+    ]
+  },
+  "modifications": []
+}

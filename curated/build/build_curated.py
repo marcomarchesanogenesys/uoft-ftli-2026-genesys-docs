@@ -1,18 +1,20 @@
 #!/usr/bin/env python3
 """Build the curated conversation set from the source datasets.
 
-Reads build/manifest.json (a selection list) and writes:
+Reads build/manifest.json (a declarative sampler) and writes, per dataset:
 
-    curated/conversations/<ID>.json    one file per conversation (canonical)
-    curated/CONVERSATIONS.md           human-readable rendering of all of them
+    curated/conversations/<ID>.json        redistributable sources (committed)
+    curated/conversations-local/<ID>.json  share-alike sources (gitignored)
+    curated/CONVERSATIONS.md               index across everything built
+    curated/conversations-<dataset>.md     readable rendering, one file per dataset
 
-Output is RAW DATA ONLY. Turns and fields come straight from the source corpora.
-There is no commentary, scoring, tagging or interpretation anywhere in the output
--- deliberately, so that readers form their own view of each interaction.
+Output is RAW DATA ONLY, in the shape documented by curated/SCHEMA.md. There is no
+commentary, scoring, tagging or interpretation anywhere in it — deliberately, so
+readers form their own view of each interaction.
 
-Where the source ships two related fields (e.g. the task assigned to an agent and
-the task the agent actually logged) both are reproduced side by side and left
-uncompared. Derived judgements are the reader's to make.
+Where a source ships two related fields (e.g. the task assigned to an agent and the
+task the agent actually recorded) both are reproduced side by side and left
+uncompared.
 
 Requires the datasets locally (they are gitignored; see ATTRIBUTION.md).
 Run from the repo root:
@@ -22,10 +24,13 @@ Run from the repo root:
 
 from __future__ import annotations
 
+import ast
 import csv
 import json
+import random
 import re
 import sys
+from collections import defaultdict
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -35,10 +40,11 @@ TWCS = ROOT / "03-twitter-twcs" / "twcs.csv"
 APPTEK = ROOT / "04-apptek" / "diarization"
 OUT_JSON = ROOT / "curated" / "conversations"
 OUT_LOCAL = ROOT / "curated" / "conversations-local"
-OUT_MD = ROOT / "curated" / "CONVERSATIONS.md"
+OUT_DIR = ROOT / "curated"
 
 SOURCES = {
     "HarperValleyBank": {
+        "prefix": "HVB",
         "licence": "CC BY 4.0",
         "url": "https://github.com/cricketclub/gridspace-stanford-harper-valley",
         "citation": "Wu, Nafziger, Scodary & Maas (2020), arXiv:2010.13929",
@@ -48,6 +54,7 @@ SOURCES = {
         "redistributable": True,
     },
     "ABCD": {
+        "prefix": "ABCD",
         "licence": "MIT",
         "url": "https://github.com/asappresearch/abcd",
         "citation": "Chen et al. (2021), NAACL, arXiv:2104.00783",
@@ -57,26 +64,25 @@ SOURCES = {
         "redistributable": True,
     },
     "AppTek": {
+        "prefix": "APPTEK",
         "licence": "CC BY-SA 4.0",
         "url": "https://huggingface.co/datasets/apptek-com/apptek_callcenter_dialogues",
         "citation": "AppTek Call-Centre Dialogues, arXiv:2604.27543",
         "copyright": "AppTek",
-        # NOT committed by default. BY-SA permits redistribution but requires
-        # derivatives stay BY-SA, which conflicts with this repo's CC BY 4.0.
-        # Unlike twcs there is no NonCommercial term and the interactions are
-        # role-played (no real customer data), so a BY-SA carve-out for these
-        # files would be straightforward if we decide to publish them.
+        # BY-SA requires derivatives stay BY-SA, which conflicts with this repo's
+        # CC BY 4.0. No NonCommercial term and the interactions are role-played, so a
+        # BY-SA carve-out would be straightforward if we decide to publish these.
         "redistributable": False,
     },
     "twcs": {
+        "prefix": "TWCS",
         "licence": "CC BY-NC-SA 4.0",
         "url": "https://www.kaggle.com/datasets/thoughtvector/customer-support-on-twitter",
         "citation": "Customer Support on Twitter, S. Axelbrooke",
         "copyright": "S. Axelbrooke; underlying posts remain their authors'",
-        # NOT committed. CC BY-NC-SA would permit redistribution only under
-        # BY-NC-SA (conflicting with this repo's CC BY 4.0), the platform terms on
-        # republishing post text are unresolved, and the excerpts contain personal
-        # details of identifiable people. Regenerated locally instead.
+        # Share-alike conflicts with CC BY 4.0, platform terms on republishing post
+        # text are unresolved, and excerpts contain personal details of identifiable
+        # people. Regenerated locally instead.
         "redistributable": False,
     },
 }
@@ -84,10 +90,48 @@ SOURCES = {
 csv.field_size_limit(10**9)
 
 
-# ---------------------------------------------------------------- extractors
+def prune(d: dict) -> dict:
+    """Drop keys whose value is absent.
+
+    SCHEMA.md contract: a missing key means the dataset does not record this. An
+    empty value would wrongly imply the field exists and happened to be blank.
+    """
+    return {k: v for k, v in d.items() if v not in (None, "", {}, [])}
 
 
-def load_harper_valley(sid: str) -> dict:
+# ============================================================ HarperValleyBank
+
+
+def hvb_index() -> list[dict]:
+    """One entry per usable conversation: id, stratum, and the loaded records."""
+    out = []
+    for mp in sorted((HVB / "metadata").glob("*.json")):
+        sid = mp.stem
+        tp = HVB / "transcript" / f"{sid}.json"
+        if not tp.exists():
+            continue
+        meta = json.loads(mp.read_text())
+        tasks = [t.get("task_type") for t in (meta.get("tasks") or []) if t.get("task_type")]
+        if not tasks:
+            continue
+        segs = [s for s in json.loads(tp.read_text()) if (s.get("human_transcript") or "").strip()]
+        if {s["speaker_role"] for s in segs} != {"agent", "caller"}:
+            continue
+        aid = (meta.get("agent") or {}).get("speaker_id")
+        out.append(
+            {
+                "original_id": sid,
+                "stratum": tasks[0],
+                "n_turns": len(segs),
+                # speaker_id, NOT agent_name: 52 of 58 speakers appear under multiple
+                # display names in this corpus, so the name is not an identity.
+                "agent": f"hvb-speaker-{aid}" if aid is not None else None,
+            }
+        )
+    return out
+
+
+def hvb_load(sid: str) -> dict:
     meta = json.loads((HVB / "metadata" / f"{sid}.json").read_text())
     segs = json.loads((HVB / "transcript" / f"{sid}.json").read_text())
     agent = meta.get("agent") or {}
@@ -99,260 +143,463 @@ def load_harper_valley(sid: str) -> dict:
         if not text:
             continue
         turns.append(
-            {
-                "n": s["index"],
-                "speaker": "agent" if s["speaker_role"] == "agent" else "customer",
-                "text": text,
-                "asr_text": (s.get("transcript") or "").strip() or None,
-                "start_ms": s.get("start_ms"),
-                "duration_ms": s.get("duration_ms"),
-                "dialog_acts": [a.replace("gridspace_", "") for a in (s.get("dialog_acts") or [])],
-            }
+            prune(
+                {
+                    "n": s["index"],
+                    "speaker": "agent" if s["speaker_role"] == "agent" else "customer",
+                    "text": text,
+                    "asr_text": (s.get("transcript") or "").strip(),
+                    "start_ms": s.get("start_ms"),
+                    "duration_ms": s.get("duration_ms"),
+                    "dialog_acts": [
+                        a.replace("gridspace_", "") for a in (s.get("dialog_acts") or [])
+                    ],
+                }
+            )
         )
+
+    # customer_record: a WRITE -- what the agent entered as a result of the call.
+    captured = {}
+    for r in agent.get("responses") or []:
+        captured.update(r.get("data") or {})
+    captured.pop("task_type", None)  # kept in source_fields as task_logged_by_agent
 
     return {
         "channel": "voice",
         "agent_id": f"hvb-speaker-{agent.get('speaker_id')}",
         "customer_id": f"hvb-speaker-{caller.get('speaker_id')}",
+        "customer_record": prune(
+            {
+                "customer_name": (caller.get("metadata") or {}).get("first and last name"),
+                "captured_by_agent": captured,
+            }
+        ),
         "turns": turns,
-        # Source fields, reproduced as-is. Not compared.
-        "source_fields": {
-            "task_assigned": [t.get("task_type") for t in (meta.get("tasks") or [])],
-            "task_logged_by_agent": [
-                (r.get("data") or {}).get("task_type")
-                for r in (agent.get("responses") or [])
-                if (r.get("data") or {}).get("task_type")
-            ],
-            "labels": meta.get("labels") or {},
-            "session": meta.get("session"),
-            "agent_survey_response": (agent.get("survey_response") or {}).get("data"),
-            "customer_survey_response": (caller.get("survey_response") or {}).get("data"),
-        },
+        "source_fields": prune(
+            {
+                "task_assigned": [t.get("task_type") for t in (meta.get("tasks") or [])],
+                "task_logged_by_agent": [
+                    (r.get("data") or {}).get("task_type")
+                    for r in (agent.get("responses") or [])
+                    if (r.get("data") or {}).get("task_type")
+                ],
+                "labels": meta.get("labels") or {},
+                "session": meta.get("session"),
+                "agent_survey_response": (agent.get("survey_response") or {}).get("data"),
+                "customer_survey_response": (caller.get("survey_response") or {}).get("data"),
+            }
+        ),
     }
 
 
-def load_abcd(convo_id: str, _cache: dict = {}) -> dict:
-    if not _cache:
+# ============================================================ ABCD
+
+_ABCD_CACHE: dict[str, dict] = {}
+
+
+def _abcd_all() -> dict[str, dict]:
+    if not _ABCD_CACHE:
         for split in json.loads(ABCD.read_text()).values():
             for c in split:
-                _cache[str(c["convo_id"])] = c
-    c = _cache[str(convo_id)]
+                _ABCD_CACHE[str(c["convo_id"])] = c
+    return _ABCD_CACHE
 
-    turns = []
-    for n, (speaker, text) in enumerate(c["original"], 1):
-        turns.append(
+
+def abcd_index() -> list[dict]:
+    out = []
+    for cid, c in _abcd_all().items():
+        sp = {s for s, _ in c["original"]}
+        if not {"agent", "customer"} <= sp:
+            continue
+        out.append(
             {
-                "n": n,
-                # ABCD interleaves the agent's system actions as a third speaker
-                "speaker": "system_action" if speaker == "action" else speaker,
-                "text": text.strip(),
+                "original_id": cid,
+                "stratum": c["scenario"]["flow"],
+                "n_turns": len(c["original"]),
+                "agent": None,  # ABCD carries no agent identity of any kind
             }
         )
+    return out
 
+
+def abcd_load(cid: str) -> dict:
+    c = _abcd_all()[str(cid)]
+    sc = c["scenario"]
+    per = sc.get("personal") or {}
+    order = sc.get("order") or {}
+
+    # The source stores products as a Python-repr string; parse to real JSON.
+    # Values unchanged -- this is the one formatting liberty in the set.
+    try:
+        prods = ast.literal_eval(order.get("products") or "[]")
+    except (ValueError, SyntaxError):
+        prods = []
+
+    turns = [
+        {
+            "n": n,
+            # ABCD interleaves the agent's system actions as a third speaker
+            "speaker": "system_action" if sp == "action" else sp,
+            "text": t.strip(),
+        }
+        for n, (sp, t) in enumerate(c["original"], 1)
+    ]
+
+    # customer_record: a READ -- the record existed before the call and the agent
+    # looks it up.
     return {
         "channel": "chat",
         "agent_id": None,  # ABCD carries no agent identity
-        "customer_id": None,
+        "customer_id": per.get("username"),
+        "customer_record": prune(
+            {
+                "customer_name": per.get("customer_name"),
+                "username": per.get("username"),
+                "email": per.get("email"),
+                "phone": per.get("phone"),
+                "member_level": per.get("member_level"),
+                "address": prune(
+                    {
+                        "street": order.get("street_address"),
+                        "city": order.get("city"),
+                        "state": order.get("state"),
+                        "zip_code": order.get("zip_code"),
+                        "full_address": order.get("full_address"),
+                    }
+                ),
+                "order": prune(
+                    {
+                        "order_id": order.get("order_id"),
+                        "purchase_date": order.get("purchase_date"),
+                        "payment_method": order.get("payment_method"),
+                        "packaging": order.get("packaging"),
+                        "num_products": order.get("num_products"),
+                        "products": [
+                            prune(
+                                {
+                                    "brand": p.get("brand"),
+                                    "product_type": p.get("product_type"),
+                                    "amount": p.get("amount"),
+                                }
+                            )
+                            for p in prods
+                        ],
+                    }
+                ),
+            }
+        ),
         "turns": turns,
-        "source_fields": {
-            "flow": c["scenario"]["flow"],
-            "subflow": c["scenario"]["subflow"],
-            "actions_taken": [
-                t["targets"][2]
-                for t in c["delexed"]
-                if (t.get("targets") or [None, None, None])[2]
-            ],
-            "scenario_order": c["scenario"].get("order"),
-            "scenario_product": c["scenario"].get("product"),
-        },
+        "source_fields": prune(
+            {
+                "flow": sc.get("flow"),
+                "subflow": sc.get("subflow"),
+                "actions_taken": [
+                    t["targets"][2]
+                    for t in c["delexed"]
+                    if (t.get("targets") or [None, None, None])[2]
+                ],
+            }
+        ),
     }
 
 
-def load_apptek(stem: str) -> dict:
-    """Load one AppTek conversation from the diarization split.
+# ============================================================ AppTek
 
-    Segments are time-stamped and may OVERLAP across speakers -- 17% of adjacent
-    cross-role pairs do. Turns are ordered by start time and `start_s`/`end_s` are
-    preserved so that overlap stays visible rather than being flattened away.
-    """
-    target = f"audio/{stem}.wav"
-    for mp in sorted(APPTEK.glob("*/metadata.jsonl")):
-        for line in mp.read_text().splitlines():
-            if not line.strip():
-                continue
-            c = json.loads(line)
-            if c["file_name"] != target:
-                continue
+_APPTEK_CACHE: dict[str, dict] = {}
 
-            segs = sorted(c["segments"], key=lambda x: (x["start"], x["end"]))
-            turns = []
-            for n, sg in enumerate(segs, 1):
-                turns.append(
-                    {
-                        "n": n,
-                        "speaker": sg["role"],  # agent | customer
-                        "text": sg["text"].strip(),
-                        "start_s": sg["start"],
-                        "end_s": sg["end"],
-                        "speaker_id": sg["speaker_id"],
-                    }
-                )
 
-            agent_ids = sorted({sg["speaker_id"] for sg in segs if sg["role"] == "agent"})
-            return {
-                "channel": "voice",
-                "agent_id": agent_ids[0] if len(agent_ids) == 1 else (agent_ids or None),
-                "customer_id": next(
-                    (sg["speaker_id"] for sg in segs if sg["role"] == "customer"), None
-                ),
-                "turns": turns,
-                "source_fields": {
-                    "duration_s": c["duration"],
-                    "domain": c["domain"],
-                    "accent": c["accent"],
-                    "agent_gender": next(
-                        (sg["gender"] for sg in segs if sg["role"] == "agent"), None
-                    ),
-                    "customer_gender": next(
-                        (sg["gender"] for sg in segs if sg["role"] == "customer"), None
-                    ),
-                },
+def _apptek_all() -> dict[str, dict]:
+    if not _APPTEK_CACHE:
+        for mp in sorted(APPTEK.glob("*/metadata.jsonl")):
+            for line in mp.read_text().splitlines():
+                if not line.strip():
+                    continue
+                c = json.loads(line)
+                stem = Path(c["file_name"]).stem
+                _APPTEK_CACHE[stem] = c
+    return _APPTEK_CACHE
+
+
+def apptek_index() -> list[dict]:
+    out = []
+    for stem, c in _apptek_all().items():
+        segs = c["segments"]
+        if {"agent", "customer"} - {s["role"] for s in segs}:
+            continue
+        agents = sorted({s["speaker_id"] for s in segs if s["role"] == "agent"})
+        out.append(
+            {
+                "original_id": stem,
+                "stratum": c["domain"],
+                "n_turns": len(segs),
+                "agent": agents[0] if len(agents) == 1 else None,
             }
-    raise SystemExit(f"AppTek: no conversation named {target!r}")
+        )
+    return out
 
+
+def apptek_load(stem: str) -> dict:
+    c = _apptek_all()[stem]
+    # Segments are time-stamped and may OVERLAP across speakers. Ordered by start
+    # time; start_s/end_s preserved so overlap stays visible rather than flattened.
+    segs = sorted(c["segments"], key=lambda x: (x["start"], x["end"]))
+    turns = [
+        {
+            "n": n,
+            "speaker": sg["role"],
+            "text": sg["text"].strip(),
+            "start_s": sg["start"],
+            "end_s": sg["end"],
+            "speaker_id": sg["speaker_id"],
+        }
+        for n, sg in enumerate(segs, 1)
+    ]
+    agents = sorted({s["speaker_id"] for s in segs if s["role"] == "agent"})
+    return {
+        "channel": "voice",
+        "agent_id": agents[0] if len(agents) == 1 else (agents or None),
+        "customer_id": next(
+            (s["speaker_id"] for s in segs if s["role"] == "customer"), None
+        ),
+        "customer_record": {},  # AppTek records no customer data
+        "turns": turns,
+        "source_fields": prune(
+            {
+                "duration_s": c.get("duration"),
+                "domain": c.get("domain"),
+                "accent": c.get("accent"),
+                "agent_gender": next(
+                    (s["gender"] for s in segs if s["role"] == "agent"), None
+                ),
+                "customer_gender": next(
+                    (s["gender"] for s in segs if s["role"] == "customer"), None
+                ),
+            }
+        ),
+    }
+
+
+# ============================================================ twcs
 
 TWCS_SIG = re.compile(r"\^\s*([A-Za-z]{2,3})\s*$")
+_TWCS_THREADS: dict[str, dict] | None = None
 
 
-def load_twcs(brand: str, initials: str, keyword: str) -> dict:
-    """Re-locate a thread by brand + agent initials + keyword.
+def _twcs_build_threads() -> dict[str, dict]:
+    """Index every signed-agent thread in ONE pass over the 493 MB file.
 
-    Tweet ids and text are not stored in the manifest: twcs is CC BY-NC-SA, and
-    pinning them in this repo edges toward redistributing the dataset. Re-deriving
-    from the local copy keeps this repository link-only for that source.
+    The naive approach (two passes per conversation) would mean 200 passes for 100
+    conversations. This loads only the rows belonging to brand replies that carry an
+    agent sign-off, plus their parents, then reconstructs threads in memory.
     """
-    cands, want = [], set()
+    global _TWCS_THREADS
+    if _TWCS_THREADS is not None:
+        return _TWCS_THREADS
+
+    rows: dict[str, dict] = {}
+    parent_of: dict[str, str] = {}
+    signed: list[str] = []
+
     with TWCS.open(newline="", encoding="utf-8", errors="replace") as f:
         for r in csv.DictReader(f):
-            if r["inbound"] != "False" or r["author_id"] != brand:
-                continue
-            m = TWCS_SIG.search((r["text"] or "").strip())
-            if not m or m.group(1) != initials or not r["in_response_to_tweet_id"]:
-                continue
-            cands.append(r)
-            want |= {r["tweet_id"], r["in_response_to_tweet_id"]}
-            if len(cands) >= 600:
-                break
+            tid = r["tweet_id"]
+            rows[tid] = {
+                "author": r["author_id"],
+                "inbound": r["inbound"] == "True",
+                "created_at": r["created_at"],
+                "text": r["text"] or "",
+                "parent": (r["in_response_to_tweet_id"] or "").strip(),
+                "child": (r["response_tweet_id"] or "").split(",")[0].strip(),
+            }
+            if r["in_response_to_tweet_id"]:
+                parent_of[tid] = r["in_response_to_tweet_id"].strip()
+            if r["inbound"] == "False" and TWCS_SIG.search((r["text"] or "").strip()):
+                signed.append(tid)
 
-    rows = {}
-    with TWCS.open(newline="", encoding="utf-8", errors="replace") as f:
-        for r in csv.DictReader(f):
-            if r["tweet_id"] in want:
-                rows[r["tweet_id"]] = r
-
-    def root(tid):
-        r, d = rows.get(tid), 0
-        while r and r.get("in_response_to_tweet_id") in rows and d < 12:
-            tid = r["in_response_to_tweet_id"]
-            r = rows[tid]
+    threads: dict[str, dict] = {}
+    for tid in signed:
+        # walk to the thread root
+        root, d = tid, 0
+        while root in parent_of and parent_of[root] in rows and d < 12:
+            root = parent_of[root]
             d += 1
-        return tid
-
-    seen = set()
-    for c in cands:
-        rt = root(c["tweet_id"])
-        if rt in seen:
+        if root in threads:
             continue
-        seen.add(rt)
-        chain, cur = [], rt
-        while cur in rows and len(chain) < 10:
-            chain.append(rows[cur])
-            nxt = (rows[cur].get("response_tweet_id") or "").split(",")[0].strip()
+        chain, cur = [], root
+        while cur in rows and len(chain) < 12:
+            chain.append((cur, rows[cur]))
+            nxt = rows[cur]["child"]
             cur = nxt if nxt in rows else None
         if len(chain) < 3:
             continue
-        if keyword.lower() not in " ".join(x["text"] for x in chain).lower():
+        brand = next((r["author"] for _, r in chain if not r["inbound"]), None)
+        sig = None
+        for _, r in chain:
+            m = TWCS_SIG.search(r["text"].strip())
+            if m and not r["inbound"]:
+                sig = m.group(1)
+                break
+        if not brand or not sig:
             continue
+        threads[root] = {"chain": chain, "brand": brand, "signoff": sig}
 
-        turns = []
-        for i, r in enumerate(chain, 1):
-            turns.append(
-                {
-                    "n": i,
-                    "speaker": "customer" if r["inbound"] == "True" else "agent",
-                    # @handle prefix and ^XX sign-off stripped for readability;
-                    # the sign-off is preserved in source_fields.agent_signoff
-                    "text": TWCS_SIG.sub("", re.sub(r"^@\S+\s*", "", r["text"])).strip(),
-                    "sent_at": r["created_at"],
-                }
-            )
+    _TWCS_THREADS = threads
+    return threads
 
-        return {
-            "channel": "social",
-            "agent_id": f"twcs-{brand}-{initials}",
-            "customer_id": None,
-            "turns": turns,
-            "source_fields": {"brand": brand, "agent_signoff": f"^{initials}"},
+
+def twcs_index() -> list[dict]:
+    return [
+        {
+            "original_id": root,
+            "stratum": t["brand"],
+            "n_turns": len(t["chain"]),
+            "agent": f"twcs-{t['brand']}-{t['signoff']}",
         }
-
-    raise SystemExit(f"twcs: no matching thread for {brand} ^{initials} / {keyword!r}")
-
-
-# ---------------------------------------------------------------- rendering
+        for root, t in _twcs_build_threads().items()
+    ]
 
 
-def render_markdown(convos: list[dict], local_only: list[dict] | None = None) -> str:
-    L: list[str] = []
-    L.append("# Curated Conversations\n")
-    L.append(
-        "Real customer-service interactions taken from the three source corpora. "
-        "Generated by `curated/build/build_curated.py` — **do not edit by hand.**\n"
-    )
-    L.append(
-        "These are presented **as raw data, without commentary or scoring.** No "
-        "conversation here is labelled good or bad, and nothing is flagged for your "
-        "attention — reading and interpreting them is the exercise. See "
-        "`curated/SCHEMA.md` for the field reference.\n"
-    )
-
-    if local_only:
-        ids = ", ".join(f"`{c['id']}`" for c in local_only)
-        L.append(
-            f"> **Not included here: {ids}.** Those come from a source whose licence "
-            "does not permit redistribution under this repository's terms. Generate "
-            "them on your own machine with `python3 curated/build/build_curated.py` "
-            "once you have downloaded the source datasets — they will appear in "
-            "`curated/conversations-local/`.\n"
+def twcs_load(root: str) -> dict:
+    t = _twcs_build_threads()[root]
+    turns = []
+    for i, (_, r) in enumerate(t["chain"], 1):
+        # @handle prefix and ^XX sign-off stripped for readability; the sign-off is
+        # preserved in source_fields.agent_signoff
+        txt = TWCS_SIG.sub("", re.sub(r"^@\S+\s*", "", r["text"])).strip()
+        turns.append(
+            {
+                "n": i,
+                "speaker": "customer" if r["inbound"] else "agent",
+                "text": txt,
+                "sent_at": r["created_at"],
+            }
         )
+    return {
+        "channel": "social",
+        "agent_id": f"twcs-{t['brand']}-{t['signoff']}",
+        "customer_id": None,  # twcs customer ids are anonymised integers
+        "customer_record": {},  # twcs records no customer data
+        "turns": turns,
+        "source_fields": {"brand": t["brand"], "agent_signoff": f"^{t['signoff']}"},
+    }
 
-    L.append("## Index\n")
-    L.append("| ID | Channel | Source | Turns |")
-    L.append("|---|---|---|---|")
+
+# ============================================================ registry
+
+DATASETS = {
+    "HarperValleyBank": (hvb_index, hvb_load, HVB),
+    "ABCD": (abcd_index, abcd_load, ABCD),
+    "AppTek": (apptek_index, apptek_load, APPTEK),
+    "twcs": (twcs_index, twcs_load, TWCS),
+}
+
+
+def agent_volume_sample(
+    pool: list[dict], count: int, cap: int
+) -> tuple[list[dict], list[tuple]]:
+    """Take the busiest agents, up to `cap` conversations each, until `count`.
+
+    Ranks agents by how many conversations they have and works down that order,
+    taking at most `cap` from each. The cap is what makes the set usable in both
+    directions at once: without it, per-agent volume is skewed enough that the top
+    one or two agents swallow the entire budget (one twcs agent alone has 1,954
+    threads), leaving too few agents to compare.
+
+    At cap 10 every dataset yields ~10 agents with ~10 conversations each -- enough
+    depth to see a trend within one agent, enough breadth to see that agents differ.
+
+    Deterministic -- no RNG. Agents tie-break on id and conversations are taken in
+    id order, so the same pool always yields the same set.
+    """
+    by_agent: dict[str, list[dict]] = defaultdict(list)
+    for item in pool:
+        if item.get("agent"):
+            by_agent[item["agent"]].append(item)
+
+    # busiest first; agent id breaks ties so the ordering is stable
+    ranked = sorted(by_agent.items(), key=lambda kv: (-len(kv[1]), kv[0]))
+
+    picked: list[dict] = []
+    used: list[tuple] = []
+    for agent, convos in ranked:
+        if len(picked) >= count:
+            break
+        convos.sort(key=lambda x: x["original_id"])
+        take = convos[:cap]
+        picked.extend(take)
+        used.append((agent, len(take), len(convos)))
+    return picked, used
+
+
+def stratified_sample(pool: list[dict], count: int, rng: random.Random) -> list[dict]:
+    """Spread `count` picks as evenly as possible across strata.
+
+    Strata are interaction TYPES (task / flow / domain / brand) -- never anything
+    about how the interaction went -- so coverage is guaranteed without selecting
+    for quality.
+    """
+    buckets: dict[str, list[dict]] = defaultdict(list)
+    for item in pool:
+        buckets[item["stratum"]].append(item)
+    for b in buckets.values():
+        b.sort(key=lambda x: x["original_id"])  # deterministic before shuffling
+        rng.shuffle(b)
+
+    picked: list[dict] = []
+    keys = sorted(buckets)
+    while len(picked) < count and any(buckets[k] for k in keys):
+        for k in keys:
+            if len(picked) >= count:
+                break
+            if buckets[k]:
+                picked.append(buckets[k].pop())
+    return picked
+
+
+# ============================================================ rendering
+
+
+def render_dataset(ds: str, convos: list[dict]) -> str:
+    meta = SOURCES[ds]
+    L = [f"# Curated Conversations — {ds}\n"]
+    L.append(
+        f"{len(convos)} interactions from **{ds}** ({meta['licence']}). Generated by "
+        "`curated/build/build_curated.py` — **do not edit by hand.**\n"
+    )
+    L.append(
+        "Raw data, without commentary or scoring. No conversation here is labelled good "
+        "or bad and nothing is flagged for your attention. See `curated/SCHEMA.md` for "
+        "the field reference.\n"
+    )
+    L.append("| ID | Turns | Agent | " + ("Customer record | " if any(c.get("customer_record") for c in convos) else "") + "Source id |")
+    L.append("|---|---|---|" + ("---|" if any(c.get("customer_record") for c in convos) else "") + "---|")
     for c in convos:
-        L.append(
-            f"| [`{c['id']}`](#{c['id'].lower()}) | {c['channel']} "
-            f"| {c['source']['dataset']} | {len(c['turns'])} |"
-        )
+        row = f"| [`{c['id']}`](#{c['id'].lower()}) | {len(c['turns'])} | `{c.get('agent_id') or '—'}` | "
+        if any(x.get("customer_record") for x in convos):
+            row += ("yes | " if c.get("customer_record") else "— | ")
+        row += f"`{c['source']['original_id']}` |"
+        L.append(row)
     L.append("")
 
     for c in convos:
-        src = c["source"]
         L.append("---\n")
         L.append(f"## {c['id']}\n")
         L.append(f"- **Channel** {c['channel']} · **Turns** {len(c['turns'])}")
         L.append(
-            f"- **Source** {src['dataset']} `{src['original_id']}` — {src['licence']} "
-            f"([source]({src['url']}))"
+            f"- **Source** {ds} `{c['source']['original_id']}` — {c['source']['licence']}"
         )
-        L.append(
-            f"- **Agent** `{c['agent_id']}`"
-            if c.get("agent_id")
-            else "- **Agent** *not identified in this dataset*"
-        )
+        if c.get("agent_id"):
+            L.append(f"- **Agent** `{c['agent_id']}`")
         mods = c.get("modifications") or []
         L.append(
             f"- **Modified** {'yes — ' + '; '.join(mods) if mods else 'no (verbatim from source)'}\n"
         )
+
+        if c.get("customer_record"):
+            L.append("### Customer record\n")
+            L.append("```json")
+            L.append(json.dumps(c["customer_record"], indent=2, ensure_ascii=False))
+            L.append("```\n")
 
         L.append("### Transcript\n")
         for t in c["turns"]:
@@ -360,121 +607,234 @@ def render_markdown(convos: list[dict], local_only: list[dict] | None = None) ->
                 L.append(f"{t['n']}. *(system: {t['text']})*")
                 continue
             who = "**Agent**" if t["speaker"] == "agent" else "Customer"
-            stamp = (
-                f"  <sub>{t['start_s']:.1f}–{t['end_s']:.1f}s</sub>"
-                if t.get("start_s") is not None
-                else ""
-            )
+            stamp = ""
+            if t.get("start_s") is not None:
+                stamp = f"  <sub>{t['start_s']:.1f}–{t['end_s']:.1f}s</sub>"
             L.append(f"{t['n']}. {who}: {t['text']}{stamp}")
         L.append("")
 
-        L.append("### Source fields\n")
-        L.append("_Reproduced from the dataset as-is._\n")
-        for k, v in c["source_fields"].items():
-            if v in (None, {}, []):
-                continue
-            L.append(f"- `{k}`: {v}")
-        L.append("")
+        if c.get("source_fields"):
+            L.append("### Source fields\n")
+            L.append("_Reproduced from the dataset as-is._\n")
+            for k, v in c["source_fields"].items():
+                L.append(f"- `{k}`: {v}")
+            L.append("")
 
-    # Required attribution notices (CC BY 4.0 s.3(a); MIT notice retention).
     L.append("---\n")
-    L.append("## NOTICE — required attributions\n")
-    seen = []
-    for c in convos:
-        key = c["source"]["dataset"]
-        if key in seen:
-            continue
-        seen.append(key)
-        meta = SOURCES[key]
-        L.append(f"**{key}** — {c['source']['licence']}")
-        L.append(f"- {meta['copyright']}")
-        L.append(f"- {meta['citation']}")
-        L.append(f"- {meta['url']}")
-        L.append(
-            "- Excerpts here are unmodified transcripts restructured into JSON; "
-            "any alteration to an interaction is recorded in its `modifications` field.\n"
-        )
+    L.append("## NOTICE — required attribution\n")
+    L.append(f"**{ds}** — {meta['licence']}")
+    L.append(f"- {meta['copyright']}")
+    L.append(f"- {meta['citation']}")
+    L.append(f"- {meta['url']}")
     L.append(
-        "Full licence text for this repository is in `LICENSE`; per-dataset "
-        "obligations are in `ATTRIBUTION.md`.\n"
+        "- Excerpts here are unmodified transcripts restructured into JSON; any "
+        "alteration to an interaction is recorded in its `modifications` field.\n"
     )
+    return "\n".join(L) + "\n"
+
+
+def render_index(
+    by_ds: dict[str, list[dict]],
+    agent_counts: dict[str, list[tuple]],
+    skipped: list[str] | None = None,
+) -> str:
+    L = ["# Curated Conversations\n"]
+    total = sum(len(v) for v in by_ds.values())
+    L.append(
+        f"{total} real customer-service interactions across {len(by_ds)} datasets, all in "
+        "the same schema — see `curated/SCHEMA.md`. Pick whichever source suits what you "
+        "want to build.\n"
+    )
+    L.append(
+        "Raw data only: no commentary, scoring or tagging anywhere in the set. "
+        "Generated by `curated/build/build_curated.py` — **do not edit by hand.**\n"
+    )
+    if skipped:
+        L.append(
+            "> Built without " + ", ".join(f"**{d}**" for d in skipped) + " — not "
+            "downloaded. Run `python3 scripts/download_data.py --all`, then rebuild.\n"
+        )
+    L.append("| Dataset | Count | Channel | Licence | Committed | Readable rendering |")
+    L.append("|---|---|---|---|---|---|")
+    for ds, convos in by_ds.items():
+        m = SOURCES[ds]
+        ch = convos[0]["channel"] if convos else "—"
+        com = "yes" if m["redistributable"] else "local only"
+        L.append(
+            f"| {ds} | {len(convos)} | {ch} | {m['licence']} | {com} | "
+            f"[`conversations-{ds.lower()}.md`](conversations-{ds.lower()}.md) |"
+        )
+    L.append("")
+    L.append(
+        "**Committed** means the source licence permits redistribution, so the JSON is "
+        "in `conversations/` in this repo. *Local only* means share-alike terms conflict "
+        "with this repository's CC BY 4.0, so those land in `conversations-local/` "
+        "(gitignored) — run the build yourself after downloading the sources.\n"
+    )
+    L.append("## What each dataset gives you\n")
+    L.append("| | Agent id | Customer record | Per-turn timing | Gold + machine transcript | Real dates |")
+    L.append("|---|---|---|---|---|---|")
+    L.append("| HarperValleyBank | yes | yes (write) | milliseconds | **yes** | 4 days only |")
+    L.append("| ABCD | no | yes (read) | no | no | no |")
+    L.append("| AppTek | yes | no | seconds | no | no |")
+    L.append("| twcs | ~35% | no | message timestamps | no | **yes, 3 months** |")
+    L.append("")
+
+    if agent_counts:
+        L.append("## Conversations per agent\n")
+        L.append(
+            "Selected by agent volume: the busiest agents, up to 10 conversations each. "
+            "Enough per agent to look at one person's conversations together, and enough "
+            "agents to compare. *Available* is how many that agent has in the full "
+            "dataset — raise `max_per_agent` in "
+            "`build/manifest.json` to pull more.\n"
+        )
+        for ds, used in agent_counts.items():
+            local = "" if SOURCES[ds]["redistributable"] else " — local only"
+            L.append(f"**{ds}**{local}\n")
+            L.append("| Agent | In this set | Available |")
+            L.append("|---|---|---|")
+            for agent, n, avail in used:
+                L.append(f"| `{agent}` | {n} | {avail} |")
+            L.append("")
+        if "ABCD" in by_ds:
+            L.append(
+                "**ABCD** records no agent identity, so it is selected by flow instead "
+                "and cannot be grouped by agent at all.\n"
+            )
+        L.append(
+            "Two limits worth knowing before building anything longitudinal: "
+            "HarperValleyBank spans **4 days** and AppTek has **no dates**, so a run of "
+            "conversations there is a sequence, not a timeline. **twcs is the only "
+            "source with real dates** (3 months).\n"
+        )
 
     return "\n".join(L) + "\n"
 
 
-# ---------------------------------------------------------------- main
+# ============================================================ main
 
 
 def main() -> int:
     manifest = json.loads((Path(__file__).parent / "manifest.json").read_text())
+    rng = random.Random(manifest.get("seed", 0))
 
-    needed = {e["source"]["dataset"] for e in manifest["conversations"]}
-    required = [
-        p
-        for p, ds in ((HVB, "HarperValleyBank"), (ABCD, "ABCD"), (TWCS, "twcs"), (APPTEK, "AppTek"))
-        if ds in needed
-    ]
-    for p in required:
-        if not p.exists():
-            print(
-                f"ERROR: missing {p}\n  Datasets are gitignored — see ATTRIBUTION.md.",
-                file=sys.stderr,
-            )
-            return 2
+    # Build whatever is present. A student without Kaggle credentials has no twcs,
+    # and that must not stop the other three from building.
+    specs, skipped = [], []
+    for spec in manifest["samples"]:
+        _, _, path = DATASETS[spec["dataset"]]
+        (specs if path.exists() else skipped).append(spec)
+
+    if skipped:
+        print("Skipping datasets that are not downloaded:")
+        for spec in skipped:
+            _, _, path = DATASETS[spec["dataset"]]
+            try:
+                where = path.relative_to(ROOT)
+            except ValueError:
+                where = path
+            print(f"  {spec['dataset']:<18} expected at {where}")
+        print("  Run: python3 scripts/download_data.py --all\n")
+
+    if not specs:
+        print(
+            "ERROR: no datasets found. Datasets are gitignored — run\n"
+            "  python3 scripts/download_data.py\n"
+            "See ATTRIBUTION.md for licences.",
+            file=sys.stderr,
+        )
+        return 2
 
     OUT_JSON.mkdir(parents=True, exist_ok=True)
     OUT_LOCAL.mkdir(parents=True, exist_ok=True)
-    built, local_only = [], []
+    for old in list(OUT_JSON.glob("*.json")) + list(OUT_LOCAL.glob("*.json")):
+        old.unlink()
 
-    for entry in manifest["conversations"]:
-        ds = entry["source"]["dataset"]
-        oid = entry["source"]["original_id"]
+    by_ds: dict[str, list[dict]] = {}
+    agent_counts: dict[str, list[tuple]] = {}
 
-        if ds == "HarperValleyBank":
-            core = load_harper_valley(oid)
-        elif ds == "ABCD":
-            core = load_abcd(oid)
-        elif ds == "AppTek":
-            core = load_apptek(oid)
-        elif ds == "twcs":
-            core = load_twcs("VirginTrains", "HP", "booking reference")
-        else:
-            raise SystemExit(f"unknown dataset {ds!r}")
-
+    for spec in specs:
+        ds = spec["dataset"]
+        index_fn, load_fn, _ = DATASETS[ds]
         meta = SOURCES[ds]
-        convo = {
-            "id": entry["id"],
-            "source": {
-                "dataset": ds,
-                "original_id": oid,
-                "licence": meta["licence"],
-                "url": meta["url"],
-                "citation": meta["citation"],
-            },
-            "modifications": entry.get("modifications", []),
-            "channel": core["channel"],
-            "agent_id": core["agent_id"],
-            "customer_id": core["customer_id"],
-            "turns": core["turns"],
-            "source_fields": core["source_fields"],
-        }
+        print(f"\n{ds}")
+        print("  indexing ...")
+        pool = index_fn()
+        lo, hi = spec.get("min_turns", 1), spec.get("max_turns", 10**6)
+        pool = [p for p in pool if lo <= p["n_turns"] <= hi]
+        print(f"  {len(pool)} conversations pass the structural filter "
+              f"({lo}-{hi} turns), {len({p['stratum'] for p in pool})} strata")
 
-        redist = meta["redistributable"]
-        target = OUT_JSON if redist else OUT_LOCAL
-        (target / f"{entry['id']}.json").write_text(
-            json.dumps(convo, indent=2, ensure_ascii=False) + "\n"
-        )
-        (built if redist else local_only).append(convo)
-        print(
-            f"  built {entry['id']}  ({ds} {oid}, {len(convo['turns'])} turns)"
-            f"{'' if redist else '   [local only -- not committable]'}"
-        )
+        strategy = spec.get("strategy", "stratified")
+        if strategy == "agent_volume" and not any(p.get("agent") for p in pool):
+            print("  NOTE: this dataset has no agent identity — "
+                  "falling back to stratified sampling")
+            strategy = "stratified"
 
-    OUT_MD.write_text(render_markdown(built, local_only))
-    print(f"\nwrote {len(built)} committable conversations -> {OUT_JSON}")
-    if local_only:
-        print(f"wrote {len(local_only)} local-only conversations  -> {OUT_LOCAL}")
-    print(f"wrote rendering                    -> {OUT_MD}")
+        if strategy == "agent_volume":
+            cap = spec.get("max_per_agent", 10)
+            picked, used = agent_volume_sample(pool, spec["count"], cap)
+            tot_agents = len({p["agent"] for p in pool if p.get("agent")})
+            print(f"  {tot_agents} agents in pool; took the {len(used)} busiest, "
+                  f"max {cap} each")
+            for agent, n, avail in used:
+                print(f"      {agent:<34} {n:>3} taken  ({avail} available)")
+            agent_counts[ds] = used
+            picked.sort(key=lambda x: (x["agent"], x["original_id"]))
+        else:
+            picked = stratified_sample(pool, spec["count"], rng)
+            picked.sort(key=lambda x: (x["stratum"], x["original_id"]))
+        if len(picked) < spec["count"]:
+            print(f"  NOTE: only {len(picked)} available, asked for {spec['count']}")
+        convos = []
+        for i, item in enumerate(picked, 1):
+            core = load_fn(item["original_id"])
+            convo = prune(
+                {
+                    "id": f"{meta['prefix']}-{i:04d}",
+                    "source": {
+                        "dataset": ds,
+                        "original_id": item["original_id"],
+                        "licence": meta["licence"],
+                        "url": meta["url"],
+                        "citation": meta["citation"],
+                    },
+                    "modifications": [],
+                    "channel": core["channel"],
+                    "agent_id": core.get("agent_id"),
+                    "customer_id": core.get("customer_id"),
+                    "customer_record": core.get("customer_record"),
+                    "turns": core["turns"],
+                    "source_fields": core.get("source_fields"),
+                }
+            )
+            convo.setdefault("modifications", [])  # required key, [] is meaningful
+            target = OUT_JSON if meta["redistributable"] else OUT_LOCAL
+            (target / f"{convo['id']}.json").write_text(
+                json.dumps(convo, indent=2, ensure_ascii=False) + "\n"
+            )
+            convos.append(convo)
+
+        by_ds[ds] = convos
+        where = "conversations/" if meta["redistributable"] else "conversations-local/ (not committed)"
+        print(f"  wrote {len(convos)} -> {where}")
+
+        md = OUT_DIR / f"conversations-{ds.lower()}.md"
+        if meta["redistributable"]:
+            md.write_text(render_dataset(ds, convos))
+            print(f"  wrote rendering -> {md.name}")
+        else:
+            if md.exists():
+                md.unlink()
+
+    (OUT_DIR / "CONVERSATIONS.md").write_text(
+        render_index(by_ds, agent_counts, [s["dataset"] for s in skipped])
+    )
+    total = sum(len(v) for v in by_ds.values())
+    print(f"\n{'-' * 62}")
+    print(f"{total} conversations across {len(by_ds)} datasets")
+    print(f"index -> curated/CONVERSATIONS.md")
     return 0
 
 

@@ -1,0 +1,104 @@
+{
+  "id": "ABCD-0070",
+  "source": {
+    "dataset": "ABCD",
+    "original_id": "9255",
+    "licence": "MIT",
+    "url": "https://github.com/asappresearch/abcd",
+    "citation": "Chen et al. (2021), NAACL, arXiv:2104.00783"
+  },
+  "channel": "chat",
+  "customer_record": {
+    "customer_name": "norman bouchard",
+    "phone": "(317) 010-8835",
+    "member_level": "guest",
+    "address": {
+      "street": "9219 lincoln ave",
+      "city": "newark",
+      "state": "wa",
+      "zip_code": "22745",
+      "full_address": "9219 lincoln ave  newark, wa 22745"
+    },
+    "order": {
+      "num_products": "1",
+      "products": [
+        {
+          "brand": "guess",
+          "product_type": "boots",
+          "amount": 59
+        }
+      ]
+    }
+  },
+  "turns": [
+    {
+      "n": 1,
+      "speaker": "agent",
+      "text": "Hello. How can i help you today?"
+    },
+    {
+      "n": 2,
+      "speaker": "customer",
+      "text": "Hi! I was considering buying a pair of Guess boots but needed some information"
+    },
+    {
+      "n": 3,
+      "speaker": "customer",
+      "text": "I was hoping you could let me know if you have size 8 in stock. The website says its unavailable."
+    },
+    {
+      "n": 4,
+      "speaker": "agent",
+      "text": "okay give me one moment"
+    },
+    {
+      "n": 5,
+      "speaker": "system_action",
+      "text": "Searching the FAQ pages ..."
+    },
+    {
+      "n": 6,
+      "speaker": "system_action",
+      "text": "System Action: search boots"
+    },
+    {
+      "n": 7,
+      "speaker": "agent",
+      "text": "Unfortunately if the desired size is listed as unavailable then we are currently out of stock."
+    },
+    {
+      "n": 8,
+      "speaker": "agent",
+      "text": "We refill at the end of the month I suggest checking then"
+    },
+    {
+      "n": 9,
+      "speaker": "customer",
+      "text": "I see"
+    },
+    {
+      "n": 10,
+      "speaker": "agent",
+      "text": "Is there anything else I can do for you today?"
+    },
+    {
+      "n": 11,
+      "speaker": "customer",
+      "text": "That is all I needed to know. Thank you"
+    },
+    {
+      "n": 12,
+      "speaker": "agent",
+      "text": "All right. Well Thanks for reaching out and have a great day!"
+    }
+  ],
+  "source_fields": {
+    "flow": "single_item_query",
+    "subflow": "boots_other_3",
+    "actions_taken": [
+      "search-faq",
+      "search-boots"
+    ]
+  },
+  "modifications": []
+}

@@ -1,0 +1,162 @@
+{
+  "id": "ABCD-0024",
+  "source": {
+    "dataset": "ABCD",
+    "original_id": "5465",
+    "licence": "MIT",
+    "url": "https://github.com/asappresearch/abcd",
+    "citation": "Chen et al. (2021), NAACL, arXiv:2104.00783"
+  },
+  "channel": "chat",
+  "customer_record": {
+    "customer_name": "rodriguez domingo",
+    "phone": "(156) 541-9994",
+    "member_level": "silver",
+    "address": {
+      "street": "3374 2nd ave",
+      "city": "brighton",
+      "state": "mi",
+      "zip_code": "74811",
+      "full_address": "3374 2nd ave  brighton, mi 74811"
+    },
+    "order": {
+      "order_id": "1218012872",
+      "num_products": "2",
+      "products": [
+        {
+          "brand": "guess",
+          "product_type": "jeans",
+          "amount": 64
+        },
+        {
+          "brand": "tommy_hilfiger",
+          "product_type": "boots",
+          "amount": 49
+        }
+      ]
+    }
+  },
+  "turns": [
+    {
+      "n": 1,
+      "speaker": "agent",
+      "text": "Hi! How can I help you today?"
+    },
+    {
+      "n": 2,
+      "speaker": "customer",
+      "text": "Hello, I would like to remove an item from my order as we don't want it anymore"
+    },
+    {
+      "n": 3,
+      "speaker": "agent",
+      "text": "No problem, one moment please."
+    },
+    {
+      "n": 4,
+      "speaker": "agent",
+      "text": "What is your full name or account ID?"
+    },
+    {
+      "n": 5,
+      "speaker": "customer",
+      "text": "Rodriguez Domingo"
+    },
+    {
+      "n": 6,
+      "speaker": "agent",
+      "text": "In order to validate your purchase, I need your username, email address, and order ID."
+    },
+    {
+      "n": 7,
+      "speaker": "system_action",
+      "text": "Account has been pulled up for Rodriguez Domingo."
+    },
+    {
+      "n": 8,
+      "speaker": "customer",
+      "text": "My order Id is 1218012872, username is rdomingo45, email is rdomingo45@email.com"
+    },
+    {
+      "n": 9,
+      "speaker": "system_action",
+      "text": "Purchase validation in progress ..."
+    },
+    {
+      "n": 10,
+      "speaker": "agent",
+      "text": "I appreciate this information."
+    },
+    {
+      "n": 11,
+      "speaker": "agent",
+      "text": "Do you want the refund by gift card, value in your account, paper check, or credit card?"
+    },
+    {
+      "n": 12,
+      "speaker": "customer",
+      "text": "gift card please"
+    },
+    {
+      "n": 13,
+      "speaker": "agent",
+      "text": "Sure, I need your address to send it to you."
+    },
+    {
+      "n": 14,
+      "speaker": "customer",
+      "text": "3374 2nd Ave Brighton, MI 74811"
+    },
+    {
+      "n": 15,
+      "speaker": "system_action",
+      "text": "Details of 3374 2nd Ave Brighton, MI 74811 have been entered."
+    },
+    {
+      "n": 16,
+      "speaker": "agent",
+      "text": "How much was the item?"
+    },
+    {
+      "n": 17,
+      "speaker": "customer",
+      "text": "$64"
+    },
+    {
+      "n": 18,
+      "speaker": "system_action",
+      "text": "A refund has been made for the amount of $64."
+    },
+    {
+      "n": 19,
+      "speaker": "agent",
+      "text": "Refund completed! Is there anything else I can do for you today?"
+    },
+    {
+      "n": 20,
+      "speaker": "customer",
+      "text": "that is all"
+    },
+    {
+      "n": 21,
+      "speaker": "agent",
+      "text": "Great, thank you for contacting AcmeCorp and have a good day!"
+    },
+    {
+      "n": 22,
+      "speaker": "customer",
+      "text": "you too"
+    }
+  ],
+  "source_fields": {
+    "flow": "order_issue",
+    "subflow": "manage_cancel",
+    "actions_taken": [
+      "pull-up-account",
+      "validate-purchase",
+      "enter-details",
+      "offer-refund"
+    ]
+  },
+  "modifications": []
+}

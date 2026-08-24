@@ -1,0 +1,120 @@
+{
+  "id": "ABCD-0080",
+  "source": {
+    "dataset": "ABCD",
+    "original_id": "9629",
+    "licence": "MIT",
+    "url": "https://github.com/asappresearch/abcd",
+    "citation": "Chen et al. (2021), NAACL, arXiv:2104.00783"
+  },
+  "channel": "chat",
+  "customer_record": {
+    "customer_name": "sanya afzal",
+    "phone": "(231) 673-1110",
+    "member_level": "guest",
+    "address": {
+      "street": "6264 woodshore st",
+      "city": "la fayette",
+      "state": "wa",
+      "zip_code": "84262",
+      "full_address": "6264 woodshore st  la fayette, wa 84262"
+    }
+  },
+  "turns": [
+    {
+      "n": 1,
+      "speaker": "agent",
+      "text": "Hello, how may I help you today?"
+    },
+    {
+      "n": 2,
+      "speaker": "customer",
+      "text": "Hi there. I was thinking of purchasing something for my husband's birthday, but I wanted to know first if I could cancel the subscription afterwards if I don't like it and, if so, how I would do that."
+    },
+    {
+      "n": 3,
+      "speaker": "agent",
+      "text": "Sure thing, let me pull up information about that policy for you."
+    },
+    {
+      "n": 4,
+      "speaker": "system_action",
+      "text": "Searching the FAQ pages ..."
+    },
+    {
+      "n": 5,
+      "speaker": "system_action",
+      "text": "System Action: search policy"
+    },
+    {
+      "n": 6,
+      "speaker": "system_action",
+      "text": "FAQ answer related to policy (question3) was selected."
+    },
+    {
+      "n": 7,
+      "speaker": "agent",
+      "text": "Thank you for your patience. You can cancel your subscription at any time, either by going to your account settings on the website or by contacting a customer service agent."
+    },
+    {
+      "n": 8,
+      "speaker": "customer",
+      "text": "Okay, that's great."
+    },
+    {
+      "n": 9,
+      "speaker": "agent",
+      "text": "When you cancel, you will receive membership benefits until the end of the current month."
+    },
+    {
+      "n": 10,
+      "speaker": "customer",
+      "text": "Oh, that's nice too!"
+    },
+    {
+      "n": 11,
+      "speaker": "agent",
+      "text": "The current month when you cancel, that is."
+    },
+    {
+      "n": 12,
+      "speaker": "customer",
+      "text": "Thanks for the information"
+    },
+    {
+      "n": 13,
+      "speaker": "agent",
+      "text": "For sure, is there anything else I can help with?"
+    },
+    {
+      "n": 14,
+      "speaker": "customer",
+      "text": "No that's all"
+    },
+    {
+      "n": 15,
+      "speaker": "customer",
+      "text": "thanks a lot"
+    },
+    {
+      "n": 16,
+      "speaker": "agent",
+      "text": "Great, enjoy the rest of your day!"
+    },
+    {
+      "n": 17,
+      "speaker": "customer",
+      "text": "You as well"
+    }
+  ],
+  "source_fields": {
+    "flow": "storewide_query",
+    "subflow": "policy_3",
+    "actions_taken": [
+      "search-faq",
+      "search-policy",
+      "select-faq"
+    ]
+  },
+  "modifications": []
+}

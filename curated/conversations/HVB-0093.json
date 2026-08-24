@@ -1,0 +1,312 @@
+{
+  "id": "HVB-0093",
+  "source": {
+    "dataset": "HarperValleyBank",
+    "original_id": "1083c47e2f304790",
+    "licence": "CC BY 4.0",
+    "url": "https://github.com/cricketclub/gridspace-stanford-harper-valley",
+    "citation": "Wu, Nafziger, Scodary & Maas (2020), arXiv:2010.13929"
+  },
+  "channel": "voice",
+  "agent_id": "hvb-speaker-6",
+  "customer_id": "hvb-speaker-29",
+  "customer_record": {
+    "customer_name": "Patricia Garcia",
+    "captured_by_agent": {
+      "company name": "smart electric",
+      "money amount": "121",
+      "company address": "647 first st harper valley oregon 61766"
+    }
+  },
+  "turns": [
+    {
+      "n": 1,
+      "speaker": "agent",
+      "text": "hello this is harper valley national bank my name is jennifer how can i help you today",
+      "asr_text": "hello this is harper valley national bank my name is jennifer how can i help you today",
+      "start_ms": 1390,
+      "duration_ms": 4020,
+      "dialog_acts": [
+        "greeting"
+      ]
+    },
+    {
+      "n": 2,
+      "speaker": "customer",
+      "text": "hi my name is patricia garcia",
+      "asr_text": "hi my name is patricia garcia",
+      "start_ms": 10190,
+      "duration_ms": 2520,
+      "dialog_acts": [
+        "response",
+        "problem_description"
+      ]
+    },
+    {
+      "n": 3,
+      "speaker": "customer",
+      "text": "i would like to pay a bill",
+      "asr_text": "i would like to pay a bill",
+      "start_ms": 13320,
+      "duration_ms": 1740,
+      "dialog_acts": [
+        "response",
+        "problem_description"
+      ]
+    },
+    {
+      "n": 4,
+      "speaker": "agent",
+      "text": "what is the company name",
+      "asr_text": "what is the company name",
+      "start_ms": 15010,
+      "duration_ms": 1170,
+      "dialog_acts": [
+        "data_question"
+      ]
+    },
+    {
+      "n": 5,
+      "speaker": "customer",
+      "text": "the company is smart electric",
+      "asr_text": "the company is smart electric",
+      "start_ms": 20020,
+      "duration_ms": 2460,
+      "dialog_acts": [
+        "problem_description"
+      ]
+    },
+    {
+      "n": 6,
+      "speaker": "agent",
+      "text": "what is the company address",
+      "asr_text": "what is the company address",
+      "start_ms": 22330,
+      "duration_ms": 1470,
+      "dialog_acts": [
+        "data_question"
+      ]
+    },
+    {
+      "n": 7,
+      "speaker": "customer",
+      "text": "the address is six four seven",
+      "asr_text": "the address is six four seven",
+      "start_ms": 28220,
+      "duration_ms": 4020,
+      "dialog_acts": [
+        "response",
+        "data_response"
+      ]
+    },
+    {
+      "n": 8,
+      "speaker": "customer",
+      "text": "first",
+      "asr_text": "first",
+      "start_ms": 33350,
+      "duration_ms": 690,
+      "dialog_acts": [
+        "response"
+      ]
+    },
+    {
+      "n": 9,
+      "speaker": "customer",
+      "text": "street",
+      "asr_text": "street",
+      "start_ms": 34420,
+      "duration_ms": 690,
+      "dialog_acts": [
+        "response",
+        "problem_description"
+      ]
+    },
+    {
+      "n": 10,
+      "speaker": "agent",
+      "text": "[noise] [noise] [noise]",
+      "asr_text": "[noise] [noise] [noise]",
+      "start_ms": 33350,
+      "duration_ms": 2970,
+      "dialog_acts": [
+        "filler_disfluency"
+      ]
+    },
+    {
+      "n": 11,
+      "speaker": "agent",
+      "text": "[noise]",
+      "asr_text": "[noise]",
+      "start_ms": 37450,
+      "duration_ms": 120,
+      "dialog_acts": [
+        "data_question",
+        "filler_disfluency"
+      ]
+    },
+    {
+      "n": 12,
+      "speaker": "customer",
+      "text": "harper valley",
+      "asr_text": "arbor valley",
+      "start_ms": 43320,
+      "duration_ms": 990,
+      "dialog_acts": [
+        "response"
+      ]
+    },
+    {
+      "n": 13,
+      "speaker": "agent",
+      "text": "[noise]",
+      "asr_text": "[noise]",
+      "start_ms": 42350,
+      "duration_ms": 30,
+      "dialog_acts": [
+        "filler_disfluency"
+      ]
+    },
+    {
+      "n": 14,
+      "speaker": "customer",
+      "text": "oregon",
+      "asr_text": "oregon",
+      "start_ms": 51560,
+      "duration_ms": 600,
+      "dialog_acts": [
+        "response"
+      ]
+    },
+    {
+      "n": 15,
+      "speaker": "agent",
+      "text": "[noise] [noise] [noise]",
+      "asr_text": "[noise] [noise] [noise]",
+      "start_ms": 50650,
+      "duration_ms": 1080,
+      "dialog_acts": [
+        "other",
+        "filler_disfluency"
+      ]
+    },
+    {
+      "n": 16,
+      "speaker": "agent",
+      "text": "[noise] [noise]",
+      "asr_text": "[noise] [noise]",
+      "start_ms": 52750,
+      "duration_ms": 1200,
+      "dialog_acts": [
+        "other",
+        "filler_disfluency"
+      ]
+    },
+    {
+      "n": 17,
+      "speaker": "customer",
+      "text": "six one seven",
+      "asr_text": "six one seven",
+      "start_ms": 58700,
+      "duration_ms": 1830,
+      "dialog_acts": [
+        "response"
+      ]
+    },
+    {
+      "n": 18,
+      "speaker": "customer",
+      "text": "six six",
+      "asr_text": "six six",
+      "start_ms": 61120,
+      "duration_ms": 720,
+      "dialog_acts": [
+        "filler_disfluency",
+        "data_response"
+      ]
+    },
+    {
+      "n": 19,
+      "speaker": "agent",
+      "text": "what is the bill amount",
+      "asr_text": "what is the bill amount",
+      "start_ms": 61450,
+      "duration_ms": 1080,
+      "dialog_acts": [
+        "data_question"
+      ]
+    },
+    {
+      "n": 20,
+      "speaker": "customer",
+      "text": "the amount of the bill is one hundred and twenty one dollars",
+      "asr_text": "the amount of the bill is one hundred and twenty one dollars",
+      "start_ms": 67230,
+      "duration_ms": 4470,
+      "dialog_acts": [
+        "response"
+      ]
+    },
+    {
+      "n": 21,
+      "speaker": "agent",
+      "text": "we will send your payment to smart electric is there anything else i can help you with",
+      "asr_text": "we will send your payment too smart electric is there anything else i can help you with",
+      "start_ms": 73020,
+      "duration_ms": 4530,
+      "dialog_acts": [
+        "procedure_explanation",
+        "open_question"
+      ]
+    },
+    {
+      "n": 22,
+      "speaker": "customer",
+      "text": "no",
+      "asr_text": "no",
+      "start_ms": 83920,
+      "duration_ms": 480,
+      "dialog_acts": [
+        "other"
+      ]
+    },
+    {
+      "n": 23,
+      "speaker": "agent",
+      "text": "thank you for calling have a great day",
+      "asr_text": "thank you for calling have a great day",
+      "start_ms": 83860,
+      "duration_ms": 1860,
+      "dialog_acts": [
+        "thanks",
+        "closing"
+      ]
+    },
+    {
+      "n": 24,
+      "speaker": "agent",
+      "text": "[noise]",
+      "asr_text": "[noise]",
+      "start_ms": 88250,
+      "duration_ms": 30,
+      "dialog_acts": [
+        "closing"
+      ]
+    }
+  ],
+  "source_fields": {
+    "task_assigned": [
+      "pay bill"
+    ],
+    "task_logged_by_agent": [
+      "pay bill"
+    ],
+    "labels": {
+      "lhvb_script": 5.0,
+      "caller_mos": 4.0,
+      "agent_mos": 4.0
+    },
+    "session": "Little Harper Valley 2"
+  },
+  "modifications": []
+}

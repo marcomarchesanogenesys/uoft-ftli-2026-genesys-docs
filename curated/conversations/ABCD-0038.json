@@ -1,0 +1,146 @@
+{
+  "id": "ABCD-0038",
+  "source": {
+    "dataset": "ABCD",
+    "original_id": "8801",
+    "licence": "MIT",
+    "url": "https://github.com/asappresearch/abcd",
+    "citation": "Chen et al. (2021), NAACL, arXiv:2104.00783"
+  },
+  "channel": "chat",
+  "customer_id": "davidwilliams795",
+  "customer_record": {
+    "customer_name": "david williams",
+    "username": "davidwilliams795",
+    "email": "davidwilliams795@email.com",
+    "phone": "(426) 819-4227",
+    "member_level": "silver",
+    "address": {
+      "street": "4379 kennedy st",
+      "city": "san mateo",
+      "state": "tx",
+      "zip_code": "7039",
+      "full_address": "4379 kennedy st  san mateo, tx 7039"
+    },
+    "order": {
+      "order_id": "7242615218",
+      "purchase_date": "2019-12-31",
+      "payment_method": "credit card",
+      "packaging": "no",
+      "num_products": "1",
+      "products": [
+        {
+          "brand": "michael_kors",
+          "product_type": "shirt",
+          "amount": 99
+        }
+      ]
+    }
+  },
+  "turns": [
+    {
+      "n": 1,
+      "speaker": "agent",
+      "text": "Hello, how can I help you today?"
+    },
+    {
+      "n": 2,
+      "speaker": "customer",
+      "text": "I want to state of the refund."
+    },
+    {
+      "n": 3,
+      "speaker": "customer",
+      "text": "know*"
+    },
+    {
+      "n": 4,
+      "speaker": "agent",
+      "text": "I can look in to this for you. Are you waiting for a refund and want to see if it has gone through yet?"
+    },
+    {
+      "n": 5,
+      "speaker": "customer",
+      "text": "Exactly."
+    },
+    {
+      "n": 6,
+      "speaker": "agent",
+      "text": "Can I please get your full name or Account ID?"
+    },
+    {
+      "n": 7,
+      "speaker": "customer",
+      "text": "David Williams"
+    },
+    {
+      "n": 8,
+      "speaker": "system_action",
+      "text": "Account has been pulled up for David Williams."
+    },
+    {
+      "n": 9,
+      "speaker": "agent",
+      "text": "Thanks David. I just pulled up your account but have you look up the order. Can I get your username, email address and Order ID?"
+    },
+    {
+      "n": 10,
+      "speaker": "customer",
+      "text": "davidwilliams795,davidwilliams795@email.com,7242615218"
+    },
+    {
+      "n": 11,
+      "speaker": "system_action",
+      "text": "Purchase validation in progress ..."
+    },
+    {
+      "n": 12,
+      "speaker": "agent",
+      "text": "Thanks David. You are on the ball today!"
+    },
+    {
+      "n": 13,
+      "speaker": "customer",
+      "text": "Thanks"
+    },
+    {
+      "n": 14,
+      "speaker": "agent",
+      "text": "It looks like you refund is in progress."
+    },
+    {
+      "n": 15,
+      "speaker": "agent",
+      "text": "You should see it within a few days."
+    },
+    {
+      "n": 16,
+      "speaker": "customer",
+      "text": "thanks for the info."
+    },
+    {
+      "n": 17,
+      "speaker": "agent",
+      "text": "No problem, was there anything else you needed help with today?"
+    },
+    {
+      "n": 18,
+      "speaker": "customer",
+      "text": "no"
+    },
+    {
+      "n": 19,
+      "speaker": "agent",
+      "text": "Thanks David, have a great day."
+    }
+  ],
+  "source_fields": {
+    "flow": "product_defect",
+    "subflow": "refund_status",
+    "actions_taken": [
+      "pull-up-account",
+      "validate-purchase"
+    ]
+  },
+  "modifications": []
+}

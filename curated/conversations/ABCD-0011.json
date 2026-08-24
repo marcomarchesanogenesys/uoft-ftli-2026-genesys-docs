@@ -1,0 +1,130 @@
+{
+  "id": "ABCD-0011",
+  "source": {
+    "dataset": "ABCD",
+    "original_id": "10143",
+    "licence": "MIT",
+    "url": "https://github.com/asappresearch/abcd",
+    "citation": "Chen et al. (2021), NAACL, arXiv:2104.00783"
+  },
+  "channel": "chat",
+  "customer_record": {
+    "customer_name": "chloe zhang",
+    "member_level": "guest",
+    "address": {
+      "street": "4753 lincoln ave",
+      "city": "raleigh",
+      "state": "mi",
+      "zip_code": "97728",
+      "full_address": "4753 lincoln ave  raleigh, mi 97728"
+    },
+    "order": {
+      "num_products": "1",
+      "products": [
+        {
+          "brand": "tommy_hilfiger",
+          "product_type": "jeans",
+          "amount": 84
+        }
+      ]
+    }
+  },
+  "turns": [
+    {
+      "n": 1,
+      "speaker": "agent",
+      "text": "Hello! Thank you for contacting us today. How can I help you?"
+    },
+    {
+      "n": 2,
+      "speaker": "customer",
+      "text": "Hi"
+    },
+    {
+      "n": 3,
+      "speaker": "customer",
+      "text": "I seem to be missing credits from my account"
+    },
+    {
+      "n": 4,
+      "speaker": "customer",
+      "text": "It was from a one time deal due to a previous purchase"
+    },
+    {
+      "n": 5,
+      "speaker": "agent",
+      "text": "Oh no! I'm sorry to hear that. Let's see if we can resolve that. Can I have your name please?"
+    },
+    {
+      "n": 6,
+      "speaker": "customer",
+      "text": "Chloe Zhang"
+    },
+    {
+      "n": 7,
+      "speaker": "system_action",
+      "text": "Account has been pulled up for Chloe Zhang."
+    },
+    {
+      "n": 8,
+      "speaker": "system_action",
+      "text": "A reason of previous purchase has been recorded."
+    },
+    {
+      "n": 9,
+      "speaker": "agent",
+      "text": "Okay let me see what's going on. One second."
+    },
+    {
+      "n": 10,
+      "speaker": "system_action",
+      "text": "Querying the system for an answer ..."
+    },
+    {
+      "n": 11,
+      "speaker": "agent",
+      "text": "Do you know how much the credit was supposed to be for?"
+    },
+    {
+      "n": 12,
+      "speaker": "customer",
+      "text": "40"
+    },
+    {
+      "n": 13,
+      "speaker": "system_action",
+      "text": "A promo code has been created."
+    },
+    {
+      "n": 14,
+      "speaker": "agent",
+      "text": "Okay it does look like it was an error in our system. I have generated a promo code for the missing credit. Here you go: UQ75U."
+    },
+    {
+      "n": 15,
+      "speaker": "agent",
+      "text": "Can I help you with anything else today?"
+    },
+    {
+      "n": 16,
+      "speaker": "customer",
+      "text": "that was all thanks"
+    },
+    {
+      "n": 17,
+      "speaker": "agent",
+      "text": "Thank you and have a great day!"
+    }
+  ],
+  "source_fields": {
+    "flow": "manage_account",
+    "subflow": "status_credit_missing",
+    "actions_taken": [
+      "pull-up-account",
+      "record-reason",
+      "ask-the-oracle",
+      "promo-code"
+    ]
+  },
+  "modifications": []
+}

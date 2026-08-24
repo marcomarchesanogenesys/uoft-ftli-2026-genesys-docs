@@ -1,0 +1,152 @@
+{
+  "id": "ABCD-0028",
+  "source": {
+    "dataset": "ABCD",
+    "original_id": "9286",
+    "licence": "MIT",
+    "url": "https://github.com/asappresearch/abcd",
+    "citation": "Chen et al. (2021), NAACL, arXiv:2104.00783"
+  },
+  "channel": "chat",
+  "customer_record": {
+    "customer_name": "david williams",
+    "phone": "(768) 889-6151",
+    "member_level": "silver",
+    "address": {
+      "street": "9993 1st ave",
+      "city": "san lima",
+      "state": "tx",
+      "zip_code": "56686",
+      "full_address": "9993 1st ave  san lima, tx 56686"
+    },
+    "order": {
+      "order_id": "4953808575",
+      "num_products": "1",
+      "products": [
+        {
+          "brand": "guess",
+          "product_type": "shirt",
+          "amount": 99
+        }
+      ]
+    }
+  },
+  "turns": [
+    {
+      "n": 1,
+      "speaker": "agent",
+      "text": "Hello, how can i help you today"
+    },
+    {
+      "n": 2,
+      "speaker": "customer",
+      "text": "Hello"
+    },
+    {
+      "n": 3,
+      "speaker": "customer",
+      "text": "I placed an order 10 minutes ago"
+    },
+    {
+      "n": 4,
+      "speaker": "customer",
+      "text": "and I just realized that I forgot to order a shirt"
+    },
+    {
+      "n": 5,
+      "speaker": "customer",
+      "text": "can I add this shirt to my order?"
+    },
+    {
+      "n": 6,
+      "speaker": "agent",
+      "text": "Of course, could i get your full name account and order ID please"
+    },
+    {
+      "n": 7,
+      "speaker": "customer",
+      "text": "David Williams"
+    },
+    {
+      "n": 8,
+      "speaker": "customer",
+      "text": "account id S7ZROGNIOF"
+    },
+    {
+      "n": 9,
+      "speaker": "system_action",
+      "text": "Account has been pulled up for David Williams."
+    },
+    {
+      "n": 10,
+      "speaker": "customer",
+      "text": "order # is 4953808575"
+    },
+    {
+      "n": 11,
+      "speaker": "system_action",
+      "text": "Identity verification in progress ..."
+    },
+    {
+      "n": 12,
+      "speaker": "agent",
+      "text": "Okay, and what is your membership level"
+    },
+    {
+      "n": 13,
+      "speaker": "customer",
+      "text": "Silver"
+    },
+    {
+      "n": 14,
+      "speaker": "system_action",
+      "text": "Membership level of Silver has been noted."
+    },
+    {
+      "n": 15,
+      "speaker": "agent",
+      "text": "And what item would you like to add to your order"
+    },
+    {
+      "n": 16,
+      "speaker": "customer",
+      "text": "Guess Shirt for $99"
+    },
+    {
+      "n": 17,
+      "speaker": "system_action",
+      "text": "A purchase of Guess Shirt $99 was made."
+    },
+    {
+      "n": 18,
+      "speaker": "agent",
+      "text": "Okay done the shirt will come at the same time as the rest of your order. Can i help you with anything else"
+    },
+    {
+      "n": 19,
+      "speaker": "customer",
+      "text": "no. that was all"
+    },
+    {
+      "n": 20,
+      "speaker": "customer",
+      "text": "thank you so much"
+    },
+    {
+      "n": 21,
+      "speaker": "agent",
+      "text": "Okay, have a good day"
+    }
+  ],
+  "source_fields": {
+    "flow": "order_issue",
+    "subflow": "manage_create",
+    "actions_taken": [
+      "pull-up-account",
+      "verify-identity",
+      "membership",
+      "make-purchase"
+    ]
+  },
+  "modifications": []
+}

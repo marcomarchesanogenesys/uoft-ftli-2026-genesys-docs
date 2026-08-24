@@ -1,0 +1,213 @@
+{
+  "id": "ABCD-0032",
+  "source": {
+    "dataset": "ABCD",
+    "original_id": "1167",
+    "licence": "MIT",
+    "url": "https://github.com/asappresearch/abcd",
+    "citation": "Chen et al. (2021), NAACL, arXiv:2104.00783"
+  },
+  "channel": "chat",
+  "customer_id": "josephb8",
+  "customer_record": {
+    "customer_name": "joseph banter",
+    "username": "josephb8",
+    "email": "josephb8@email.com",
+    "phone": "(594) 419-2273",
+    "member_level": "bronze",
+    "address": {
+      "street": "7848 circle drive",
+      "city": "la fayette",
+      "state": "mi",
+      "zip_code": "89795",
+      "full_address": "7848 circle drive  la fayette, mi 89795"
+    },
+    "order": {
+      "order_id": "4627648389",
+      "purchase_date": "2019-12-05",
+      "payment_method": "credit card",
+      "packaging": "no",
+      "num_products": "1",
+      "products": [
+        {
+          "brand": "calvin_klein",
+          "product_type": "boots",
+          "amount": 79
+        }
+      ]
+    }
+  },
+  "turns": [
+    {
+      "n": 1,
+      "speaker": "agent",
+      "text": "Hi, how can I help you?"
+    },
+    {
+      "n": 2,
+      "speaker": "customer",
+      "text": "Hi. I've already submitted a refund request, but I'd like to add something else to that. Can you help me  with that?"
+    },
+    {
+      "n": 3,
+      "speaker": "agent",
+      "text": "Ok sure. Happy to help."
+    },
+    {
+      "n": 4,
+      "speaker": "agent",
+      "text": "What is the reason for wanting to add to the refund?"
+    },
+    {
+      "n": 5,
+      "speaker": "customer",
+      "text": "Toe box is too narrow. Too bad, cute boots."
+    },
+    {
+      "n": 6,
+      "speaker": "agent",
+      "text": "Ok got it. I'm sorry to hear that."
+    },
+    {
+      "n": 7,
+      "speaker": "agent",
+      "text": "Let me take a look."
+    },
+    {
+      "n": 8,
+      "speaker": "agent",
+      "text": "Can I have your name please?"
+    },
+    {
+      "n": 9,
+      "speaker": "customer",
+      "text": "I've got my order number if that helps."
+    },
+    {
+      "n": 10,
+      "speaker": "customer",
+      "text": "Joseph Banter"
+    },
+    {
+      "n": 11,
+      "speaker": "system_action",
+      "text": "Account has been pulled up for Joseph Banter."
+    },
+    {
+      "n": 12,
+      "speaker": "agent",
+      "text": "Great! Yes, the order ID would be great"
+    },
+    {
+      "n": 13,
+      "speaker": "customer",
+      "text": "4627648389"
+    },
+    {
+      "n": 14,
+      "speaker": "agent",
+      "text": "Thanks. Can I also have your email and username please?"
+    },
+    {
+      "n": 15,
+      "speaker": "customer",
+      "text": "Sure. It's josephb8@email.com and username is josephb8"
+    },
+    {
+      "n": 16,
+      "speaker": "system_action",
+      "text": "Purchase validation in progress ..."
+    },
+    {
+      "n": 17,
+      "speaker": "agent",
+      "text": "What is the brand of the boots that you are returning?"
+    },
+    {
+      "n": 18,
+      "speaker": "customer",
+      "text": "They're calvin klein boots"
+    },
+    {
+      "n": 19,
+      "speaker": "system_action",
+      "text": "A reason of Calvin Klein boots has been recorded."
+    },
+    {
+      "n": 20,
+      "speaker": "agent",
+      "text": "Got it. And what was the purchase price?"
+    },
+    {
+      "n": 21,
+      "speaker": "customer",
+      "text": "$79.00"
+    },
+    {
+      "n": 22,
+      "speaker": "agent",
+      "text": "Great. And what was your previous refund amount?"
+    },
+    {
+      "n": 23,
+      "speaker": "customer",
+      "text": "Checking..."
+    },
+    {
+      "n": 24,
+      "speaker": "customer",
+      "text": "Have a note here somewhere..."
+    },
+    {
+      "n": 25,
+      "speaker": "customer",
+      "text": "$100.00"
+    },
+    {
+      "n": 26,
+      "speaker": "agent",
+      "text": "Great"
+    },
+    {
+      "n": 27,
+      "speaker": "system_action",
+      "text": "A refund has been made for the amount of $179."
+    },
+    {
+      "n": 28,
+      "speaker": "customer",
+      "text": "Great!"
+    },
+    {
+      "n": 29,
+      "speaker": "agent",
+      "text": "Wonderful! Your refund has been updated and the total will now be 179."
+    },
+    {
+      "n": 30,
+      "speaker": "agent",
+      "text": "Anything else I can help with?"
+    },
+    {
+      "n": 31,
+      "speaker": "customer",
+      "text": "No, that's everything. Really appreciate your help, though."
+    },
+    {
+      "n": 32,
+      "speaker": "agent",
+      "text": "Great, have a great day!"
+    }
+  ],
+  "source_fields": {
+    "flow": "product_defect",
+    "subflow": "refund_update",
+    "actions_taken": [
+      "pull-up-account",
+      "validate-purchase",
+      "record-reason",
+      "offer-refund"
+    ]
+  },
+  "modifications": []
+}

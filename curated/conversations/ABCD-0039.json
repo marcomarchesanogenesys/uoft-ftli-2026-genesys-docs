@@ -1,0 +1,194 @@
+{
+  "id": "ABCD-0039",
+  "source": {
+    "dataset": "ABCD",
+    "original_id": "8825",
+    "licence": "MIT",
+    "url": "https://github.com/asappresearch/abcd",
+    "citation": "Chen et al. (2021), NAACL, arXiv:2104.00783"
+  },
+  "channel": "chat",
+  "customer_id": "alessandrophoenix397",
+  "customer_record": {
+    "customer_name": "alessandro phoenix",
+    "username": "alessandrophoenix397",
+    "email": "alessandrophoenix397@email.com",
+    "phone": "(351) 893-9271",
+    "member_level": "bronze",
+    "address": {
+      "street": "2613 circle drive",
+      "city": "san mateo",
+      "state": "ny",
+      "zip_code": "24571",
+      "full_address": "2613 circle drive  san mateo, ny 24571"
+    },
+    "order": {
+      "order_id": "5096612783",
+      "purchase_date": "2020-03-04",
+      "payment_method": "paypal",
+      "packaging": "no",
+      "num_products": "1",
+      "products": [
+        {
+          "brand": "tommy_hilfiger",
+          "product_type": "boots",
+          "amount": 99
+        }
+      ]
+    }
+  },
+  "turns": [
+    {
+      "n": 1,
+      "speaker": "agent",
+      "text": "Hello, how can I help you today?"
+    },
+    {
+      "n": 2,
+      "speaker": "customer",
+      "text": "yes i would like to return an item"
+    },
+    {
+      "n": 3,
+      "speaker": "agent",
+      "text": "Okay, and why is that?"
+    },
+    {
+      "n": 4,
+      "speaker": "customer",
+      "text": "because i ordered the wrong color"
+    },
+    {
+      "n": 5,
+      "speaker": "agent",
+      "text": "Okay, can I have your full name?"
+    },
+    {
+      "n": 6,
+      "speaker": "customer",
+      "text": "Alessandro Phoenix"
+    },
+    {
+      "n": 7,
+      "speaker": "system_action",
+      "text": "Account has been pulled up for Alessandro Phoenix."
+    },
+    {
+      "n": 8,
+      "speaker": "agent",
+      "text": "And your username, email, and order ID?"
+    },
+    {
+      "n": 9,
+      "speaker": "customer",
+      "text": "username is alessandrophoenix397, email is  alessandrophoenix397@email.com and order id is 5096612783"
+    },
+    {
+      "n": 10,
+      "speaker": "system_action",
+      "text": "Purchase validation in progress ..."
+    },
+    {
+      "n": 11,
+      "speaker": "agent",
+      "text": "Okay, and may I ask what your membership level is?"
+    },
+    {
+      "n": 12,
+      "speaker": "customer",
+      "text": "bronze"
+    },
+    {
+      "n": 13,
+      "speaker": "system_action",
+      "text": "Membership level of bronze has been noted."
+    },
+    {
+      "n": 14,
+      "speaker": "agent",
+      "text": "And when did you purchase the item?"
+    },
+    {
+      "n": 15,
+      "speaker": "customer",
+      "text": "3/4/2020"
+    },
+    {
+      "n": 16,
+      "speaker": "agent",
+      "text": "Do you still have the receipt?"
+    },
+    {
+      "n": 17,
+      "speaker": "customer",
+      "text": "yes"
+    },
+    {
+      "n": 18,
+      "speaker": "agent",
+      "text": "Okay, then I can help you."
+    },
+    {
+      "n": 19,
+      "speaker": "agent",
+      "text": "Can I have your full address?"
+    },
+    {
+      "n": 20,
+      "speaker": "customer",
+      "text": "2613 Circle Drive  San Mateo, NY 24571"
+    },
+    {
+      "n": 21,
+      "speaker": "system_action",
+      "text": "Details of 2613 Circle Drive San Mateo, NY 24571 have been entered."
+    },
+    {
+      "n": 22,
+      "speaker": "agent",
+      "text": "And how would you like to process this, by mail, in store, or at a drop off center?"
+    },
+    {
+      "n": 23,
+      "speaker": "customer",
+      "text": "mail"
+    },
+    {
+      "n": 24,
+      "speaker": "system_action",
+      "text": "Order has been updated with by mail."
+    },
+    {
+      "n": 25,
+      "speaker": "agent",
+      "text": "Okay, everything is done on my end. Everything else you need to do will be in the email you'll be getting."
+    },
+    {
+      "n": 26,
+      "speaker": "agent",
+      "text": "Is there anything else I can do for you today?"
+    },
+    {
+      "n": 27,
+      "speaker": "customer",
+      "text": "okay, thank that will be all"
+    },
+    {
+      "n": 28,
+      "speaker": "agent",
+      "text": "Then have a nice day!"
+    }
+  ],
+  "source_fields": {
+    "flow": "product_defect",
+    "subflow": "return_color",
+    "actions_taken": [
+      "pull-up-account",
+      "validate-purchase",
+      "membership",
+      "enter-details",
+      "update-order"
+    ]
+  },
+  "modifications": []
+}

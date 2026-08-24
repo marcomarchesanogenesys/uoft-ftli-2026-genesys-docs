@@ -1,0 +1,97 @@
+{
+  "id": "ABCD-0010",
+  "source": {
+    "dataset": "ABCD",
+    "original_id": "9290",
+    "licence": "MIT",
+    "url": "https://github.com/asappresearch/abcd",
+    "citation": "Chen et al. (2021), NAACL, arXiv:2104.00783"
+  },
+  "channel": "chat",
+  "customer_id": "sanyaafzal697",
+  "customer_record": {
+    "customer_name": "sanya afzal",
+    "username": "sanyaafzal697",
+    "email": "sanyaafzal697@email.com",
+    "phone": "(749) 946-1024",
+    "member_level": "guest",
+    "address": {
+      "street": "1476 1st ave",
+      "city": "la fayette",
+      "state": "ny",
+      "zip_code": "27322",
+      "full_address": "1476 1st ave  la fayette, ny 27322"
+    }
+  },
+  "turns": [
+    {
+      "n": 1,
+      "speaker": "agent",
+      "text": "Hi, thanks for contacting Acme Brands. How can I help today?"
+    },
+    {
+      "n": 2,
+      "speaker": "customer",
+      "text": "Hello!  I wanted to check on my order status of something I just bought but I can't get into my account because I can't remember my username.  Can you help me to figure out what it is?"
+    },
+    {
+      "n": 3,
+      "speaker": "agent",
+      "text": "Sure thing, can I have your full name or account ID please?"
+    },
+    {
+      "n": 4,
+      "speaker": "customer",
+      "text": "Absolutely.  My name is Sanya Afzal.  My account ID is QPDRTK8Q1R"
+    },
+    {
+      "n": 5,
+      "speaker": "system_action",
+      "text": "Account has been pulled up for QPDRTK8Q1R."
+    },
+    {
+      "n": 6,
+      "speaker": "agent",
+      "text": "And can I have your zip code, phone number, or email address to verify your identity?  I will need 2 of those 3."
+    },
+    {
+      "n": 7,
+      "speaker": "customer",
+      "text": "My zip code is 27322, phone number is (749) 946-1024, my email address is sanyaafzal697@email.com  You can have all 3 in case you need them later. lol :)"
+    },
+    {
+      "n": 8,
+      "speaker": "system_action",
+      "text": "Identity verification in progress ..."
+    },
+    {
+      "n": 9,
+      "speaker": "agent",
+      "text": "Thank you! I see here your username is safzal1"
+    },
+    {
+      "n": 10,
+      "speaker": "agent",
+      "text": "Is there anything else I can help with?"
+    },
+    {
+      "n": 11,
+      "speaker": "customer",
+      "text": "No that was all, thank you so much for helping me."
+    },
+    {
+      "n": 12,
+      "speaker": "agent",
+      "text": "You're welcome, have a great day!"
+    }
+  ],
+  "source_fields": {
+    "flow": "account_access",
+    "subflow": "recover_username",
+    "actions_taken": [
+      "pull-up-account",
+      "verify-identity"
+    ]
+  },
+  "modifications": []
+}

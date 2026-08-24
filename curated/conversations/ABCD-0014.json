@@ -1,0 +1,184 @@
+{
+  "id": "ABCD-0014",
+  "source": {
+    "dataset": "ABCD",
+    "original_id": "2524",
+    "licence": "MIT",
+    "url": "https://github.com/asappresearch/abcd",
+    "citation": "Chen et al. (2021), NAACL, arXiv:2104.00783"
+  },
+  "channel": "chat",
+  "customer_record": {
+    "customer_name": "sanya afzal",
+    "member_level": "bronze",
+    "address": {
+      "street": "0197 primrose ave",
+      "city": "san mateo",
+      "state": "tx",
+      "zip_code": "7264",
+      "full_address": "0197 primrose ave  san mateo, tx 7264"
+    },
+    "order": {
+      "num_products": "1",
+      "products": [
+        {
+          "brand": "michael_kors",
+          "product_type": "shirt",
+          "amount": 54
+        }
+      ]
+    }
+  },
+  "turns": [
+    {
+      "n": 1,
+      "speaker": "agent",
+      "text": "Thank you for contacting Acme.  How may I help you today?"
+    },
+    {
+      "n": 2,
+      "speaker": "customer",
+      "text": "Hi! I need to check the status of my account because my subscription was removed and I still want it"
+    },
+    {
+      "n": 3,
+      "speaker": "agent",
+      "text": "Oh, I'm sorry to hear that, but we'll definitely try to get your subscription back up and running"
+    },
+    {
+      "n": 4,
+      "speaker": "agent",
+      "text": "may I ask your full name, so that we can get started?"
+    },
+    {
+      "n": 5,
+      "speaker": "customer",
+      "text": "Sanya Afzal"
+    },
+    {
+      "n": 6,
+      "speaker": "system_action",
+      "text": "Account has been pulled up for Sanya Afzal."
+    },
+    {
+      "n": 7,
+      "speaker": "agent",
+      "text": "Thanks, Sanya"
+    },
+    {
+      "n": 8,
+      "speaker": "agent",
+      "text": "and to verify your information, may I ask for your account ID and the order ID associated with your subscription"
+    },
+    {
+      "n": 9,
+      "speaker": "customer",
+      "text": "I do not have any of that information"
+    },
+    {
+      "n": 10,
+      "speaker": "agent",
+      "text": "I see.  One moment, allow me to check with my manager to see if I can access your account in a different way"
+    },
+    {
+      "n": 11,
+      "speaker": "customer",
+      "text": "thank you"
+    },
+    {
+      "n": 12,
+      "speaker": "agent",
+      "text": "okay, sorry about the wait.  Let me see if I can solve this issue from a different angle"
+    },
+    {
+      "n": 13,
+      "speaker": "agent",
+      "text": "A subscription was removed from your account, may I ask how you found out about this?"
+    },
+    {
+      "n": 14,
+      "speaker": "customer",
+      "text": "email"
+    },
+    {
+      "n": 15,
+      "speaker": "system_action",
+      "text": "A reason of email has been recorded."
+    },
+    {
+      "n": 16,
+      "speaker": "agent",
+      "text": "Okay, I'll check with our IT department.  The email itself might have been a mistake"
+    },
+    {
+      "n": 17,
+      "speaker": "system_action",
+      "text": "Querying the system for an answer ..."
+    },
+    {
+      "n": 18,
+      "speaker": "agent",
+      "text": "Yes, according to our systems, no email was actually sent to you by Acme.  We've been having some trouble with scam emails recently, so I'm very glad you brought this to our attention"
+    },
+    {
+      "n": 19,
+      "speaker": "customer",
+      "text": "thank you so much"
+    },
+    {
+      "n": 20,
+      "speaker": "agent",
+      "text": "If you look very closely, you can see that the email about your subscription being cancelled was not from our official marketing team"
+    },
+    {
+      "n": 21,
+      "speaker": "agent",
+      "text": "and you're welcome.  Your account appears to be in order, so there's nothing to worry about."
+    },
+    {
+      "n": 22,
+      "speaker": "customer",
+      "text": "oh gosh! I just looked at it. it sure isn't"
+    },
+    {
+      "n": 23,
+      "speaker": "customer",
+      "text": "thank you for everything"
+    },
+    {
+      "n": 24,
+      "speaker": "agent",
+      "text": "Yes, they keep getting craftier, but luckily you were vigilant and double-checked"
+    },
+    {
+      "n": 25,
+      "speaker": "agent",
+      "text": "If you log into your account at any time, you should see your subscription is still active"
+    },
+    {
+      "n": 26,
+      "speaker": "agent",
+      "text": "Would there be anything else that I can help you with?"
+    },
+    {
+      "n": 27,
+      "speaker": "customer",
+      "text": "no thank you"
+    },
+    {
+      "n": 28,
+      "speaker": "agent",
+      "text": "You're welcome.  Have a great day."
+    }
+  ],
+  "source_fields": {
+    "flow": "manage_account",
+    "subflow": "status_service_removed",
+    "actions_taken": [
+      "pull-up-account",
+      "record-reason",
+      "ask-the-oracle"
+    ]
+  },
+  "modifications": []
+}

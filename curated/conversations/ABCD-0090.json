@@ -1,0 +1,226 @@
+{
+  "id": "ABCD-0090",
+  "source": {
+    "dataset": "ABCD",
+    "original_id": "9899",
+    "licence": "MIT",
+    "url": "https://github.com/asappresearch/abcd",
+    "citation": "Chen et al. (2021), NAACL, arXiv:2104.00783"
+  },
+  "channel": "chat",
+  "customer_record": {
+    "customer_name": "albert sanders",
+    "phone": "(103) 074-1729",
+    "member_level": "silver",
+    "address": {
+      "street": "5777 woodshore st",
+      "city": "monterey",
+      "state": "wa",
+      "zip_code": "45275",
+      "full_address": "5777 woodshore st  monterey, wa 45275"
+    },
+    "order": {
+      "order_id": "4324126957",
+      "num_products": "1",
+      "products": [
+        {
+          "brand": "tommy_hilfiger",
+          "product_type": "jeans",
+          "amount": 69
+        }
+      ]
+    }
+  },
+  "turns": [
+    {
+      "n": 1,
+      "speaker": "agent",
+      "text": "Hello. How may I assist you today?"
+    },
+    {
+      "n": 2,
+      "speaker": "customer",
+      "text": "Hi, I just checked my statement and you have charged me twice for the subscription service, twice in the same month."
+    },
+    {
+      "n": 3,
+      "speaker": "agent",
+      "text": "I can check into it."
+    },
+    {
+      "n": 4,
+      "speaker": "agent",
+      "text": "What's your name?"
+    },
+    {
+      "n": 5,
+      "speaker": "customer",
+      "text": "Thank you."
+    },
+    {
+      "n": 6,
+      "speaker": "customer",
+      "text": "Albert Sanders"
+    },
+    {
+      "n": 7,
+      "speaker": "system_action",
+      "text": "Account has been pulled up for Albert Sanders."
+    },
+    {
+      "n": 8,
+      "speaker": "agent",
+      "text": "What are your account and order IDs?"
+    },
+    {
+      "n": 9,
+      "speaker": "customer",
+      "text": "Account ID is 0B04TGRCUS"
+    },
+    {
+      "n": 10,
+      "speaker": "customer",
+      "text": "Order ID 4324126857"
+    },
+    {
+      "n": 11,
+      "speaker": "agent",
+      "text": "What is your membership level Albert?"
+    },
+    {
+      "n": 12,
+      "speaker": "system_action",
+      "text": "Identity verification in progress ..."
+    },
+    {
+      "n": 13,
+      "speaker": "customer",
+      "text": "Silver"
+    },
+    {
+      "n": 14,
+      "speaker": "system_action",
+      "text": "Identity verification in progress ..."
+    },
+    {
+      "n": 15,
+      "speaker": "agent",
+      "text": "I am not finding those account or order IDs in our system."
+    },
+    {
+      "n": 16,
+      "speaker": "system_action",
+      "text": "Identity verification in progress ..."
+    },
+    {
+      "n": 17,
+      "speaker": "customer",
+      "text": "okay try OBO4TGRCUS as the account ID Please"
+    },
+    {
+      "n": 18,
+      "speaker": "system_action",
+      "text": "Identity verification in progress ..."
+    },
+    {
+      "n": 19,
+      "speaker": "agent",
+      "text": "Okay, is there another order ID?"
+    },
+    {
+      "n": 20,
+      "speaker": "customer",
+      "text": "4324126957"
+    },
+    {
+      "n": 21,
+      "speaker": "customer",
+      "text": "Tommy Hilfiger Jeans $69"
+    },
+    {
+      "n": 22,
+      "speaker": "system_action",
+      "text": "Identity verification in progress ..."
+    },
+    {
+      "n": 23,
+      "speaker": "agent",
+      "text": "Okay, those worked. Thanks for your patience."
+    },
+    {
+      "n": 24,
+      "speaker": "customer",
+      "text": "No problem, thank you - it was my error i think"
+    },
+    {
+      "n": 25,
+      "speaker": "agent",
+      "text": "We can offer you a $10 refund for the charge for your subscription."
+    },
+    {
+      "n": 26,
+      "speaker": "agent",
+      "text": "You're very welcome, we are all human."
+    },
+    {
+      "n": 27,
+      "speaker": "system_action",
+      "text": "Membership level of Silver has been noted."
+    },
+    {
+      "n": 28,
+      "speaker": "customer",
+      "text": "Is that the full cost of it?"
+    },
+    {
+      "n": 29,
+      "speaker": "agent",
+      "text": "I am not sure, I don't have access to the information to the charge. It is just our company policy to refund our Silver members $10 in these circumstances."
+    },
+    {
+      "n": 30,
+      "speaker": "customer",
+      "text": "Okay thats finbe, just do that please."
+    },
+    {
+      "n": 31,
+      "speaker": "system_action",
+      "text": "A refund has been made for the amount of $10."
+    },
+    {
+      "n": 32,
+      "speaker": "customer",
+      "text": "#fine"
+    },
+    {
+      "n": 33,
+      "speaker": "agent",
+      "text": "Can I help with anything else?"
+    },
+    {
+      "n": 34,
+      "speaker": "customer",
+      "text": "No, you've been great. Thank you and goodbye."
+    },
+    {
+      "n": 35,
+      "speaker": "agent",
+      "text": "Thanks! Have a great day"
+    }
+  ],
+  "source_fields": {
+    "flow": "subscription_inquiry",
+    "subflow": "manage_dispute_bill",
+    "actions_taken": [
+      "pull-up-account",
+      "verify-identity",
+      "verify-identity",
+      "verify-identity",
+      "verify-identity",
+      "verify-identity",
+      "membership",
+      "offer-refund"
+    ]
+  },
+  "modifications": []
+}

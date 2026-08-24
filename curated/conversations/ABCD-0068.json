@@ -1,0 +1,115 @@
+{
+  "id": "ABCD-0068",
+  "source": {
+    "dataset": "ABCD",
+    "original_id": "861",
+    "licence": "MIT",
+    "url": "https://github.com/asappresearch/abcd",
+    "citation": "Chen et al. (2021), NAACL, arXiv:2104.00783"
+  },
+  "channel": "chat",
+  "customer_record": {
+    "customer_name": "rodriguez domingo",
+    "phone": "(327) 964-5178",
+    "member_level": "gold",
+    "address": {
+      "street": "0471 circle drive",
+      "city": "la fayette",
+      "state": "wa",
+      "zip_code": "18868",
+      "full_address": "0471 circle drive  la fayette, wa 18868"
+    },
+    "order": {
+      "num_products": "1",
+      "products": [
+        {
+          "brand": "michael_kors",
+          "product_type": "jacket",
+          "amount": 54
+        }
+      ]
+    }
+  },
+  "turns": [
+    {
+      "n": 1,
+      "speaker": "customer",
+      "text": "is the jacket soft?"
+    },
+    {
+      "n": 2,
+      "speaker": "agent",
+      "text": "if i understand correctly, you are inquiring about a single item, the jacket today"
+    },
+    {
+      "n": 3,
+      "speaker": "customer",
+      "text": "yup"
+    },
+    {
+      "n": 4,
+      "speaker": "system_action",
+      "text": "Searching the FAQ pages ..."
+    },
+    {
+      "n": 5,
+      "speaker": "agent",
+      "text": "I can help with that today"
+    },
+    {
+      "n": 6,
+      "speaker": "system_action",
+      "text": "System Action: search jacket"
+    },
+    {
+      "n": 7,
+      "speaker": "customer",
+      "text": "its a michaels kors"
+    },
+    {
+      "n": 8,
+      "speaker": "agent",
+      "text": "understood, and i dont believe i caught your name today?"
+    },
+    {
+      "n": 9,
+      "speaker": "customer",
+      "text": "that is correct"
+    },
+    {
+      "n": 10,
+      "speaker": "system_action",
+      "text": "FAQ answer related to jacket (other4) was selected."
+    },
+    {
+      "n": 11,
+      "speaker": "customer",
+      "text": "i think my question has been answered"
+    },
+    {
+      "n": 12,
+      "speaker": "agent",
+      "text": "The outside of the jacket is made with synthetic material to be windproof, but the inside is cotton, so it is indeed soft"
+    },
+    {
+      "n": 13,
+      "speaker": "agent",
+      "text": "is there anything else i can help you with today?"
+    },
+    {
+      "n": 14,
+      "speaker": "agent",
+      "text": "it seems we have been disconnected, if you have any additional issues, feel free to contact us!"
+    }
+  ],
+  "source_fields": {
+    "flow": "single_item_query",
+    "subflow": "jacket_how_2",
+    "actions_taken": [
+      "search-faq",
+      "search-jacket",
+      "select-faq"
+    ]
+  },
+  "modifications": []
+}

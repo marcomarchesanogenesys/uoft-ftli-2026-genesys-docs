@@ -1,0 +1,193 @@
+{
+  "id": "ABCD-0096",
+  "source": {
+    "dataset": "ABCD",
+    "original_id": "5972",
+    "licence": "MIT",
+    "url": "https://github.com/asappresearch/abcd",
+    "citation": "Chen et al. (2021), NAACL, arXiv:2104.00783"
+  },
+  "channel": "chat",
+  "customer_id": "alberts4",
+  "customer_record": {
+    "customer_name": "albert sanders",
+    "username": "alberts4",
+    "email": "alberts4@email.com",
+    "phone": "(359) 205-2583",
+    "member_level": "gold",
+    "address": {
+      "street": "7811 lincoln ave",
+      "city": "baltimore",
+      "state": "tx",
+      "zip_code": "39932",
+      "full_address": "7811 lincoln ave  baltimore, tx 39932"
+    },
+    "order": {
+      "num_products": "1",
+      "products": [
+        {
+          "brand": "guess",
+          "product_type": "boots",
+          "amount": 49
+        }
+      ]
+    }
+  },
+  "turns": [
+    {
+      "n": 1,
+      "speaker": "agent",
+      "text": "Good afternoon, how can I help you?"
+    },
+    {
+      "n": 2,
+      "speaker": "customer",
+      "text": "hello, i dont know what is going on but every time i search for an item i get 0 results"
+    },
+    {
+      "n": 3,
+      "speaker": "customer",
+      "text": "this is very frustrating!"
+    },
+    {
+      "n": 4,
+      "speaker": "agent",
+      "text": "I understand, just to confirm you get zero result or you get that there is no more of the desired item"
+    },
+    {
+      "n": 5,
+      "speaker": "agent",
+      "text": "or no result found"
+    },
+    {
+      "n": 6,
+      "speaker": "agent",
+      "text": "Sir?"
+    },
+    {
+      "n": 7,
+      "speaker": "customer",
+      "text": "yes"
+    },
+    {
+      "n": 8,
+      "speaker": "customer",
+      "text": "it is 0 results"
+    },
+    {
+      "n": 9,
+      "speaker": "customer",
+      "text": "any item"
+    },
+    {
+      "n": 10,
+      "speaker": "customer",
+      "text": "says 0"
+    },
+    {
+      "n": 11,
+      "speaker": "agent",
+      "text": "already, We will do a series of steps and see which one solves your problem."
+    },
+    {
+      "n": 12,
+      "speaker": "agent",
+      "text": "First, have you already tried to log out of your account and log back in?"
+    },
+    {
+      "n": 13,
+      "speaker": "system_action",
+      "text": "Agent is looking for solutions ..."
+    },
+    {
+      "n": 14,
+      "speaker": "customer",
+      "text": "yes i have done that"
+    },
+    {
+      "n": 15,
+      "speaker": "agent",
+      "text": "ok"
+    },
+    {
+      "n": 16,
+      "speaker": "agent",
+      "text": "Let's try to clean the cookies in your browser, do you know how to do it?"
+    },
+    {
+      "n": 17,
+      "speaker": "system_action",
+      "text": "Agent is looking for solutions ..."
+    },
+    {
+      "n": 18,
+      "speaker": "customer",
+      "text": "yes"
+    },
+    {
+      "n": 19,
+      "speaker": "customer",
+      "text": "i have done that too"
+    },
+    {
+      "n": 20,
+      "speaker": "agent",
+      "text": "alright, Let's try to find another item other than the original, for example \"Prada Handbag\""
+    },
+    {
+      "n": 21,
+      "speaker": "system_action",
+      "text": "Agent is looking for solutions ..."
+    },
+    {
+      "n": 22,
+      "speaker": "agent",
+      "text": "and then go back to find the original item."
+    },
+    {
+      "n": 23,
+      "speaker": "customer",
+      "text": "ok that worked!"
+    },
+    {
+      "n": 24,
+      "speaker": "customer",
+      "text": "i found the original item"
+    },
+    {
+      "n": 25,
+      "speaker": "agent",
+      "text": "I'm glad to hear it"
+    },
+    {
+      "n": 26,
+      "speaker": "customer",
+      "text": "thank you!"
+    },
+    {
+      "n": 27,
+      "speaker": "agent",
+      "text": "all set then"
+    },
+    {
+      "n": 28,
+      "speaker": "agent",
+      "text": "a pleasure to help you"
+    },
+    {
+      "n": 29,
+      "speaker": "customer",
+      "text": "thank you bye"
+    }
+  ],
+  "source_fields": {
+    "flow": "troubleshoot_site",
+    "subflow": "search_results",
+    "actions_taken": [
+      "log-out-in",
+      "instructions",
+      "try-again"
+    ]
+  },
+  "modifications": []
+}

@@ -1,0 +1,122 @@
+{
+  "id": "ABCD-0094",
+  "source": {
+    "dataset": "ABCD",
+    "original_id": "3619",
+    "licence": "MIT",
+    "url": "https://github.com/asappresearch/abcd",
+    "citation": "Chen et al. (2021), NAACL, arXiv:2104.00783"
+  },
+  "channel": "chat",
+  "customer_id": "nbouchard547",
+  "customer_record": {
+    "customer_name": "norman bouchard",
+    "username": "nbouchard547",
+    "email": "nbouchard547@email.com",
+    "phone": "(548) 465-2360",
+    "member_level": "bronze",
+    "address": {
+      "street": "3899 2nd ave",
+      "city": "newark",
+      "state": "ca",
+      "zip_code": "37961",
+      "full_address": "3899 2nd ave  newark, ca 37961"
+    },
+    "order": {
+      "num_products": "1",
+      "products": [
+        {
+          "brand": "guess",
+          "product_type": "jeans",
+          "amount": 74
+        }
+      ]
+    }
+  },
+  "turns": [
+    {
+      "n": 1,
+      "speaker": "agent",
+      "text": "Hello, how can I help you?"
+    },
+    {
+      "n": 2,
+      "speaker": "customer",
+      "text": "Hi. Every time I try to search for something, no results are showing up."
+    },
+    {
+      "n": 3,
+      "speaker": "agent",
+      "text": "Let's try a couple solutions to that. Can you try logging out of your account and then logging back in?"
+    },
+    {
+      "n": 4,
+      "speaker": "customer",
+      "text": "Sure, hang on."
+    },
+    {
+      "n": 5,
+      "speaker": "customer",
+      "text": "I have done that, it didn't work..."
+    },
+    {
+      "n": 6,
+      "speaker": "system_action",
+      "text": "Agent is looking for solutions ..."
+    },
+    {
+      "n": 7,
+      "speaker": "agent",
+      "text": "Can you try clearing the cookies in your browser?"
+    },
+    {
+      "n": 8,
+      "speaker": "customer",
+      "text": "Okay..."
+    },
+    {
+      "n": 9,
+      "speaker": "customer",
+      "text": "Can you tell me how to do that?"
+    },
+    {
+      "n": 10,
+      "speaker": "agent",
+      "text": "Yep, if you go into your settings option in the browser and select \"More Details\", you should see it"
+    },
+    {
+      "n": 11,
+      "speaker": "system_action",
+      "text": "Agent is looking for solutions ..."
+    },
+    {
+      "n": 12,
+      "speaker": "customer",
+      "text": "Thanks, that seemed to work! I can see the results now."
+    },
+    {
+      "n": 13,
+      "speaker": "agent",
+      "text": "Awesome! Is there anything else I can help you with?"
+    },
+    {
+      "n": 14,
+      "speaker": "customer",
+      "text": "No that's all. Thanks!"
+    },
+    {
+      "n": 15,
+      "speaker": "agent",
+      "text": "Have a great day!"
+    }
+  ],
+  "source_fields": {
+    "flow": "troubleshoot_site",
+    "subflow": "search_results",
+    "actions_taken": [
+      "log-out-in",
+      "instructions"
+    ]
+  },
+  "modifications": []
+}

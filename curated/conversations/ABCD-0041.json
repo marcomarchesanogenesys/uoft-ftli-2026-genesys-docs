@@ -1,0 +1,193 @@
+{
+  "id": "ABCD-0041",
+  "source": {
+    "dataset": "ABCD",
+    "original_id": "1686",
+    "licence": "MIT",
+    "url": "https://github.com/asappresearch/abcd",
+    "citation": "Chen et al. (2021), NAACL, arXiv:2104.00783"
+  },
+  "channel": "chat",
+  "customer_id": "jbanter8",
+  "customer_record": {
+    "customer_name": "joseph banter",
+    "username": "jbanter8",
+    "email": "jbanter8@email.com",
+    "phone": "(637) 269-4504",
+    "member_level": "guest",
+    "address": {
+      "street": "3124 1st ave",
+      "city": "san lima",
+      "state": "ny",
+      "zip_code": "52491",
+      "full_address": "3124 1st ave  san lima, ny 52491"
+    },
+    "order": {
+      "order_id": "9529522608",
+      "num_products": "1",
+      "products": [
+        {
+          "brand": "calvin_klein",
+          "product_type": "boots",
+          "amount": 89
+        }
+      ]
+    }
+  },
+  "turns": [
+    {
+      "n": 1,
+      "speaker": "agent",
+      "text": "Thank you for contacting Acme.  How may I help you today?"
+    },
+    {
+      "n": 2,
+      "speaker": "customer",
+      "text": "Hello, the reason I contact you is because im trying to use a promo code but it doesnt work"
+    },
+    {
+      "n": 3,
+      "speaker": "agent",
+      "text": "I'm sorry to hear that, but let's see if I can clear that up for you"
+    },
+    {
+      "n": 4,
+      "speaker": "customer",
+      "text": "Ok thanks"
+    },
+    {
+      "n": 5,
+      "speaker": "agent",
+      "text": "May I ask your full name, so that I can take a look at your account?"
+    },
+    {
+      "n": 6,
+      "speaker": "customer",
+      "text": "that would be great"
+    },
+    {
+      "n": 7,
+      "speaker": "customer",
+      "text": "Joseph Banter"
+    },
+    {
+      "n": 8,
+      "speaker": "system_action",
+      "text": "Account has been pulled up for Joseph Banter."
+    },
+    {
+      "n": 9,
+      "speaker": "agent",
+      "text": "Okay, Mr. Banter, I can see your account now"
+    },
+    {
+      "n": 10,
+      "speaker": "agent",
+      "text": "Sometimes our promo codes are only valid for a limited time, usually a week, do you know when your code was issued?"
+    },
+    {
+      "n": 11,
+      "speaker": "customer",
+      "text": "it was issued about 8 days ago"
+    },
+    {
+      "n": 12,
+      "speaker": "customer",
+      "text": "maybe thats why it doest work"
+    },
+    {
+      "n": 13,
+      "speaker": "system_action",
+      "text": "Querying the system for an answer ..."
+    },
+    {
+      "n": 14,
+      "speaker": "agent",
+      "text": "Yes, I'm checking in our system now, and the code that was most recently tried on your account has indeed expired"
+    },
+    {
+      "n": 15,
+      "speaker": "agent",
+      "text": "However, depending on your membership level, I may be able to provide a new code for you"
+    },
+    {
+      "n": 16,
+      "speaker": "customer",
+      "text": "Oh thats too bad,"
+    },
+    {
+      "n": 17,
+      "speaker": "customer",
+      "text": "it would be great if you could help me"
+    },
+    {
+      "n": 18,
+      "speaker": "agent",
+      "text": "are you a member of our site, or were you using the site as a guest?"
+    },
+    {
+      "n": 19,
+      "speaker": "customer",
+      "text": "I really want those boots"
+    },
+    {
+      "n": 20,
+      "speaker": "customer",
+      "text": "im a guest"
+    },
+    {
+      "n": 21,
+      "speaker": "agent",
+      "text": "Oh, I'm sorry, I could only issue a replacement promo code to one of our existing members"
+    },
+    {
+      "n": 22,
+      "speaker": "customer",
+      "text": "Thats too bad"
+    },
+    {
+      "n": 23,
+      "speaker": "customer",
+      "text": "I guess I will have to wait for another discount then"
+    },
+    {
+      "n": 24,
+      "speaker": "agent",
+      "text": "Indeed, I'm sorry I couldn't be of any more assistance"
+    },
+    {
+      "n": 25,
+      "speaker": "customer",
+      "text": "No problem I understand"
+    },
+    {
+      "n": 26,
+      "speaker": "agent",
+      "text": "Are there any other issues that I could help you with while we are here?"
+    },
+    {
+      "n": 27,
+      "speaker": "customer",
+      "text": "no that would be all"
+    },
+    {
+      "n": 28,
+      "speaker": "customer",
+      "text": "thanks"
+    },
+    {
+      "n": 29,
+      "speaker": "agent",
+      "text": "You too.  Have a good day"
+    }
+  ],
+  "source_fields": {
+    "flow": "purchase_dispute",
+    "subflow": "promo_code_invalid",
+    "actions_taken": [
+      "pull-up-account",
+      "ask-the-oracle"
+    ]
+  },
+  "modifications": []
+}

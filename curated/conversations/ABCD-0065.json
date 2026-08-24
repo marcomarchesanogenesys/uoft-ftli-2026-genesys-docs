@@ -1,0 +1,110 @@
+{
+  "id": "ABCD-0065",
+  "source": {
+    "dataset": "ABCD",
+    "original_id": "3918",
+    "licence": "MIT",
+    "url": "https://github.com/asappresearch/abcd",
+    "citation": "Chen et al. (2021), NAACL, arXiv:2104.00783"
+  },
+  "channel": "chat",
+  "customer_record": {
+    "customer_name": "rodriguez domingo",
+    "phone": "(295) 980-7173",
+    "member_level": "guest",
+    "address": {
+      "street": "0560 woodshore st",
+      "city": "monterey",
+      "state": "tx",
+      "zip_code": "31207",
+      "full_address": "0560 woodshore st  monterey, tx 31207"
+    },
+    "order": {
+      "num_products": "1",
+      "products": [
+        {
+          "brand": "guess",
+          "product_type": "jacket",
+          "amount": 54
+        }
+      ]
+    }
+  },
+  "turns": [
+    {
+      "n": 1,
+      "speaker": "agent",
+      "text": "Hello and thanks for contacting AcmeBrands. How can I help you today?"
+    },
+    {
+      "n": 2,
+      "speaker": "agent",
+      "text": "Are you there?"
+    },
+    {
+      "n": 3,
+      "speaker": "customer",
+      "text": "Hi, I want to know what material this product is made out of   a guess jacket $54."
+    },
+    {
+      "n": 4,
+      "speaker": "agent",
+      "text": "I'd be happy to find that information for you, but first, could you provide me with your name?"
+    },
+    {
+      "n": 5,
+      "speaker": "customer",
+      "text": "Rodriguez Domingo"
+    },
+    {
+      "n": 6,
+      "speaker": "customer",
+      "text": "I haven't purchased it yet, but I was thinking of getting it as a gift."
+    },
+    {
+      "n": 7,
+      "speaker": "agent",
+      "text": "That would be a great gift. I'll be just a moment while I search up that information for you, Rodriguez."
+    },
+    {
+      "n": 8,
+      "speaker": "system_action",
+      "text": "Searching the FAQ pages ..."
+    },
+    {
+      "n": 9,
+      "speaker": "system_action",
+      "text": "System Action: search jacket"
+    },
+    {
+      "n": 10,
+      "speaker": "system_action",
+      "text": "FAQ answer related to jacket (other4) was selected."
+    },
+    {
+      "n": 11,
+      "speaker": "agent",
+      "text": "The outside of the jacket has synthetic materials like polyester, nylon and tricot to make it windproof, but the inside is lined with cotton, which is great for warmth and insulation."
+    },
+    {
+      "n": 12,
+      "speaker": "customer",
+      "text": "O.k. thank you - that helps me with my decision. That's all I needed.  Have a nice day!"
+    },
+    {
+      "n": 13,
+      "speaker": "agent",
+      "text": "You're welcome! Enjoy your day, too!"
+    }
+  ],
+  "source_fields": {
+    "flow": "single_item_query",
+    "subflow": "jacket_other_4",
+    "actions_taken": [
+      "search-faq",
+      "search-jacket",
+      "select-faq"
+    ]
+  },
+  "modifications": []
+}

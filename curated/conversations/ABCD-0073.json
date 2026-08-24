@@ -1,0 +1,110 @@
+{
+  "id": "ABCD-0073",
+  "source": {
+    "dataset": "ABCD",
+    "original_id": "418",
+    "licence": "MIT",
+    "url": "https://github.com/asappresearch/abcd",
+    "citation": "Chen et al. (2021), NAACL, arXiv:2104.00783"
+  },
+  "channel": "chat",
+  "customer_record": {
+    "customer_name": "alessandro phoenix",
+    "phone": "(655) 010-9446",
+    "member_level": "guest",
+    "address": {
+      "street": "1358 woodshore st",
+      "city": "brighton",
+      "state": "ny",
+      "zip_code": "75715",
+      "full_address": "1358 woodshore st  brighton, ny 75715"
+    }
+  },
+  "turns": [
+    {
+      "n": 1,
+      "speaker": "agent",
+      "text": "Hello! How may I help you today?"
+    },
+    {
+      "n": 2,
+      "speaker": "customer",
+      "text": "hello, what are the requirements of getting premium membership"
+    },
+    {
+      "n": 3,
+      "speaker": "agent",
+      "text": "I will be happy to help you with that."
+    },
+    {
+      "n": 4,
+      "speaker": "agent",
+      "text": "What is your name?"
+    },
+    {
+      "n": 5,
+      "speaker": "customer",
+      "text": "Alessandro Phoenix"
+    },
+    {
+      "n": 6,
+      "speaker": "agent",
+      "text": "Thank you Alessandro."
+    },
+    {
+      "n": 7,
+      "speaker": "system_action",
+      "text": "Searching the FAQ pages ..."
+    },
+    {
+      "n": 8,
+      "speaker": "system_action",
+      "text": "System Action: search membership"
+    },
+    {
+      "n": 9,
+      "speaker": "agent",
+      "text": "So to become a member, you would have to earn it by making purchases over a period of time. Bronze is given to customers who purchase over $500 in the last year. Silver is for $1000 in purchases over the last year, and Gold is over $2000 purchases an"
+    },
+    {
+      "n": 10,
+      "speaker": "agent",
+      "text": "Is there anything else I can help you with?"
+    },
+    {
+      "n": 11,
+      "speaker": "system_action",
+      "text": "FAQ answer related to membership (question2) was selected."
+    },
+    {
+      "n": 12,
+      "speaker": "customer",
+      "text": "ok that is all."
+    },
+    {
+      "n": 13,
+      "speaker": "customer",
+      "text": "i am a heavy shopper"
+    },
+    {
+      "n": 14,
+      "speaker": "customer",
+      "text": "thanks for the help"
+    },
+    {
+      "n": 15,
+      "speaker": "agent",
+      "text": "You are very welcome. Thanks for being a customer."
+    }
+  ],
+  "source_fields": {
+    "flow": "storewide_query",
+    "subflow": "membership_2",
+    "actions_taken": [
+      "search-faq",
+      "search-membership",
+      "select-faq"
+    ]
+  },
+  "modifications": []
+}

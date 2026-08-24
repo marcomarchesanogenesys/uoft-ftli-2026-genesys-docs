@@ -1,0 +1,124 @@
+{
+  "id": "ABCD-0053",
+  "source": {
+    "dataset": "ABCD",
+    "original_id": "3072",
+    "licence": "MIT",
+    "url": "https://github.com/asappresearch/abcd",
+    "citation": "Chen et al. (2021), NAACL, arXiv:2104.00783"
+  },
+  "channel": "chat",
+  "customer_id": "dwilliams347",
+  "customer_record": {
+    "customer_name": "david williams",
+    "username": "dwilliams347",
+    "email": "dwilliams347@email.com",
+    "phone": "(734) 769-0015",
+    "member_level": "guest",
+    "address": {
+      "street": "6346 circle drive",
+      "city": "raleigh",
+      "state": "mi",
+      "zip_code": "99667",
+      "full_address": "6346 circle drive  raleigh, mi 99667"
+    },
+    "order": {
+      "order_id": "1428950413",
+      "purchase_date": "2019-09-24",
+      "num_products": "3",
+      "products": [
+        {
+          "brand": "guess",
+          "product_type": "shirt",
+          "amount": 64
+        },
+        {
+          "brand": "michael_kors",
+          "product_type": "boots",
+          "amount": 94
+        },
+        {
+          "brand": "guess",
+          "product_type": "shirt",
+          "amount": 79
+        }
+      ]
+    }
+  },
+  "turns": [
+    {
+      "n": 1,
+      "speaker": "agent",
+      "text": "Thanks for contacting AcmeBrands! How can I help you today?"
+    },
+    {
+      "n": 2,
+      "speaker": "customer",
+      "text": "Hi, Do you any app for the mobile phones?"
+    },
+    {
+      "n": 3,
+      "speaker": "agent",
+      "text": "I'd be happy to find that information for you, but first could I have your name?"
+    },
+    {
+      "n": 4,
+      "speaker": "customer",
+      "text": "My name is David Williams"
+    },
+    {
+      "n": 5,
+      "speaker": "system_action",
+      "text": "Searching the FAQ pages ..."
+    },
+    {
+      "n": 6,
+      "speaker": "agent",
+      "text": "Hello, David. We don't currently have a mobile app. Are you having a issue placing an order online?"
+    },
+    {
+      "n": 7,
+      "speaker": "customer",
+      "text": "No, I just want to use a mobile app"
+    },
+    {
+      "n": 8,
+      "speaker": "agent",
+      "text": "I can send the suggestion of adding a mobile application to our management if you would like."
+    },
+    {
+      "n": 9,
+      "speaker": "customer",
+      "text": "Ok, I will be happy"
+    },
+    {
+      "n": 10,
+      "speaker": "system_action",
+      "text": "The Management has been notified."
+    },
+    {
+      "n": 11,
+      "speaker": "agent",
+      "text": "You're suggestion and request has been sent to our internal team. Is there anything else I can help you with?"
+    },
+    {
+      "n": 12,
+      "speaker": "customer",
+      "text": "No thank you very much"
+    },
+    {
+      "n": 13,
+      "speaker": "agent",
+      "text": "You're welcome. Enjoy the rest of your day."
+    }
+  ],
+  "source_fields": {
+    "flow": "shipping_issue",
+    "subflow": "status",
+    "actions_taken": [
+      "search-faq",
+      "notify-team"
+    ]
+  },
+  "modifications": []
+}

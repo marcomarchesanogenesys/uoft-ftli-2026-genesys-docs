@@ -1,0 +1,200 @@
+{
+  "id": "HVB-0045",
+  "source": {
+    "dataset": "HarperValleyBank",
+    "original_id": "0c98468d8b914ea1",
+    "licence": "CC BY 4.0",
+    "url": "https://github.com/cricketclub/gridspace-stanford-harper-valley",
+    "citation": "Wu, Nafziger, Scodary & Maas (2020), arXiv:2010.13929"
+  },
+  "channel": "voice",
+  "agent_id": "hvb-speaker-40",
+  "customer_id": "hvb-speaker-28",
+  "customer_record": {
+    "customer_name": "David Smith",
+    "captured_by_agent": {
+      "phone": "461-425-8668"
+    }
+  },
+  "turns": [
+    {
+      "n": 1,
+      "speaker": "agent",
+      "text": "hello this is harper valley national bank",
+      "asr_text": "hello this is harper valley national bank",
+      "start_ms": 2889,
+      "duration_ms": 2040,
+      "dialog_acts": [
+        "greeting"
+      ]
+    },
+    {
+      "n": 2,
+      "speaker": "agent",
+      "text": "my name is linda",
+      "asr_text": "my name is linda",
+      "start_ms": 5289,
+      "duration_ms": 840,
+      "dialog_acts": [
+        "greeting"
+      ]
+    },
+    {
+      "n": 3,
+      "speaker": "agent",
+      "text": "how can i help you today",
+      "asr_text": "how can i help you today",
+      "start_ms": 6889,
+      "duration_ms": 1020,
+      "dialog_acts": [
+        "greeting"
+      ]
+    },
+    {
+      "n": 4,
+      "speaker": "customer",
+      "text": "hi my name is david smith i would like to reset my password",
+      "asr_text": "hi my name is david smith i would like to reset my password",
+      "start_ms": 11390,
+      "duration_ms": 4980,
+      "dialog_acts": [
+        "response",
+        "greeting"
+      ]
+    },
+    {
+      "n": 5,
+      "speaker": "agent",
+      "text": "what is your phone number",
+      "asr_text": "what is your phone number",
+      "start_ms": 21889,
+      "duration_ms": 1050,
+      "dialog_acts": [
+        "data_question"
+      ]
+    },
+    {
+      "n": 6,
+      "speaker": "customer",
+      "text": "my phone number is four six one",
+      "asr_text": "my phone number is four six one",
+      "start_ms": 26290,
+      "duration_ms": 3930,
+      "dialog_acts": [
+        "response",
+        "other"
+      ]
+    },
+    {
+      "n": 7,
+      "speaker": "customer",
+      "text": "four two five",
+      "asr_text": "four two five",
+      "start_ms": 30920,
+      "duration_ms": 2640,
+      "dialog_acts": [
+        "response",
+        "data_response"
+      ]
+    },
+    {
+      "n": 8,
+      "speaker": "customer",
+      "text": "eight six six eight",
+      "asr_text": "eight six six eight",
+      "start_ms": 34220,
+      "duration_ms": 2910,
+      "dialog_acts": [
+        "response",
+        "data_response"
+      ]
+    },
+    {
+      "n": 9,
+      "speaker": "agent",
+      "text": "your password reset link has been sent to your phone",
+      "asr_text": "your password reset link has been sent to your phone",
+      "start_ms": 45159,
+      "duration_ms": 2400,
+      "dialog_acts": [
+        "data_question",
+        "procedure_explanation"
+      ]
+    },
+    {
+      "n": 10,
+      "speaker": "customer",
+      "text": "thank you",
+      "asr_text": "thank you",
+      "start_ms": 51420,
+      "duration_ms": 390,
+      "dialog_acts": [
+        "thanks"
+      ]
+    },
+    {
+      "n": 11,
+      "speaker": "agent",
+      "text": "is there anything else i can help you with",
+      "asr_text": "is there anything else i can help you with",
+      "start_ms": 49919,
+      "duration_ms": 1560,
+      "dialog_acts": [
+        "open_question"
+      ]
+    },
+    {
+      "n": 12,
+      "speaker": "customer",
+      "text": "no that'll be it",
+      "asr_text": "not a little bit",
+      "start_ms": 54490,
+      "duration_ms": 810,
+      "dialog_acts": [
+        "other"
+      ]
+    },
+    {
+      "n": 13,
+      "speaker": "agent",
+      "text": "thank you for calling have a great day",
+      "asr_text": "thank you for calling have a great day",
+      "start_ms": 54859,
+      "duration_ms": 1710,
+      "dialog_acts": [
+        "thanks",
+        "closing"
+      ]
+    },
+    {
+      "n": 14,
+      "speaker": "customer",
+      "text": "you <unk>",
+      "asr_text": "you too",
+      "start_ms": 59620,
+      "duration_ms": 420,
+      "dialog_acts": [
+        "closing"
+      ]
+    }
+  ],
+  "source_fields": {
+    "task_assigned": [
+      "reset password"
+    ],
+    "task_logged_by_agent": [
+      "reset password"
+    ],
+    "labels": {
+      "lhvb_script": 5.0,
+      "caller_mos": 3.0,
+      "agent_mos": 3.0
+    },
+    "session": "Little Harper Valley 2",
+    "customer_survey_response": {
+      "ease_of_connection": "10",
+      "partner_rating": "10"
+    }
+  },
+  "modifications": []
+}

@@ -1,0 +1,163 @@
+{
+  "id": "ABCD-0084",
+  "source": {
+    "dataset": "ABCD",
+    "original_id": "4932",
+    "licence": "MIT",
+    "url": "https://github.com/asappresearch/abcd",
+    "citation": "Chen et al. (2021), NAACL, arXiv:2104.00783"
+  },
+  "channel": "chat",
+  "customer_record": {
+    "customer_name": "rodriguez domingo",
+    "phone": "(430) 384-1868",
+    "member_level": "bronze",
+    "address": {
+      "street": "8630 woodshore st",
+      "city": "jacksonville",
+      "state": "mi",
+      "zip_code": "81747",
+      "full_address": "8630 woodshore st  jacksonville, mi 81747"
+    },
+    "order": {
+      "order_id": "1918667461",
+      "num_products": "1",
+      "products": [
+        {
+          "brand": "guess",
+          "product_type": "shirt",
+          "amount": 49
+        }
+      ]
+    }
+  },
+  "turns": [
+    {
+      "n": 1,
+      "speaker": "agent",
+      "text": "Hello, Thank you for contacting us today. How can I help you?"
+    },
+    {
+      "n": 2,
+      "speaker": "customer",
+      "text": "i would like to dispute my billing because i got charged twice for my subscription"
+    },
+    {
+      "n": 3,
+      "speaker": "agent",
+      "text": "I'm sorry to hear that. Let me look into it for you."
+    },
+    {
+      "n": 4,
+      "speaker": "agent",
+      "text": "Could you provide me with your Full name and account ID please?"
+    },
+    {
+      "n": 5,
+      "speaker": "customer",
+      "text": "Rodriguez Domingo. KEMFGSWSOV"
+    },
+    {
+      "n": 6,
+      "speaker": "system_action",
+      "text": "Account has been pulled up for Rodriguez Domingo."
+    },
+    {
+      "n": 7,
+      "speaker": "agent",
+      "text": "Thank you I was able to pull up your account. Could you also provide me with the order ID so I can look up the charges?"
+    },
+    {
+      "n": 8,
+      "speaker": "customer",
+      "text": "1918667461"
+    },
+    {
+      "n": 9,
+      "speaker": "system_action",
+      "text": "Identity verification in progress ..."
+    },
+    {
+      "n": 10,
+      "speaker": "agent",
+      "text": "Alright, great. Next could you tell me what your membership level is?"
+    },
+    {
+      "n": 11,
+      "speaker": "customer",
+      "text": "bronze"
+    },
+    {
+      "n": 12,
+      "speaker": "system_action",
+      "text": "Membership level of bronze has been noted."
+    },
+    {
+      "n": 13,
+      "speaker": "agent",
+      "text": "And how much do you believe the overcharge was for?"
+    },
+    {
+      "n": 14,
+      "speaker": "customer",
+      "text": "$49"
+    },
+    {
+      "n": 15,
+      "speaker": "agent",
+      "text": "Alright. Let me check with the system to see if it was charged twice."
+    },
+    {
+      "n": 16,
+      "speaker": "system_action",
+      "text": "Querying the system for an answer ..."
+    },
+    {
+      "n": 17,
+      "speaker": "agent",
+      "text": "Alright. It looks like this was indeed an error in our processing."
+    },
+    {
+      "n": 18,
+      "speaker": "agent",
+      "text": "Let me go ahead and get that refund to you."
+    },
+    {
+      "n": 19,
+      "speaker": "customer",
+      "text": "ok"
+    },
+    {
+      "n": 20,
+      "speaker": "system_action",
+      "text": "A refund has been made for the amount of $49."
+    },
+    {
+      "n": 21,
+      "speaker": "agent",
+      "text": "Alright. All set. Was there anything else I could do for you today"
+    },
+    {
+      "n": 22,
+      "speaker": "customer",
+      "text": "that is all. thank you"
+    },
+    {
+      "n": 23,
+      "speaker": "agent",
+      "text": "Thank you for shopping with us. Have a great day!"
+    }
+  ],
+  "source_fields": {
+    "flow": "subscription_inquiry",
+    "subflow": "manage_dispute_bill",
+    "actions_taken": [
+      "pull-up-account",
+      "verify-identity",
+      "membership",
+      "ask-the-oracle",
+      "offer-refund"
+    ]
+  },
+  "modifications": []
+}

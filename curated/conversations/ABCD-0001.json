@@ -1,0 +1,108 @@
+{
+  "id": "ABCD-0001",
+  "source": {
+    "dataset": "ABCD",
+    "original_id": "10247",
+    "licence": "MIT",
+    "url": "https://github.com/asappresearch/abcd",
+    "citation": "Chen et al. (2021), NAACL, arXiv:2104.00783"
+  },
+  "channel": "chat",
+  "customer_id": "josephbanter716",
+  "customer_record": {
+    "customer_name": "joseph banter",
+    "username": "josephbanter716",
+    "email": "josephbanter716@email.com",
+    "phone": "(822) 577-6709",
+    "member_level": "guest",
+    "address": {
+      "street": "5887 circle drive",
+      "city": "la fayette",
+      "state": "ca",
+      "zip_code": "21131",
+      "full_address": "5887 circle drive  la fayette, ca 21131"
+    }
+  },
+  "turns": [
+    {
+      "n": 1,
+      "speaker": "agent",
+      "text": "Hello and welcome to AcmeCorp, how can I help you today?"
+    },
+    {
+      "n": 2,
+      "speaker": "customer",
+      "text": "can not access my account since the phone i used for the two factor authentication got lost."
+    },
+    {
+      "n": 3,
+      "speaker": "agent",
+      "text": "Sure, I'll be able to help you reset your two factor authentication for you.  First can I have the full name on your account?"
+    },
+    {
+      "n": 4,
+      "speaker": "customer",
+      "text": "Joseph Banter"
+    },
+    {
+      "n": 5,
+      "speaker": "system_action",
+      "text": "Account has been pulled up for Joseph Banter."
+    },
+    {
+      "n": 6,
+      "speaker": "agent",
+      "text": "Hi Joseph.  I'm going to need the email on file so you can get your code for the two factor authentication."
+    },
+    {
+      "n": 7,
+      "speaker": "customer",
+      "text": "josephbanter716@email.com"
+    },
+    {
+      "n": 8,
+      "speaker": "system_action",
+      "text": "Details of josephbanter716@email.com have been entered."
+    },
+    {
+      "n": 9,
+      "speaker": "agent",
+      "text": "Thanks so much.  I'm also going to send you a link to read about the best security practices for your account."
+    },
+    {
+      "n": 10,
+      "speaker": "system_action",
+      "text": "A link will be sent."
+    },
+    {
+      "n": 11,
+      "speaker": "customer",
+      "text": "ok thanks"
+    },
+    {
+      "n": 12,
+      "speaker": "agent",
+      "text": "You're welcome.  The email has been sent and you should be able to reset your two factor authentication now.  Is there anything else I can help you with today?"
+    },
+    {
+      "n": 13,
+      "speaker": "customer",
+      "text": "that is all"
+    },
+    {
+      "n": 14,
+      "speaker": "agent",
+      "text": "Wonderful, hope you have a nice day!"
+    }
+  ],
+  "source_fields": {
+    "flow": "account_access",
+    "subflow": "reset_2fa",
+    "actions_taken": [
+      "pull-up-account",
+      "enter-details",
+      "send-link"
+    ]
+  },
+  "modifications": []
+}

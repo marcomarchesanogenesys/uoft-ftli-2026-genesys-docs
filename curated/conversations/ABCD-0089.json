@@ -1,0 +1,189 @@
+{
+  "id": "ABCD-0089",
+  "source": {
+    "dataset": "ABCD",
+    "original_id": "9475",
+    "licence": "MIT",
+    "url": "https://github.com/asappresearch/abcd",
+    "citation": "Chen et al. (2021), NAACL, arXiv:2104.00783"
+  },
+  "channel": "chat",
+  "customer_record": {
+    "customer_name": "alessandro phoenix",
+    "phone": "(940) 936-7528",
+    "member_level": "guest",
+    "address": {
+      "street": "9949 lexington ave",
+      "city": "la fayette",
+      "state": "wa",
+      "zip_code": "79765",
+      "full_address": "9949 lexington ave  la fayette, wa 79765"
+    },
+    "order": {
+      "order_id": "5487813129"
+    }
+  },
+  "turns": [
+    {
+      "n": 1,
+      "speaker": "agent",
+      "text": "Hi, what can I do for you?"
+    },
+    {
+      "n": 2,
+      "speaker": "customer",
+      "text": "Hello! I want help with my premium subscription"
+    },
+    {
+      "n": 3,
+      "speaker": "customer",
+      "text": "I love the benefits so much! I can't imagine how I lived without them"
+    },
+    {
+      "n": 4,
+      "speaker": "agent",
+      "text": "Okay, what kind of hep did you need?"
+    },
+    {
+      "n": 5,
+      "speaker": "customer",
+      "text": "I really want to keep my subscription active but I am not sure how to pay the fee"
+    },
+    {
+      "n": 6,
+      "speaker": "customer",
+      "text": "Can you help me figure this out?"
+    },
+    {
+      "n": 7,
+      "speaker": "agent",
+      "text": "So you would like to pay your bill?"
+    },
+    {
+      "n": 8,
+      "speaker": "customer",
+      "text": "Yes I would"
+    },
+    {
+      "n": 9,
+      "speaker": "agent",
+      "text": "Can I have your name?"
+    },
+    {
+      "n": 10,
+      "speaker": "customer",
+      "text": "I think the annual fee is due"
+    },
+    {
+      "n": 11,
+      "speaker": "customer",
+      "text": "Alessandro Phoenix"
+    },
+    {
+      "n": 12,
+      "speaker": "system_action",
+      "text": "Account has been pulled up for Alessandro Phoenix."
+    },
+    {
+      "n": 13,
+      "speaker": "agent",
+      "text": "Okay, can I have your account ID and order ID?"
+    },
+    {
+      "n": 14,
+      "speaker": "customer",
+      "text": "EPDWFLBDYY"
+    },
+    {
+      "n": 15,
+      "speaker": "customer",
+      "text": "5487813129"
+    },
+    {
+      "n": 16,
+      "speaker": "system_action",
+      "text": "Identity verification in progress ..."
+    },
+    {
+      "n": 17,
+      "speaker": "agent",
+      "text": "Okay the amount is 99, how much did you want to pay today?"
+    },
+    {
+      "n": 18,
+      "speaker": "customer",
+      "text": "I would like to pay all of it"
+    },
+    {
+      "n": 19,
+      "speaker": "system_action",
+      "text": "Details of 99 have been entered."
+    },
+    {
+      "n": 20,
+      "speaker": "agent",
+      "text": "Do you have your credit card number?"
+    },
+    {
+      "n": 21,
+      "speaker": "customer",
+      "text": "Can you use the card that I have on file?"
+    },
+    {
+      "n": 22,
+      "speaker": "agent",
+      "text": "Yes I can"
+    },
+    {
+      "n": 23,
+      "speaker": "system_action",
+      "text": "Account has been updated with renew subscription."
+    },
+    {
+      "n": 24,
+      "speaker": "agent",
+      "text": "Okay you are all set"
+    },
+    {
+      "n": 25,
+      "speaker": "customer",
+      "text": "Oh great!"
+    },
+    {
+      "n": 26,
+      "speaker": "agent",
+      "text": "Is there anything else I can do for you?"
+    },
+    {
+      "n": 27,
+      "speaker": "customer",
+      "text": "I am so happy to keep my subscription"
+    },
+    {
+      "n": 28,
+      "speaker": "customer",
+      "text": "No, that was it"
+    },
+    {
+      "n": 29,
+      "speaker": "customer",
+      "text": "Thanks for helping me!"
+    },
+    {
+      "n": 30,
+      "speaker": "agent",
+      "text": "No prblem, have a nice day"
+    }
+  ],
+  "source_fields": {
+    "flow": "subscription_inquiry",
+    "subflow": "manage_pay_bill",
+    "actions_taken": [
+      "pull-up-account",
+      "verify-identity",
+      "enter-details",
+      "update-account"
+    ]
+  },
+  "modifications": []
+}

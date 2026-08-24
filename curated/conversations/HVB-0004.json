@@ -1,0 +1,273 @@
+{
+  "id": "HVB-0004",
+  "source": {
+    "dataset": "HarperValleyBank",
+    "original_id": "0bbbedb40f224e9a",
+    "licence": "CC BY 4.0",
+    "url": "https://github.com/cricketclub/gridspace-stanford-harper-valley",
+    "citation": "Wu, Nafziger, Scodary & Maas (2020), arXiv:2010.13929"
+  },
+  "channel": "voice",
+  "agent_id": "hvb-speaker-17",
+  "customer_id": "hvb-speaker-32",
+  "customer_record": {
+    "customer_name": "David Johnson",
+    "captured_by_agent": {
+      "replacement card type": "credit"
+    }
+  },
+  "turns": [
+    {
+      "n": 1,
+      "speaker": "agent",
+      "text": "hello this is harper valley national bank my name is elizabeth how can i help you today",
+      "asr_text": "hello this is happy valley national bank my name is elisia how can i help you today",
+      "start_ms": 3020,
+      "duration_ms": 3870,
+      "dialog_acts": [
+        "greeting"
+      ]
+    },
+    {
+      "n": 2,
+      "speaker": "customer",
+      "text": "hi my name is david johnson",
+      "asr_text": "hi my name is david johnson",
+      "start_ms": 8419,
+      "duration_ms": 1950,
+      "dialog_acts": [
+        "greeting"
+      ]
+    },
+    {
+      "n": 3,
+      "speaker": "agent",
+      "text": "[noise]",
+      "asr_text": "[noise]",
+      "start_ms": 10390,
+      "duration_ms": 60,
+      "dialog_acts": [
+        "other",
+        "confirm_data"
+      ]
+    },
+    {
+      "n": 4,
+      "speaker": "customer",
+      "text": "i lost my credit card can you send me a new one",
+      "asr_text": "i lost my credit card can you send me a new one",
+      "start_ms": 11019,
+      "duration_ms": 2760,
+      "dialog_acts": [
+        "greeting",
+        "problem_description"
+      ]
+    },
+    {
+      "n": 5,
+      "speaker": "agent",
+      "text": "[noise]",
+      "asr_text": "[noise]",
+      "start_ms": 12490,
+      "duration_ms": 750,
+      "dialog_acts": [
+        "other",
+        "confirm_data"
+      ]
+    },
+    {
+      "n": 6,
+      "speaker": "agent",
+      "text": "yeah sure i can help you with that um",
+      "asr_text": "yeah sure i can help you with that um",
+      "start_ms": 15060,
+      "duration_ms": 2400,
+      "dialog_acts": [
+        "other",
+        "confirm_data"
+      ]
+    },
+    {
+      "n": 7,
+      "speaker": "agent",
+      "text": "so you said you lost your credit card right",
+      "asr_text": "so you said you lost your credit card right",
+      "start_ms": 18090,
+      "duration_ms": 2790,
+      "dialog_acts": [
+        "other",
+        "confirm_data"
+      ]
+    },
+    {
+      "n": 8,
+      "speaker": "customer",
+      "text": "yes",
+      "asr_text": "yes",
+      "start_ms": 21919,
+      "duration_ms": 540,
+      "dialog_acts": [
+        "yes_response"
+      ]
+    },
+    {
+      "n": 9,
+      "speaker": "agent",
+      "text": "okay so i will um replace uh like to make a new credit card for you and it's gonna send to your address",
+      "asr_text": "okay so i will um replace uh like to make a new credit card for you and it's going to send to your address",
+      "start_ms": 23260,
+      "duration_ms": 8490,
+      "dialog_acts": [
+        "other"
+      ]
+    },
+    {
+      "n": 10,
+      "speaker": "agent",
+      "text": "um in three to five business days could i get your home address too",
+      "asr_text": "um in three to five business days could i get your home address too",
+      "start_ms": 32190,
+      "duration_ms": 3690,
+      "dialog_acts": [
+        "data_question",
+        "procedure_explanation"
+      ]
+    },
+    {
+      "n": 11,
+      "speaker": "customer",
+      "text": "[noise]",
+      "asr_text": "[noise]",
+      "start_ms": 37389,
+      "duration_ms": 120,
+      "dialog_acts": [
+        "filler_disfluency",
+        "data_response"
+      ]
+    },
+    {
+      "n": 12,
+      "speaker": "agent",
+      "text": "[noise]",
+      "asr_text": "okay",
+      "start_ms": 37790,
+      "duration_ms": 120,
+      "dialog_acts": [
+        "acknowledgement"
+      ]
+    },
+    {
+      "n": 13,
+      "speaker": "customer",
+      "text": "um",
+      "asr_text": "um",
+      "start_ms": 39249,
+      "duration_ms": 720,
+      "dialog_acts": [
+        "filler_disfluency"
+      ]
+    },
+    {
+      "n": 14,
+      "speaker": "agent",
+      "text": "[noise]",
+      "asr_text": "okay",
+      "start_ms": 39230,
+      "duration_ms": 150,
+      "dialog_acts": [
+        "acknowledgement"
+      ]
+    },
+    {
+      "n": 15,
+      "speaker": "customer",
+      "text": "[noise]",
+      "asr_text": "[noise]",
+      "start_ms": 41789,
+      "duration_ms": 90,
+      "dialog_acts": [
+        "filler_disfluency"
+      ]
+    },
+    {
+      "n": 16,
+      "speaker": "customer",
+      "text": "uh no sorry",
+      "asr_text": "uh no sorry",
+      "start_ms": 43419,
+      "duration_ms": 2850,
+      "dialog_acts": [
+        "other"
+      ]
+    },
+    {
+      "n": 17,
+      "speaker": "agent",
+      "text": "[noise]",
+      "asr_text": "[noise]",
+      "start_ms": 43590,
+      "duration_ms": 90,
+      "dialog_acts": [
+        "acknowledgement",
+        "filler_disfluency"
+      ]
+    },
+    {
+      "n": 18,
+      "speaker": "agent",
+      "text": "[noise]",
+      "asr_text": "yeah",
+      "start_ms": 44520,
+      "duration_ms": 90,
+      "dialog_acts": [
+        "acknowledgement"
+      ]
+    },
+    {
+      "n": 19,
+      "speaker": "agent",
+      "text": "[noise]",
+      "asr_text": "[noise]",
+      "start_ms": 45590,
+      "duration_ms": 180,
+      "dialog_acts": [
+        "other"
+      ]
+    },
+    {
+      "n": 20,
+      "speaker": "agent",
+      "text": "[laughter] [laughter]",
+      "asr_text": "[laughter] [laughter]",
+      "start_ms": 47020,
+      "duration_ms": 750,
+      "dialog_acts": [
+        "acknowledgement",
+        "other"
+      ]
+    }
+  ],
+  "source_fields": {
+    "task_assigned": [
+      "replace card"
+    ],
+    "task_logged_by_agent": [
+      "replace card"
+    ],
+    "labels": {
+      "lhvb_script": 5.0,
+      "caller_mos": 5.0,
+      "agent_mos": 5.0
+    },
+    "session": "Little Harper Valley 1",
+    "agent_survey_response": {
+      "ease_of_connection": "10",
+      "partner_rating": "10"
+    },
+    "customer_survey_response": {
+      "ease_of_connection": "8",
+      "partner_rating": "0"
+    }
+  },
+  "modifications": []
+}

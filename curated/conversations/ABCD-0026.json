@@ -1,0 +1,163 @@
+{
+  "id": "ABCD-0026",
+  "source": {
+    "dataset": "ABCD",
+    "original_id": "7470",
+    "licence": "MIT",
+    "url": "https://github.com/asappresearch/abcd",
+    "citation": "Chen et al. (2021), NAACL, arXiv:2104.00783"
+  },
+  "channel": "chat",
+  "customer_record": {
+    "customer_name": "alessandro phoenix",
+    "phone": "(607) 140-9207",
+    "member_level": "bronze",
+    "address": {
+      "street": "0419 kennedy st",
+      "city": "newark",
+      "state": "wa",
+      "zip_code": "66156",
+      "full_address": "0419 kennedy st  newark, wa 66156"
+    },
+    "order": {
+      "order_id": "1225304645",
+      "payment_method": "debit card",
+      "num_products": "1",
+      "products": [
+        {
+          "brand": "guess",
+          "product_type": "jeans",
+          "amount": 69
+        }
+      ]
+    }
+  },
+  "turns": [
+    {
+      "n": 1,
+      "speaker": "agent",
+      "text": "How may I help you?"
+    },
+    {
+      "n": 2,
+      "speaker": "customer",
+      "text": "Hi I would like to check the status of my order"
+    },
+    {
+      "n": 3,
+      "speaker": "customer",
+      "text": "It seems the payment method is wrong"
+    },
+    {
+      "n": 4,
+      "speaker": "agent",
+      "text": "Alright, let's check that."
+    },
+    {
+      "n": 5,
+      "speaker": "agent",
+      "text": "May I have your full name, account ID and order ID?"
+    },
+    {
+      "n": 6,
+      "speaker": "customer",
+      "text": "Alessandro Phoenix"
+    },
+    {
+      "n": 7,
+      "speaker": "customer",
+      "text": "tzusl472y9"
+    },
+    {
+      "n": 8,
+      "speaker": "customer",
+      "text": "1225304645"
+    },
+    {
+      "n": 9,
+      "speaker": "system_action",
+      "text": "Account has been pulled up for Alessandro Phoenix."
+    },
+    {
+      "n": 10,
+      "speaker": "system_action",
+      "text": "Identity verification in progress ..."
+    },
+    {
+      "n": 11,
+      "speaker": "agent",
+      "text": "What is the shipping status of your order?"
+    },
+    {
+      "n": 12,
+      "speaker": "customer",
+      "text": "in transit"
+    },
+    {
+      "n": 13,
+      "speaker": "system_action",
+      "text": "Shipping status of in transit has been noted."
+    },
+    {
+      "n": 14,
+      "speaker": "agent",
+      "text": "What is the new desired method?"
+    },
+    {
+      "n": 15,
+      "speaker": "customer",
+      "text": "my card on file"
+    },
+    {
+      "n": 16,
+      "speaker": "agent",
+      "text": "If your method was wrong wouldn't the card on file be wrong?"
+    },
+    {
+      "n": 17,
+      "speaker": "customer",
+      "text": "no my debit card was used"
+    },
+    {
+      "n": 18,
+      "speaker": "customer",
+      "text": "I want to use my credit card"
+    },
+    {
+      "n": 19,
+      "speaker": "system_action",
+      "text": "Order has been updated with credit card."
+    },
+    {
+      "n": 20,
+      "speaker": "agent",
+      "text": "It has been fixed, anything else for you today?"
+    },
+    {
+      "n": 21,
+      "speaker": "customer",
+      "text": "no that was all"
+    },
+    {
+      "n": 22,
+      "speaker": "customer",
+      "text": "thank you"
+    },
+    {
+      "n": 23,
+      "speaker": "agent",
+      "text": "Have a good one!"
+    }
+  ],
+  "source_fields": {
+    "flow": "order_issue",
+    "subflow": "status_payment_method",
+    "actions_taken": [
+      "pull-up-account",
+      "verify-identity",
+      "shipping-status",
+      "update-order"
+    ]
+  },
+  "modifications": []
+}

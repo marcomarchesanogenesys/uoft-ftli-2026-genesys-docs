@@ -1,0 +1,120 @@
+{
+  "id": "ABCD-0009",
+  "source": {
+    "dataset": "ABCD",
+    "original_id": "829",
+    "licence": "MIT",
+    "url": "https://github.com/asappresearch/abcd",
+    "citation": "Chen et al. (2021), NAACL, arXiv:2104.00783"
+  },
+  "channel": "chat",
+  "customer_record": {
+    "customer_name": "chloe zhang",
+    "phone": "(129) 452-4903",
+    "member_level": "bronze",
+    "address": {
+      "street": "7366 woodshore st",
+      "city": "jacksonville",
+      "state": "ny",
+      "zip_code": "5333",
+      "full_address": "7366 woodshore st  jacksonville, ny 5333"
+    }
+  },
+  "turns": [
+    {
+      "n": 1,
+      "speaker": "agent",
+      "text": "Hello, how can I help you?"
+    },
+    {
+      "n": 2,
+      "speaker": "customer",
+      "text": "Hello, my name is Chloe. I am having trouble accessing my online account because I lost my phone with two-factor authentication on it."
+    },
+    {
+      "n": 3,
+      "speaker": "agent",
+      "text": "I can reset that for you. May I have your full name?"
+    },
+    {
+      "n": 4,
+      "speaker": "customer",
+      "text": "Sure, my name is Chloe Zhang."
+    },
+    {
+      "n": 5,
+      "speaker": "system_action",
+      "text": "Account has been pulled up for Chloe Zhang."
+    },
+    {
+      "n": 6,
+      "speaker": "agent",
+      "text": "Could I have your email address to send you the reset code?"
+    },
+    {
+      "n": 7,
+      "speaker": "customer",
+      "text": "I'm afraid I don't have that information."
+    },
+    {
+      "n": 8,
+      "speaker": "customer",
+      "text": "Is there another way?"
+    },
+    {
+      "n": 9,
+      "speaker": "agent",
+      "text": "Do you know your PIN number?"
+    },
+    {
+      "n": 10,
+      "speaker": "customer",
+      "text": "Yes I do. It is 578544"
+    },
+    {
+      "n": 11,
+      "speaker": "system_action",
+      "text": "Details of 578544 have been entered."
+    },
+    {
+      "n": 12,
+      "speaker": "agent",
+      "text": "Okay, I can send the reset email to the address on file for that account."
+    },
+    {
+      "n": 13,
+      "speaker": "system_action",
+      "text": "A link will be sent."
+    },
+    {
+      "n": 14,
+      "speaker": "customer",
+      "text": "Thank you, I will reset it now."
+    },
+    {
+      "n": 15,
+      "speaker": "agent",
+      "text": "Contact us again if you need additional assistance. Is there anything else I can help you with at the moment?"
+    },
+    {
+      "n": 16,
+      "speaker": "customer",
+      "text": "That should be everything for today. I appreciate your help!"
+    },
+    {
+      "n": 17,
+      "speaker": "agent",
+      "text": "Have a wonderful day!"
+    }
+  ],
+  "source_fields": {
+    "flow": "account_access",
+    "subflow": "reset_2fa",
+    "actions_taken": [
+      "pull-up-account",
+      "enter-details",
+      "send-link"
+    ]
+  },
+  "modifications": []
+}

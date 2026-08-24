@@ -1,0 +1,205 @@
+{
+  "id": "HVB-0096",
+  "source": {
+    "dataset": "HarperValleyBank",
+    "original_id": "1c9c4822cbcd4676",
+    "licence": "CC BY 4.0",
+    "url": "https://github.com/cricketclub/gridspace-stanford-harper-valley",
+    "citation": "Wu, Nafziger, Scodary & Maas (2020), arXiv:2010.13929"
+  },
+  "channel": "voice",
+  "agent_id": "hvb-speaker-6",
+  "customer_id": "hvb-speaker-17",
+  "customer_record": {
+    "customer_name": "Elizabeth Jones",
+    "captured_by_agent": {
+      "phone": "7125518570"
+    }
+  },
+  "turns": [
+    {
+      "n": 1,
+      "speaker": "customer",
+      "text": "[noise]",
+      "asr_text": "hmm",
+      "start_ms": 1730,
+      "duration_ms": 90,
+      "dialog_acts": [
+        "greeting",
+        "acknowledgement"
+      ]
+    },
+    {
+      "n": 2,
+      "speaker": "agent",
+      "text": "[noise] hello this is harper valley national bank my name is elizabeth how can i help you today",
+      "asr_text": "[noise] hello this is harper valley national bank my name is elizabeth how can i help you today",
+      "start_ms": 1270,
+      "duration_ms": 4290,
+      "dialog_acts": [
+        "greeting"
+      ]
+    },
+    {
+      "n": 3,
+      "speaker": "customer",
+      "text": "hi my name is elizabeth jones i would like to reset my password",
+      "asr_text": "hi my name is elise up actual i would like to reset my password",
+      "start_ms": 8590,
+      "duration_ms": 4050,
+      "dialog_acts": [
+        "greeting",
+        "problem_description"
+      ]
+    },
+    {
+      "n": 4,
+      "speaker": "agent",
+      "text": "what is your phone number",
+      "asr_text": "what is your phone number",
+      "start_ms": 12240,
+      "duration_ms": 1080,
+      "dialog_acts": [
+        "data_question"
+      ]
+    },
+    {
+      "n": 5,
+      "speaker": "customer",
+      "text": "my phone number is",
+      "asr_text": "my phone number is",
+      "start_ms": 16590,
+      "duration_ms": 1290,
+      "dialog_acts": [
+        "greeting",
+        "data_response"
+      ]
+    },
+    {
+      "n": 6,
+      "speaker": "customer",
+      "text": "seven one two",
+      "asr_text": "seven one two",
+      "start_ms": 18290,
+      "duration_ms": 1590,
+      "dialog_acts": [
+        "greeting",
+        "data_response"
+      ]
+    },
+    {
+      "n": 7,
+      "speaker": "customer",
+      "text": "five five one",
+      "asr_text": "hi fi one",
+      "start_ms": 20720,
+      "duration_ms": 1800,
+      "dialog_acts": [
+        "data_response",
+        "problem_description"
+      ]
+    },
+    {
+      "n": 8,
+      "speaker": "customer",
+      "text": "eight five",
+      "asr_text": "eight five",
+      "start_ms": 23290,
+      "duration_ms": 1050,
+      "dialog_acts": [
+        "greeting",
+        "data_response"
+      ]
+    },
+    {
+      "n": 9,
+      "speaker": "customer",
+      "text": "seven zero",
+      "asr_text": "seven zero",
+      "start_ms": 24790,
+      "duration_ms": 1290,
+      "dialog_acts": [
+        "greeting",
+        "data_response"
+      ]
+    },
+    {
+      "n": 10,
+      "speaker": "agent",
+      "text": "your password reset link has been sent to your phone is there anything else i can help you with",
+      "asr_text": "your password reset link has been sent to your phone is there anything else i can help you with",
+      "start_ms": 27630,
+      "duration_ms": 4230,
+      "dialog_acts": [
+        "open_question",
+        "yes_response"
+      ]
+    },
+    {
+      "n": 11,
+      "speaker": "customer",
+      "text": "oh no that's actually all i need for today thank you so much",
+      "asr_text": "oh no it's ask you i need for today thank you so much",
+      "start_ms": 34890,
+      "duration_ms": 2250,
+      "dialog_acts": [
+        "thanks",
+        "other"
+      ]
+    },
+    {
+      "n": 12,
+      "speaker": "agent",
+      "text": "thank you for calling have a great day",
+      "asr_text": "thank you for calling have a great day",
+      "start_ms": 36230,
+      "duration_ms": 1830,
+      "dialog_acts": [
+        "thanks",
+        "closing"
+      ]
+    },
+    {
+      "n": 13,
+      "speaker": "customer",
+      "text": "you too bye",
+      "asr_text": "you too bye",
+      "start_ms": 40990,
+      "duration_ms": 900,
+      "dialog_acts": [
+        "thanks",
+        "closing"
+      ]
+    },
+    {
+      "n": 14,
+      "speaker": "agent",
+      "text": "[noise]",
+      "asr_text": "[noise]",
+      "start_ms": 40070,
+      "duration_ms": 120,
+      "dialog_acts": [
+        "closing"
+      ]
+    }
+  ],
+  "source_fields": {
+    "task_assigned": [
+      "reset password"
+    ],
+    "task_logged_by_agent": [
+      "reset password"
+    ],
+    "labels": {
+      "lhvb_script": 5.0,
+      "caller_mos": 5.0,
+      "agent_mos": 5.0
+    },
+    "session": "Little Harper Valley 3",
+    "customer_survey_response": {
+      "ease_of_connection": "10",
+      "partner_rating": "10"
+    }
+  },
+  "modifications": []
+}

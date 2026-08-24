@@ -1,0 +1,120 @@
+{
+  "id": "ABCD-0076",
+  "source": {
+    "dataset": "ABCD",
+    "original_id": "7150",
+    "licence": "MIT",
+    "url": "https://github.com/asappresearch/abcd",
+    "citation": "Chen et al. (2021), NAACL, arXiv:2104.00783"
+  },
+  "channel": "chat",
+  "customer_record": {
+    "customer_name": "rodriguez domingo",
+    "phone": "(250) 737-2529",
+    "member_level": "guest",
+    "address": {
+      "street": "2022 2nd ave",
+      "city": "brighton",
+      "state": "ny",
+      "zip_code": "49065",
+      "full_address": "2022 2nd ave  brighton, ny 49065"
+    },
+    "order": {
+      "num_products": "3",
+      "products": [
+        {
+          "brand": "michael_kors",
+          "product_type": "boots",
+          "amount": 49
+        },
+        {
+          "brand": "guess",
+          "product_type": "jacket",
+          "amount": 84
+        },
+        {
+          "brand": "tommy_hilfiger",
+          "product_type": "boots",
+          "amount": 99
+        }
+      ]
+    }
+  },
+  "turns": [
+    {
+      "n": 1,
+      "speaker": "customer",
+      "text": "Hi"
+    },
+    {
+      "n": 2,
+      "speaker": "agent",
+      "text": "Thank you for shopping with AcmeBrands! How may I help you?"
+    },
+    {
+      "n": 3,
+      "speaker": "customer",
+      "text": "I was looking at buying some items that I need urgent so I wanted to see if you could help me with the price of overnight shipping"
+    },
+    {
+      "n": 4,
+      "speaker": "agent",
+      "text": "Sure! Let me pull up that information for you. One moment."
+    },
+    {
+      "n": 5,
+      "speaker": "system_action",
+      "text": "Searching the FAQ pages ..."
+    },
+    {
+      "n": 6,
+      "speaker": "system_action",
+      "text": "System Action: search pricing"
+    },
+    {
+      "n": 7,
+      "speaker": "agent",
+      "text": "Are you in the continental United States?"
+    },
+    {
+      "n": 8,
+      "speaker": "customer",
+      "text": "Yes"
+    },
+    {
+      "n": 9,
+      "speaker": "agent",
+      "text": "Okay. Overnight shipping is $39.99 for items 5 pounds or less, $54.99 for 10 pounds or less, and $69.99 for anything over 10 pounds."
+    },
+    {
+      "n": 10,
+      "speaker": "agent",
+      "text": "Is there anything else you need?"
+    },
+    {
+      "n": 11,
+      "speaker": "system_action",
+      "text": "FAQ answer related to pricing (question3) was selected."
+    },
+    {
+      "n": 12,
+      "speaker": "customer",
+      "text": "That is all. Thank you"
+    },
+    {
+      "n": 13,
+      "speaker": "agent",
+      "text": "You're welcome! Have a wonderful day."
+    }
+  ],
+  "source_fields": {
+    "flow": "storewide_query",
+    "subflow": "pricing_3",
+    "actions_taken": [
+      "search-faq",
+      "search-pricing",
+      "select-faq"
+    ]
+  },
+  "modifications": []
+}

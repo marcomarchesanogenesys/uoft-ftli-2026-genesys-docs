@@ -1,0 +1,273 @@
+{
+  "id": "HVB-0007",
+  "source": {
+    "dataset": "HarperValleyBank",
+    "original_id": "16fa4dc5c741486e",
+    "licence": "CC BY 4.0",
+    "url": "https://github.com/cricketclub/gridspace-stanford-harper-valley",
+    "citation": "Wu, Nafziger, Scodary & Maas (2020), arXiv:2010.13929"
+  },
+  "channel": "voice",
+  "agent_id": "hvb-speaker-17",
+  "customer_id": "hvb-speaker-33",
+  "customer_record": {
+    "customer_name": "Michael Wilson",
+    "captured_by_agent": {
+      "company name": "Smart Electic",
+      "money amount": "111",
+      "company address": "482 Main St, Harper Valley, Ca, 62305"
+    }
+  },
+  "turns": [
+    {
+      "n": 1,
+      "speaker": "agent",
+      "text": "hello this is harper valley national bank my name is john how can i help you today",
+      "asr_text": "hello this is hubbard valley national bank my name is john how can i help you today",
+      "start_ms": 1800,
+      "duration_ms": 4680,
+      "dialog_acts": [
+        "greeting"
+      ]
+    },
+    {
+      "n": 2,
+      "speaker": "customer",
+      "text": "hi my name is michael wilson i would like to pay a bill",
+      "asr_text": "hi my name is michael we'd like to pay all be",
+      "start_ms": 10620,
+      "duration_ms": 3600,
+      "dialog_acts": [
+        "greeting"
+      ]
+    },
+    {
+      "n": 3,
+      "speaker": "agent",
+      "text": "sure i can help you with that what is the company name",
+      "asr_text": "sure i can help you with that what is the company name",
+      "start_ms": 13310,
+      "duration_ms": 2820,
+      "dialog_acts": [
+        "data_question"
+      ]
+    },
+    {
+      "n": 4,
+      "speaker": "customer",
+      "text": "the company is smart electric",
+      "asr_text": "the company is mark alacrity",
+      "start_ms": 20590,
+      "duration_ms": 2700,
+      "dialog_acts": [
+        "data_response"
+      ]
+    },
+    {
+      "n": 5,
+      "speaker": "agent",
+      "text": "[noise]",
+      "asr_text": "mm hmm",
+      "start_ms": 21780,
+      "duration_ms": 180,
+      "dialog_acts": [
+        "acknowledgement"
+      ]
+    },
+    {
+      "n": 6,
+      "speaker": "agent",
+      "text": "okay uh what is the company address",
+      "asr_text": "okay uh what is the company address",
+      "start_ms": 23110,
+      "duration_ms": 2760,
+      "dialog_acts": [
+        "data_question"
+      ]
+    },
+    {
+      "n": 7,
+      "speaker": "customer",
+      "text": "four eight six",
+      "asr_text": "four eight",
+      "start_ms": 29950,
+      "duration_ms": 870,
+      "dialog_acts": [
+        "data_communication",
+        "data_response"
+      ]
+    },
+    {
+      "n": 8,
+      "speaker": "customer",
+      "text": "main street",
+      "asr_text": "main street",
+      "start_ms": 33060,
+      "duration_ms": 1170,
+      "dialog_acts": [
+        "data_communication",
+        "data_response"
+      ]
+    },
+    {
+      "n": 9,
+      "speaker": "agent",
+      "text": "mhm",
+      "asr_text": "uh huh",
+      "start_ms": 31540,
+      "duration_ms": 330,
+      "dialog_acts": [
+        "acknowledgement"
+      ]
+    },
+    {
+      "n": 10,
+      "speaker": "agent",
+      "text": "mhm",
+      "asr_text": "mmm",
+      "start_ms": 33240,
+      "duration_ms": 540,
+      "dialog_acts": [
+        "acknowledgement",
+        "other"
+      ]
+    },
+    {
+      "n": 11,
+      "speaker": "customer",
+      "text": "harper valley",
+      "asr_text": "hop of bali",
+      "start_ms": 36360,
+      "duration_ms": 1140,
+      "dialog_acts": [
+        "data_communication",
+        "data_response"
+      ]
+    },
+    {
+      "n": 12,
+      "speaker": "agent",
+      "text": "mhm",
+      "asr_text": "uh huh",
+      "start_ms": 36940,
+      "duration_ms": 450,
+      "dialog_acts": [
+        "acknowledgement"
+      ]
+    },
+    {
+      "n": 13,
+      "speaker": "customer",
+      "text": "california",
+      "asr_text": "california",
+      "start_ms": 39990,
+      "duration_ms": 1080,
+      "dialog_acts": [
+        "response",
+        "other"
+      ]
+    },
+    {
+      "n": 14,
+      "speaker": "customer",
+      "text": "six two three zero five",
+      "asr_text": "two three zero five",
+      "start_ms": 41920,
+      "duration_ms": 1320,
+      "dialog_acts": [
+        "response",
+        "data_response"
+      ]
+    },
+    {
+      "n": 15,
+      "speaker": "agent",
+      "text": "okay and what is the bill amount",
+      "asr_text": "okay and what is the bill amount",
+      "start_ms": 44310,
+      "duration_ms": 2160,
+      "dialog_acts": [
+        "data_question"
+      ]
+    },
+    {
+      "n": 16,
+      "speaker": "customer",
+      "text": "a hundred and eleven dollars",
+      "asr_text": "a hundred and eleven daughter",
+      "start_ms": 50420,
+      "duration_ms": 1440,
+      "dialog_acts": [
+        "response"
+      ]
+    },
+    {
+      "n": 17,
+      "speaker": "agent",
+      "text": "okay um",
+      "asr_text": "okay um",
+      "start_ms": 52910,
+      "duration_ms": 1770,
+      "dialog_acts": [
+        "acknowledgement"
+      ]
+    },
+    {
+      "n": 18,
+      "speaker": "agent",
+      "text": "we will send your payment to smart electric is there anything else i can help you with",
+      "asr_text": "we will send your payment is smart electric is there anything else i can help you with",
+      "start_ms": 54980,
+      "duration_ms": 4500,
+      "dialog_acts": [
+        "open_question"
+      ]
+    },
+    {
+      "n": 19,
+      "speaker": "customer",
+      "text": "no",
+      "asr_text": "oh",
+      "start_ms": 63540,
+      "duration_ms": 270,
+      "dialog_acts": [
+        "response"
+      ]
+    },
+    {
+      "n": 20,
+      "speaker": "agent",
+      "text": "thank you for calling have a great day",
+      "asr_text": "thank you for calling have a great day",
+      "start_ms": 63310,
+      "duration_ms": 1950,
+      "dialog_acts": [
+        "open_question",
+        "closing"
+      ]
+    }
+  ],
+  "source_fields": {
+    "task_assigned": [
+      "pay bill"
+    ],
+    "task_logged_by_agent": [
+      "pay bill"
+    ],
+    "labels": {
+      "lhvb_script": 5.0,
+      "caller_mos": 5.0,
+      "agent_mos": 5.0
+    },
+    "session": "Little Harper Valley 3",
+    "agent_survey_response": {
+      "ease_of_connection": "10",
+      "partner_rating": "10"
+    },
+    "customer_survey_response": {
+      "ease_of_connection": "10",
+      "partner_rating": "10"
+    }
+  },
+  "modifications": []
+}

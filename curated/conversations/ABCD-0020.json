@@ -1,0 +1,158 @@
+{
+  "id": "ABCD-0020",
+  "source": {
+    "dataset": "ABCD",
+    "original_id": "7422",
+    "licence": "MIT",
+    "url": "https://github.com/asappresearch/abcd",
+    "citation": "Chen et al. (2021), NAACL, arXiv:2104.00783"
+  },
+  "channel": "chat",
+  "customer_record": {
+    "customer_name": "rodriguez domingo",
+    "member_level": "silver",
+    "address": {
+      "street": "3291 brushwick dr",
+      "city": "baltimore",
+      "state": "wa",
+      "zip_code": "54702",
+      "full_address": "3291 brushwick dr  baltimore, wa 54702"
+    },
+    "order": {
+      "num_products": "1",
+      "products": [
+        {
+          "brand": "guess",
+          "product_type": "shirt",
+          "amount": 59
+        }
+      ]
+    }
+  },
+  "turns": [
+    {
+      "n": 1,
+      "speaker": "agent",
+      "text": "How may I help you?"
+    },
+    {
+      "n": 2,
+      "speaker": "customer",
+      "text": "hi"
+    },
+    {
+      "n": 3,
+      "speaker": "customer",
+      "text": "I would like to know the status of my subscription"
+    },
+    {
+      "n": 4,
+      "speaker": "agent",
+      "text": "Sure, may I have your full name, account and order ID to check?"
+    },
+    {
+      "n": 5,
+      "speaker": "customer",
+      "text": "Rodriguez Domingo"
+    },
+    {
+      "n": 6,
+      "speaker": "agent",
+      "text": "account and order ID also?"
+    },
+    {
+      "n": 7,
+      "speaker": "customer",
+      "text": "I don't have that right now"
+    },
+    {
+      "n": 8,
+      "speaker": "system_action",
+      "text": "Identity verification in progress ..."
+    },
+    {
+      "n": 9,
+      "speaker": "system_action",
+      "text": "Querying the system for subscription status ..."
+    },
+    {
+      "n": 10,
+      "speaker": "agent",
+      "text": "It is active, it is due 3 days from now but it won't tell me what amount it's due for."
+    },
+    {
+      "n": 11,
+      "speaker": "agent",
+      "text": "Anything else today?"
+    },
+    {
+      "n": 12,
+      "speaker": "system_action",
+      "text": "Account has been pulled up for Rodriguez Domingo."
+    },
+    {
+      "n": 13,
+      "speaker": "customer",
+      "text": "Okay. Would like  to know if I could have free shipping outside of the country"
+    },
+    {
+      "n": 14,
+      "speaker": "system_action",
+      "text": "Searching the FAQ pages ..."
+    },
+    {
+      "n": 15,
+      "speaker": "system_action",
+      "text": "System Action: search policy"
+    },
+    {
+      "n": 16,
+      "speaker": "system_action",
+      "text": "System Action: search pricing"
+    },
+    {
+      "n": 17,
+      "speaker": "agent",
+      "text": "We don't ship outside of the country for any price, sorry."
+    },
+    {
+      "n": 18,
+      "speaker": "system_action",
+      "text": "FAQ answer related to pricing (question3) was selected."
+    },
+    {
+      "n": 19,
+      "speaker": "customer",
+      "text": "Okay. Thanks"
+    },
+    {
+      "n": 20,
+      "speaker": "agent",
+      "text": "Anything else today?"
+    },
+    {
+      "n": 21,
+      "speaker": "customer",
+      "text": "That would be all"
+    },
+    {
+      "n": 22,
+      "speaker": "agent",
+      "text": "Have a good one!"
+    }
+  ],
+  "source_fields": {
+    "flow": "manage_account",
+    "subflow": "status_shipping_question",
+    "actions_taken": [
+      "verify-identity",
+      "subscription-status",
+      "pull-up-account",
+      "search-faq",
+      "search-policy",
+      "search-pricing",
+      "select-faq"
+    ]
+  },
+  "modifications": []
+}

@@ -1,0 +1,222 @@
+{
+  "id": "HVB-0064",
+  "source": {
+    "dataset": "HarperValleyBank",
+    "original_id": "0c4dc74de76c4b06",
+    "licence": "CC BY 4.0",
+    "url": "https://github.com/cricketclub/gridspace-stanford-harper-valley",
+    "citation": "Wu, Nafziger, Scodary & Maas (2020), arXiv:2010.13929"
+  },
+  "channel": "voice",
+  "agent_id": "hvb-speaker-53",
+  "customer_id": "hvb-speaker-31",
+  "customer_record": {
+    "customer_name": "Linda Davis",
+    "captured_by_agent": {
+      "company name": "fossil gas",
+      "money amount": "143",
+      "company address": "429 first street, forest ranch, oregon, 39983"
+    }
+  },
+  "turns": [
+    {
+      "n": 1,
+      "speaker": "agent",
+      "text": "[noise] hello this is harper valley national bank my name is michael how can i help you today",
+      "asr_text": "[noise] hello this is harper valley national bank my name is michael how can i help you today",
+      "start_ms": 1559,
+      "duration_ms": 4740,
+      "dialog_acts": [
+        "greeting",
+        "open_question"
+      ]
+    },
+    {
+      "n": 2,
+      "speaker": "customer",
+      "text": "hi my name is linda davis i would like to pay a bill",
+      "asr_text": "hi my name is linda davis i would like to pay a bill",
+      "start_ms": 8690,
+      "duration_ms": 3180,
+      "dialog_acts": [
+        "greeting"
+      ]
+    },
+    {
+      "n": 3,
+      "speaker": "agent",
+      "text": "okay and what is the company name",
+      "asr_text": "okay and what is the company name",
+      "start_ms": 13819,
+      "duration_ms": 1800,
+      "dialog_acts": [
+        "data_question"
+      ]
+    },
+    {
+      "n": 4,
+      "speaker": "customer",
+      "text": "fossil gas",
+      "asr_text": "possible gas",
+      "start_ms": 17420,
+      "duration_ms": 930,
+      "dialog_acts": [
+        "response"
+      ]
+    },
+    {
+      "n": 5,
+      "speaker": "agent",
+      "text": "and what is the company address",
+      "asr_text": "yeah it was a company address",
+      "start_ms": 20079,
+      "duration_ms": 1410,
+      "dialog_acts": [
+        "data_question"
+      ]
+    },
+    {
+      "n": 6,
+      "speaker": "customer",
+      "text": "four two nine",
+      "asr_text": "four two nine",
+      "start_ms": 23720,
+      "duration_ms": 1050,
+      "dialog_acts": [
+        "response",
+        "data_response"
+      ]
+    },
+    {
+      "n": 7,
+      "speaker": "customer",
+      "text": "first street",
+      "asr_text": "first street",
+      "start_ms": 26420,
+      "duration_ms": 1110,
+      "dialog_acts": [
+        "response"
+      ]
+    },
+    {
+      "n": 8,
+      "speaker": "customer",
+      "text": "forest ranch",
+      "asr_text": "forrest ranch",
+      "start_ms": 30420,
+      "duration_ms": 1170,
+      "dialog_acts": [
+        "response",
+        "data_response"
+      ]
+    },
+    {
+      "n": 9,
+      "speaker": "customer",
+      "text": "oregon",
+      "asr_text": "oregon",
+      "start_ms": 33520,
+      "duration_ms": 630,
+      "dialog_acts": [
+        "other",
+        "data_response"
+      ]
+    },
+    {
+      "n": 10,
+      "speaker": "agent",
+      "text": "[noise]",
+      "asr_text": "[noise]",
+      "start_ms": 37689,
+      "duration_ms": 120,
+      "dialog_acts": [
+        "acknowledgement",
+        "filler_disfluency"
+      ]
+    },
+    {
+      "n": 11,
+      "speaker": "customer",
+      "text": "three nine nine eight three",
+      "asr_text": "three nine nine eight three",
+      "start_ms": 38300,
+      "duration_ms": 1770,
+      "dialog_acts": [
+        "response",
+        "data_response"
+      ]
+    },
+    {
+      "n": 12,
+      "speaker": "agent",
+      "text": "mkay and what is the bill amount",
+      "asr_text": "hmm okay and what is the bill amount",
+      "start_ms": 43619,
+      "duration_ms": 1590,
+      "dialog_acts": [
+        "data_question"
+      ]
+    },
+    {
+      "n": 13,
+      "speaker": "customer",
+      "text": "a hundred and forty three dollars",
+      "asr_text": "a hundred and forty three dollars",
+      "start_ms": 48120,
+      "duration_ms": 1770,
+      "dialog_acts": [
+        "response",
+        "other"
+      ]
+    },
+    {
+      "n": 14,
+      "speaker": "agent",
+      "text": "alright we will send your payment to fossil gas one hundred forty three dollars is there anything else i can help you with",
+      "asr_text": "alright we will send your payment to follow guys one hundred forty three dollars is there anything else i can help you with",
+      "start_ms": 52919,
+      "duration_ms": 5790,
+      "dialog_acts": [
+        "procedure_explanation",
+        "open_question"
+      ]
+    },
+    {
+      "n": 15,
+      "speaker": "customer",
+      "text": "no that's all",
+      "asr_text": "no that's all",
+      "start_ms": 59920,
+      "duration_ms": 780,
+      "dialog_acts": [
+        "other"
+      ]
+    },
+    {
+      "n": 16,
+      "speaker": "agent",
+      "text": "uh huh and thank you for calling you have a great day",
+      "asr_text": "uh huh thank you for calling you have a great day",
+      "start_ms": 62279,
+      "duration_ms": 2040,
+      "dialog_acts": [
+        "closing"
+      ]
+    }
+  ],
+  "source_fields": {
+    "task_assigned": [
+      "pay bill"
+    ],
+    "task_logged_by_agent": [
+      "pay bill"
+    ],
+    "labels": {
+      "lhvb_script": 5.0,
+      "caller_mos": 5.0,
+      "agent_mos": 5.0
+    },
+    "session": "Little Harper Valley 3"
+  },
+  "modifications": []
+}

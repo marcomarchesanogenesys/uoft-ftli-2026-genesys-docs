@@ -1,0 +1,127 @@
+{
+  "id": "ABCD-0079",
+  "source": {
+    "dataset": "ABCD",
+    "original_id": "9626",
+    "licence": "MIT",
+    "url": "https://github.com/asappresearch/abcd",
+    "citation": "Chen et al. (2021), NAACL, arXiv:2104.00783"
+  },
+  "channel": "chat",
+  "customer_record": {
+    "customer_name": "david williams",
+    "phone": "(669) 814-2257",
+    "member_level": "silver",
+    "address": {
+      "street": "5535 lincoln ave",
+      "city": "baltimore",
+      "state": "tx",
+      "zip_code": "99127",
+      "full_address": "5535 lincoln ave  baltimore, tx 99127"
+    }
+  },
+  "turns": [
+    {
+      "n": 1,
+      "speaker": "agent",
+      "text": "Hello. How may I help you today?"
+    },
+    {
+      "n": 2,
+      "speaker": "customer",
+      "text": "hello"
+    },
+    {
+      "n": 3,
+      "speaker": "agent",
+      "text": "Hello. How may I help you today?"
+    },
+    {
+      "n": 4,
+      "speaker": "customer",
+      "text": "Can you tell me how I can cancel my subscription?"
+    },
+    {
+      "n": 5,
+      "speaker": "system_action",
+      "text": "Searching the FAQ pages ..."
+    },
+    {
+      "n": 6,
+      "speaker": "system_action",
+      "text": "System Action: search membership"
+    },
+    {
+      "n": 7,
+      "speaker": "system_action",
+      "text": "System Action: search policy"
+    },
+    {
+      "n": 8,
+      "speaker": "agent",
+      "text": "Do you want to know how to cancel or what happens if you cancel?"
+    },
+    {
+      "n": 9,
+      "speaker": "system_action",
+      "text": "System Action: search membership"
+    },
+    {
+      "n": 10,
+      "speaker": "customer",
+      "text": "both please"
+    },
+    {
+      "n": 11,
+      "speaker": "agent",
+      "text": "Lets start with the most important one first."
+    },
+    {
+      "n": 12,
+      "speaker": "agent",
+      "text": "Which one do you need to know about?"
+    },
+    {
+      "n": 13,
+      "speaker": "customer",
+      "text": "I want to know how to cancel my subscription and what happens if I cancel it"
+    },
+    {
+      "n": 14,
+      "speaker": "agent",
+      "text": "Well if you cancel you can do that at anytime. Your benefits will last through the end of the month."
+    },
+    {
+      "n": 15,
+      "speaker": "agent",
+      "text": "Anything else I can help you with?"
+    },
+    {
+      "n": 16,
+      "speaker": "system_action",
+      "text": "FAQ answer related to policy (question3) was selected."
+    },
+    {
+      "n": 17,
+      "speaker": "customer",
+      "text": "no. that was all"
+    },
+    {
+      "n": 18,
+      "speaker": "agent",
+      "text": "Great. Have a nice day."
+    }
+  ],
+  "source_fields": {
+    "flow": "storewide_query",
+    "subflow": "policy_3",
+    "actions_taken": [
+      "search-faq",
+      "search-membership",
+      "search-policy",
+      "search-membership",
+      "select-faq"
+    ]
+  },
+  "modifications": []
+}

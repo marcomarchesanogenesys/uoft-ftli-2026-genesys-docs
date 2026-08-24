@@ -1,0 +1,201 @@
+{
+  "id": "HVB-0047",
+  "source": {
+    "dataset": "HarperValleyBank",
+    "original_id": "1f7e8fcf454842ce",
+    "licence": "CC BY 4.0",
+    "url": "https://github.com/cricketclub/gridspace-stanford-harper-valley",
+    "citation": "Wu, Nafziger, Scodary & Maas (2020), arXiv:2010.13929"
+  },
+  "channel": "voice",
+  "agent_id": "hvb-speaker-40",
+  "customer_id": "hvb-speaker-28",
+  "customer_record": {
+    "customer_name": "James Smith",
+    "captured_by_agent": {
+      "time": "8:30AM",
+      "day": "Wednesday"
+    }
+  },
+  "turns": [
+    {
+      "n": 1,
+      "speaker": "agent",
+      "text": "hello this is harper valley national bank my name is robert",
+      "asr_text": "hello this is harper valley national bank my name is robert",
+      "start_ms": 3599,
+      "duration_ms": 3600,
+      "dialog_acts": [
+        "greeting"
+      ]
+    },
+    {
+      "n": 2,
+      "speaker": "agent",
+      "text": "how can i help you today",
+      "asr_text": "how can i help you today",
+      "start_ms": 7699,
+      "duration_ms": 960,
+      "dialog_acts": [
+        "greeting"
+      ]
+    },
+    {
+      "n": 3,
+      "speaker": "customer",
+      "text": "hi my name is jane smith i would like to schedule an appointment",
+      "asr_text": "hi my name is jane smith i would like to schedule an appointment",
+      "start_ms": 11920,
+      "duration_ms": 5640,
+      "dialog_acts": [
+        "greeting",
+        "problem_description"
+      ]
+    },
+    {
+      "n": 4,
+      "speaker": "agent",
+      "text": "what day would you like for this appointment",
+      "asr_text": "what day would you like for this appointment",
+      "start_ms": 18899,
+      "duration_ms": 1650,
+      "dialog_acts": [
+        "data_question"
+      ]
+    },
+    {
+      "n": 5,
+      "speaker": "customer",
+      "text": "wednesday",
+      "asr_text": "wednesday",
+      "start_ms": 23690,
+      "duration_ms": 690,
+      "dialog_acts": [
+        "response",
+        "yes_response"
+      ]
+    },
+    {
+      "n": 6,
+      "speaker": "agent",
+      "text": "what time would you like for your appointment",
+      "asr_text": "what time would you like for your appointment",
+      "start_ms": 26469,
+      "duration_ms": 1740,
+      "dialog_acts": [
+        "data_question"
+      ]
+    },
+    {
+      "n": 7,
+      "speaker": "customer",
+      "text": "eight thirty a m",
+      "asr_text": "eight thirty am",
+      "start_ms": 31420,
+      "duration_ms": 1530,
+      "dialog_acts": [
+        "response"
+      ]
+    },
+    {
+      "n": 8,
+      "speaker": "agent",
+      "text": "[noise]",
+      "asr_text": "[music]",
+      "start_ms": 30449,
+      "duration_ms": 1620,
+      "dialog_acts": [
+        "acknowledgement",
+        "other"
+      ]
+    },
+    {
+      "n": 9,
+      "speaker": "agent",
+      "text": "your appointment has been scheduled for wednesday at eight thirty a m",
+      "asr_text": "they're claiming has been scheduled for wednesday at eight thirty am",
+      "start_ms": 36839,
+      "duration_ms": 3690,
+      "dialog_acts": [
+        "other",
+        "procedure_explanation"
+      ]
+    },
+    {
+      "n": 10,
+      "speaker": "agent",
+      "text": "is there anything else i can help you with",
+      "asr_text": "is there anything else i can help you with",
+      "start_ms": 41899,
+      "duration_ms": 1440,
+      "dialog_acts": [
+        "open_question"
+      ]
+    },
+    {
+      "n": 11,
+      "speaker": "customer",
+      "text": "[noise]",
+      "asr_text": "um",
+      "start_ms": 44820,
+      "duration_ms": 150,
+      "dialog_acts": [
+        "filler_disfluency"
+      ]
+    },
+    {
+      "n": 12,
+      "speaker": "customer",
+      "text": "no that'll be it thank you",
+      "asr_text": "no that'll be it thank you",
+      "start_ms": 46420,
+      "duration_ms": 1260,
+      "dialog_acts": [
+        "thanks",
+        "other"
+      ]
+    },
+    {
+      "n": 13,
+      "speaker": "agent",
+      "text": "thank you for calling have a great day",
+      "asr_text": "thank you for calling have a great day",
+      "start_ms": 46909,
+      "duration_ms": 1890,
+      "dialog_acts": [
+        "closing"
+      ]
+    },
+    {
+      "n": 14,
+      "speaker": "customer",
+      "text": "you too",
+      "asr_text": "you too",
+      "start_ms": 51920,
+      "duration_ms": 450,
+      "dialog_acts": [
+        "other",
+        "closing"
+      ]
+    }
+  ],
+  "source_fields": {
+    "task_assigned": [
+      "schedule appointment"
+    ],
+    "task_logged_by_agent": [
+      "schedule appointment"
+    ],
+    "labels": {
+      "lhvb_script": 5.0,
+      "caller_mos": 5.0,
+      "agent_mos": 5.0
+    },
+    "session": "Little Harper Valley 3",
+    "customer_survey_response": {
+      "ease_of_connection": "10",
+      "partner_rating": "10"
+    }
+  },
+  "modifications": []
+}

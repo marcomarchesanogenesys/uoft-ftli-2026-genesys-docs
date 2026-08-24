@@ -1,0 +1,140 @@
+{
+  "id": "ABCD-0082",
+  "source": {
+    "dataset": "ABCD",
+    "original_id": "235",
+    "licence": "MIT",
+    "url": "https://github.com/asappresearch/abcd",
+    "citation": "Chen et al. (2021), NAACL, arXiv:2104.00783"
+  },
+  "channel": "chat",
+  "customer_record": {
+    "customer_name": "joyce wu",
+    "phone": "(153) 767-7548",
+    "member_level": "gold",
+    "address": {
+      "street": "4553 lexington ave",
+      "city": "san mateo",
+      "state": "mi",
+      "zip_code": "82285",
+      "full_address": "4553 lexington ave  san mateo, mi 82285"
+    }
+  },
+  "turns": [
+    {
+      "n": 1,
+      "speaker": "agent",
+      "text": "Hello, how can I help you?"
+    },
+    {
+      "n": 2,
+      "speaker": "customer",
+      "text": "Hi, I have a problem. I signed up for your premium subscription shopping service, but I can't afford it this month."
+    },
+    {
+      "n": 3,
+      "speaker": "customer",
+      "text": "Do you accept extensions?"
+    },
+    {
+      "n": 4,
+      "speaker": "agent",
+      "text": "I will be happy to see what options we have for you."
+    },
+    {
+      "n": 5,
+      "speaker": "agent",
+      "text": "First I need your full name, account ID, and order ID."
+    },
+    {
+      "n": 6,
+      "speaker": "customer",
+      "text": "My name is Joyce Wu"
+    },
+    {
+      "n": 7,
+      "speaker": "customer",
+      "text": "My account ID is NUHXANYUYD"
+    },
+    {
+      "n": 8,
+      "speaker": "customer",
+      "text": "I don't have an order ID"
+    },
+    {
+      "n": 9,
+      "speaker": "agent",
+      "text": "Ok thank you. One moment please"
+    },
+    {
+      "n": 10,
+      "speaker": "agent",
+      "text": "Do you know what your membership level is?"
+    },
+    {
+      "n": 11,
+      "speaker": "customer",
+      "text": "yeah, I'm a gold member"
+    },
+    {
+      "n": 12,
+      "speaker": "agent",
+      "text": "Good news - as a gold member you are able to get an extension."
+    },
+    {
+      "n": 13,
+      "speaker": "customer",
+      "text": "incredible! Thanks for your help"
+    },
+    {
+      "n": 14,
+      "speaker": "agent",
+      "text": "No problem! Did you need anything else?"
+    },
+    {
+      "n": 15,
+      "speaker": "customer",
+      "text": "nope that's all. Thanks!"
+    },
+    {
+      "n": 16,
+      "speaker": "agent",
+      "text": "Good to hear. Hope you have a good day"
+    },
+    {
+      "n": 17,
+      "speaker": "agent",
+      "text": "Bye"
+    },
+    {
+      "n": 18,
+      "speaker": "customer",
+      "text": "bye"
+    },
+    {
+      "n": 19,
+      "speaker": "system_action",
+      "text": "Account has been pulled up for Joyce Wu."
+    },
+    {
+      "n": 20,
+      "speaker": "system_action",
+      "text": "Identity verification in progess ..."
+    },
+    {
+      "n": 21,
+      "speaker": "system_action",
+      "text": "Membership level of gold has been noted."
+    }
+  ],
+  "source_fields": {
+    "flow": "subscription_inquiry",
+    "subflow": "manage_extension",
+    "actions_taken": [
+      "pull-up-account",
+      "verify-identity",
+      "membership"
+    ]
+  },
+  "modifications": []
+}

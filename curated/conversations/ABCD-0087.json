@@ -1,0 +1,129 @@
+{
+  "id": "ABCD-0087",
+  "source": {
+    "dataset": "ABCD",
+    "original_id": "7592",
+    "licence": "MIT",
+    "url": "https://github.com/asappresearch/abcd",
+    "citation": "Chen et al. (2021), NAACL, arXiv:2104.00783"
+  },
+  "channel": "chat",
+  "customer_record": {
+    "customer_name": "sanya afzal",
+    "phone": "(001) 149-8478",
+    "member_level": "gold",
+    "address": {
+      "street": "2773 2nd ave",
+      "city": "brighton",
+      "state": "ca",
+      "zip_code": "64767",
+      "full_address": "2773 2nd ave  brighton, ca 64767"
+    },
+    "order": {
+      "order_id": "5411650958"
+    }
+  },
+  "turns": [
+    {
+      "n": 1,
+      "speaker": "agent",
+      "text": "Hello. How may I help you today?"
+    },
+    {
+      "n": 2,
+      "speaker": "customer",
+      "text": "Hi. I recently got a premium membership with you. I need to pay my bill."
+    },
+    {
+      "n": 3,
+      "speaker": "agent",
+      "text": "Great. May I have your name please."
+    },
+    {
+      "n": 4,
+      "speaker": "customer",
+      "text": "Sure. My name is Sanya Afzal."
+    },
+    {
+      "n": 5,
+      "speaker": "agent",
+      "text": "Thanks. Can I also have your account ID and Order ID?"
+    },
+    {
+      "n": 6,
+      "speaker": "system_action",
+      "text": "Account has been pulled up for Sanya Afzal."
+    },
+    {
+      "n": 7,
+      "speaker": "customer",
+      "text": "Absolutely. Account ID: LQMM3PSB0E and Order ID: 5411650958"
+    },
+    {
+      "n": 8,
+      "speaker": "system_action",
+      "text": "Identity verification in progress ..."
+    },
+    {
+      "n": 9,
+      "speaker": "agent",
+      "text": "And how much do you want to pay today?"
+    },
+    {
+      "n": 10,
+      "speaker": "customer",
+      "text": "I'd just like to pay the full amount. Sorry I was never told what the subscription fee is."
+    },
+    {
+      "n": 11,
+      "speaker": "system_action",
+      "text": "Querying the system for subscription status ..."
+    },
+    {
+      "n": 12,
+      "speaker": "agent",
+      "text": "Ok that will be $20. Do you have a CC?"
+    },
+    {
+      "n": 13,
+      "speaker": "customer",
+      "text": "I do not have a credit card on hand. Can you use the one on my account?"
+    },
+    {
+      "n": 14,
+      "speaker": "agent",
+      "text": "I sure can. One moment please."
+    },
+    {
+      "n": 15,
+      "speaker": "system_action",
+      "text": "Account has been updated with renew subscription."
+    },
+    {
+      "n": 16,
+      "speaker": "agent",
+      "text": "Alright everything is all paid. Is there anything else i can help you with?"
+    },
+    {
+      "n": 17,
+      "speaker": "customer",
+      "text": "Oh thank you so much! That was all I needed today."
+    },
+    {
+      "n": 18,
+      "speaker": "agent",
+      "text": "Great have a nice day."
+    }
+  ],
+  "source_fields": {
+    "flow": "subscription_inquiry",
+    "subflow": "manage_pay_bill",
+    "actions_taken": [
+      "pull-up-account",
+      "verify-identity",
+      "subscription-status",
+      "update-account"
+    ]
+  },
+  "modifications": []
+}

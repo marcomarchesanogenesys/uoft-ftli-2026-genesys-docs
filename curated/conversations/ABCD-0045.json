@@ -1,0 +1,150 @@
+{
+  "id": "ABCD-0045",
+  "source": {
+    "dataset": "ABCD",
+    "original_id": "4181",
+    "licence": "MIT",
+    "url": "https://github.com/asappresearch/abcd",
+    "citation": "Chen et al. (2021), NAACL, arXiv:2104.00783"
+  },
+  "channel": "chat",
+  "customer_id": "ap720353",
+  "customer_record": {
+    "customer_name": "alessandro phoenix",
+    "username": "ap720353",
+    "email": "ap720353@email.com",
+    "phone": "(944) 480-1336",
+    "member_level": "silver",
+    "address": {
+      "street": "9788 lexington ave",
+      "city": "san lima",
+      "state": "tx",
+      "zip_code": "9262",
+      "full_address": "9788 lexington ave  san lima, tx 9262"
+    },
+    "order": {
+      "order_id": "3507816633",
+      "num_products": "1",
+      "products": [
+        {
+          "brand": "michael_kors",
+          "product_type": "shirt",
+          "amount": 89
+        }
+      ]
+    }
+  },
+  "turns": [
+    {
+      "n": 1,
+      "speaker": "agent",
+      "text": "Hello, thank you for contacting AcmeCorp how may I help you?"
+    },
+    {
+      "n": 2,
+      "speaker": "customer",
+      "text": "Hi! I was trying to make a purchase but the item seems to be out of stock"
+    },
+    {
+      "n": 3,
+      "speaker": "agent",
+      "text": "Oh no, I would happy to look into for you. Was this a single item or multiple items?"
+    },
+    {
+      "n": 4,
+      "speaker": "customer",
+      "text": "just one"
+    },
+    {
+      "n": 5,
+      "speaker": "customer",
+      "text": "Micheal Kors shirt"
+    },
+    {
+      "n": 6,
+      "speaker": "agent",
+      "text": "Alright, may I please have your full name or account ID?"
+    },
+    {
+      "n": 7,
+      "speaker": "customer",
+      "text": "Alessandro Phoenix"
+    },
+    {
+      "n": 8,
+      "speaker": "system_action",
+      "text": "Account has been pulled up for Alessandro Phoenix."
+    },
+    {
+      "n": 9,
+      "speaker": "system_action",
+      "text": "A reason of Micheal Kors shirt has been recorded."
+    },
+    {
+      "n": 10,
+      "speaker": "agent",
+      "text": "I do apologize the item is not in stock and I will let our purchasing dept know."
+    },
+    {
+      "n": 11,
+      "speaker": "system_action",
+      "text": "The purchasing department has been notified."
+    },
+    {
+      "n": 12,
+      "speaker": "customer",
+      "text": "Can you have it delivered once it comes avaiable?"
+    },
+    {
+      "n": 13,
+      "speaker": "customer",
+      "text": "becomes"
+    },
+    {
+      "n": 14,
+      "speaker": "agent",
+      "text": "If you like I can back-order the item and once it is avail it will ship immediately."
+    },
+    {
+      "n": 15,
+      "speaker": "agent",
+      "text": "Is is okay to use your credit card on file?"
+    },
+    {
+      "n": 16,
+      "speaker": "customer",
+      "text": "Yes please"
+    },
+    {
+      "n": 17,
+      "speaker": "system_action",
+      "text": "A purchase of Micheal Kors shirt was made."
+    },
+    {
+      "n": 18,
+      "speaker": "agent",
+      "text": "I have placed that order. Again, I do apologize. Is there anything else I can do for you today?"
+    },
+    {
+      "n": 19,
+      "speaker": "customer",
+      "text": "That is all. Thank you"
+    },
+    {
+      "n": 20,
+      "speaker": "agent",
+      "text": "Thank you for contacting AcmeCorp, please be safe and stay well."
+    }
+  ],
+  "source_fields": {
+    "flow": "purchase_dispute",
+    "subflow": "out_of_stock_one_item",
+    "actions_taken": [
+      "pull-up-account",
+      "record-reason",
+      "notify-team",
+      "make-purchase"
+    ]
+  },
+  "modifications": []
+}

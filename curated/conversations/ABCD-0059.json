@@ -1,0 +1,167 @@
+{
+  "id": "ABCD-0059",
+  "source": {
+    "dataset": "ABCD",
+    "original_id": "8463",
+    "licence": "MIT",
+    "url": "https://github.com/asappresearch/abcd",
+    "citation": "Chen et al. (2021), NAACL, arXiv:2104.00783"
+  },
+  "channel": "chat",
+  "customer_id": "rdomingo173",
+  "customer_record": {
+    "customer_name": "rodriguez domingo",
+    "username": "rdomingo173",
+    "email": "rdomingo173@email.com",
+    "phone": "(280) 015-4469",
+    "member_level": "gold",
+    "address": {
+      "street": "2198 1st ave",
+      "city": "san mateo",
+      "state": "ca",
+      "zip_code": "88604",
+      "full_address": "2198 1st ave  san mateo, ca 88604"
+    },
+    "order": {
+      "order_id": "1175183347",
+      "purchase_date": "2019-11-06",
+      "num_products": "1",
+      "products": [
+        {
+          "brand": "tommy_hilfiger",
+          "product_type": "boots",
+          "amount": 49
+        }
+      ]
+    }
+  },
+  "turns": [
+    {
+      "n": 1,
+      "speaker": "agent",
+      "text": "Thank you for contacting Acme Brands! How can I help you today?"
+    },
+    {
+      "n": 2,
+      "speaker": "customer",
+      "text": "Hey, I haven't gotten my package yet. Just want to check on the shipping status."
+    },
+    {
+      "n": 3,
+      "speaker": "customer",
+      "text": "It's been about 9 days now"
+    },
+    {
+      "n": 4,
+      "speaker": "agent",
+      "text": "Okay. Could I please have your name or account ID?"
+    },
+    {
+      "n": 5,
+      "speaker": "customer",
+      "text": "Rodriguez Domingo"
+    },
+    {
+      "n": 6,
+      "speaker": "system_action",
+      "text": "Account has been pulled up for Rodriguez Domingo."
+    },
+    {
+      "n": 7,
+      "speaker": "agent",
+      "text": "Thank you. I've pulled up your account. Can you verify your username, email address and order ID of the shipment?"
+    },
+    {
+      "n": 8,
+      "speaker": "customer",
+      "text": "rdomingo173, rdomingo173@email.com"
+    },
+    {
+      "n": 9,
+      "speaker": "customer",
+      "text": "1175183347"
+    },
+    {
+      "n": 10,
+      "speaker": "system_action",
+      "text": "Purchase validation in progress ..."
+    },
+    {
+      "n": 11,
+      "speaker": "system_action",
+      "text": "A reason of 9 days has been recorded."
+    },
+    {
+      "n": 12,
+      "speaker": "agent",
+      "text": "It usually only takes a week at most to receive your orders. I'd be happy to ship you a new order, if you provide me with your shipping address."
+    },
+    {
+      "n": 13,
+      "speaker": "customer",
+      "text": "yes, please do"
+    },
+    {
+      "n": 14,
+      "speaker": "customer",
+      "text": "2198 1st Ave  San Mateo, CA 88604"
+    },
+    {
+      "n": 15,
+      "speaker": "system_action",
+      "text": "Order has been updated with 2198 1st Ave San Mateo, CA 88604."
+    },
+    {
+      "n": 16,
+      "speaker": "agent",
+      "text": "Thank you. Which items were to be included with your order?"
+    },
+    {
+      "n": 17,
+      "speaker": "customer",
+      "text": "The $49 TH Boots"
+    },
+    {
+      "n": 18,
+      "speaker": "system_action",
+      "text": "A purchase of Tommy Hilfiger Boots was made."
+    },
+    {
+      "n": 19,
+      "speaker": "agent",
+      "text": "I've placed a new order for your boots and you should receive them in the next few days. I apologize for the delay. Is there anything else I can help you with today?"
+    },
+    {
+      "n": 20,
+      "speaker": "customer",
+      "text": "That's ok! Thank you for your help."
+    },
+    {
+      "n": 21,
+      "speaker": "customer",
+      "text": "That's all."
+    },
+    {
+      "n": 22,
+      "speaker": "agent",
+      "text": "You're welcome. Enjoy your day!"
+    },
+    {
+      "n": 23,
+      "speaker": "customer",
+      "text": "You too"
+    }
+  ],
+  "source_fields": {
+    "flow": "shipping_issue",
+    "subflow": "missing",
+    "actions_taken": [
+      "pull-up-account",
+      "validate-purchase",
+      "record-reason",
+      "update-order",
+      "make-purchase"
+    ]
+  },
+  "modifications": []
+}

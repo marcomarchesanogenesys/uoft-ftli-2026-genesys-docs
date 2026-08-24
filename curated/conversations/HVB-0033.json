@@ -1,0 +1,253 @@
+{
+  "id": "HVB-0033",
+  "source": {
+    "dataset": "HarperValleyBank",
+    "original_id": "063ea0f1abb143c1",
+    "licence": "CC BY 4.0",
+    "url": "https://github.com/cricketclub/gridspace-stanford-harper-valley",
+    "citation": "Wu, Nafziger, Scodary & Maas (2020), arXiv:2010.13929"
+  },
+  "channel": "voice",
+  "agent_id": "hvb-speaker-28",
+  "customer_id": "hvb-speaker-22",
+  "customer_record": {
+    "customer_name": "Patricia Garcia",
+    "captured_by_agent": {
+      "replacement card type": "credit"
+    }
+  },
+  "turns": [
+    {
+      "n": 1,
+      "speaker": "customer",
+      "text": "[noise]",
+      "asr_text": "okay",
+      "start_ms": 630,
+      "duration_ms": 210,
+      "dialog_acts": [
+        "acknowledgement",
+        "greeting"
+      ]
+    },
+    {
+      "n": 2,
+      "speaker": "customer",
+      "text": "[noise]",
+      "asr_text": "[noise]",
+      "start_ms": 2290,
+      "duration_ms": 480,
+      "dialog_acts": [
+        "greeting",
+        "filler_disfluency"
+      ]
+    },
+    {
+      "n": 3,
+      "speaker": "customer",
+      "text": "[noise]",
+      "asr_text": "ooh",
+      "start_ms": 3720,
+      "duration_ms": 480,
+      "dialog_acts": [
+        "greeting",
+        "other"
+      ]
+    },
+    {
+      "n": 4,
+      "speaker": "agent",
+      "text": "hello this is harper valley national bank my name is mary how can i help you today",
+      "asr_text": "hello this is harper valley national bank my name is mary how can i help you today",
+      "start_ms": 1860,
+      "duration_ms": 6000,
+      "dialog_acts": [
+        "greeting"
+      ]
+    },
+    {
+      "n": 5,
+      "speaker": "customer",
+      "text": "[noise]",
+      "asr_text": "non lethal to stop the violence",
+      "start_ms": 5910,
+      "duration_ms": 2160,
+      "dialog_acts": [
+        "greeting",
+        "problem_description"
+      ]
+    },
+    {
+      "n": 6,
+      "speaker": "customer",
+      "text": "hi my name is patricia garcia i lost my credit card can you send me a new one [noise] my credit card",
+      "asr_text": "hi my name is patricia garcia i lost my credit card can you send me a new one [noise] my credit card",
+      "start_ms": 10950,
+      "duration_ms": 10980,
+      "dialog_acts": [
+        "greeting",
+        "problem_description"
+      ]
+    },
+    {
+      "n": 7,
+      "speaker": "agent",
+      "text": "sure which card would you like to replace",
+      "asr_text": "sure which card would you like to replace",
+      "start_ms": 15560,
+      "duration_ms": 2460,
+      "dialog_acts": [
+        "data_question",
+        "confirm_data"
+      ]
+    },
+    {
+      "n": 8,
+      "speaker": "agent",
+      "text": "okay",
+      "asr_text": "okay",
+      "start_ms": 23790,
+      "duration_ms": 660,
+      "dialog_acts": [
+        "acknowledgement"
+      ]
+    },
+    {
+      "n": 9,
+      "speaker": "customer",
+      "text": "[noise]",
+      "asr_text": "as high as the athletes fail these days because of layers and governors",
+      "start_ms": 25890,
+      "duration_ms": 5340,
+      "dialog_acts": [
+        "problem_description"
+      ]
+    },
+    {
+      "n": 10,
+      "speaker": "customer",
+      "text": "[noise]",
+      "asr_text": "doing their jobs once again",
+      "start_ms": 32190,
+      "duration_ms": 1770,
+      "dialog_acts": [
+        "other"
+      ]
+    },
+    {
+      "n": 11,
+      "speaker": "agent",
+      "text": "i've ordered your replacement credit card is there anything else i can help you with",
+      "asr_text": "i've ordered your replacement credit card is there anything else i can help you with",
+      "start_ms": 31590,
+      "duration_ms": 4200,
+      "dialog_acts": [
+        "other"
+      ]
+    },
+    {
+      "n": 12,
+      "speaker": "customer",
+      "text": "[noise]",
+      "asr_text": "stop this i wear store water",
+      "start_ms": 34390,
+      "duration_ms": 1830,
+      "dialog_acts": [
+        "other"
+      ]
+    },
+    {
+      "n": 13,
+      "speaker": "customer",
+      "text": "[noise]",
+      "asr_text": "after taxes",
+      "start_ms": 36690,
+      "duration_ms": 690,
+      "dialog_acts": [
+        "acknowledgement",
+        "filler_disfluency"
+      ]
+    },
+    {
+      "n": 14,
+      "speaker": "customer",
+      "text": "no that's it",
+      "asr_text": "um no that's it",
+      "start_ms": 38260,
+      "duration_ms": 990,
+      "dialog_acts": [
+        "other",
+        "problem_description"
+      ]
+    },
+    {
+      "n": 15,
+      "speaker": "agent",
+      "text": "alright well thank you for calling have a great day",
+      "asr_text": "alright well thank you for calling have a great day",
+      "start_ms": 38680,
+      "duration_ms": 2190,
+      "dialog_acts": [
+        "thanks"
+      ]
+    },
+    {
+      "n": 16,
+      "speaker": "customer",
+      "text": "[noise]",
+      "asr_text": "[noise]",
+      "start_ms": 41690,
+      "duration_ms": 300,
+      "dialog_acts": [
+        "acknowledgement",
+        "filler_disfluency"
+      ]
+    },
+    {
+      "n": 17,
+      "speaker": "customer",
+      "text": "[noise]",
+      "asr_text": "[noise]",
+      "start_ms": 44190,
+      "duration_ms": 30,
+      "dialog_acts": [
+        "acknowledgement",
+        "closing"
+      ]
+    },
+    {
+      "n": 18,
+      "speaker": "customer",
+      "text": "[noise]",
+      "asr_text": "[noise]",
+      "start_ms": 44790,
+      "duration_ms": 480,
+      "dialog_acts": [
+        "acknowledgement",
+        "filler_disfluency"
+      ]
+    }
+  ],
+  "source_fields": {
+    "task_assigned": [
+      "replace card"
+    ],
+    "task_logged_by_agent": [
+      "replace card"
+    ],
+    "labels": {
+      "lhvb_script": 5.0,
+      "caller_mos": 5.0,
+      "agent_mos": 5.0
+    },
+    "session": "Little Harper Valley 3",
+    "agent_survey_response": {
+      "ease_of_connection": "10",
+      "partner_rating": "10"
+    },
+    "customer_survey_response": {
+      "ease_of_connection": "10",
+      "partner_rating": "10"
+    }
+  },
+  "modifications": []
+}

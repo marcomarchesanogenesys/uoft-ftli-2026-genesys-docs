@@ -1,0 +1,276 @@
+{
+  "id": "HVB-0082",
+  "source": {
+    "dataset": "HarperValleyBank",
+    "original_id": "0a6f57765f4641a2",
+    "licence": "CC BY 4.0",
+    "url": "https://github.com/cricketclub/gridspace-stanford-harper-valley",
+    "citation": "Wu, Nafziger, Scodary & Maas (2020), arXiv:2010.13929"
+  },
+  "channel": "voice",
+  "agent_id": "hvb-speaker-57",
+  "customer_id": "hvb-speaker-45",
+  "customer_record": {
+    "customer_name": "Patricia Jones",
+    "captured_by_agent": {
+      "transfer destination account": "savings",
+      "transfer amount": "102",
+      "transfer source account": "checking"
+    }
+  },
+  "turns": [
+    {
+      "n": 1,
+      "speaker": "agent",
+      "text": "hello this is harper valley national bank my name is megan how can i help you today",
+      "asr_text": "hello this is providing a national bank my name is megan how can i help you today",
+      "start_ms": 2000,
+      "duration_ms": 4140,
+      "dialog_acts": [
+        "greeting",
+        "open_question"
+      ]
+    },
+    {
+      "n": 2,
+      "speaker": "customer",
+      "text": "[noise] hi my name is patricia jones",
+      "asr_text": "[noise] hi my name is patricia jones",
+      "start_ms": 9090,
+      "duration_ms": 2580,
+      "dialog_acts": [
+        "response",
+        "greeting"
+      ]
+    },
+    {
+      "n": 3,
+      "speaker": "customer",
+      "text": "i would like to transfer money between my accounts",
+      "asr_text": "i would like to transfer money between my accounts",
+      "start_ms": 12190,
+      "duration_ms": 2400,
+      "dialog_acts": [
+        "response",
+        "problem_description"
+      ]
+    },
+    {
+      "n": 4,
+      "speaker": "agent",
+      "text": "what is the transfer amount",
+      "asr_text": "what is the telephone mode",
+      "start_ms": 18400,
+      "duration_ms": 1620,
+      "dialog_acts": [
+        "data_question",
+        "acknowledgement"
+      ]
+    },
+    {
+      "n": 5,
+      "speaker": "customer",
+      "text": "the amount is a hundred and two dollars",
+      "asr_text": "the amount is a hundred and two dollars",
+      "start_ms": 23420,
+      "duration_ms": 2160,
+      "dialog_acts": [
+        "response",
+        "problem_description"
+      ]
+    },
+    {
+      "n": 6,
+      "speaker": "agent",
+      "text": "[noise]",
+      "asr_text": "[noise]",
+      "start_ms": 26570,
+      "duration_ms": 30,
+      "dialog_acts": [
+        "acknowledgement"
+      ]
+    },
+    {
+      "n": 7,
+      "speaker": "agent",
+      "text": "and what is the source account",
+      "asr_text": "and what is this a cell phone",
+      "start_ms": 29700,
+      "duration_ms": 1740,
+      "dialog_acts": [
+        "data_question"
+      ]
+    },
+    {
+      "n": 8,
+      "speaker": "customer",
+      "text": "from my checking account to my savings account",
+      "asr_text": "from my checking account to my savings account",
+      "start_ms": 35190,
+      "duration_ms": 2760,
+      "dialog_acts": [
+        "response",
+        "problem_description"
+      ]
+    },
+    {
+      "n": 9,
+      "speaker": "agent",
+      "text": "[noise]",
+      "asr_text": "mm hmm",
+      "start_ms": 33610,
+      "duration_ms": 180,
+      "dialog_acts": [
+        "acknowledgement"
+      ]
+    },
+    {
+      "n": 10,
+      "speaker": "customer",
+      "text": "[noise]",
+      "asr_text": "[noise]",
+      "start_ms": 41160,
+      "duration_ms": 60,
+      "dialog_acts": [
+        "response",
+        "acknowledgement"
+      ]
+    },
+    {
+      "n": 11,
+      "speaker": "customer",
+      "text": "[noise]",
+      "asr_text": "[noise]",
+      "start_ms": 45390,
+      "duration_ms": 30,
+      "dialog_acts": [
+        "response",
+        "filler_disfluency"
+      ]
+    },
+    {
+      "n": 12,
+      "speaker": "agent",
+      "text": "a hundred and two dollars has been transferred from your checking account to your savings account",
+      "asr_text": "a hundred and two dollars has been transferred from your checking account to your savings account",
+      "start_ms": 46200,
+      "duration_ms": 4860,
+      "dialog_acts": [
+        "other",
+        "procedure_explanation"
+      ]
+    },
+    {
+      "n": 13,
+      "speaker": "agent",
+      "text": "is there anything else i can help you with",
+      "asr_text": "is there anything else i can help you with",
+      "start_ms": 52100,
+      "duration_ms": 1740,
+      "dialog_acts": [
+        "open_question"
+      ]
+    },
+    {
+      "n": 14,
+      "speaker": "customer",
+      "text": "thank you",
+      "asr_text": "thank you",
+      "start_ms": 54920,
+      "duration_ms": 540,
+      "dialog_acts": [
+        "response",
+        "thanks"
+      ]
+    },
+    {
+      "n": 15,
+      "speaker": "customer",
+      "text": "no that was all thank you",
+      "asr_text": "no that was all thank you",
+      "start_ms": 56950,
+      "duration_ms": 1380,
+      "dialog_acts": [
+        "thanks"
+      ]
+    },
+    {
+      "n": 16,
+      "speaker": "agent",
+      "text": "[noise]",
+      "asr_text": "[noise]",
+      "start_ms": 55070,
+      "duration_ms": 420,
+      "dialog_acts": [
+        "filler_disfluency"
+      ]
+    },
+    {
+      "n": 17,
+      "speaker": "agent",
+      "text": "okay thank you for calling have a great day",
+      "asr_text": "okay thank you for calling have a great day",
+      "start_ms": 58060,
+      "duration_ms": 2010,
+      "dialog_acts": [
+        "closing"
+      ]
+    },
+    {
+      "n": 18,
+      "speaker": "customer",
+      "text": "bye",
+      "asr_text": "bye",
+      "start_ms": 63090,
+      "duration_ms": 360,
+      "dialog_acts": [
+        "closing"
+      ]
+    },
+    {
+      "n": 19,
+      "speaker": "agent",
+      "text": "bye",
+      "asr_text": "right",
+      "start_ms": 63010,
+      "duration_ms": 300,
+      "dialog_acts": [
+        "closing"
+      ]
+    },
+    {
+      "n": 20,
+      "speaker": "agent",
+      "text": "[noise]",
+      "asr_text": "[noise]",
+      "start_ms": 64690,
+      "duration_ms": 60,
+      "dialog_acts": [
+        "closing"
+      ]
+    }
+  ],
+  "source_fields": {
+    "task_assigned": [
+      "transfer money"
+    ],
+    "task_logged_by_agent": [
+      "transfer money"
+    ],
+    "labels": {
+      "lhvb_script": 5.0,
+      "caller_mos": 5.0,
+      "agent_mos": 5.0
+    },
+    "session": "Little Harper Valley 3",
+    "agent_survey_response": {
+      "ease_of_connection": "10",
+      "partner_rating": "10"
+    },
+    "customer_survey_response": {
+      "ease_of_connection": "10",
+      "partner_rating": "10"
+    }
+  },
+  "modifications": []
+}

@@ -1,0 +1,128 @@
+{
+  "id": "ABCD-0075",
+  "source": {
+    "dataset": "ABCD",
+    "original_id": "5143",
+    "licence": "MIT",
+    "url": "https://github.com/asappresearch/abcd",
+    "citation": "Chen et al. (2021), NAACL, arXiv:2104.00783"
+  },
+  "channel": "chat",
+  "customer_record": {
+    "customer_name": "david williams",
+    "phone": "(079) 193-3635",
+    "member_level": "bronze",
+    "address": {
+      "street": "4635 lincoln ave",
+      "city": "la fayette",
+      "state": "ca",
+      "zip_code": "41426",
+      "full_address": "4635 lincoln ave  la fayette, ca 41426"
+    }
+  },
+  "turns": [
+    {
+      "n": 1,
+      "speaker": "agent",
+      "text": "How can I help you?"
+    },
+    {
+      "n": 2,
+      "speaker": "customer",
+      "text": "Hi, I'm a bronze member there, and I just have a quick question about premium subscriptions"
+    },
+    {
+      "n": 3,
+      "speaker": "customer",
+      "text": "What happens if I am late on a payment?"
+    },
+    {
+      "n": 4,
+      "speaker": "agent",
+      "text": "I'd be glad to check on that."
+    },
+    {
+      "n": 5,
+      "speaker": "system_action",
+      "text": "Membership level of  has been noted."
+    },
+    {
+      "n": 6,
+      "speaker": "system_action",
+      "text": "Searching the FAQ pages ..."
+    },
+    {
+      "n": 7,
+      "speaker": "system_action",
+      "text": "System Action: search membership"
+    },
+    {
+      "n": 8,
+      "speaker": "system_action",
+      "text": "System Action: search pricing"
+    },
+    {
+      "n": 9,
+      "speaker": "agent",
+      "text": "Are you looking for an extension?"
+    },
+    {
+      "n": 10,
+      "speaker": "customer",
+      "text": "No, I was just wondering in general terms what would happen if the payment was late"
+    },
+    {
+      "n": 11,
+      "speaker": "system_action",
+      "text": "System Action: search policy"
+    },
+    {
+      "n": 12,
+      "speaker": "system_action",
+      "text": "FAQ answer related to policy (question4) was selected."
+    },
+    {
+      "n": 13,
+      "speaker": "customer",
+      "text": "If there's nothing listed in the books, then it might not be something I need to worry about"
+    },
+    {
+      "n": 14,
+      "speaker": "agent",
+      "text": "A late fee will be charged."
+    },
+    {
+      "n": 15,
+      "speaker": "agent",
+      "text": "The fee is $2 per day past the monthly deadline."
+    },
+    {
+      "n": 16,
+      "speaker": "customer",
+      "text": "Okay, that was what I was hoping to find out"
+    },
+    {
+      "n": 17,
+      "speaker": "customer",
+      "text": "Thanks for your help, that's all I needed"
+    },
+    {
+      "n": 18,
+      "speaker": "agent",
+      "text": "You're welcome. Is there anything else?"
+    }
+  ],
+  "source_fields": {
+    "flow": "storewide_query",
+    "subflow": "policy_4",
+    "actions_taken": [
+      "membership",
+      "search-faq",
+      "search-membership",
+      "search-pricing",
+      "search-policy",
+      "select-faq"
+    ]
+  },
+  "modifications": []
+}

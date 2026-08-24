@@ -1,0 +1,225 @@
+{
+  "id": "HVB-0072",
+  "source": {
+    "dataset": "HarperValleyBank",
+    "original_id": "06ff201c1fd84e1c",
+    "licence": "CC BY 4.0",
+    "url": "https://github.com/cricketclub/gridspace-stanford-harper-valley",
+    "citation": "Wu, Nafziger, Scodary & Maas (2020), arXiv:2010.13929"
+  },
+  "channel": "voice",
+  "agent_id": "hvb-speaker-56",
+  "customer_id": "hvb-speaker-40",
+  "customer_record": {
+    "customer_name": "Michael Johnson",
+    "captured_by_agent": {
+      "balance check account type": "savings"
+    }
+  },
+  "turns": [
+    {
+      "n": 1,
+      "speaker": "customer",
+      "text": "[noise]",
+      "asr_text": "[noise]",
+      "start_ms": 30,
+      "duration_ms": 240,
+      "dialog_acts": [
+        "greeting"
+      ]
+    },
+    {
+      "n": 2,
+      "speaker": "agent",
+      "text": "hello this is harper valley national bank my name is elizabeth how can i help you today",
+      "asr_text": "hello this is harper valley national bank my name is elizabeth how can i help you today",
+      "start_ms": 2029,
+      "duration_ms": 4740,
+      "dialog_acts": [
+        "greeting"
+      ]
+    },
+    {
+      "n": 3,
+      "speaker": "customer",
+      "text": "[noise]",
+      "asr_text": "[noise]",
+      "start_ms": 7700,
+      "duration_ms": 720,
+      "dialog_acts": [
+        "greeting",
+        "filler_disfluency"
+      ]
+    },
+    {
+      "n": 4,
+      "speaker": "customer",
+      "text": "hi my name is michael johnson",
+      "asr_text": "hi my name is michael johnson",
+      "start_ms": 12320,
+      "duration_ms": 1800,
+      "dialog_acts": [
+        "greeting",
+        "other"
+      ]
+    },
+    {
+      "n": 5,
+      "speaker": "customer",
+      "text": "i need to check my account balance",
+      "asr_text": "i need to check my account balance",
+      "start_ms": 15220,
+      "duration_ms": 1440,
+      "dialog_acts": [
+        "greeting",
+        "problem_description"
+      ]
+    },
+    {
+      "n": 6,
+      "speaker": "customer",
+      "text": "[noise]",
+      "asr_text": "[noise]",
+      "start_ms": 17490,
+      "duration_ms": 210,
+      "dialog_acts": [
+        "greeting",
+        "filler_disfluency"
+      ]
+    },
+    {
+      "n": 7,
+      "speaker": "agent",
+      "text": "[noise]",
+      "asr_text": "[noise]",
+      "start_ms": 15669,
+      "duration_ms": 60,
+      "dialog_acts": [
+        "other",
+        "bear_with_me"
+      ]
+    },
+    {
+      "n": 8,
+      "speaker": "customer",
+      "text": "[noise]",
+      "asr_text": "[noise]",
+      "start_ms": 18590,
+      "duration_ms": 30,
+      "dialog_acts": [
+        "greeting",
+        "filler_disfluency"
+      ]
+    },
+    {
+      "n": 9,
+      "speaker": "agent",
+      "text": "okay which account would you like to check",
+      "asr_text": "okay which account would you like to check",
+      "start_ms": 16899,
+      "duration_ms": 2190,
+      "dialog_acts": [
+        "data_question"
+      ]
+    },
+    {
+      "n": 10,
+      "speaker": "customer",
+      "text": "my savings account",
+      "asr_text": "my savings account",
+      "start_ms": 26180,
+      "duration_ms": 900,
+      "dialog_acts": [
+        "data_response",
+        "bear_with_me"
+      ]
+    },
+    {
+      "n": 11,
+      "speaker": "agent",
+      "text": "[noise] okay",
+      "asr_text": "[noise] okay",
+      "start_ms": 26569,
+      "duration_ms": 960,
+      "dialog_acts": [
+        "acknowledgement",
+        "bear_with_me"
+      ]
+    },
+    {
+      "n": 12,
+      "speaker": "agent",
+      "text": "your savings account balance is fifty two dollars",
+      "asr_text": "your savings account balance is fifty two dollars",
+      "start_ms": 29329,
+      "duration_ms": 3390,
+      "dialog_acts": [
+        "data_response",
+        "bear_with_me"
+      ]
+    },
+    {
+      "n": 13,
+      "speaker": "agent",
+      "text": "is there anything else i can help you with",
+      "asr_text": "is there anything else i can help you with",
+      "start_ms": 34329,
+      "duration_ms": 1860,
+      "dialog_acts": [
+        "open_question"
+      ]
+    },
+    {
+      "n": 14,
+      "speaker": "customer",
+      "text": "nope that's gonna be it",
+      "asr_text": "nope that's gonna be it",
+      "start_ms": 42060,
+      "duration_ms": 1170,
+      "dialog_acts": [
+        "other"
+      ]
+    },
+    {
+      "n": 15,
+      "speaker": "agent",
+      "text": "alright thank you thank you for calling have a great day",
+      "asr_text": "alright thank you thank you for calling have a great day",
+      "start_ms": 42389,
+      "duration_ms": 4620,
+      "dialog_acts": [
+        "closing"
+      ]
+    },
+    {
+      "n": 16,
+      "speaker": "customer",
+      "text": "thank you",
+      "asr_text": "thank you",
+      "start_ms": 44620,
+      "duration_ms": 390,
+      "dialog_acts": [
+        "thanks"
+      ]
+    }
+  ],
+  "source_fields": {
+    "task_assigned": [
+      "check balance"
+    ],
+    "task_logged_by_agent": [
+      "check balance"
+    ],
+    "labels": {
+      "lhvb_script": 5.0,
+      "caller_mos": 5.0,
+      "agent_mos": 5.0
+    },
+    "session": "Little Harper Valley 3",
+    "agent_survey_response": {
+      "ease_of_connection": "10",
+      "partner_rating": "10"
+    }
+  },
+  "modifications": []
+}

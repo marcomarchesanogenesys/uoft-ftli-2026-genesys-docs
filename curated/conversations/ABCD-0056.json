@@ -1,0 +1,172 @@
+{
+  "id": "ABCD-0056",
+  "source": {
+    "dataset": "ABCD",
+    "original_id": "4316",
+    "licence": "MIT",
+    "url": "https://github.com/asappresearch/abcd",
+    "citation": "Chen et al. (2021), NAACL, arXiv:2104.00783"
+  },
+  "channel": "chat",
+  "customer_id": "czhang12",
+  "customer_record": {
+    "customer_name": "chloe zhang",
+    "username": "czhang12",
+    "email": "czhang12@email.com",
+    "phone": "(181) 658-8985",
+    "member_level": "bronze",
+    "address": {
+      "street": "5084 1st ave",
+      "city": "newark",
+      "state": "mi",
+      "zip_code": "63492",
+      "full_address": "5084 1st ave  newark, mi 63492"
+    },
+    "order": {
+      "order_id": "7276392251",
+      "purchase_date": "2019-09-02",
+      "num_products": "2",
+      "products": [
+        {
+          "brand": "michael_kors",
+          "product_type": "shirt",
+          "amount": 84
+        },
+        {
+          "brand": "calvin_klein",
+          "product_type": "boots",
+          "amount": 49
+        }
+      ]
+    }
+  },
+  "turns": [
+    {
+      "n": 1,
+      "speaker": "agent",
+      "text": "Hi! How may I help you today?"
+    },
+    {
+      "n": 2,
+      "speaker": "customer",
+      "text": "Hi. I need to change my shipping address because I'll be out of town this weekend for a friend's wedding."
+    },
+    {
+      "n": 3,
+      "speaker": "agent",
+      "text": "Sure! I can help with that"
+    },
+    {
+      "n": 4,
+      "speaker": "agent",
+      "text": "Can I have your full name?"
+    },
+    {
+      "n": 5,
+      "speaker": "customer",
+      "text": "Chloe Zhang."
+    },
+    {
+      "n": 6,
+      "speaker": "system_action",
+      "text": "Account has been pulled up for Chloe Zhang.."
+    },
+    {
+      "n": 7,
+      "speaker": "agent",
+      "text": "What is your correct address"
+    },
+    {
+      "n": 8,
+      "speaker": "customer",
+      "text": "5084 1st Ave  Newark, MI 63492"
+    },
+    {
+      "n": 9,
+      "speaker": "system_action",
+      "text": "A reason of 5084 1st Ave has been recorded."
+    },
+    {
+      "n": 10,
+      "speaker": "agent",
+      "text": "Can I have your username and email address"
+    },
+    {
+      "n": 11,
+      "speaker": "customer",
+      "text": "Username: czhang12"
+    },
+    {
+      "n": 12,
+      "speaker": "customer",
+      "text": "czhang12@email.com"
+    },
+    {
+      "n": 13,
+      "speaker": "system_action",
+      "text": "Identity verification in progress ..."
+    },
+    {
+      "n": 14,
+      "speaker": "agent",
+      "text": "What was the old address"
+    },
+    {
+      "n": 15,
+      "speaker": "agent",
+      "text": "incorrect address*"
+    },
+    {
+      "n": 16,
+      "speaker": "customer",
+      "text": "5082 1st Ave  Newark, MI 63492"
+    },
+    {
+      "n": 17,
+      "speaker": "system_action",
+      "text": "Order has been updated with 5082 1st Ave."
+    },
+    {
+      "n": 18,
+      "speaker": "system_action",
+      "text": "Account has been updated with 5082 1st Ave."
+    },
+    {
+      "n": 19,
+      "speaker": "agent",
+      "text": "Thank you for that information.  Everything has been updated for you"
+    },
+    {
+      "n": 20,
+      "speaker": "customer",
+      "text": "Thank you!"
+    },
+    {
+      "n": 21,
+      "speaker": "agent",
+      "text": "You're Welcome! Can I help with anything else?"
+    },
+    {
+      "n": 22,
+      "speaker": "customer",
+      "text": "Nope. Have a nice day."
+    },
+    {
+      "n": 23,
+      "speaker": "agent",
+      "text": "Have a great day"
+    }
+  ],
+  "source_fields": {
+    "flow": "shipping_issue",
+    "subflow": "manage",
+    "actions_taken": [
+      "pull-up-account",
+      "record-reason",
+      "verify-identity",
+      "update-order",
+      "update-account"
+    ]
+  },
+  "modifications": []
+}

@@ -1,0 +1,201 @@
+{
+  "id": "HVB-0092",
+  "source": {
+    "dataset": "HarperValleyBank",
+    "original_id": "0f8e8b5f72bb4594",
+    "licence": "CC BY 4.0",
+    "url": "https://github.com/cricketclub/gridspace-stanford-harper-valley",
+    "citation": "Wu, Nafziger, Scodary & Maas (2020), arXiv:2010.13929"
+  },
+  "channel": "voice",
+  "agent_id": "hvb-speaker-6",
+  "customer_id": "hvb-speaker-53",
+  "customer_record": {
+    "customer_name": "Robert Miller",
+    "captured_by_agent": {
+      "transfer destination account": "checking",
+      "transfer amount": "141",
+      "transfer source account": "savings"
+    }
+  },
+  "turns": [
+    {
+      "n": 1,
+      "speaker": "agent",
+      "text": "hello this is harper valley national bank my name is mary how can i help you today",
+      "asr_text": "hello this is harper valley national bank my name is mary how can i help you today",
+      "start_ms": 1690,
+      "duration_ms": 3930,
+      "dialog_acts": [
+        "greeting"
+      ]
+    },
+    {
+      "n": 2,
+      "speaker": "customer",
+      "text": "[noise] hi my name is robert miller i would like to transfer money between my accounts",
+      "asr_text": "[noise] hi my name is robert miller i would like to transfer money between my accounts",
+      "start_ms": 9259,
+      "duration_ms": 4890,
+      "dialog_acts": [
+        "greeting",
+        "problem_description"
+      ]
+    },
+    {
+      "n": 3,
+      "speaker": "agent",
+      "text": "what is the transfer amount",
+      "asr_text": "what is the transfer amount",
+      "start_ms": 14210,
+      "duration_ms": 1230,
+      "dialog_acts": [
+        "data_question"
+      ]
+    },
+    {
+      "n": 4,
+      "speaker": "customer",
+      "text": "<unk> the amount is a hundred and forty one dollars",
+      "asr_text": "and then there is a hundred and forty one dollars",
+      "start_ms": 19420,
+      "duration_ms": 2370,
+      "dialog_acts": [
+        "problem_description",
+        "data_response"
+      ]
+    },
+    {
+      "n": 5,
+      "speaker": "agent",
+      "text": "what is the source account",
+      "asr_text": "what is the source account",
+      "start_ms": 21460,
+      "duration_ms": 1440,
+      "dialog_acts": [
+        "data_question",
+        "data_response"
+      ]
+    },
+    {
+      "n": 6,
+      "speaker": "customer",
+      "text": "uh it's sourcing from my savings account to my checking account",
+      "asr_text": "alright sir thing from my savings account to my checking account",
+      "start_ms": 27120,
+      "duration_ms": 3150,
+      "dialog_acts": [
+        "problem_description",
+        "data_response"
+      ]
+    },
+    {
+      "n": 7,
+      "speaker": "agent",
+      "text": "what is the destination account",
+      "asr_text": "what is the destination account",
+      "start_ms": 29900,
+      "duration_ms": 1710,
+      "dialog_acts": [
+        "data_question"
+      ]
+    },
+    {
+      "n": 8,
+      "speaker": "customer",
+      "text": "uh my checking account",
+      "asr_text": "uh my checking account",
+      "start_ms": 35120,
+      "duration_ms": 1050,
+      "dialog_acts": [
+        "problem_description",
+        "data_response"
+      ]
+    },
+    {
+      "n": 9,
+      "speaker": "agent",
+      "text": "one hundred and forty one dollars has been transferred from your savings account to your checking account is there anything else i can help you with",
+      "asr_text": "one hundred and forty one dollars has been transferred from your savings account to your checking account is there anything else i can help you with",
+      "start_ms": 35930,
+      "duration_ms": 7410,
+      "dialog_acts": [
+        "procedure_explanation",
+        "open_question"
+      ]
+    },
+    {
+      "n": 10,
+      "speaker": "customer",
+      "text": "no that'll be all thank you",
+      "asr_text": "no that'll be all thank you",
+      "start_ms": 46920,
+      "duration_ms": 1170,
+      "dialog_acts": [
+        "thanks",
+        "other"
+      ]
+    },
+    {
+      "n": 11,
+      "speaker": "agent",
+      "text": "thank you for calling have a great day",
+      "asr_text": "thank you for calling have a great day",
+      "start_ms": 47260,
+      "duration_ms": 1680,
+      "dialog_acts": [
+        "closing"
+      ]
+    },
+    {
+      "n": 12,
+      "speaker": "customer",
+      "text": "mhm",
+      "asr_text": "mhm mhm",
+      "start_ms": 52520,
+      "duration_ms": 930,
+      "dialog_acts": [
+        "acknowledgement",
+        "closing"
+      ]
+    },
+    {
+      "n": 13,
+      "speaker": "agent",
+      "text": "[noise]",
+      "asr_text": "[noise]",
+      "start_ms": 50930,
+      "duration_ms": 90,
+      "dialog_acts": [
+        "closing"
+      ]
+    },
+    {
+      "n": 14,
+      "speaker": "customer",
+      "text": "[noise]",
+      "asr_text": "[noise]",
+      "start_ms": 54290,
+      "duration_ms": 120,
+      "dialog_acts": [
+        "acknowledgement",
+        "closing"
+      ]
+    }
+  ],
+  "source_fields": {
+    "task_assigned": [
+      "transfer money"
+    ],
+    "task_logged_by_agent": [
+      "transfer money"
+    ],
+    "labels": {
+      "lhvb_script": 5.0,
+      "caller_mos": 5.0,
+      "agent_mos": 5.0
+    },
+    "session": "Little Harper Valley 3"
+  },
+  "modifications": []
+}

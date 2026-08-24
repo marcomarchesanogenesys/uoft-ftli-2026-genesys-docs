@@ -1,0 +1,279 @@
+{
+  "id": "ABCD-0022",
+  "source": {
+    "dataset": "ABCD",
+    "original_id": "2492",
+    "licence": "MIT",
+    "url": "https://github.com/asappresearch/abcd",
+    "citation": "Chen et al. (2021), NAACL, arXiv:2104.00783"
+  },
+  "channel": "chat",
+  "customer_record": {
+    "customer_name": "rodriguez domingo",
+    "phone": "(554) 399-5465",
+    "member_level": "silver",
+    "address": {
+      "street": "9176 1st ave",
+      "city": "la fayette",
+      "state": "tx",
+      "zip_code": "57233",
+      "full_address": "9176 1st ave  la fayette, tx 57233"
+    },
+    "order": {
+      "order_id": "7552146872",
+      "num_products": "1",
+      "products": [
+        {
+          "brand": "calvin_klein",
+          "product_type": "jeans",
+          "amount": 79
+        }
+      ]
+    }
+  },
+  "turns": [
+    {
+      "n": 1,
+      "speaker": "agent",
+      "text": "Hi, there.  How can I help you?"
+    },
+    {
+      "n": 2,
+      "speaker": "customer",
+      "text": "Hello Mr. Agent"
+    },
+    {
+      "n": 3,
+      "speaker": "customer",
+      "text": "Can you please move my delivery date until sometime next week?  I really don't want to have to pay a shipping fee, and I don't mind waiting longer."
+    },
+    {
+      "n": 4,
+      "speaker": "agent",
+      "text": "I can help you with that.  What is your full name or Account ID?"
+    },
+    {
+      "n": 5,
+      "speaker": "customer",
+      "text": "Rodriguez Domingo"
+    },
+    {
+      "n": 6,
+      "speaker": "system_action",
+      "text": "Account has been pulled up for Rodriguez Domingo."
+    },
+    {
+      "n": 7,
+      "speaker": "customer",
+      "text": "ok"
+    },
+    {
+      "n": 8,
+      "speaker": "agent",
+      "text": "Okay, I've pulled up your account."
+    },
+    {
+      "n": 9,
+      "speaker": "customer",
+      "text": "And???"
+    },
+    {
+      "n": 10,
+      "speaker": "agent",
+      "text": "Do you know the status of your shipping?"
+    },
+    {
+      "n": 11,
+      "speaker": "customer",
+      "text": "Doh!  Yes, I see now that it's already out for delivery  :("
+    },
+    {
+      "n": 12,
+      "speaker": "system_action",
+      "text": "Shipping status of Out for delivery has been noted."
+    },
+    {
+      "n": 13,
+      "speaker": "agent",
+      "text": "Let me confirm your purchase."
+    },
+    {
+      "n": 14,
+      "speaker": "agent",
+      "text": "I'll need your Username, email, and Order ID"
+    },
+    {
+      "n": 15,
+      "speaker": "customer",
+      "text": "Order ID is 7552146872.  Sorry, I don't remember my Username, but my email address is rdomingo3829@gmail.com"
+    },
+    {
+      "n": 16,
+      "speaker": "system_action",
+      "text": "Purchase validation in progress ..."
+    },
+    {
+      "n": 17,
+      "speaker": "customer",
+      "text": "ok"
+    },
+    {
+      "n": 18,
+      "speaker": "agent",
+      "text": "Are you a Gold or Silver member?"
+    },
+    {
+      "n": 19,
+      "speaker": "customer",
+      "text": "Silver"
+    },
+    {
+      "n": 20,
+      "speaker": "system_action",
+      "text": "Querying the system for an answer ..."
+    },
+    {
+      "n": 21,
+      "speaker": "agent",
+      "text": "Great.  Let me check on some solutions."
+    },
+    {
+      "n": 22,
+      "speaker": "customer",
+      "text": "OK"
+    },
+    {
+      "n": 23,
+      "speaker": "system_action",
+      "text": "Membership level of silver has been noted."
+    },
+    {
+      "n": 24,
+      "speaker": "customer",
+      "text": "Could you please hurry?  I have somewhere I need to be.  This is taking a long time."
+    },
+    {
+      "n": 25,
+      "speaker": "agent",
+      "text": "Yes, I'm just checking to see if there's an alternative for you rather than cancelling."
+    },
+    {
+      "n": 26,
+      "speaker": "customer",
+      "text": "Ok"
+    },
+    {
+      "n": 27,
+      "speaker": "system_action",
+      "text": "Membership level of silver has been noted."
+    },
+    {
+      "n": 28,
+      "speaker": "system_action",
+      "text": "Membership level of  has been noted."
+    },
+    {
+      "n": 29,
+      "speaker": "customer",
+      "text": "Huh?"
+    },
+    {
+      "n": 30,
+      "speaker": "agent",
+      "text": "Okay, it looks like we will have to cancel the order."
+    },
+    {
+      "n": 31,
+      "speaker": "customer",
+      "text": "So what do I do when I receive the order since it's already out for delivery? Should I refuse delivery?"
+    },
+    {
+      "n": 32,
+      "speaker": "agent",
+      "text": "No, I'd accept delivery.  If you'd like to return the item for a full refund, then you can."
+    },
+    {
+      "n": 33,
+      "speaker": "system_action",
+      "text": "Searching the FAQ pages ..."
+    },
+    {
+      "n": 34,
+      "speaker": "customer",
+      "text": "I'd keep it if I could just get the shipping reimbursed.  Could I get a refund of just the shipping?"
+    },
+    {
+      "n": 35,
+      "speaker": "system_action",
+      "text": "System Action: search membership"
+    },
+    {
+      "n": 36,
+      "speaker": "agent",
+      "text": "Sure I can do that for you."
+    },
+    {
+      "n": 37,
+      "speaker": "customer",
+      "text": "Awesome"
+    },
+    {
+      "n": 38,
+      "speaker": "system_action",
+      "text": "FAQ answer related to membership (question3) was selected."
+    },
+    {
+      "n": 39,
+      "speaker": "system_action",
+      "text": "System Action: search membership"
+    },
+    {
+      "n": 40,
+      "speaker": "customer",
+      "text": "Can I get a confirmation email that I will be reimbursed the shipping fee please?"
+    },
+    {
+      "n": 41,
+      "speaker": "agent",
+      "text": "Yes you will get a confirmation email once it's changed in the system."
+    },
+    {
+      "n": 42,
+      "speaker": "customer",
+      "text": "Ok, thank you"
+    },
+    {
+      "n": 43,
+      "speaker": "agent",
+      "text": "You are very welcome.  Can I help you with anything else?"
+    },
+    {
+      "n": 44,
+      "speaker": "customer",
+      "text": "No, that was everything!"
+    },
+    {
+      "n": 45,
+      "speaker": "agent",
+      "text": "Have a wonderful day!"
+    }
+  ],
+  "source_fields": {
+    "flow": "order_issue",
+    "subflow": "manage_downgrade",
+    "actions_taken": [
+      "pull-up-account",
+      "shipping-status",
+      "validate-purchase",
+      "ask-the-oracle",
+      "membership",
+      "membership",
+      "membership",
+      "search-faq",
+      "search-membership",
+      "select-faq",
+      "search-membership"
+    ]
+  },
+  "modifications": []
+}

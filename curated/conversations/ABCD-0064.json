@@ -1,0 +1,136 @@
+{
+  "id": "ABCD-0064",
+  "source": {
+    "dataset": "ABCD",
+    "original_id": "2613",
+    "licence": "MIT",
+    "url": "https://github.com/asappresearch/abcd",
+    "citation": "Chen et al. (2021), NAACL, arXiv:2104.00783"
+  },
+  "channel": "chat",
+  "customer_record": {
+    "customer_name": "rodriguez domingo",
+    "phone": "(451) 862-4027",
+    "member_level": "guest",
+    "address": {
+      "street": "9815 brushwick dr",
+      "city": "san lima",
+      "state": "tx",
+      "zip_code": "65160",
+      "full_address": "9815 brushwick dr  san lima, tx 65160"
+    },
+    "order": {
+      "num_products": "1",
+      "products": [
+        {
+          "brand": "calvin_klein",
+          "product_type": "boots",
+          "amount": 74
+        }
+      ]
+    }
+  },
+  "turns": [
+    {
+      "n": 1,
+      "speaker": "customer",
+      "text": "hello"
+    },
+    {
+      "n": 2,
+      "speaker": "agent",
+      "text": "Hello, how can I help you today?"
+    },
+    {
+      "n": 3,
+      "speaker": "customer",
+      "text": "i am thinking about buying these boots that i really like"
+    },
+    {
+      "n": 4,
+      "speaker": "customer",
+      "text": "Do you know if they come with a warranty?"
+    },
+    {
+      "n": 5,
+      "speaker": "customer",
+      "text": "They are Calvin Klein brown leather"
+    },
+    {
+      "n": 6,
+      "speaker": "agent",
+      "text": "Happy to help, may I have your  name please?"
+    },
+    {
+      "n": 7,
+      "speaker": "customer",
+      "text": "Sure, Rodriguez Domingo"
+    },
+    {
+      "n": 8,
+      "speaker": "agent",
+      "text": "thanks Rodriguez."
+    },
+    {
+      "n": 9,
+      "speaker": "system_action",
+      "text": "Account has been pulled up for Rodriguez Domingo."
+    },
+    {
+      "n": 10,
+      "speaker": "system_action",
+      "text": "Searching the FAQ pages ..."
+    },
+    {
+      "n": 11,
+      "speaker": "system_action",
+      "text": "System Action: search boots"
+    },
+    {
+      "n": 12,
+      "speaker": "system_action",
+      "text": "FAQ answer related to boots (other4) was selected."
+    },
+    {
+      "n": 13,
+      "speaker": "agent",
+      "text": "Our products are warranted for 12 months from date of purchase. They are guaranteed to be free of defects in material and workmanship."
+    },
+    {
+      "n": 14,
+      "speaker": "customer",
+      "text": "Great, thank you!"
+    },
+    {
+      "n": 15,
+      "speaker": "agent",
+      "text": "Great, is there anything else that I can help you with?"
+    },
+    {
+      "n": 16,
+      "speaker": "customer",
+      "text": "Nope, thank you"
+    },
+    {
+      "n": 17,
+      "speaker": "agent",
+      "text": "Have a nice day!"
+    },
+    {
+      "n": 18,
+      "speaker": "customer",
+      "text": "you too"
+    }
+  ],
+  "source_fields": {
+    "flow": "single_item_query",
+    "subflow": "boots_other_4",
+    "actions_taken": [
+      "pull-up-account",
+      "search-faq",
+      "search-boots",
+      "select-faq"
+    ]
+  },
+  "modifications": []
+}

@@ -1,0 +1,222 @@
+{
+  "id": "ABCD-0004",
+  "source": {
+    "dataset": "ABCD",
+    "original_id": "2173",
+    "licence": "MIT",
+    "url": "https://github.com/asappresearch/abcd",
+    "citation": "Chen et al. (2021), NAACL, arXiv:2104.00783"
+  },
+  "channel": "chat",
+  "customer_id": "davidw92",
+  "customer_record": {
+    "customer_name": "david williams",
+    "username": "davidw92",
+    "email": "davidw92@email.com",
+    "phone": "(223) 654-2642",
+    "member_level": "gold",
+    "address": {
+      "street": "1987 woodshore st",
+      "city": "newark",
+      "state": "mi",
+      "zip_code": "67828",
+      "full_address": "1987 woodshore st  newark, mi 67828"
+    }
+  },
+  "turns": [
+    {
+      "n": 1,
+      "speaker": "customer",
+      "text": "Hi there"
+    },
+    {
+      "n": 2,
+      "speaker": "agent",
+      "text": "Thank you for contacting AcmeBrands, how can I help you today?"
+    },
+    {
+      "n": 3,
+      "speaker": "customer",
+      "text": "I have an issue and I need your help"
+    },
+    {
+      "n": 4,
+      "speaker": "customer",
+      "text": "I am a senior and my memory isn't what it was"
+    },
+    {
+      "n": 5,
+      "speaker": "customer",
+      "text": "You know, getting older and all that lol"
+    },
+    {
+      "n": 6,
+      "speaker": "customer",
+      "text": "I'm 78"
+    },
+    {
+      "n": 7,
+      "speaker": "customer",
+      "text": "I need to check my order"
+    },
+    {
+      "n": 8,
+      "speaker": "customer",
+      "text": "But I plum forgot my username"
+    },
+    {
+      "n": 9,
+      "speaker": "agent",
+      "text": "Sure, I can help with that."
+    },
+    {
+      "n": 10,
+      "speaker": "customer",
+      "text": "Things like this are happening more and more"
+    },
+    {
+      "n": 11,
+      "speaker": "customer",
+      "text": "can you help an old man out?"
+    },
+    {
+      "n": 12,
+      "speaker": "agent",
+      "text": "First, to recover your username I will need your full name or account ID."
+    },
+    {
+      "n": 13,
+      "speaker": "customer",
+      "text": "Okay"
+    },
+    {
+      "n": 14,
+      "speaker": "customer",
+      "text": "I'm David Williams"
+    },
+    {
+      "n": 15,
+      "speaker": "customer",
+      "text": "At least I still know my own name!"
+    },
+    {
+      "n": 16,
+      "speaker": "system_action",
+      "text": "Account has been pulled up for David Williams."
+    },
+    {
+      "n": 17,
+      "speaker": "agent",
+      "text": "Thanks, I will also need 2 of the 3 following pieces of information - zip code, phone number, or email address."
+    },
+    {
+      "n": 18,
+      "speaker": "customer",
+      "text": "Oh okay"
+    },
+    {
+      "n": 19,
+      "speaker": "customer",
+      "text": "one moment"
+    },
+    {
+      "n": 20,
+      "speaker": "customer",
+      "text": "My number is (223) 654-2642"
+    },
+    {
+      "n": 21,
+      "speaker": "customer",
+      "text": "My email is davidw92@email.com"
+    },
+    {
+      "n": 22,
+      "speaker": "customer",
+      "text": "I use email even though I'm a senior lol"
+    },
+    {
+      "n": 23,
+      "speaker": "agent",
+      "text": "That's great!"
+    },
+    {
+      "n": 24,
+      "speaker": "system_action",
+      "text": "Identity verification in progess ..."
+    },
+    {
+      "n": 25,
+      "speaker": "agent",
+      "text": "Alright - your username is dwilliams1."
+    },
+    {
+      "n": 26,
+      "speaker": "agent",
+      "text": "Is there anything else I can help you with today?"
+    },
+    {
+      "n": 27,
+      "speaker": "customer",
+      "text": "Oh of course"
+    },
+    {
+      "n": 28,
+      "speaker": "customer",
+      "text": "What didn't I remember that?"
+    },
+    {
+      "n": 29,
+      "speaker": "customer",
+      "text": "Why i mean"
+    },
+    {
+      "n": 30,
+      "speaker": "customer",
+      "text": "I will try to login right now"
+    },
+    {
+      "n": 31,
+      "speaker": "customer",
+      "text": "Oh, okay"
+    },
+    {
+      "n": 32,
+      "speaker": "customer",
+      "text": "I just logged in!!!"
+    },
+    {
+      "n": 33,
+      "speaker": "customer",
+      "text": "Great"
+    },
+    {
+      "n": 34,
+      "speaker": "agent",
+      "text": "Great!"
+    },
+    {
+      "n": 35,
+      "speaker": "customer",
+      "text": "That's all I needed today"
+    },
+    {
+      "n": 36,
+      "speaker": "customer",
+      "text": "thanks so much"
+    },
+    {
+      "n": 37,
+      "speaker": "agent",
+      "text": "Thank you sir, and have a great day!"
+    }
+  ],
+  "source_fields": {
+    "flow": "account_access",
+    "subflow": "recover_username",
+    "actions_taken": [
+      "pull-up-account",
+      "verify-identity"
+    ]
+  },
+  "modifications": []
+}

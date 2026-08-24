@@ -1,0 +1,115 @@
+{
+  "id": "ABCD-0071",
+  "source": {
+    "dataset": "ABCD",
+    "original_id": "10209",
+    "licence": "MIT",
+    "url": "https://github.com/asappresearch/abcd",
+    "citation": "Chen et al. (2021), NAACL, arXiv:2104.00783"
+  },
+  "channel": "chat",
+  "customer_record": {
+    "customer_name": "crystal minh",
+    "phone": "(763) 582-2725",
+    "member_level": "silver",
+    "address": {
+      "street": "0610 brushwick dr",
+      "city": "san mateo",
+      "state": "ny",
+      "zip_code": "92358",
+      "full_address": "0610 brushwick dr  san mateo, ny 92358"
+    }
+  },
+  "turns": [
+    {
+      "n": 1,
+      "speaker": "agent",
+      "text": "Hello, how can I help you today?"
+    },
+    {
+      "n": 2,
+      "speaker": "customer",
+      "text": "I was hoping you could answer my question regarding refunds."
+    },
+    {
+      "n": 3,
+      "speaker": "agent",
+      "text": "Are you trying to refund a specific item or did you just want to know about refunds in general?"
+    },
+    {
+      "n": 4,
+      "speaker": "customer",
+      "text": "Just in general, I've actually never bought anything on your site. If I don't like something, can I return it for a refund?"
+    },
+    {
+      "n": 5,
+      "speaker": "agent",
+      "text": "Okay, let me just look into that for you."
+    },
+    {
+      "n": 6,
+      "speaker": "customer",
+      "text": "Thanks"
+    },
+    {
+      "n": 7,
+      "speaker": "agent",
+      "text": "Can I have your name please?"
+    },
+    {
+      "n": 8,
+      "speaker": "customer",
+      "text": "It's Crystal"
+    },
+    {
+      "n": 9,
+      "speaker": "system_action",
+      "text": "Searching the FAQ pages ..."
+    },
+    {
+      "n": 10,
+      "speaker": "system_action",
+      "text": "System Action: search policy"
+    },
+    {
+      "n": 11,
+      "speaker": "system_action",
+      "text": "FAQ answer related to policy (question2) was selected."
+    },
+    {
+      "n": 12,
+      "speaker": "agent",
+      "text": "We're only able to refund items that haven't been shipped yet.We do need order ID, customer username, and customer email address to make refunds so make sure you have that info."
+    },
+    {
+      "n": 13,
+      "speaker": "agent",
+      "text": "Can I help with anything else today?"
+    },
+    {
+      "n": 14,
+      "speaker": "customer",
+      "text": "okay, I think that makes sense."
+    },
+    {
+      "n": 15,
+      "speaker": "customer",
+      "text": "That's it for now"
+    },
+    {
+      "n": 16,
+      "speaker": "agent",
+      "text": "Have a nice day."
+    }
+  ],
+  "source_fields": {
+    "flow": "storewide_query",
+    "subflow": "policy_2",
+    "actions_taken": [
+      "search-faq",
+      "search-policy",
+      "select-faq"
+    ]
+  },
+  "modifications": []
+}

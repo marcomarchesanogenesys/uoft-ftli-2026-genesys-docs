@@ -1,0 +1,172 @@
+{
+  "id": "ABCD-0060",
+  "source": {
+    "dataset": "ABCD",
+    "original_id": "923",
+    "licence": "MIT",
+    "url": "https://github.com/asappresearch/abcd",
+    "citation": "Chen et al. (2021), NAACL, arXiv:2104.00783"
+  },
+  "channel": "chat",
+  "customer_id": "normanb2",
+  "customer_record": {
+    "customer_name": "norman bouchard",
+    "username": "normanb2",
+    "email": "normanb2@email.com",
+    "phone": "(377) 312-4848",
+    "member_level": "silver",
+    "address": {
+      "street": "2254 primrose ave",
+      "city": "newark",
+      "state": "tx",
+      "zip_code": "85134",
+      "full_address": "2254 primrose ave  newark, tx 85134"
+    },
+    "order": {
+      "order_id": "1595595798",
+      "purchase_date": "2019-07-31",
+      "num_products": "3",
+      "products": [
+        {
+          "brand": "calvin_klein",
+          "product_type": "jacket",
+          "amount": 79
+        },
+        {
+          "brand": "michael_kors",
+          "product_type": "jacket",
+          "amount": 59
+        },
+        {
+          "brand": "guess",
+          "product_type": "boots",
+          "amount": 79
+        }
+      ]
+    }
+  },
+  "turns": [
+    {
+      "n": 1,
+      "speaker": "agent",
+      "text": "Hi,  I'm James. How can I help you?"
+    },
+    {
+      "n": 2,
+      "speaker": "customer",
+      "text": "Hello, I was wondering if you could check the status of my order as I noticed the shipping cost was a lot higher than I expected."
+    },
+    {
+      "n": 3,
+      "speaker": "agent",
+      "text": "I can do that for you.  Can I have your full name?"
+    },
+    {
+      "n": 4,
+      "speaker": "customer",
+      "text": "Norman Bouchard"
+    },
+    {
+      "n": 5,
+      "speaker": "system_action",
+      "text": "Account has been pulled up for Norman Bouchard."
+    },
+    {
+      "n": 6,
+      "speaker": "agent",
+      "text": "Do you want to downgrade to a less expensive shipping option?"
+    },
+    {
+      "n": 7,
+      "speaker": "customer",
+      "text": "Actually, can we just cancel the order entirely and give me a refund?"
+    },
+    {
+      "n": 8,
+      "speaker": "agent",
+      "text": "We can possibly do that"
+    },
+    {
+      "n": 9,
+      "speaker": "customer",
+      "text": "Great"
+    },
+    {
+      "n": 10,
+      "speaker": "agent",
+      "text": "I'll need your username,  email address, and order ID."
+    },
+    {
+      "n": 11,
+      "speaker": "customer",
+      "text": "normanb2, normanb2@email.com, 1595595798"
+    },
+    {
+      "n": 12,
+      "speaker": "system_action",
+      "text": "Purchase validation in progress ..."
+    },
+    {
+      "n": 13,
+      "speaker": "agent",
+      "text": "Okay,  can you tell me the shipping status?"
+    },
+    {
+      "n": 14,
+      "speaker": "customer",
+      "text": "Order Received"
+    },
+    {
+      "n": 15,
+      "speaker": "system_action",
+      "text": "Shipping status of 1595595798 has been noted."
+    },
+    {
+      "n": 16,
+      "speaker": "system_action",
+      "text": "Shipping status of Order Received has been noted."
+    },
+    {
+      "n": 17,
+      "speaker": "system_action",
+      "text": "Order has been updated with cancel order."
+    },
+    {
+      "n": 18,
+      "speaker": "agent",
+      "text": "Okay, the order has been canceled and you will not be charged."
+    },
+    {
+      "n": 19,
+      "speaker": "customer",
+      "text": "Awesome, thanks so much."
+    },
+    {
+      "n": 20,
+      "speaker": "agent",
+      "text": "Can I help you with anything else?"
+    },
+    {
+      "n": 21,
+      "speaker": "customer",
+      "text": "That's all for me today."
+    },
+    {
+      "n": 22,
+      "speaker": "agent",
+      "text": "Have a great day"
+    }
+  ],
+  "source_fields": {
+    "flow": "shipping_issue",
+    "subflow": "cost",
+    "actions_taken": [
+      "pull-up-account",
+      "validate-purchase",
+      "shipping-status",
+      "shipping-status",
+      "update-order"
+    ]
+  },
+  "modifications": []
+}

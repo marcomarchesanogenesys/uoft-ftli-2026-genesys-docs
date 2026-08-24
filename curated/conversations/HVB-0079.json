@@ -1,0 +1,318 @@
+{
+  "id": "HVB-0079",
+  "source": {
+    "dataset": "HarperValleyBank",
+    "original_id": "14ec9f4c914f4a38",
+    "licence": "CC BY 4.0",
+    "url": "https://github.com/cricketclub/gridspace-stanford-harper-valley",
+    "citation": "Wu, Nafziger, Scodary & Maas (2020), arXiv:2010.13929"
+  },
+  "channel": "voice",
+  "agent_id": "hvb-speaker-56",
+  "customer_id": "hvb-speaker-17",
+  "customer_record": {
+    "customer_name": "Mary Rodriguez",
+    "captured_by_agent": {
+      "home address": "764 First Street, Forest Ranch, Oregon 17537"
+    }
+  },
+  "turns": [
+    {
+      "n": 1,
+      "speaker": "agent",
+      "text": "hello this is harper valley national bank",
+      "asr_text": "hello mr harper valley national bank",
+      "start_ms": 2089,
+      "duration_ms": 3750,
+      "dialog_acts": [
+        "greeting"
+      ]
+    },
+    {
+      "n": 2,
+      "speaker": "agent",
+      "text": "my name is linda",
+      "asr_text": "my name is linda",
+      "start_ms": 6659,
+      "duration_ms": 1620,
+      "dialog_acts": [
+        "greeting"
+      ]
+    },
+    {
+      "n": 3,
+      "speaker": "customer",
+      "text": "[noise]",
+      "asr_text": "[laughter]",
+      "start_ms": 9990,
+      "duration_ms": 420,
+      "dialog_acts": [
+        "greeting",
+        "other"
+      ]
+    },
+    {
+      "n": 4,
+      "speaker": "agent",
+      "text": "how can i help you today",
+      "asr_text": "how can i help you today",
+      "start_ms": 10089,
+      "duration_ms": 1290,
+      "dialog_acts": [
+        "greeting",
+        "open_question"
+      ]
+    },
+    {
+      "n": 5,
+      "speaker": "customer",
+      "text": "[noise]",
+      "asr_text": "mm mm",
+      "start_ms": 13190,
+      "duration_ms": 510,
+      "dialog_acts": [
+        "response",
+        "greeting"
+      ]
+    },
+    {
+      "n": 6,
+      "speaker": "customer",
+      "text": "hi my name is mary <unk> uh i need a new checkbook",
+      "asr_text": "hi my name is mary road trip uh i need a new transfer <unk>",
+      "start_ms": 14490,
+      "duration_ms": 3690,
+      "dialog_acts": [
+        "greeting",
+        "problem_description"
+      ]
+    },
+    {
+      "n": 7,
+      "speaker": "agent",
+      "text": "what is your address",
+      "asr_text": "what is your address",
+      "start_ms": 19159,
+      "duration_ms": 1260,
+      "dialog_acts": [
+        "data_question"
+      ]
+    },
+    {
+      "n": 8,
+      "speaker": "customer",
+      "text": "my address as",
+      "asr_text": "my address as",
+      "start_ms": 23790,
+      "duration_ms": 1290,
+      "dialog_acts": [
+        "response",
+        "data_response"
+      ]
+    },
+    {
+      "n": 9,
+      "speaker": "customer",
+      "text": "seven sixty four first street",
+      "asr_text": "seven sixty four for street",
+      "start_ms": 25450,
+      "duration_ms": 3090,
+      "dialog_acts": [
+        "data_communication",
+        "data_response"
+      ]
+    },
+    {
+      "n": 10,
+      "speaker": "customer",
+      "text": "the city is",
+      "asr_text": "the c d s",
+      "start_ms": 29490,
+      "duration_ms": 990,
+      "dialog_acts": [
+        "data_communication",
+        "data_response"
+      ]
+    },
+    {
+      "n": 11,
+      "speaker": "customer",
+      "text": "forest ranch",
+      "asr_text": "sarah s ranch",
+      "start_ms": 31090,
+      "duration_ms": 1320,
+      "dialog_acts": [
+        "other",
+        "data_response"
+      ]
+    },
+    {
+      "n": 12,
+      "speaker": "customer",
+      "text": "the state",
+      "asr_text": "the state",
+      "start_ms": 33690,
+      "duration_ms": 750,
+      "dialog_acts": [
+        "data_response",
+        "problem_description"
+      ]
+    },
+    {
+      "n": 13,
+      "speaker": "customer",
+      "text": "is oregon",
+      "asr_text": "as oregon",
+      "start_ms": 34920,
+      "duration_ms": 1650,
+      "dialog_acts": [
+        "response",
+        "data_communication"
+      ]
+    },
+    {
+      "n": 14,
+      "speaker": "customer",
+      "text": "and the zip code is one",
+      "asr_text": "and the zip code is one",
+      "start_ms": 37990,
+      "duration_ms": 3090,
+      "dialog_acts": [
+        "response",
+        "data_question"
+      ]
+    },
+    {
+      "n": 15,
+      "speaker": "customer",
+      "text": "seven five three seven",
+      "asr_text": "seven five three seven",
+      "start_ms": 41590,
+      "duration_ms": 3270,
+      "dialog_acts": [
+        "response"
+      ]
+    },
+    {
+      "n": 16,
+      "speaker": "agent",
+      "text": "[noise]",
+      "asr_text": "mm hmm",
+      "start_ms": 44829,
+      "duration_ms": 180,
+      "dialog_acts": [
+        "acknowledgement",
+        "other"
+      ]
+    },
+    {
+      "n": 17,
+      "speaker": "agent",
+      "text": "a new checkbook has been sent to your home address",
+      "asr_text": "a new check book has been sent to your home address",
+      "start_ms": 46289,
+      "duration_ms": 2430,
+      "dialog_acts": [
+        "other"
+      ]
+    },
+    {
+      "n": 18,
+      "speaker": "customer",
+      "text": "[noise]",
+      "asr_text": "[noise]",
+      "start_ms": 49260,
+      "duration_ms": 150,
+      "dialog_acts": [
+        "other"
+      ]
+    },
+    {
+      "n": 19,
+      "speaker": "customer",
+      "text": "[noise]",
+      "asr_text": "hum",
+      "start_ms": 50520,
+      "duration_ms": 120,
+      "dialog_acts": [
+        "response",
+        "filler_disfluency"
+      ]
+    },
+    {
+      "n": 20,
+      "speaker": "agent",
+      "text": "is there anything else i can do for you today",
+      "asr_text": "there anything else i can do for you today",
+      "start_ms": 49989,
+      "duration_ms": 2010,
+      "dialog_acts": [
+        "open_question"
+      ]
+    },
+    {
+      "n": 21,
+      "speaker": "customer",
+      "text": "[noise]",
+      "asr_text": "oh",
+      "start_ms": 53490,
+      "duration_ms": 90,
+      "dialog_acts": [
+        "response"
+      ]
+    },
+    {
+      "n": 22,
+      "speaker": "customer",
+      "text": "oh no that's gonna be it thank you",
+      "asr_text": "oh no that's gonna be it thank you",
+      "start_ms": 55090,
+      "duration_ms": 2400,
+      "dialog_acts": [
+        "response"
+      ]
+    },
+    {
+      "n": 23,
+      "speaker": "agent",
+      "text": "thank you for calling have a great day",
+      "asr_text": "thank you for calling have a great day",
+      "start_ms": 56589,
+      "duration_ms": 2580,
+      "dialog_acts": [
+        "other",
+        "closing"
+      ]
+    },
+    {
+      "n": 24,
+      "speaker": "customer",
+      "text": "you too bye",
+      "asr_text": "you too bye",
+      "start_ms": 62020,
+      "duration_ms": 1260,
+      "dialog_acts": [
+        "closing"
+      ]
+    }
+  ],
+  "source_fields": {
+    "task_assigned": [
+      "order checks"
+    ],
+    "task_logged_by_agent": [
+      "order checks"
+    ],
+    "labels": {
+      "lhvb_script": 5.0,
+      "caller_mos": 3.0,
+      "agent_mos": 5.0
+    },
+    "session": "Little Harper Valley 2",
+    "customer_survey_response": {
+      "ease_of_connection": "10",
+      "partner_rating": "10"
+    }
+  },
+  "modifications": []
+}

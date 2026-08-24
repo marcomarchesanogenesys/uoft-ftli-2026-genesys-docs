@@ -1,0 +1,145 @@
+{
+  "id": "ABCD-0061",
+  "source": {
+    "dataset": "ABCD",
+    "original_id": "10141",
+    "licence": "MIT",
+    "url": "https://github.com/asappresearch/abcd",
+    "citation": "Chen et al. (2021), NAACL, arXiv:2104.00783"
+  },
+  "channel": "chat",
+  "customer_record": {
+    "customer_name": "joyce wu",
+    "phone": "(951) 674-3230",
+    "member_level": "gold",
+    "address": {
+      "street": "9820 primrose ave",
+      "city": "raleigh",
+      "state": "ca",
+      "zip_code": "73329",
+      "full_address": "9820 primrose ave  raleigh, ca 73329"
+    },
+    "order": {
+      "num_products": "1",
+      "products": [
+        {
+          "brand": "guess",
+          "product_type": "jeans",
+          "amount": 84
+        }
+      ]
+    }
+  },
+  "turns": [
+    {
+      "n": 1,
+      "speaker": "agent",
+      "text": "Hi, thanks for contacting AcmeBrands. How can I help you?"
+    },
+    {
+      "n": 2,
+      "speaker": "customer",
+      "text": "I am looking at a cool pair of jeans, but I'm worried about how often they will need to be washed. Do you know how often that should happen?"
+    },
+    {
+      "n": 3,
+      "speaker": "agent",
+      "text": "Sure, i'd be happy to help you out with that."
+    },
+    {
+      "n": 4,
+      "speaker": "customer",
+      "text": "Okay, thanks!"
+    },
+    {
+      "n": 5,
+      "speaker": "agent",
+      "text": "Can I get your first name so I can better address you?"
+    },
+    {
+      "n": 6,
+      "speaker": "customer",
+      "text": "Joyce"
+    },
+    {
+      "n": 7,
+      "speaker": "agent",
+      "text": "Thanks Joyce."
+    },
+    {
+      "n": 8,
+      "speaker": "system_action",
+      "text": "Searching the FAQ pages ..."
+    },
+    {
+      "n": 9,
+      "speaker": "system_action",
+      "text": "System Action: search jeans"
+    },
+    {
+      "n": 10,
+      "speaker": "system_action",
+      "text": "FAQ answer related to jeans (how2) was selected."
+    },
+    {
+      "n": 11,
+      "speaker": "agent",
+      "text": "If you are using our jeans normally, they should be washed around once a week. That's if you use them two or three times a week."
+    },
+    {
+      "n": 12,
+      "speaker": "customer",
+      "text": "Yeah, that sounds about right."
+    },
+    {
+      "n": 13,
+      "speaker": "agent",
+      "text": "We don't recommend washing more often than that, as it can dull the color."
+    },
+    {
+      "n": 14,
+      "speaker": "customer",
+      "text": "Whew! My laziness won't affect the longevity of the jeans then."
+    },
+    {
+      "n": 15,
+      "speaker": "customer",
+      "text": "Awesome! That's all I wanted to know. I appreciate your help."
+    },
+    {
+      "n": 16,
+      "speaker": "agent",
+      "text": "Not a problem, that's what we are here for! Is there anything else I can help you out with today?"
+    },
+    {
+      "n": 17,
+      "speaker": "customer",
+      "text": "Nope, that's it."
+    },
+    {
+      "n": 18,
+      "speaker": "agent",
+      "text": "Ok, great!"
+    },
+    {
+      "n": 19,
+      "speaker": "agent",
+      "text": "Have an excellent day then!"
+    },
+    {
+      "n": 20,
+      "speaker": "customer",
+      "text": "You too!"
+    }
+  ],
+  "source_fields": {
+    "flow": "single_item_query",
+    "subflow": "jeans_how_2",
+    "actions_taken": [
+      "search-faq",
+      "search-jeans",
+      "select-faq"
+    ]
+  },
+  "modifications": []
+}

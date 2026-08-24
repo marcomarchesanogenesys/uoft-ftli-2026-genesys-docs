@@ -1,0 +1,146 @@
+{
+  "id": "ABCD-0017",
+  "source": {
+    "dataset": "ABCD",
+    "original_id": "4998",
+    "licence": "MIT",
+    "url": "https://github.com/asappresearch/abcd",
+    "citation": "Chen et al. (2021), NAACL, arXiv:2104.00783"
+  },
+  "channel": "chat",
+  "customer_record": {
+    "customer_name": "joyce wu",
+    "member_level": "bronze",
+    "address": {
+      "street": "4315 1st ave",
+      "city": "monterey",
+      "state": "tx",
+      "zip_code": "52148",
+      "full_address": "4315 1st ave  monterey, tx 52148"
+    },
+    "order": {
+      "num_products": "1",
+      "products": [
+        {
+          "brand": "calvin_klein",
+          "product_type": "jacket",
+          "amount": 94
+        }
+      ]
+    }
+  },
+  "turns": [
+    {
+      "n": 1,
+      "speaker": "agent",
+      "text": "Hi! How can I help you today?"
+    },
+    {
+      "n": 2,
+      "speaker": "customer",
+      "text": "My husband told me that a premium subscription was added to our account that we didn't want"
+    },
+    {
+      "n": 3,
+      "speaker": "agent",
+      "text": "No problem, just a moment."
+    },
+    {
+      "n": 4,
+      "speaker": "agent",
+      "text": "Can I please have your full name or account ID."
+    },
+    {
+      "n": 5,
+      "speaker": "customer",
+      "text": "Joyce Wu"
+    },
+    {
+      "n": 6,
+      "speaker": "system_action",
+      "text": "Account has been pulled up for Joyce Wu."
+    },
+    {
+      "n": 7,
+      "speaker": "system_action",
+      "text": "Details of spouse have been entered."
+    },
+    {
+      "n": 8,
+      "speaker": "agent",
+      "text": "I am going to see if this is a problem in the system."
+    },
+    {
+      "n": 9,
+      "speaker": "customer",
+      "text": "ok"
+    },
+    {
+      "n": 10,
+      "speaker": "system_action",
+      "text": "Querying the system for an answer ..."
+    },
+    {
+      "n": 11,
+      "speaker": "system_action",
+      "text": "Account has been updated with remove service."
+    },
+    {
+      "n": 12,
+      "speaker": "agent",
+      "text": "The service has been removed."
+    },
+    {
+      "n": 13,
+      "speaker": "customer",
+      "text": "Great. Thanks."
+    },
+    {
+      "n": 14,
+      "speaker": "agent",
+      "text": "I am also going to offer a refund because of this error"
+    },
+    {
+      "n": 15,
+      "speaker": "system_action",
+      "text": "A refund has been made for the amount of $40."
+    },
+    {
+      "n": 16,
+      "speaker": "agent",
+      "text": "I have refunded $40"
+    },
+    {
+      "n": 17,
+      "speaker": "agent",
+      "text": "Is there anything else I can do for you today?"
+    },
+    {
+      "n": 18,
+      "speaker": "agent",
+      "text": "Are you there?"
+    },
+    {
+      "n": 19,
+      "speaker": "customer",
+      "text": "No, that's it. Thank you."
+    },
+    {
+      "n": 20,
+      "speaker": "agent",
+      "text": "Great, thank you for contacting AcmeCorp and have a good day!"
+    }
+  ],
+  "source_fields": {
+    "flow": "manage_account",
+    "subflow": "status_service_added",
+    "actions_taken": [
+      "pull-up-account",
+      "enter-details",
+      "ask-the-oracle",
+      "update-account",
+      "offer-refund"
+    ]
+  },
+  "modifications": []
+}

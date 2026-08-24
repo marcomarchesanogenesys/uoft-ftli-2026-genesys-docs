@@ -1,0 +1,149 @@
+{
+  "id": "ABCD-0018",
+  "source": {
+    "dataset": "ABCD",
+    "original_id": "6617",
+    "licence": "MIT",
+    "url": "https://github.com/asappresearch/abcd",
+    "citation": "Chen et al. (2021), NAACL, arXiv:2104.00783"
+  },
+  "channel": "chat",
+  "customer_record": {
+    "customer_name": "alessandro phoenix",
+    "member_level": "guest",
+    "address": {
+      "street": "5339 primrose ave",
+      "city": "monterey",
+      "state": "tx",
+      "zip_code": "90042",
+      "full_address": "5339 primrose ave  monterey, tx 90042"
+    },
+    "order": {
+      "num_products": "1",
+      "products": [
+        {
+          "brand": "calvin_klein",
+          "product_type": "shirt",
+          "amount": 84
+        }
+      ]
+    }
+  },
+  "turns": [
+    {
+      "n": 1,
+      "speaker": "agent",
+      "text": "Hello, how may I assist you?"
+    },
+    {
+      "n": 2,
+      "speaker": "customer",
+      "text": "Hi. My subscription was removed but I want to have it."
+    },
+    {
+      "n": 3,
+      "speaker": "agent",
+      "text": "Sure, what's your name?"
+    },
+    {
+      "n": 4,
+      "speaker": "customer",
+      "text": "Alessandro Phoenix"
+    },
+    {
+      "n": 5,
+      "speaker": "system_action",
+      "text": "Account has been pulled up for Alessandro Phoenix."
+    },
+    {
+      "n": 6,
+      "speaker": "agent",
+      "text": "Thank you Alessandro."
+    },
+    {
+      "n": 7,
+      "speaker": "agent",
+      "text": "How did you learn that your subscription had been removed?"
+    },
+    {
+      "n": 8,
+      "speaker": "customer",
+      "text": "I heard from a spouse"
+    },
+    {
+      "n": 9,
+      "speaker": "agent",
+      "text": "Gotcha. Let me see if it was actually removed from your account, just a moment."
+    },
+    {
+      "n": 10,
+      "speaker": "system_action",
+      "text": "Querying the system for an answer ..."
+    },
+    {
+      "n": 11,
+      "speaker": "system_action",
+      "text": "Account has been updated with add service."
+    },
+    {
+      "n": 12,
+      "speaker": "agent",
+      "text": "It looks like the information you heard was correct, and it was in fact removed."
+    },
+    {
+      "n": 13,
+      "speaker": "agent",
+      "text": "However, I have reinstated your subscription."
+    },
+    {
+      "n": 14,
+      "speaker": "customer",
+      "text": "great. thanks so much"
+    },
+    {
+      "n": 15,
+      "speaker": "agent",
+      "text": "There's nothing to worry about, and you're not being charged extra or anything."
+    },
+    {
+      "n": 16,
+      "speaker": "agent",
+      "text": "Is there anything else I can help with?"
+    },
+    {
+      "n": 17,
+      "speaker": "customer",
+      "text": "no that's all"
+    },
+    {
+      "n": 18,
+      "speaker": "agent",
+      "text": "Also, when looking at your account it should show the subscription."
+    },
+    {
+      "n": 19,
+      "speaker": "agent",
+      "text": "If it's not available immediately, it may just take a few minutes."
+    },
+    {
+      "n": 20,
+      "speaker": "agent",
+      "text": "Please do reach back out to us if it does not in fact appear on your account."
+    },
+    {
+      "n": 21,
+      "speaker": "agent",
+      "text": "With that being said, I thank you for getting in touch with us. I hope you have an excellent day."
+    }
+  ],
+  "source_fields": {
+    "flow": "manage_account",
+    "subflow": "status_service_removed",
+    "actions_taken": [
+      "pull-up-account",
+      "ask-the-oracle",
+      "update-account"
+    ]
+  },
+  "modifications": []
+}

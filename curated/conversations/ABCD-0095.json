@@ -1,0 +1,121 @@
+{
+  "id": "ABCD-0095",
+  "source": {
+    "dataset": "ABCD",
+    "original_id": "4470",
+    "licence": "MIT",
+    "url": "https://github.com/asappresearch/abcd",
+    "citation": "Chen et al. (2021), NAACL, arXiv:2104.00783"
+  },
+  "channel": "chat",
+  "customer_id": "dw258809",
+  "customer_record": {
+    "customer_name": "david williams",
+    "username": "dw258809",
+    "email": "dw258809@email.com",
+    "phone": "(214) 943-0209",
+    "member_level": "guest",
+    "address": {
+      "street": "8316 kennedy st",
+      "city": "baltimore",
+      "state": "wa",
+      "zip_code": "29637",
+      "full_address": "8316 kennedy st  baltimore, wa 29637"
+    },
+    "order": {
+      "num_products": "1",
+      "products": [
+        {
+          "brand": "calvin_klein",
+          "product_type": "jacket",
+          "amount": 74
+        }
+      ]
+    }
+  },
+  "turns": [
+    {
+      "n": 1,
+      "speaker": "agent",
+      "text": "Hi! How may I help you?"
+    },
+    {
+      "n": 2,
+      "speaker": "customer",
+      "text": "Hi. I have been trying to search on your site but the search bar just doesn't seem to be working."
+    },
+    {
+      "n": 3,
+      "speaker": "agent",
+      "text": "I see, let's try a few things to see if we can fix it."
+    },
+    {
+      "n": 4,
+      "speaker": "system_action",
+      "text": "Agent is looking for solutions ..."
+    },
+    {
+      "n": 5,
+      "speaker": "customer",
+      "text": "ok"
+    },
+    {
+      "n": 6,
+      "speaker": "agent",
+      "text": "First, could you try logging in and out and then searching again?"
+    },
+    {
+      "n": 7,
+      "speaker": "customer",
+      "text": "yes give me a second"
+    },
+    {
+      "n": 8,
+      "speaker": "customer",
+      "text": "ok , nope that didn't work"
+    },
+    {
+      "n": 9,
+      "speaker": "agent",
+      "text": "I see, if you go to your browser and go into 'More Details' there should be an option to clear cookies. Could you try that, and then search?"
+    },
+    {
+      "n": 10,
+      "speaker": "customer",
+      "text": "Ok, i see it. I'll give it a shot."
+    },
+    {
+      "n": 11,
+      "speaker": "customer",
+      "text": "I think that worked!"
+    },
+    {
+      "n": 12,
+      "speaker": "agent",
+      "text": "Excellent! I'm glad."
+    },
+    {
+      "n": 13,
+      "speaker": "agent",
+      "text": "Will there be anything else today?"
+    },
+    {
+      "n": 14,
+      "speaker": "customer",
+      "text": "nope that is it, thank you."
+    },
+    {
+      "n": 15,
+      "speaker": "agent",
+      "text": "Have a great day!"
+    }
+  ],
+  "source_fields": {
+    "flow": "troubleshoot_site",
+    "subflow": "search_results",
+    "actions_taken": [
+      "log-out-in"
+    ]
+  },
+  "modifications": []
+}

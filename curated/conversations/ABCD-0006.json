@@ -1,0 +1,167 @@
+{
+  "id": "ABCD-0006",
+  "source": {
+    "dataset": "ABCD",
+    "original_id": "5161",
+    "licence": "MIT",
+    "url": "https://github.com/asappresearch/abcd",
+    "citation": "Chen et al. (2021), NAACL, arXiv:2104.00783"
+  },
+  "channel": "chat",
+  "customer_id": "albertsanders958",
+  "customer_record": {
+    "customer_name": "albert sanders",
+    "username": "albertsanders958",
+    "phone": "(342) 383-4007",
+    "member_level": "bronze",
+    "address": {
+      "street": "7454 2nd ave",
+      "city": "san mateo",
+      "state": "wa",
+      "zip_code": "30949",
+      "full_address": "7454 2nd ave  san mateo, wa 30949"
+    }
+  },
+  "turns": [
+    {
+      "n": 1,
+      "speaker": "agent",
+      "text": "Hello, thank you for contacting AcmeBrands.  How can I help today?"
+    },
+    {
+      "n": 2,
+      "speaker": "customer",
+      "text": "Well, I'm always buying my boyfriend stuff from you all, so I have a lot of past orders."
+    },
+    {
+      "n": 3,
+      "speaker": "customer",
+      "text": "I want to buy him a pair of boots, but I can't remember if he already has them."
+    },
+    {
+      "n": 4,
+      "speaker": "customer",
+      "text": "I forgot my password, so I can't log in and I tried so many times that the page froze."
+    },
+    {
+      "n": 5,
+      "speaker": "agent",
+      "text": "I can help reset your password for you."
+    },
+    {
+      "n": 6,
+      "speaker": "agent",
+      "text": "Can I have your full name or account ID please."
+    },
+    {
+      "n": 7,
+      "speaker": "customer",
+      "text": "Okay.  Albert Sanders"
+    },
+    {
+      "n": 8,
+      "speaker": "system_action",
+      "text": "Account has been pulled up for Albert Sanders."
+    },
+    {
+      "n": 9,
+      "speaker": "agent",
+      "text": "Thank you Albert - can I also have your username?"
+    },
+    {
+      "n": 10,
+      "speaker": "customer",
+      "text": "sure.  it's albertsanders958"
+    },
+    {
+      "n": 11,
+      "speaker": "system_action",
+      "text": "Details of albertsanders958 have been entered."
+    },
+    {
+      "n": 12,
+      "speaker": "agent",
+      "text": "OK, I won't be able to recover your old password, but I can generate a new one for you."
+    },
+    {
+      "n": 13,
+      "speaker": "agent",
+      "text": "All I will need is your PIN or the answer to your security question."
+    },
+    {
+      "n": 14,
+      "speaker": "customer",
+      "text": "Okay, let me check my planner for the PIN.  Hold on"
+    },
+    {
+      "n": 15,
+      "speaker": "customer",
+      "text": "Finally!!  761920"
+    },
+    {
+      "n": 16,
+      "speaker": "system_action",
+      "text": "A password has been generated."
+    },
+    {
+      "n": 17,
+      "speaker": "agent",
+      "text": "Great - I have generated a new password for you: 6qwgznj4c07"
+    },
+    {
+      "n": 18,
+      "speaker": "agent",
+      "text": "Please use this one going forward, in the event you remember your old password it will no longer be valid."
+    },
+    {
+      "n": 19,
+      "speaker": "agent",
+      "text": "Is there anything else I can help you with today?"
+    },
+    {
+      "n": 20,
+      "speaker": "customer",
+      "text": "Wait!  Let me try and log in while I still have you!"
+    },
+    {
+      "n": 21,
+      "speaker": "agent",
+      "text": "No problem."
+    },
+    {
+      "n": 22,
+      "speaker": "customer",
+      "text": "It worked, THANK GOD!!!!!"
+    },
+    {
+      "n": 23,
+      "speaker": "agent",
+      "text": "Great!"
+    },
+    {
+      "n": 24,
+      "speaker": "agent",
+      "text": "Can I help with anything else?"
+    },
+    {
+      "n": 25,
+      "speaker": "customer",
+      "text": "No.  I'm ready to go!!  Thank you, dear!!!"
+    },
+    {
+      "n": 26,
+      "speaker": "agent",
+      "text": "Thank you and have a great day!"
+    }
+  ],
+  "source_fields": {
+    "flow": "account_access",
+    "subflow": "recover_password",
+    "actions_taken": [
+      "pull-up-account",
+      "enter-details",
+      "make-password"
+    ]
+  },
+  "modifications": []
+}

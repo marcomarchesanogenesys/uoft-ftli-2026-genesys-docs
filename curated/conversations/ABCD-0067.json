@@ -1,0 +1,115 @@
+{
+  "id": "ABCD-0067",
+  "source": {
+    "dataset": "ABCD",
+    "original_id": "8260",
+    "licence": "MIT",
+    "url": "https://github.com/asappresearch/abcd",
+    "citation": "Chen et al. (2021), NAACL, arXiv:2104.00783"
+  },
+  "channel": "chat",
+  "customer_record": {
+    "customer_name": "david williams",
+    "phone": "(943) 139-4246",
+    "member_level": "guest",
+    "address": {
+      "street": "7159 primrose ave",
+      "city": "newark",
+      "state": "mi",
+      "zip_code": "46545",
+      "full_address": "7159 primrose ave  newark, mi 46545"
+    },
+    "order": {
+      "num_products": "1",
+      "products": [
+        {
+          "brand": "michael_kors",
+          "product_type": "jacket",
+          "amount": 99
+        }
+      ]
+    }
+  },
+  "turns": [
+    {
+      "n": 1,
+      "speaker": "agent",
+      "text": "Hi, how can I help you?"
+    },
+    {
+      "n": 2,
+      "speaker": "customer",
+      "text": "I would like to know what material a Michael Kors jacket for $99 is made of"
+    },
+    {
+      "n": 3,
+      "speaker": "agent",
+      "text": "Ok, one moment while I check"
+    },
+    {
+      "n": 4,
+      "speaker": "system_action",
+      "text": "Searching the FAQ pages ..."
+    },
+    {
+      "n": 5,
+      "speaker": "system_action",
+      "text": "System Action: search jacket"
+    },
+    {
+      "n": 6,
+      "speaker": "agent",
+      "text": "The outside material is polyester, nylon and tricot to help with armth and wind proofing"
+    },
+    {
+      "n": 7,
+      "speaker": "agent",
+      "text": "the inside material is cotton to help with insulation and retaining body heat"
+    },
+    {
+      "n": 8,
+      "speaker": "agent",
+      "text": "It's great for cold weather and windy conditions"
+    },
+    {
+      "n": 9,
+      "speaker": "system_action",
+      "text": "FAQ answer related to jacket (other4) was selected."
+    },
+    {
+      "n": 10,
+      "speaker": "agent",
+      "text": "Does this answer your question?"
+    },
+    {
+      "n": 11,
+      "speaker": "customer",
+      "text": "yes!"
+    },
+    {
+      "n": 12,
+      "speaker": "agent",
+      "text": "Can I do anything else for you today?"
+    },
+    {
+      "n": 13,
+      "speaker": "customer",
+      "text": "no, thanks!"
+    },
+    {
+      "n": 14,
+      "speaker": "agent",
+      "text": "ok, have a great day"
+    }
+  ],
+  "source_fields": {
+    "flow": "single_item_query",
+    "subflow": "jacket_other_4",
+    "actions_taken": [
+      "search-faq",
+      "search-jacket",
+      "select-faq"
+    ]
+  },
+  "modifications": []
+}

@@ -1,0 +1,155 @@
+{
+  "id": "HVB-0009",
+  "source": {
+    "dataset": "HarperValleyBank",
+    "original_id": "18bcc675d39e4525",
+    "licence": "CC BY 4.0",
+    "url": "https://github.com/cricketclub/gridspace-stanford-harper-valley",
+    "citation": "Wu, Nafziger, Scodary & Maas (2020), arXiv:2010.13929"
+  },
+  "channel": "voice",
+  "agent_id": "hvb-speaker-17",
+  "customer_id": "hvb-speaker-59",
+  "customer_record": {
+    "customer_name": "Jennifer Smith",
+    "captured_by_agent": {
+      "balance check account type": "savings"
+    }
+  },
+  "turns": [
+    {
+      "n": 1,
+      "speaker": "agent",
+      "text": "hello this is harper valley national bank my name is jane how can i help you today",
+      "asr_text": "hello this is happy valley national bank my name is jane how can i help you today",
+      "start_ms": 1863,
+      "duration_ms": 5490,
+      "dialog_acts": [
+        "greeting",
+        "open_question"
+      ]
+    },
+    {
+      "n": 2,
+      "speaker": "customer",
+      "text": "yes my name is jennifer smith and i would like to know my account balance",
+      "asr_text": "yeah the name is gena first mess and i would like to know my account balance",
+      "start_ms": 10740,
+      "duration_ms": 5220,
+      "dialog_acts": [
+        "response",
+        "problem_description"
+      ]
+    },
+    {
+      "n": 3,
+      "speaker": "agent",
+      "text": "oh sure i can help you to check that which account would you like to check",
+      "asr_text": "oh sure i can help you with this check that which account would you like to check",
+      "start_ms": 14953,
+      "duration_ms": 3840,
+      "dialog_acts": [
+        "data_question",
+        "open_question"
+      ]
+    },
+    {
+      "n": 4,
+      "speaker": "customer",
+      "text": "um my savings account",
+      "asr_text": "um my savings account",
+      "start_ms": 22510,
+      "duration_ms": 1920,
+      "dialog_acts": [
+        "response",
+        "problem_description"
+      ]
+    },
+    {
+      "n": 5,
+      "speaker": "agent",
+      "text": "okay your savings account balance is one hundred thirty dollars is there anything else i can help you with",
+      "asr_text": "okay your savings account balance is one hundred thirty dollars is there anything else i can help you with",
+      "start_ms": 23653,
+      "duration_ms": 7380,
+      "dialog_acts": [
+        "open_question"
+      ]
+    },
+    {
+      "n": 6,
+      "speaker": "customer",
+      "text": "um",
+      "asr_text": "um",
+      "start_ms": 35520,
+      "duration_ms": 1050,
+      "dialog_acts": [
+        "filler_disfluency"
+      ]
+    },
+    {
+      "n": 7,
+      "speaker": "customer",
+      "text": "no that's all for today",
+      "asr_text": "no that's all for today",
+      "start_ms": 38120,
+      "duration_ms": 1080,
+      "dialog_acts": [
+        "other",
+        "thanks"
+      ]
+    },
+    {
+      "n": 8,
+      "speaker": "agent",
+      "text": "thank you for calling have a great day",
+      "asr_text": "thank you for calling have a great day",
+      "start_ms": 38253,
+      "duration_ms": 2130,
+      "dialog_acts": [
+        "closing"
+      ]
+    },
+    {
+      "n": 9,
+      "speaker": "customer",
+      "text": "you too bye bye",
+      "asr_text": "you too bye bye",
+      "start_ms": 43420,
+      "duration_ms": 1080,
+      "dialog_acts": [
+        "closing"
+      ]
+    },
+    {
+      "n": 10,
+      "speaker": "agent",
+      "text": "bye now",
+      "asr_text": "bye now",
+      "start_ms": 43353,
+      "duration_ms": 600,
+      "dialog_acts": [
+        "closing"
+      ]
+    }
+  ],
+  "source_fields": {
+    "task_assigned": [
+      "check balance"
+    ],
+    "task_logged_by_agent": [
+      "check balance"
+    ],
+    "labels": {
+      "lhvb_script": 5.0,
+      "caller_mos": 5.0,
+      "agent_mos": 5.0
+    },
+    "session": "Little Harper Valley 3",
+    "agent_survey_response": {
+      "ease_of_connection": "10",
+      "partner_rating": "10"
+    }
+  },
+  "modifications": []
+}

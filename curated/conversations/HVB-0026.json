@@ -1,0 +1,144 @@
+{
+  "id": "HVB-0026",
+  "source": {
+    "dataset": "HarperValleyBank",
+    "original_id": "12b4887e64914206",
+    "licence": "CC BY 4.0",
+    "url": "https://github.com/cricketclub/gridspace-stanford-harper-valley",
+    "citation": "Wu, Nafziger, Scodary & Maas (2020), arXiv:2010.13929"
+  },
+  "channel": "voice",
+  "agent_id": "hvb-speaker-24",
+  "customer_id": "hvb-speaker-40",
+  "customer_record": {
+    "customer_name": "Mary Rodriguez",
+    "captured_by_agent": {
+      "balance check account type": "savings"
+    }
+  },
+  "turns": [
+    {
+      "n": 1,
+      "speaker": "agent",
+      "text": "hello this is harper valley national bank my name is james how can i help you today",
+      "asr_text": "hello this is harper valley national bank my name is james how can i help you today",
+      "start_ms": 3019,
+      "duration_ms": 5520,
+      "dialog_acts": [
+        "greeting"
+      ]
+    },
+    {
+      "n": 2,
+      "speaker": "customer",
+      "text": "hi my name is mary rodriguez i need to check my account balance",
+      "asr_text": "hi my name is mary rodriguez i need to check my account balance",
+      "start_ms": 13190,
+      "duration_ms": 3540,
+      "dialog_acts": [
+        "greeting",
+        "problem_description"
+      ]
+    },
+    {
+      "n": 3,
+      "speaker": "agent",
+      "text": "which account would you like to check",
+      "asr_text": "which account would you like to charge",
+      "start_ms": 20369,
+      "duration_ms": 1740,
+      "dialog_acts": [
+        "data_question",
+        "acknowledgement"
+      ]
+    },
+    {
+      "n": 4,
+      "speaker": "customer",
+      "text": "my savings account",
+      "asr_text": "my savings account",
+      "start_ms": 27220,
+      "duration_ms": 960,
+      "dialog_acts": [
+        "response",
+        "data_response"
+      ]
+    },
+    {
+      "n": 5,
+      "speaker": "agent",
+      "text": "your savings account balance is one hundred forty dollars",
+      "asr_text": "your savings account balance is one hundred forty dollars",
+      "start_ms": 34099,
+      "duration_ms": 3540,
+      "dialog_acts": [
+        "other",
+        "confirm_data"
+      ]
+    },
+    {
+      "n": 6,
+      "speaker": "agent",
+      "text": "is there anything else i can help you with",
+      "asr_text": "is there anything else i can help you with",
+      "start_ms": 41129,
+      "duration_ms": 1770,
+      "dialog_acts": [
+        "open_question"
+      ]
+    },
+    {
+      "n": 7,
+      "speaker": "customer",
+      "text": "no that's it thank you",
+      "asr_text": "no that's it thank you",
+      "start_ms": 47120,
+      "duration_ms": 1380,
+      "dialog_acts": [
+        "other",
+        "thanks"
+      ]
+    },
+    {
+      "n": 8,
+      "speaker": "agent",
+      "text": "thank you for calling have a great day",
+      "asr_text": "thank you for calling have a great day",
+      "start_ms": 48969,
+      "duration_ms": 2100,
+      "dialog_acts": [
+        "closing"
+      ]
+    },
+    {
+      "n": 9,
+      "speaker": "customer",
+      "text": "[noise]",
+      "asr_text": "[laughter]",
+      "start_ms": 53690,
+      "duration_ms": 300,
+      "dialog_acts": [
+        "closing"
+      ]
+    }
+  ],
+  "source_fields": {
+    "task_assigned": [
+      "check balance"
+    ],
+    "task_logged_by_agent": [
+      "check balance"
+    ],
+    "labels": {
+      "lhvb_script": 5.0,
+      "caller_mos": 4.0,
+      "agent_mos": 4.0
+    },
+    "session": "Little Harper Valley 2",
+    "agent_survey_response": {
+      "ease_of_connection": "9",
+      "partner_rating": "10"
+    }
+  },
+  "modifications": []
+}

@@ -1,0 +1,165 @@
+{
+  "id": "ABCD-0042",
+  "source": {
+    "dataset": "ABCD",
+    "original_id": "1796",
+    "licence": "MIT",
+    "url": "https://github.com/asappresearch/abcd",
+    "citation": "Chen et al. (2021), NAACL, arXiv:2104.00783"
+  },
+  "channel": "chat",
+  "customer_id": "davidwilliams456",
+  "customer_record": {
+    "customer_name": "david williams",
+    "username": "davidwilliams456",
+    "email": "davidwilliams456@email.com",
+    "phone": "(794) 921-7877",
+    "member_level": "gold",
+    "address": {
+      "street": "0007 primrose ave",
+      "city": "la fayette",
+      "state": "ny",
+      "zip_code": "15585",
+      "full_address": "0007 primrose ave  la fayette, ny 15585"
+    },
+    "order": {
+      "order_id": "5939845084",
+      "num_products": "1",
+      "products": [
+        {
+          "brand": "guess",
+          "product_type": "jacket",
+          "amount": 89
+        }
+      ]
+    }
+  },
+  "turns": [
+    {
+      "n": 1,
+      "speaker": "agent",
+      "text": "Good afternoon and thank you for contacting AcmeBrands! Can I have your name?"
+    },
+    {
+      "n": 2,
+      "speaker": "customer",
+      "text": "I trying to see when you guys get your stock back in. Because everytime i try to order something its out of stock"
+    },
+    {
+      "n": 3,
+      "speaker": "customer",
+      "text": "David Williams"
+    },
+    {
+      "n": 4,
+      "speaker": "agent",
+      "text": "I apologize for some of our items being out stock. Was there a specific item you were looking to order, David?"
+    },
+    {
+      "n": 5,
+      "speaker": "system_action",
+      "text": "Account has been pulled up for David Williams."
+    },
+    {
+      "n": 6,
+      "speaker": "customer",
+      "text": "Yes i was looking at the Guess Jacket and i'vre been looking for over a month and it always saying out of stock"
+    },
+    {
+      "n": 7,
+      "speaker": "customer",
+      "text": "I just don't understand!"
+    },
+    {
+      "n": 8,
+      "speaker": "system_action",
+      "text": "A reason of Guess Jacket has been recorded."
+    },
+    {
+      "n": 9,
+      "speaker": "agent",
+      "text": "I'm sorry you've had to wait this long. I'll write a report and let our Purchasing Department know about this issue so that it can be corrected."
+    },
+    {
+      "n": 10,
+      "speaker": "system_action",
+      "text": "The purchasing department has been notified."
+    },
+    {
+      "n": 11,
+      "speaker": "customer",
+      "text": "Do you know when it will be in stock, Why have it on the site if we can't buy it?>"
+    },
+    {
+      "n": 12,
+      "speaker": "agent",
+      "text": "The product is very popular and the supplier is trying to keep up with demand."
+    },
+    {
+      "n": 13,
+      "speaker": "customer",
+      "text": "okay still make it right but i will try back another time. Hopefully it will be in stoke then"
+    },
+    {
+      "n": 14,
+      "speaker": "agent",
+      "text": "I can place a back-order for it, if you would like, and then it would ship to you as soon as it became available."
+    },
+    {
+      "n": 15,
+      "speaker": "customer",
+      "text": "yes that would be great!"
+    },
+    {
+      "n": 16,
+      "speaker": "system_action",
+      "text": "A purchase of Guess Jacket was made."
+    },
+    {
+      "n": 17,
+      "speaker": "agent",
+      "text": "It will use the cred card that you currently have on your account for the purchase."
+    },
+    {
+      "n": 18,
+      "speaker": "customer",
+      "text": "ok"
+    },
+    {
+      "n": 19,
+      "speaker": "customer",
+      "text": "thank you"
+    },
+    {
+      "n": 20,
+      "speaker": "agent",
+      "text": "You're welcome! Is there anything else I can help you with today?"
+    },
+    {
+      "n": 21,
+      "speaker": "customer",
+      "text": "that will be all"
+    },
+    {
+      "n": 22,
+      "speaker": "agent",
+      "text": "Great, I hope you have a wonderful day."
+    },
+    {
+      "n": 23,
+      "speaker": "customer",
+      "text": "you too"
+    }
+  ],
+  "source_fields": {
+    "flow": "purchase_dispute",
+    "subflow": "out_of_stock_general",
+    "actions_taken": [
+      "pull-up-account",
+      "record-reason",
+      "notify-team",
+      "make-purchase"
+    ]
+  },
+  "modifications": []
+}

@@ -1,0 +1,175 @@
+{
+  "id": "ABCD-0063",
+  "source": {
+    "dataset": "ABCD",
+    "original_id": "1776",
+    "licence": "MIT",
+    "url": "https://github.com/asappresearch/abcd",
+    "citation": "Chen et al. (2021), NAACL, arXiv:2104.00783"
+  },
+  "channel": "chat",
+  "customer_record": {
+    "customer_name": "rodriguez domingo",
+    "phone": "(259) 987-9154",
+    "member_level": "silver",
+    "address": {
+      "street": "8375 lincoln ave",
+      "city": "newark",
+      "state": "ca",
+      "zip_code": "66587",
+      "full_address": "8375 lincoln ave  newark, ca 66587"
+    },
+    "order": {
+      "num_products": "1",
+      "products": [
+        {
+          "brand": "tommy_hilfiger",
+          "product_type": "jacket",
+          "amount": 89
+        }
+      ]
+    }
+  },
+  "turns": [
+    {
+      "n": 1,
+      "speaker": "agent",
+      "text": "Hello, how can i help you?"
+    },
+    {
+      "n": 2,
+      "speaker": "customer",
+      "text": "Hi, I am interested in a jacket on your website but the materials aren't listed"
+    },
+    {
+      "n": 3,
+      "speaker": "customer",
+      "text": "I was hoping you could help me with that"
+    },
+    {
+      "n": 4,
+      "speaker": "agent",
+      "text": "I will love to help you with that!"
+    },
+    {
+      "n": 5,
+      "speaker": "system_action",
+      "text": "Searching the FAQ pages ..."
+    },
+    {
+      "n": 6,
+      "speaker": "system_action",
+      "text": "System Action: search jacket"
+    },
+    {
+      "n": 7,
+      "speaker": "customer",
+      "text": "Great, thanks"
+    },
+    {
+      "n": 8,
+      "speaker": "agent",
+      "text": "I will look up materials now."
+    },
+    {
+      "n": 9,
+      "speaker": "customer",
+      "text": "It's a Tommy Hilfiger jacket"
+    },
+    {
+      "n": 10,
+      "speaker": "system_action",
+      "text": "FAQ answer related to jacket (other4) was selected."
+    },
+    {
+      "n": 11,
+      "speaker": "agent",
+      "text": "Our jackets are made with synthetic ingredients like polyester, nylon and tricot."
+    },
+    {
+      "n": 12,
+      "speaker": "agent",
+      "text": "Can i help you with anything else?"
+    },
+    {
+      "n": 13,
+      "speaker": "customer",
+      "text": "Okay, do you know which specific materials are in this jacket though?"
+    },
+    {
+      "n": 14,
+      "speaker": "customer",
+      "text": "I am allergic to nylon"
+    },
+    {
+      "n": 15,
+      "speaker": "customer",
+      "text": "so it's very important"
+    },
+    {
+      "n": 16,
+      "speaker": "agent",
+      "text": "These are the materials that are used in every jacket."
+    },
+    {
+      "n": 17,
+      "speaker": "agent",
+      "text": "I dont think it is a wise purchase for you."
+    },
+    {
+      "n": 18,
+      "speaker": "customer",
+      "text": "Well you said that they were all made with materials LIKE polyester, nylon, and tricot"
+    },
+    {
+      "n": 19,
+      "speaker": "customer",
+      "text": "do you mean they are all made with all those materials?"
+    },
+    {
+      "n": 20,
+      "speaker": "agent",
+      "text": "Yes that is the makeup of our jackets."
+    },
+    {
+      "n": 21,
+      "speaker": "customer",
+      "text": "Okay, I see"
+    },
+    {
+      "n": 22,
+      "speaker": "customer",
+      "text": "I guess I won't be buying it"
+    },
+    {
+      "n": 23,
+      "speaker": "agent",
+      "text": "I am sorry they arn't a favorable material to you. Do you need anymore help?"
+    },
+    {
+      "n": 24,
+      "speaker": "customer",
+      "text": "No, that's all"
+    },
+    {
+      "n": 25,
+      "speaker": "customer",
+      "text": "Thank you"
+    },
+    {
+      "n": 26,
+      "speaker": "agent",
+      "text": "Have a great day!"
+    }
+  ],
+  "source_fields": {
+    "flow": "single_item_query",
+    "subflow": "jacket_other_4",
+    "actions_taken": [
+      "search-faq",
+      "search-jacket",
+      "select-faq"
+    ]
+  },
+  "modifications": []
+}

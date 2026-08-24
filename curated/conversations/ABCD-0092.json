@@ -1,0 +1,208 @@
+{
+  "id": "ABCD-0092",
+  "source": {
+    "dataset": "ABCD",
+    "original_id": "3050",
+    "licence": "MIT",
+    "url": "https://github.com/asappresearch/abcd",
+    "citation": "Chen et al. (2021), NAACL, arXiv:2104.00783"
+  },
+  "channel": "chat",
+  "customer_id": "nbouchard311",
+  "customer_record": {
+    "customer_name": "norman bouchard",
+    "username": "nbouchard311",
+    "email": "nbouchard311@email.com",
+    "phone": "(714) 754-0163",
+    "member_level": "silver",
+    "address": {
+      "street": "8104 woodshore st",
+      "city": "brighton",
+      "state": "wa",
+      "zip_code": "66076",
+      "full_address": "8104 woodshore st  brighton, wa 66076"
+    },
+    "order": {
+      "num_products": "1",
+      "products": [
+        {
+          "brand": "guess",
+          "product_type": "boots",
+          "amount": 89
+        }
+      ]
+    }
+  },
+  "turns": [
+    {
+      "n": 1,
+      "speaker": "agent",
+      "text": "Hello, thank you for contacting AcmeBrand. How can I help you today?"
+    },
+    {
+      "n": 2,
+      "speaker": "customer",
+      "text": "something seems funky with your website - searching gives me exacty 0 results!"
+    },
+    {
+      "n": 3,
+      "speaker": "agent",
+      "text": "Oh my, that definitely shouldn't be happening. Lets try to troubleshoot a bit and see if we can't figure it out."
+    },
+    {
+      "n": 4,
+      "speaker": "customer",
+      "text": "thx"
+    },
+    {
+      "n": 5,
+      "speaker": "system_action",
+      "text": "Agent is looking for solutions ..."
+    },
+    {
+      "n": 6,
+      "speaker": "agent",
+      "text": "First could you try logging in and out of your account for me then try the search again?"
+    },
+    {
+      "n": 7,
+      "speaker": "customer",
+      "text": "ok hold on"
+    },
+    {
+      "n": 8,
+      "speaker": "customer",
+      "text": "maybe you are just out of everything?"
+    },
+    {
+      "n": 9,
+      "speaker": "customer",
+      "text": "nada"
+    },
+    {
+      "n": 10,
+      "speaker": "agent",
+      "text": "While i doubt thats the case it could be the problem,."
+    },
+    {
+      "n": 11,
+      "speaker": "agent",
+      "text": "Let's try clearing your cookies just to be sure. There should be a more options button in your web browser. In that menu clear cookies should show up."
+    },
+    {
+      "n": 12,
+      "speaker": "agent",
+      "text": "More details* rather"
+    },
+    {
+      "n": 13,
+      "speaker": "customer",
+      "text": "wait, won't i losee lots of info doing that?"
+    },
+    {
+      "n": 14,
+      "speaker": "customer",
+      "text": "is there anything else?"
+    },
+    {
+      "n": 15,
+      "speaker": "agent",
+      "text": "Most of the information it stores there is just for sites to keep track of your search history. If you would rather not do that I can move on to another option."
+    },
+    {
+      "n": 16,
+      "speaker": "customer",
+      "text": "that i could try?"
+    },
+    {
+      "n": 17,
+      "speaker": "agent",
+      "text": "Let's try searching for a different item to see if that comes up. Try searching for Prada Handbag."
+    },
+    {
+      "n": 18,
+      "speaker": "customer",
+      "text": "well i guess that might help"
+    },
+    {
+      "n": 19,
+      "speaker": "system_action",
+      "text": "Agent is looking for solutions ..."
+    },
+    {
+      "n": 20,
+      "speaker": "customer",
+      "text": "i will try the clearing thing"
+    },
+    {
+      "n": 21,
+      "speaker": "customer",
+      "text": "give me a minute"
+    },
+    {
+      "n": 22,
+      "speaker": "agent",
+      "text": "sure thing."
+    },
+    {
+      "n": 23,
+      "speaker": "customer",
+      "text": "YES! You are a genius!"
+    },
+    {
+      "n": 24,
+      "speaker": "system_action",
+      "text": "Agent is looking for solutions ..."
+    },
+    {
+      "n": 25,
+      "speaker": "customer",
+      "text": "i see the boots i want!"
+    },
+    {
+      "n": 26,
+      "speaker": "agent",
+      "text": "Awesome!"
+    },
+    {
+      "n": 27,
+      "speaker": "agent",
+      "text": "I'm glad we were able to solve the problem!"
+    },
+    {
+      "n": 28,
+      "speaker": "customer",
+      "text": "same"
+    },
+    {
+      "n": 29,
+      "speaker": "agent",
+      "text": "Was there anything else I could help you with today?"
+    },
+    {
+      "n": 30,
+      "speaker": "customer",
+      "text": "nope, gotta start buying stuff before it's gone, thx for your help"
+    },
+    {
+      "n": 31,
+      "speaker": "agent",
+      "text": "Haha, thank you for shopping with us. Have a great day!"
+    },
+    {
+      "n": 32,
+      "speaker": "customer",
+      "text": "u2"
+    }
+  ],
+  "source_fields": {
+    "flow": "troubleshoot_site",
+    "subflow": "search_results",
+    "actions_taken": [
+      "log-out-in",
+      "try-again",
+      "instructions"
+    ]
+  },
+  "modifications": []
+}

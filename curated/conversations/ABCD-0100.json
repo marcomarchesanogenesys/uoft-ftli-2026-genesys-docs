@@ -1,0 +1,118 @@
+{
+  "id": "ABCD-0100",
+  "source": {
+    "dataset": "ABCD",
+    "original_id": "9797",
+    "licence": "MIT",
+    "url": "https://github.com/asappresearch/abcd",
+    "citation": "Chen et al. (2021), NAACL, arXiv:2104.00783"
+  },
+  "channel": "chat",
+  "customer_id": "nbouchard125",
+  "customer_record": {
+    "customer_name": "norman bouchard",
+    "username": "nbouchard125",
+    "email": "nbouchard125@email.com",
+    "phone": "(314) 286-6580",
+    "member_level": "gold",
+    "address": {
+      "street": "3929 primrose ave",
+      "city": "san mateo",
+      "state": "ny",
+      "zip_code": "33953",
+      "full_address": "3929 primrose ave  san mateo, ny 33953"
+    },
+    "order": {
+      "num_products": "1",
+      "products": [
+        {
+          "brand": "calvin_klein",
+          "product_type": "jacket",
+          "amount": 54
+        }
+      ]
+    }
+  },
+  "turns": [
+    {
+      "n": 1,
+      "speaker": "agent",
+      "text": "YHello, how can i help you todau"
+    },
+    {
+      "n": 2,
+      "speaker": "customer",
+      "text": "Hi, I'm trying to find some new clothes on your website but the search is taking forever. The search progress indicator just spins and spins and spins."
+    },
+    {
+      "n": 3,
+      "speaker": "agent",
+      "text": "Sorry about that, first of all could you log out and in on your accounrt and try again"
+    },
+    {
+      "n": 4,
+      "speaker": "system_action",
+      "text": "Agent is looking for solutions ..."
+    },
+    {
+      "n": 5,
+      "speaker": "customer",
+      "text": "Still a no go."
+    },
+    {
+      "n": 6,
+      "speaker": "agent",
+      "text": "Okay, sorry about that i will put in a notice with our website team, in the meantime i can make the purchase for you if you would like if not the website will work in an hour or so"
+    },
+    {
+      "n": 7,
+      "speaker": "system_action",
+      "text": "The Website team has been notified."
+    },
+    {
+      "n": 8,
+      "speaker": "customer",
+      "text": "That would be great! I only have a few minutes before leaving for work so I need to buy it now."
+    },
+    {
+      "n": 9,
+      "speaker": "agent",
+      "text": "Okay sure what is the item"
+    },
+    {
+      "n": 10,
+      "speaker": "customer",
+      "text": "It's a Calvin Klein jacket"
+    },
+    {
+      "n": 11,
+      "speaker": "system_action",
+      "text": "A purchase of Calvin Klein Jacket was made."
+    },
+    {
+      "n": 12,
+      "speaker": "agent",
+      "text": "Okay done, is there anything else i can do for you"
+    },
+    {
+      "n": 13,
+      "speaker": "customer",
+      "text": "That's all. Thanks for your help!"
+    },
+    {
+      "n": 14,
+      "speaker": "agent",
+      "text": "No problem, have a good day"
+    }
+  ],
+  "source_fields": {
+    "flow": "troubleshoot_site",
+    "subflow": "search_results",
+    "actions_taken": [
+      "log-out-in",
+      "notify-team",
+      "make-purchase"
+    ]
+  },
+  "modifications": []
+}

@@ -1,0 +1,452 @@
+{
+  "id": "HVB-0080",
+  "source": {
+    "dataset": "HarperValleyBank",
+    "original_id": "15c21ca0ce024fbe",
+    "licence": "CC BY 4.0",
+    "url": "https://github.com/cricketclub/gridspace-stanford-harper-valley",
+    "citation": "Wu, Nafziger, Scodary & Maas (2020), arXiv:2010.13929"
+  },
+  "channel": "voice",
+  "agent_id": "hvb-speaker-56",
+  "customer_id": "hvb-speaker-22",
+  "customer_record": {
+    "customer_name": "John Johnson",
+    "captured_by_agent": {
+      "company name": "Fossil Gas",
+      "money amount": "91.00",
+      "company address": "153 Main Street, Harper Valley, Oregon, 50900"
+    }
+  },
+  "turns": [
+    {
+      "n": 1,
+      "speaker": "customer",
+      "text": "[noise]",
+      "asr_text": "[noise]",
+      "start_ms": 30,
+      "duration_ms": 1410,
+      "dialog_acts": [
+        "greeting"
+      ]
+    },
+    {
+      "n": 2,
+      "speaker": "customer",
+      "text": "[noise]",
+      "asr_text": "[noise]",
+      "start_ms": 2190,
+      "duration_ms": 30,
+      "dialog_acts": [
+        "greeting"
+      ]
+    },
+    {
+      "n": 3,
+      "speaker": "customer",
+      "text": "[noise]",
+      "asr_text": "right",
+      "start_ms": 4090,
+      "duration_ms": 360,
+      "dialog_acts": [
+        "greeting",
+        "acknowledgement"
+      ]
+    },
+    {
+      "n": 4,
+      "speaker": "agent",
+      "text": "[noise]",
+      "asr_text": "[noise]",
+      "start_ms": 2000,
+      "duration_ms": 90,
+      "dialog_acts": [
+        "greeting"
+      ]
+    },
+    {
+      "n": 5,
+      "speaker": "agent",
+      "text": "hello",
+      "asr_text": "hello",
+      "start_ms": 2760,
+      "duration_ms": 420,
+      "dialog_acts": [
+        "greeting"
+      ]
+    },
+    {
+      "n": 6,
+      "speaker": "agent",
+      "text": "[noise] hello this is uh harper valley national bank my name is james",
+      "asr_text": "[noise] hello this is uh her profile international bank my name is james",
+      "start_ms": 3730,
+      "duration_ms": 3900,
+      "dialog_acts": [
+        "greeting",
+        "problem_description"
+      ]
+    },
+    {
+      "n": 7,
+      "speaker": "customer",
+      "text": "[noise]",
+      "asr_text": "or a lease",
+      "start_ms": 6170,
+      "duration_ms": 570,
+      "dialog_acts": [
+        "other",
+        "greeting"
+      ]
+    },
+    {
+      "n": 8,
+      "speaker": "customer",
+      "text": "[noise]",
+      "asr_text": "oh let's see oh it said that",
+      "start_ms": 7190,
+      "duration_ms": 2610,
+      "dialog_acts": [
+        "other",
+        "greeting"
+      ]
+    },
+    {
+      "n": 9,
+      "speaker": "customer",
+      "text": "[noise]",
+      "asr_text": "[noise]",
+      "start_ms": 11190,
+      "duration_ms": 30,
+      "dialog_acts": [
+        "other",
+        "confirm_data"
+      ]
+    },
+    {
+      "n": 10,
+      "speaker": "customer",
+      "text": "hi my name is john johnson",
+      "asr_text": "hi my name is john johnson",
+      "start_ms": 14090,
+      "duration_ms": 1860,
+      "dialog_acts": [
+        "data_question",
+        "other"
+      ]
+    },
+    {
+      "n": 11,
+      "speaker": "customer",
+      "text": "i would like to pay a bill",
+      "asr_text": "i would like to pay a bill",
+      "start_ms": 16520,
+      "duration_ms": 1080,
+      "dialog_acts": [
+        "greeting",
+        "problem_description"
+      ]
+    },
+    {
+      "n": 12,
+      "speaker": "agent",
+      "text": "uhm <unk> yes of course uh what is the company name",
+      "asr_text": "uhm the yes of course uh what is the company name",
+      "start_ms": 16880,
+      "duration_ms": 3420,
+      "dialog_acts": [
+        "data_question"
+      ]
+    },
+    {
+      "n": 13,
+      "speaker": "customer",
+      "text": "[noise]",
+      "asr_text": "personally",
+      "start_ms": 19860,
+      "duration_ms": 540,
+      "dialog_acts": [
+        "bear_with_me"
+      ]
+    },
+    {
+      "n": 14,
+      "speaker": "customer",
+      "text": "the company name is fossil gas",
+      "asr_text": "the company name is fossil gas",
+      "start_ms": 23840,
+      "duration_ms": 2340,
+      "dialog_acts": [
+        "other",
+        "data_response"
+      ]
+    },
+    {
+      "n": 15,
+      "speaker": "customer",
+      "text": "[noise]",
+      "asr_text": "[noise]",
+      "start_ms": 26790,
+      "duration_ms": 570,
+      "dialog_acts": [
+        "acknowledgement"
+      ]
+    },
+    {
+      "n": 16,
+      "speaker": "agent",
+      "text": "okay and what is the company address",
+      "asr_text": "okay and what is the company address",
+      "start_ms": 25060,
+      "duration_ms": 2430,
+      "dialog_acts": [
+        "data_question"
+      ]
+    },
+    {
+      "n": 17,
+      "speaker": "customer",
+      "text": "[noise]",
+      "asr_text": "[noise]",
+      "start_ms": 27790,
+      "duration_ms": 900,
+      "dialog_acts": [
+        "other",
+        "filler_disfluency"
+      ]
+    },
+    {
+      "n": 18,
+      "speaker": "customer",
+      "text": "the address is one fifty three main street",
+      "asr_text": "the addresses one fifty three main street",
+      "start_ms": 30850,
+      "duration_ms": 2940,
+      "dialog_acts": [
+        "data_question",
+        "data_response"
+      ]
+    },
+    {
+      "n": 19,
+      "speaker": "customer",
+      "text": "[noise]",
+      "asr_text": "[noise]",
+      "start_ms": 35460,
+      "duration_ms": 60,
+      "dialog_acts": [
+        "filler_disfluency",
+        "data_response"
+      ]
+    },
+    {
+      "n": 20,
+      "speaker": "customer",
+      "text": "harper valley",
+      "asr_text": "harper valley",
+      "start_ms": 36120,
+      "duration_ms": 960,
+      "dialog_acts": [
+        "data_response"
+      ]
+    },
+    {
+      "n": 21,
+      "speaker": "customer",
+      "text": "oregon",
+      "asr_text": "oregon",
+      "start_ms": 38230,
+      "duration_ms": 600,
+      "dialog_acts": [
+        "data_communication",
+        "data_response"
+      ]
+    },
+    {
+      "n": 22,
+      "speaker": "customer",
+      "text": "[noise]",
+      "asr_text": "yeah",
+      "start_ms": 39890,
+      "duration_ms": 240,
+      "dialog_acts": [
+        "acknowledgement",
+        "filler_disfluency"
+      ]
+    },
+    {
+      "n": 23,
+      "speaker": "customer",
+      "text": "five zero nine zero zero",
+      "asr_text": "five zero nine zero zero",
+      "start_ms": 41890,
+      "duration_ms": 2250,
+      "dialog_acts": [
+        "response",
+        "data_response"
+      ]
+    },
+    {
+      "n": 24,
+      "speaker": "customer",
+      "text": "[noise]",
+      "asr_text": "[noise]",
+      "start_ms": 44860,
+      "duration_ms": 900,
+      "dialog_acts": [
+        "filler_disfluency",
+        "bear_with_me"
+      ]
+    },
+    {
+      "n": 25,
+      "speaker": "customer",
+      "text": "[noise]",
+      "asr_text": "[noise]",
+      "start_ms": 47690,
+      "duration_ms": 30,
+      "dialog_acts": [
+        "other",
+        "filler_disfluency"
+      ]
+    },
+    {
+      "n": 26,
+      "speaker": "agent",
+      "text": "and what is the bill amount",
+      "asr_text": "and what is the bill amount",
+      "start_ms": 46260,
+      "duration_ms": 1260,
+      "dialog_acts": [
+        "data_question"
+      ]
+    },
+    {
+      "n": 27,
+      "speaker": "customer",
+      "text": "[noise]",
+      "asr_text": "[noise]",
+      "start_ms": 48490,
+      "duration_ms": 30,
+      "dialog_acts": [
+        "other",
+        "filler_disfluency"
+      ]
+    },
+    {
+      "n": 28,
+      "speaker": "customer",
+      "text": "the amount of the bill is ninety one dollars",
+      "asr_text": "the amount of the bill was ninety one dollars",
+      "start_ms": 50680,
+      "duration_ms": 1890,
+      "dialog_acts": [
+        "response",
+        "data_response"
+      ]
+    },
+    {
+      "n": 29,
+      "speaker": "customer",
+      "text": "[noise]",
+      "asr_text": "um",
+      "start_ms": 54160,
+      "duration_ms": 120,
+      "dialog_acts": [
+        "filler_disfluency"
+      ]
+    },
+    {
+      "n": 30,
+      "speaker": "customer",
+      "text": "[noise]",
+      "asr_text": "[noise]",
+      "start_ms": 56290,
+      "duration_ms": 30,
+      "dialog_acts": [
+        "filler_disfluency"
+      ]
+    },
+    {
+      "n": 31,
+      "speaker": "agent",
+      "text": "okay is there anything else i can help you with",
+      "asr_text": "okay is there anything else i can help you with",
+      "start_ms": 55470,
+      "duration_ms": 2790,
+      "dialog_acts": [
+        "open_question"
+      ]
+    },
+    {
+      "n": 32,
+      "speaker": "customer",
+      "text": "[noise]",
+      "asr_text": "[noise]",
+      "start_ms": 58990,
+      "duration_ms": 30,
+      "dialog_acts": [
+        "other",
+        "filler_disfluency"
+      ]
+    },
+    {
+      "n": 33,
+      "speaker": "customer",
+      "text": "[noise] no",
+      "asr_text": "[noise] no",
+      "start_ms": 60390,
+      "duration_ms": 1920,
+      "dialog_acts": [
+        "other",
+        "problem_description"
+      ]
+    },
+    {
+      "n": 34,
+      "speaker": "customer",
+      "text": "[noise]",
+      "asr_text": "[noise]",
+      "start_ms": 62990,
+      "duration_ms": 300,
+      "dialog_acts": [
+        "filler_disfluency"
+      ]
+    },
+    {
+      "n": 35,
+      "speaker": "agent",
+      "text": "[noise]",
+      "asr_text": "[noise]",
+      "start_ms": 61530,
+      "duration_ms": 30,
+      "dialog_acts": [
+        "filler_disfluency",
+        "bear_with_me"
+      ]
+    }
+  ],
+  "source_fields": {
+    "task_assigned": [
+      "pay bill"
+    ],
+    "task_logged_by_agent": [
+      "pay bill"
+    ],
+    "labels": {
+      "lhvb_script": 5.0,
+      "caller_mos": 5.0,
+      "agent_mos": 5.0
+    },
+    "session": "Little Harper Valley 3",
+    "agent_survey_response": {
+      "ease_of_connection": "10",
+      "partner_rating": "8"
+    },
+    "customer_survey_response": {
+      "ease_of_connection": "10",
+      "partner_rating": "10"
+    }
+  },
+  "modifications": []
+}

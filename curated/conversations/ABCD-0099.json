@@ -1,0 +1,117 @@
+{
+  "id": "ABCD-0099",
+  "source": {
+    "dataset": "ABCD",
+    "original_id": "9727",
+    "licence": "MIT",
+    "url": "https://github.com/asappresearch/abcd",
+    "citation": "Chen et al. (2021), NAACL, arXiv:2104.00783"
+  },
+  "channel": "chat",
+  "customer_id": "crystalminh743",
+  "customer_record": {
+    "customer_name": "crystal minh",
+    "username": "crystalminh743",
+    "email": "crystalminh743@email.com",
+    "phone": "(829) 139-0203",
+    "member_level": "silver",
+    "address": {
+      "street": "1782 lexington ave",
+      "city": "baltimore",
+      "state": "ca",
+      "zip_code": "25994",
+      "full_address": "1782 lexington ave  baltimore, ca 25994"
+    },
+    "order": {
+      "num_products": "1",
+      "products": [
+        {
+          "brand": "calvin_klein",
+          "product_type": "jacket",
+          "amount": 84
+        }
+      ]
+    }
+  },
+  "turns": [
+    {
+      "n": 1,
+      "speaker": "customer",
+      "text": "The website is too slow."
+    },
+    {
+      "n": 2,
+      "speaker": "customer",
+      "text": "I can't click on anything."
+    },
+    {
+      "n": 3,
+      "speaker": "agent",
+      "text": "I'm sorry, let me help troubleshoot that!"
+    },
+    {
+      "n": 4,
+      "speaker": "agent",
+      "text": "Can you try logging out of your account and logging back in? Sometimes that fixes this."
+    },
+    {
+      "n": 5,
+      "speaker": "system_action",
+      "text": "Agent is looking for solutions ..."
+    },
+    {
+      "n": 6,
+      "speaker": "customer",
+      "text": "I just tried it, it didn't work."
+    },
+    {
+      "n": 7,
+      "speaker": "system_action",
+      "text": "Agent is looking for solutions ..."
+    },
+    {
+      "n": 8,
+      "speaker": "agent",
+      "text": "What about other websites on your computer? Do they work normally?"
+    },
+    {
+      "n": 9,
+      "speaker": "customer",
+      "text": "The other website seems a bit slow today."
+    },
+    {
+      "n": 10,
+      "speaker": "agent",
+      "text": "If other websites are slow too it must be a problem with your internet connection."
+    },
+    {
+      "n": 11,
+      "speaker": "customer",
+      "text": "Thanks for the info.I will be contacting my ISP as soon as possible to determine the cause of this issue."
+    },
+    {
+      "n": 12,
+      "speaker": "agent",
+      "text": "I hope you can get this fixed soon! Is there anything else I can help you with?"
+    },
+    {
+      "n": 13,
+      "speaker": "customer",
+      "text": "no"
+    },
+    {
+      "n": 14,
+      "speaker": "agent",
+      "text": "Okay, have a great day!"
+    }
+  ],
+  "source_fields": {
+    "flow": "troubleshoot_site",
+    "subflow": "slow_speed",
+    "actions_taken": [
+      "log-out-in",
+      "try-again"
+    ]
+  },
+  "modifications": []
+}

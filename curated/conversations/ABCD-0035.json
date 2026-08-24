@@ -1,0 +1,197 @@
+{
+  "id": "ABCD-0035",
+  "source": {
+    "dataset": "ABCD",
+    "original_id": "6550",
+    "licence": "MIT",
+    "url": "https://github.com/asappresearch/abcd",
+    "citation": "Chen et al. (2021), NAACL, arXiv:2104.00783"
+  },
+  "channel": "chat",
+  "customer_id": "jbanter9",
+  "customer_record": {
+    "customer_name": "joseph banter",
+    "username": "jbanter9",
+    "email": "jbanter9@email.com",
+    "phone": "(027) 775-1268",
+    "member_level": "bronze",
+    "address": {
+      "street": "8677 lincoln ave",
+      "city": "baltimore",
+      "state": "mi",
+      "zip_code": "27758",
+      "full_address": "8677 lincoln ave  baltimore, mi 27758"
+    },
+    "order": {
+      "order_id": "1620710288",
+      "purchase_date": "2019-12-04",
+      "payment_method": "debit card",
+      "packaging": "no",
+      "num_products": "1",
+      "products": [
+        {
+          "brand": "tommy_hilfiger",
+          "product_type": "jeans",
+          "amount": 94
+        }
+      ]
+    }
+  },
+  "turns": [
+    {
+      "n": 1,
+      "speaker": "agent",
+      "text": "Hello, how can I help you today?"
+    },
+    {
+      "n": 2,
+      "speaker": "customer",
+      "text": "I would like to return an item because it is the wrong color"
+    },
+    {
+      "n": 3,
+      "speaker": "agent",
+      "text": "Okay, can I have your full name?"
+    },
+    {
+      "n": 4,
+      "speaker": "customer",
+      "text": "Joseph Banter"
+    },
+    {
+      "n": 5,
+      "speaker": "system_action",
+      "text": "Account has been pulled up for Joseph Banter."
+    },
+    {
+      "n": 6,
+      "speaker": "agent",
+      "text": "And your username, email, and order ID?"
+    },
+    {
+      "n": 7,
+      "speaker": "customer",
+      "text": "Email Address: jbanter9@email.com"
+    },
+    {
+      "n": 8,
+      "speaker": "customer",
+      "text": "Username: jbanter9"
+    },
+    {
+      "n": 9,
+      "speaker": "customer",
+      "text": "Order ID: 1620710288"
+    },
+    {
+      "n": 10,
+      "speaker": "system_action",
+      "text": "Purchase validation in progress ..."
+    },
+    {
+      "n": 11,
+      "speaker": "agent",
+      "text": "And can I ask your membership level Joeseph?"
+    },
+    {
+      "n": 12,
+      "speaker": "customer",
+      "text": "Bronze"
+    },
+    {
+      "n": 13,
+      "speaker": "agent",
+      "text": "Okay, can I ask when you made the purcahse?"
+    },
+    {
+      "n": 14,
+      "speaker": "system_action",
+      "text": "Membership level of Bronze has been noted."
+    },
+    {
+      "n": 15,
+      "speaker": "customer",
+      "text": "2019-12-04"
+    },
+    {
+      "n": 16,
+      "speaker": "agent",
+      "text": "Do you still have the receipt?"
+    },
+    {
+      "n": 17,
+      "speaker": "customer",
+      "text": "I only have the order statement"
+    },
+    {
+      "n": 18,
+      "speaker": "customer",
+      "text": "so no i do not"
+    },
+    {
+      "n": 19,
+      "speaker": "agent",
+      "text": "Just to be sure, you have the item in your possession and you'd like to return it?"
+    },
+    {
+      "n": 20,
+      "speaker": "customer",
+      "text": "correct"
+    },
+    {
+      "n": 21,
+      "speaker": "agent",
+      "text": "And is it in it's original packaging"
+    },
+    {
+      "n": 22,
+      "speaker": "customer",
+      "text": "Yes"
+    },
+    {
+      "n": 23,
+      "speaker": "customer",
+      "text": "im sorry it is not in the original packaging"
+    },
+    {
+      "n": 24,
+      "speaker": "agent",
+      "text": "It isn't?"
+    },
+    {
+      "n": 25,
+      "speaker": "customer",
+      "text": "no it isnt"
+    },
+    {
+      "n": 26,
+      "speaker": "agent",
+      "text": "Well then I have to let you know you're outside of the return window for your membership level and without the receipt I can't do anything for you."
+    },
+    {
+      "n": 27,
+      "speaker": "agent",
+      "text": "Is there anything else I can do for you today?"
+    },
+    {
+      "n": 28,
+      "speaker": "customer",
+      "text": "Okay, i understand. That is everything ineeded help with today"
+    },
+    {
+      "n": 29,
+      "speaker": "agent",
+      "text": "Well then have a nice day!"
+    }
+  ],
+  "source_fields": {
+    "flow": "product_defect",
+    "subflow": "return_color",
+    "actions_taken": [
+      "pull-up-account",
+      "validate-purchase",
+      "membership"
+    ]
+  },
+  "modifications": []
+}

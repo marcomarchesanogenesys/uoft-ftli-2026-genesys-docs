@@ -1,0 +1,120 @@
+{
+  "id": "ABCD-0046",
+  "source": {
+    "dataset": "ABCD",
+    "original_id": "5326",
+    "licence": "MIT",
+    "url": "https://github.com/asappresearch/abcd",
+    "citation": "Chen et al. (2021), NAACL, arXiv:2104.00783"
+  },
+  "channel": "chat",
+  "customer_id": "rodriguezd736",
+  "customer_record": {
+    "customer_name": "rodriguez domingo",
+    "username": "rodriguezd736",
+    "email": "rodriguezd736@email.com",
+    "phone": "(723) 568-7362",
+    "member_level": "guest",
+    "address": {
+      "street": "4025 woodshore st",
+      "city": "baltimore",
+      "state": "ny",
+      "zip_code": "61636",
+      "full_address": "4025 woodshore st  baltimore, ny 61636"
+    },
+    "order": {
+      "order_id": "8173657127",
+      "num_products": "1",
+      "products": [
+        {
+          "brand": "calvin_klein",
+          "product_type": "jeans",
+          "amount": 69
+        }
+      ]
+    }
+  },
+  "turns": [
+    {
+      "n": 1,
+      "speaker": "customer",
+      "text": "This is ridiculous! I got a promo code 2 days ago and it's already invalid?!"
+    },
+    {
+      "n": 2,
+      "speaker": "agent",
+      "text": "I'm sorry and would be glad to help."
+    },
+    {
+      "n": 3,
+      "speaker": "agent",
+      "text": "Can I please have your name?"
+    },
+    {
+      "n": 4,
+      "speaker": "customer",
+      "text": "Yeah yeah. Rodriguez Domingo."
+    },
+    {
+      "n": 5,
+      "speaker": "system_action",
+      "text": "Account has been pulled up for  Rodriguez Domingo."
+    },
+    {
+      "n": 6,
+      "speaker": "system_action",
+      "text": "Querying the system for an answer ..."
+    },
+    {
+      "n": 7,
+      "speaker": "agent",
+      "text": "I am checking our system now. Can you please tell me your membership level?"
+    },
+    {
+      "n": 8,
+      "speaker": "customer",
+      "text": "Look man, I'm just a Guest"
+    },
+    {
+      "n": 9,
+      "speaker": "customer",
+      "text": "But I won't be upgrading anytime soon if y'all can't get your promo codes working!"
+    },
+    {
+      "n": 10,
+      "speaker": "system_action",
+      "text": "Membership level of guest has been noted."
+    },
+    {
+      "n": 11,
+      "speaker": "system_action",
+      "text": "A promo code has been created."
+    },
+    {
+      "n": 12,
+      "speaker": "agent",
+      "text": "Here you are O9JAM"
+    },
+    {
+      "n": 13,
+      "speaker": "customer",
+      "text": "Oh nice, a new code? Thanks a lot, man!"
+    },
+    {
+      "n": 14,
+      "speaker": "customer",
+      "text": "Gonna use it to buy some of these sweet CK jeans. Skinny legs are so hipster, amirite?"
+    }
+  ],
+  "source_fields": {
+    "flow": "purchase_dispute",
+    "subflow": "promo_code_invalid",
+    "actions_taken": [
+      "pull-up-account",
+      "ask-the-oracle",
+      "membership",
+      "promo-code"
+    ]
+  },
+  "modifications": []
+}

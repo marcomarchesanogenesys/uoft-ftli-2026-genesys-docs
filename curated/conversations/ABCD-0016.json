@@ -1,0 +1,169 @@
+{
+  "id": "ABCD-0016",
+  "source": {
+    "dataset": "ABCD",
+    "original_id": "3771",
+    "licence": "MIT",
+    "url": "https://github.com/asappresearch/abcd",
+    "citation": "Chen et al. (2021), NAACL, arXiv:2104.00783"
+  },
+  "channel": "chat",
+  "customer_id": "sanyaafzal553",
+  "customer_record": {
+    "customer_name": "sanya afzal",
+    "username": "sanyaafzal553",
+    "email": "sanyaafzal553@email.com",
+    "phone": "(575) 263-1496",
+    "member_level": "bronze",
+    "address": {
+      "street": "7872 lexington ave",
+      "city": "la fayette",
+      "state": "ca",
+      "zip_code": "48429",
+      "full_address": "7872 lexington ave  la fayette, ca 48429"
+    },
+    "order": {
+      "num_products": "1",
+      "products": [
+        {
+          "brand": "guess",
+          "product_type": "jeans",
+          "amount": 59
+        }
+      ]
+    }
+  },
+  "turns": [
+    {
+      "n": 1,
+      "speaker": "agent",
+      "text": "Hello, how may I help you today?"
+    },
+    {
+      "n": 2,
+      "speaker": "customer",
+      "text": "I need to correct the address on my account"
+    },
+    {
+      "n": 3,
+      "speaker": "agent",
+      "text": "I see, let's see what we can do to make that happen, one moment."
+    },
+    {
+      "n": 4,
+      "speaker": "agent",
+      "text": "Ok may I have your full name or Account ID?"
+    },
+    {
+      "n": 5,
+      "speaker": "customer",
+      "text": "Sanya Afzal"
+    },
+    {
+      "n": 6,
+      "speaker": "system_action",
+      "text": "Account has been pulled up for Sanya Afzal."
+    },
+    {
+      "n": 7,
+      "speaker": "agent",
+      "text": "So to change the address, I will need the current address on the account."
+    },
+    {
+      "n": 8,
+      "speaker": "customer",
+      "text": "7872 Lexington Ave  La Fayette, CA 48429"
+    },
+    {
+      "n": 9,
+      "speaker": "customer",
+      "text": "should be 7873"
+    },
+    {
+      "n": 10,
+      "speaker": "agent",
+      "text": "Oh thank you one moment."
+    },
+    {
+      "n": 11,
+      "speaker": "system_action",
+      "text": "A reason of 7872 Lexington Ave has been recorded."
+    },
+    {
+      "n": 12,
+      "speaker": "agent",
+      "text": "Before I can change this to 7873, I will need to verify your identity, so may I have 2 of the following:"
+    },
+    {
+      "n": 13,
+      "speaker": "agent",
+      "text": "Telephone number, PIN number, username, password, email address or an Order ID of a previous purchase."
+    },
+    {
+      "n": 14,
+      "speaker": "customer",
+      "text": "(575) 263-1496"
+    },
+    {
+      "n": 15,
+      "speaker": "customer",
+      "text": "sanyaafzal553@email.com"
+    },
+    {
+      "n": 16,
+      "speaker": "system_action",
+      "text": "Identity verification in progess ..."
+    },
+    {
+      "n": 17,
+      "speaker": "agent",
+      "text": "Fantastic.  And just to make sure, you wish to change to 7873 Lexington Ave, the rest remains the same obviously?"
+    },
+    {
+      "n": 18,
+      "speaker": "customer",
+      "text": "that is correct"
+    },
+    {
+      "n": 19,
+      "speaker": "system_action",
+      "text": "Account has been updated with 7873 Lexington Ave ."
+    },
+    {
+      "n": 20,
+      "speaker": "agent",
+      "text": "And there we go, thank you for your patience."
+    },
+    {
+      "n": 21,
+      "speaker": "agent",
+      "text": "Is there anything else I can help you with today?"
+    },
+    {
+      "n": 22,
+      "speaker": "customer",
+      "text": "thanks for your help"
+    },
+    {
+      "n": 23,
+      "speaker": "customer",
+      "text": "no that is all"
+    },
+    {
+      "n": 24,
+      "speaker": "agent",
+      "text": "Thanks for your patronage and have a wonderful rest of your day!"
+    }
+  ],
+  "source_fields": {
+    "flow": "manage_account",
+    "subflow": "manage_change_address",
+    "actions_taken": [
+      "pull-up-account",
+      "record-reason",
+      "verify-identity",
+      "update-account"
+    ]
+  },
+  "modifications": []
+}

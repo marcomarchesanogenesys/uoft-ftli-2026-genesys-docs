@@ -1,0 +1,165 @@
+{
+  "id": "ABCD-0072",
+  "source": {
+    "dataset": "ABCD",
+    "original_id": "1615",
+    "licence": "MIT",
+    "url": "https://github.com/asappresearch/abcd",
+    "citation": "Chen et al. (2021), NAACL, arXiv:2104.00783"
+  },
+  "channel": "chat",
+  "customer_record": {
+    "customer_name": "joyce wu",
+    "phone": "(182) 465-9996",
+    "member_level": "gold",
+    "address": {
+      "street": "1528 1st ave",
+      "city": "monterey",
+      "state": "wa",
+      "zip_code": "99848",
+      "full_address": "1528 1st ave  monterey, wa 99848"
+    }
+  },
+  "turns": [
+    {
+      "n": 1,
+      "speaker": "agent",
+      "text": "Good afternoon, how can I help you?"
+    },
+    {
+      "n": 2,
+      "speaker": "customer",
+      "text": "Hi"
+    },
+    {
+      "n": 3,
+      "speaker": "customer",
+      "text": "I wanted to inquire about your membership levels"
+    },
+    {
+      "n": 4,
+      "speaker": "customer",
+      "text": "I was looking at buying some stuff"
+    },
+    {
+      "n": 5,
+      "speaker": "agent",
+      "text": "What are you interested in knowing about it sir?"
+    },
+    {
+      "n": 6,
+      "speaker": "customer",
+      "text": "different membership levels and benefits"
+    },
+    {
+      "n": 7,
+      "speaker": "agent",
+      "text": "ok one moment"
+    },
+    {
+      "n": 8,
+      "speaker": "agent",
+      "text": "Could you give me your name please."
+    },
+    {
+      "n": 9,
+      "speaker": "customer",
+      "text": "Joyce Wu"
+    },
+    {
+      "n": 10,
+      "speaker": "system_action",
+      "text": "Searching the FAQ pages ..."
+    },
+    {
+      "n": 11,
+      "speaker": "system_action",
+      "text": "System Action: search membership"
+    },
+    {
+      "n": 12,
+      "speaker": "agent",
+      "text": "the level of membership are the following: Bronze, Silver and Gold. They benefits are..."
+    },
+    {
+      "n": 13,
+      "speaker": "customer",
+      "text": "Can you also help me with the membership fees?"
+    },
+    {
+      "n": 14,
+      "speaker": "agent",
+      "text": "An annual invitation to a fancy party with an open bar and free flight from anywhere in the US"
+    },
+    {
+      "n": 15,
+      "speaker": "customer",
+      "text": "thank you"
+    },
+    {
+      "n": 16,
+      "speaker": "agent",
+      "text": "Bronze level  have savings on shipping and promo code."
+    },
+    {
+      "n": 17,
+      "speaker": "agent",
+      "text": "Silver members get all the previous perks, can have agents make purchases on their behalf and can cancel orders at any time."
+    },
+    {
+      "n": 18,
+      "speaker": "agent",
+      "text": "and Gold members get unlimited refunds and will always be given the benefit of the doubt in transactions."
+    },
+    {
+      "n": 19,
+      "speaker": "system_action",
+      "text": "System Action: search pricing"
+    },
+    {
+      "n": 20,
+      "speaker": "agent",
+      "text": "You cannot buy the membership, you earn based on constant purchases from our company mr. Joyce"
+    },
+    {
+      "n": 21,
+      "speaker": "agent",
+      "text": "Mr. Joyce are you still there?"
+    },
+    {
+      "n": 22,
+      "speaker": "customer",
+      "text": "Yes"
+    },
+    {
+      "n": 23,
+      "speaker": "customer",
+      "text": "Thank you so much for the information"
+    },
+    {
+      "n": 24,
+      "speaker": "agent",
+      "text": "not problema. I'm glad to help you"
+    },
+    {
+      "n": 25,
+      "speaker": "agent",
+      "text": "Have a nice day!"
+    },
+    {
+      "n": 26,
+      "speaker": "customer",
+      "text": "you too"
+    }
+  ],
+  "source_fields": {
+    "flow": "storewide_query",
+    "subflow": "membership_1",
+    "actions_taken": [
+      "search-faq",
+      "search-membership",
+      "search-pricing"
+    ]
+  },
+  "modifications": []
+}

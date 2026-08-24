@@ -1,0 +1,183 @@
+{
+  "id": "ABCD-0078",
+  "source": {
+    "dataset": "ABCD",
+    "original_id": "870",
+    "licence": "MIT",
+    "url": "https://github.com/asappresearch/abcd",
+    "citation": "Chen et al. (2021), NAACL, arXiv:2104.00783"
+  },
+  "channel": "chat",
+  "customer_record": {
+    "customer_name": "crystal minh",
+    "phone": "(385) 601-6254",
+    "member_level": "silver",
+    "address": {
+      "street": "1454 brushwick dr",
+      "city": "la fayette",
+      "state": "wa",
+      "zip_code": "50675",
+      "full_address": "1454 brushwick dr  la fayette, wa 50675"
+    },
+    "order": {
+      "num_products": "3",
+      "products": [
+        {
+          "brand": "guess",
+          "product_type": "jacket",
+          "amount": 64
+        },
+        {
+          "brand": "tommy_hilfiger",
+          "product_type": "jeans",
+          "amount": 94
+        },
+        {
+          "brand": "guess",
+          "product_type": "boots",
+          "amount": 69
+        }
+      ]
+    }
+  },
+  "turns": [
+    {
+      "n": 1,
+      "speaker": "agent",
+      "text": "Hi, How can I help you today?"
+    },
+    {
+      "n": 2,
+      "speaker": "customer",
+      "text": "Hi. I was wondering how much it would cost to overnight ship something? I have found a jacket that I really like!"
+    },
+    {
+      "n": 3,
+      "speaker": "agent",
+      "text": "Okay, I can look into that for you."
+    },
+    {
+      "n": 4,
+      "speaker": "customer",
+      "text": "I am a silver level member, are there any benefits related to that with overnight shipping? I really need my jacket."
+    },
+    {
+      "n": 5,
+      "speaker": "agent",
+      "text": "Have you already ordered the jacket?"
+    },
+    {
+      "n": 6,
+      "speaker": "system_action",
+      "text": "Membership level of silver has been noted."
+    },
+    {
+      "n": 7,
+      "speaker": "system_action",
+      "text": "Searching the FAQ pages ..."
+    },
+    {
+      "n": 8,
+      "speaker": "system_action",
+      "text": "System Action: search membership"
+    },
+    {
+      "n": 9,
+      "speaker": "customer",
+      "text": "No. I am just wanting to know before I order it."
+    },
+    {
+      "n": 10,
+      "speaker": "system_action",
+      "text": "System Action: search policy"
+    },
+    {
+      "n": 11,
+      "speaker": "system_action",
+      "text": "System Action: search timing"
+    },
+    {
+      "n": 12,
+      "speaker": "agent",
+      "text": "Sorry< i'm still working on it."
+    },
+    {
+      "n": 13,
+      "speaker": "customer",
+      "text": "Okay."
+    },
+    {
+      "n": 14,
+      "speaker": "agent",
+      "text": "Silver members do get special shipping rates."
+    },
+    {
+      "n": 15,
+      "speaker": "customer",
+      "text": "So, what is the price for overnight?"
+    },
+    {
+      "n": 16,
+      "speaker": "agent",
+      "text": "overnight"
+    },
+    {
+      "n": 17,
+      "speaker": "customer",
+      "text": "So what is the cost?"
+    },
+    {
+      "n": 18,
+      "speaker": "agent",
+      "text": "One moment please."
+    },
+    {
+      "n": 19,
+      "speaker": "system_action",
+      "text": "System Action: search pricing"
+    },
+    {
+      "n": 20,
+      "speaker": "agent",
+      "text": "Sorry for the delay. For continental US-based customers, the rate is $39.99 for items of 5 pounds or less, $54.99 for items of 10 pounds or less, and $69.99 for all other items."
+    },
+    {
+      "n": 21,
+      "speaker": "customer",
+      "text": "Okay. Thank you!"
+    },
+    {
+      "n": 22,
+      "speaker": "agent",
+      "text": "IS there anything else that I can help you with?"
+    },
+    {
+      "n": 23,
+      "speaker": "customer",
+      "text": "That's all that I will be needing."
+    },
+    {
+      "n": 24,
+      "speaker": "agent",
+      "text": "Have a great day"
+    },
+    {
+      "n": 25,
+      "speaker": "customer",
+      "text": "You too."
+    }
+  ],
+  "source_fields": {
+    "flow": "storewide_query",
+    "subflow": "pricing_3",
+    "actions_taken": [
+      "membership",
+      "search-faq",
+      "search-membership",
+      "search-policy",
+      "search-timing",
+      "search-pricing"
+    ]
+  },
+  "modifications": []
+}

@@ -1,0 +1,150 @@
+{
+  "id": "ABCD-0013",
+  "source": {
+    "dataset": "ABCD",
+    "original_id": "2300",
+    "licence": "MIT",
+    "url": "https://github.com/asappresearch/abcd",
+    "citation": "Chen et al. (2021), NAACL, arXiv:2104.00783"
+  },
+  "channel": "chat",
+  "customer_id": "davidw93",
+  "customer_record": {
+    "customer_name": "david williams",
+    "username": "davidw93",
+    "email": "davidw93@email.com",
+    "phone": "(742) 405-3539",
+    "member_level": "guest",
+    "address": {
+      "street": "5765 lexington ave",
+      "city": "san lima",
+      "state": "ny",
+      "zip_code": "80055",
+      "full_address": "5765 lexington ave  san lima, ny 80055"
+    },
+    "order": {
+      "num_products": "1",
+      "products": [
+        {
+          "brand": "michael_kors",
+          "product_type": "jacket",
+          "amount": 84
+        }
+      ]
+    }
+  },
+  "turns": [
+    {
+      "n": 1,
+      "speaker": "agent",
+      "text": "Hello there how can i help you today"
+    },
+    {
+      "n": 2,
+      "speaker": "customer",
+      "text": "Hello, the phone number is incorrect on my account. I made a typo when inputing it. Can you help me get it updated?"
+    },
+    {
+      "n": 3,
+      "speaker": "agent",
+      "text": "Okay i can do that for you, could i get your Full name or your Account ID please"
+    },
+    {
+      "n": 4,
+      "speaker": "customer",
+      "text": "I need to change the 4 to a 5"
+    },
+    {
+      "n": 5,
+      "speaker": "customer",
+      "text": "Yes, my name is David Williams"
+    },
+    {
+      "n": 6,
+      "speaker": "system_action",
+      "text": "Identity verification in progess ..."
+    },
+    {
+      "n": 7,
+      "speaker": "system_action",
+      "text": "Account has been pulled up for David Williams."
+    },
+    {
+      "n": 8,
+      "speaker": "agent",
+      "text": "Okay, could i get the number that you would like to change it to"
+    },
+    {
+      "n": 9,
+      "speaker": "customer",
+      "text": "Can you change my number to (752) 405-3539"
+    },
+    {
+      "n": 10,
+      "speaker": "system_action",
+      "text": "A reason of (752) 405-3539 has been recorded."
+    },
+    {
+      "n": 11,
+      "speaker": "agent",
+      "text": "I sure can i just need to verify your identity now, could i get three of your zip code,pin number, username, password, email adress"
+    },
+    {
+      "n": 12,
+      "speaker": "customer",
+      "text": "my pin is 514585"
+    },
+    {
+      "n": 13,
+      "speaker": "customer",
+      "text": "my username is davidw93"
+    },
+    {
+      "n": 14,
+      "speaker": "customer",
+      "text": "and muy zip code is 80055"
+    },
+    {
+      "n": 15,
+      "speaker": "system_action",
+      "text": "Identity verification in progess ..."
+    },
+    {
+      "n": 16,
+      "speaker": "agent",
+      "text": "Okay great, i'll go ahead and change your phone number on the account"
+    },
+    {
+      "n": 17,
+      "speaker": "system_action",
+      "text": "Account has been updated with (752) 405-3539."
+    },
+    {
+      "n": 18,
+      "speaker": "agent",
+      "text": "Okay, everything has been updated. Is there anything else i can help you with today?"
+    },
+    {
+      "n": 19,
+      "speaker": "customer",
+      "text": "No, that is it.  Thank you for your help"
+    },
+    {
+      "n": 20,
+      "speaker": "agent",
+      "text": "No problem, have a nice day."
+    }
+  ],
+  "source_fields": {
+    "flow": "manage_account",
+    "subflow": "manage_change_phone",
+    "actions_taken": [
+      "verify-identity",
+      "pull-up-account",
+      "record-reason",
+      "verify-identity",
+      "update-account"
+    ]
+  },
+  "modifications": []
+}

@@ -1,0 +1,143 @@
+{
+  "id": "ABCD-0098",
+  "source": {
+    "dataset": "ABCD",
+    "original_id": "7265",
+    "licence": "MIT",
+    "url": "https://github.com/asappresearch/abcd",
+    "citation": "Chen et al. (2021), NAACL, arXiv:2104.00783"
+  },
+  "channel": "chat",
+  "customer_id": "jwu51476",
+  "customer_record": {
+    "customer_name": "joyce wu",
+    "username": "jwu51476",
+    "email": "jwu51476@email.com",
+    "phone": "(285) 498-7668",
+    "member_level": "bronze",
+    "address": {
+      "street": "0566 circle drive",
+      "city": "san lima",
+      "state": "ca",
+      "zip_code": "96721",
+      "full_address": "0566 circle drive  san lima, ca 96721"
+    },
+    "order": {
+      "num_products": "1",
+      "products": [
+        {
+          "brand": "tommy_hilfiger",
+          "product_type": "jacket",
+          "amount": 94
+        }
+      ]
+    }
+  },
+  "turns": [
+    {
+      "n": 1,
+      "speaker": "customer",
+      "text": "the website is SOOO Slow"
+    },
+    {
+      "n": 2,
+      "speaker": "customer",
+      "text": "i cant even use it and i just want to purchase things"
+    },
+    {
+      "n": 3,
+      "speaker": "agent",
+      "text": "I'm sorry to hear that you're having issues with the site. I have a few tricks we can try to resolve the issue. The first one is logging out and back in. Sometimes that will do it."
+    },
+    {
+      "n": 4,
+      "speaker": "system_action",
+      "text": "Agent is looking for solutions ..."
+    },
+    {
+      "n": 5,
+      "speaker": "customer",
+      "text": "sure"
+    },
+    {
+      "n": 6,
+      "speaker": "customer",
+      "text": "i'll try that no"
+    },
+    {
+      "n": 7,
+      "speaker": "agent",
+      "text": "Okay! Let me know if that works."
+    },
+    {
+      "n": 8,
+      "speaker": "customer",
+      "text": "didnt work!"
+    },
+    {
+      "n": 9,
+      "speaker": "system_action",
+      "text": "Agent is looking for solutions ..."
+    },
+    {
+      "n": 10,
+      "speaker": "agent",
+      "text": "okay, have you visited any other sites to see if it is just our website? If not, try that now please."
+    },
+    {
+      "n": 11,
+      "speaker": "customer",
+      "text": "hmm looks like slowness is just on yours"
+    },
+    {
+      "n": 12,
+      "speaker": "agent",
+      "text": "Darn. Do you have multiple tabs open? Sometimes that can cause it."
+    },
+    {
+      "n": 13,
+      "speaker": "system_action",
+      "text": "Agent is looking for solutions ..."
+    },
+    {
+      "n": 14,
+      "speaker": "customer",
+      "text": "oh that did it!"
+    },
+    {
+      "n": 15,
+      "speaker": "customer",
+      "text": "i closed other tabs"
+    },
+    {
+      "n": 16,
+      "speaker": "agent",
+      "text": "Yay! I'm glad I could help. Do you need help with anything else?"
+    },
+    {
+      "n": 17,
+      "speaker": "customer",
+      "text": "nope that sall"
+    },
+    {
+      "n": 18,
+      "speaker": "agent",
+      "text": "Yay! I'm glad I could help. Do you need help with anything else?"
+    },
+    {
+      "n": 19,
+      "speaker": "agent",
+      "text": "Okay, have a great day!"
+    }
+  ],
+  "source_fields": {
+    "flow": "troubleshoot_site",
+    "subflow": "slow_speed",
+    "actions_taken": [
+      "log-out-in",
+      "try-again",
+      "instructions"
+    ]
+  },
+  "modifications": []
+}

@@ -1,0 +1,143 @@
+{
+  "id": "HVB-0006",
+  "source": {
+    "dataset": "HarperValleyBank",
+    "original_id": "154e9235ce244a2a",
+    "licence": "CC BY 4.0",
+    "url": "https://github.com/cricketclub/gridspace-stanford-harper-valley",
+    "citation": "Wu, Nafziger, Scodary & Maas (2020), arXiv:2010.13929"
+  },
+  "channel": "voice",
+  "agent_id": "hvb-speaker-17",
+  "customer_id": "hvb-speaker-28",
+  "customer_record": {
+    "customer_name": "David Miller"
+  },
+  "turns": [
+    {
+      "n": 1,
+      "speaker": "agent",
+      "text": "hello this is harper valley national bank my name is mary how can i help you today",
+      "asr_text": "hello this is happy valley national bank my name is mary how can i help you today",
+      "start_ms": 2789,
+      "duration_ms": 5010,
+      "dialog_acts": [
+        "greeting"
+      ]
+    },
+    {
+      "n": 2,
+      "speaker": "customer",
+      "text": "[noise] hi my name is david miller what are the local branch hours",
+      "asr_text": "[noise] hi my name is david mellor what are the local branch hours",
+      "start_ms": 10960,
+      "duration_ms": 7050,
+      "dialog_acts": [
+        "greeting",
+        "problem_description"
+      ]
+    },
+    {
+      "n": 3,
+      "speaker": "agent",
+      "text": "[noise]",
+      "asr_text": "mm hmm",
+      "start_ms": 12929,
+      "duration_ms": 180,
+      "dialog_acts": [
+        "other",
+        "acknowledgement"
+      ]
+    },
+    {
+      "n": 4,
+      "speaker": "agent",
+      "text": "the branch hours are nine thirty a m to five p m is there anything else i can help you with",
+      "asr_text": "the branch your hours are nine thirty am to five p m is there anything else i can help you with",
+      "start_ms": 17189,
+      "duration_ms": 6030,
+      "dialog_acts": [
+        "open_question"
+      ]
+    },
+    {
+      "n": 5,
+      "speaker": "customer",
+      "text": "no that'll be it thank you",
+      "asr_text": "no that'll be it thank you",
+      "start_ms": 26290,
+      "duration_ms": 1560,
+      "dialog_acts": [
+        "response",
+        "other"
+      ]
+    },
+    {
+      "n": 6,
+      "speaker": "agent",
+      "text": "thank you for calling have a great day",
+      "asr_text": "thank you for calling have a great day",
+      "start_ms": 26689,
+      "duration_ms": 1920,
+      "dialog_acts": [
+        "closing"
+      ]
+    },
+    {
+      "n": 7,
+      "speaker": "customer",
+      "text": "you too",
+      "asr_text": "you too",
+      "start_ms": 31620,
+      "duration_ms": 360,
+      "dialog_acts": [
+        "closing"
+      ]
+    },
+    {
+      "n": 8,
+      "speaker": "agent",
+      "text": "[noise]",
+      "asr_text": "okay",
+      "start_ms": 30319,
+      "duration_ms": 120,
+      "dialog_acts": [
+        "closing"
+      ]
+    },
+    {
+      "n": 9,
+      "speaker": "customer",
+      "text": "[noise]",
+      "asr_text": "[laughter]",
+      "start_ms": 33790,
+      "duration_ms": 30,
+      "dialog_acts": [
+        "closing"
+      ]
+    }
+  ],
+  "source_fields": {
+    "task_assigned": [
+      "get branch hours"
+    ],
+    "task_logged_by_agent": [
+      "get branch hours"
+    ],
+    "labels": {
+      "lhvb_script": 5.0,
+      "caller_mos": 5.0,
+      "agent_mos": 5.0
+    },
+    "session": "Little Harper Valley 3",
+    "agent_survey_response": {
+      "ease_of_connection": "10",
+      "partner_rating": "10"
+    },
+    "customer_survey_response": {
+      "ease_of_connection": "10",
+      "partner_rating": "10"
+    }
+  },
+  "modifications": []
+}

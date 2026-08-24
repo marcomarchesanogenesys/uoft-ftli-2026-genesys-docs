@@ -1,0 +1,150 @@
+{
+  "id": "ABCD-0005",
+  "source": {
+    "dataset": "ABCD",
+    "original_id": "4046",
+    "licence": "MIT",
+    "url": "https://github.com/asappresearch/abcd",
+    "citation": "Chen et al. (2021), NAACL, arXiv:2104.00783"
+  },
+  "channel": "chat",
+  "customer_record": {
+    "customer_name": "chloe zhang",
+    "phone": "(132) 743-8678",
+    "member_level": "silver",
+    "address": {
+      "street": "1530 lincoln ave",
+      "city": "brighton",
+      "state": "wa",
+      "zip_code": "42558",
+      "full_address": "1530 lincoln ave  brighton, wa 42558"
+    }
+  },
+  "turns": [
+    {
+      "n": 1,
+      "speaker": "agent",
+      "text": "Hello, what can I help you with today?"
+    },
+    {
+      "n": 2,
+      "speaker": "customer",
+      "text": "hey dumb problem but I'm not sure I remember my username"
+    },
+    {
+      "n": 3,
+      "speaker": "customer",
+      "text": "I can't log in anyway"
+    },
+    {
+      "n": 4,
+      "speaker": "agent",
+      "text": "No worries, I can definitely help you figure that out!"
+    },
+    {
+      "n": 5,
+      "speaker": "agent",
+      "text": "Can I please have your full name, zip code, and email address?"
+    },
+    {
+      "n": 6,
+      "speaker": "customer",
+      "text": "ok"
+    },
+    {
+      "n": 7,
+      "speaker": "customer",
+      "text": "I'm chloe zhange"
+    },
+    {
+      "n": 8,
+      "speaker": "customer",
+      "text": "1530 lincoln ave"
+    },
+    {
+      "n": 9,
+      "speaker": "customer",
+      "text": "brighton wa 42558"
+    },
+    {
+      "n": 10,
+      "speaker": "system_action",
+      "text": "Account has been pulled up for Chloe Zhange."
+    },
+    {
+      "n": 11,
+      "speaker": "agent",
+      "text": "Thank you, do you also have your email address or phone number?"
+    },
+    {
+      "n": 12,
+      "speaker": "customer",
+      "text": "ohh there's no e at the end haha my mistake"
+    },
+    {
+      "n": 13,
+      "speaker": "customer",
+      "text": "just zhang whoops"
+    },
+    {
+      "n": 14,
+      "speaker": "customer",
+      "text": "i'm czhang@emailcom"
+    },
+    {
+      "n": 15,
+      "speaker": "agent",
+      "text": "No problem:)"
+    },
+    {
+      "n": 16,
+      "speaker": "customer",
+      "text": "132 743 8678"
+    },
+    {
+      "n": 17,
+      "speaker": "system_action",
+      "text": "Account has been pulled up for Chloe Zhang."
+    },
+    {
+      "n": 18,
+      "speaker": "system_action",
+      "text": "Identity verification in progress ..."
+    },
+    {
+      "n": 19,
+      "speaker": "agent",
+      "text": "Ok Chloe, it looks like your username is czhang1"
+    },
+    {
+      "n": 20,
+      "speaker": "customer",
+      "text": "ok that's good thought it was something totally different"
+    },
+    {
+      "n": 21,
+      "speaker": "agent",
+      "text": "Is there anything else I can help you with today?"
+    },
+    {
+      "n": 22,
+      "speaker": "customer",
+      "text": "I'm back in, that's all I needed thanks"
+    },
+    {
+      "n": 23,
+      "speaker": "agent",
+      "text": "Perfect :) You're welcome"
+    }
+  ],
+  "source_fields": {
+    "flow": "account_access",
+    "subflow": "recover_username",
+    "actions_taken": [
+      "pull-up-account",
+      "pull-up-account",
+      "verify-identity"
+    ]
+  },
+  "modifications": []
+}

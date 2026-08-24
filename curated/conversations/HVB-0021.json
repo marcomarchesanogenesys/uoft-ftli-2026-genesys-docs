@@ -1,0 +1,173 @@
+{
+  "id": "HVB-0021",
+  "source": {
+    "dataset": "HarperValleyBank",
+    "original_id": "02fd023b18d246d0",
+    "licence": "CC BY 4.0",
+    "url": "https://github.com/cricketclub/gridspace-stanford-harper-valley",
+    "citation": "Wu, Nafziger, Scodary & Maas (2020), arXiv:2010.13929"
+  },
+  "channel": "voice",
+  "agent_id": "hvb-speaker-24",
+  "customer_id": "hvb-speaker-21",
+  "customer_record": {
+    "customer_name": "Robert Williams",
+    "captured_by_agent": {
+      "home address": "910 first street forest ranch california 78311"
+    }
+  },
+  "turns": [
+    {
+      "n": 1,
+      "speaker": "agent",
+      "text": "hello this is harper valley national bank my name is mary how can i help you today",
+      "asr_text": "hello this is harbor valley national bank my name is mary how can i help you today",
+      "start_ms": 3820,
+      "duration_ms": 4890,
+      "dialog_acts": [
+        "greeting"
+      ]
+    },
+    {
+      "n": 2,
+      "speaker": "customer",
+      "text": "hello i need a new checkbook",
+      "asr_text": "hello i need a new checkbook",
+      "start_ms": 10319,
+      "duration_ms": 1680,
+      "dialog_acts": [
+        "greeting",
+        "problem_description"
+      ]
+    },
+    {
+      "n": 3,
+      "speaker": "agent",
+      "text": "what is your address",
+      "asr_text": "what is your address",
+      "start_ms": 15280,
+      "duration_ms": 1170,
+      "dialog_acts": [
+        "data_question"
+      ]
+    },
+    {
+      "n": 4,
+      "speaker": "customer",
+      "text": "nine ten first street",
+      "asr_text": "nine ten first street",
+      "start_ms": 18689,
+      "duration_ms": 1440,
+      "dialog_acts": [
+        "data_response",
+        "problem_description"
+      ]
+    },
+    {
+      "n": 5,
+      "speaker": "customer",
+      "text": "forrest ranch california",
+      "asr_text": "forrest ranch california",
+      "start_ms": 21089,
+      "duration_ms": 1530,
+      "dialog_acts": [
+        "data_communication",
+        "data_response"
+      ]
+    },
+    {
+      "n": 6,
+      "speaker": "customer",
+      "text": "seven eight three eleven",
+      "asr_text": "seven eight three all other",
+      "start_ms": 23959,
+      "duration_ms": 1800,
+      "dialog_acts": [
+        "data_response"
+      ]
+    },
+    {
+      "n": 8,
+      "speaker": "customer",
+      "text": "uh nine ten first street forest ranch california seven eight three eleven",
+      "asr_text": "uh nine ten first street force ranch california seven eight three eleven",
+      "start_ms": 28219,
+      "duration_ms": 5310,
+      "dialog_acts": [
+        "response",
+        "data_response"
+      ]
+    },
+    {
+      "n": 9,
+      "speaker": "agent",
+      "text": "okay thank you",
+      "asr_text": "okay thank you",
+      "start_ms": 35370,
+      "duration_ms": 960,
+      "dialog_acts": [
+        "thanks"
+      ]
+    },
+    {
+      "n": 10,
+      "speaker": "customer",
+      "text": "thank you so much",
+      "asr_text": "thank you so much",
+      "start_ms": 37519,
+      "duration_ms": 750,
+      "dialog_acts": [
+        "thanks"
+      ]
+    },
+    {
+      "n": 11,
+      "speaker": "agent",
+      "text": "a new check book has been sent to your home address is there anything else i can help you with",
+      "asr_text": "i knew check book has been sent to your home address is there anything else i can help you with",
+      "start_ms": 39080,
+      "duration_ms": 4020,
+      "dialog_acts": [
+        "procedure_explanation",
+        "open_question"
+      ]
+    },
+    {
+      "n": 12,
+      "speaker": "customer",
+      "text": "that's all have a great day",
+      "asr_text": "that's all have a great day",
+      "start_ms": 44329,
+      "duration_ms": 1020,
+      "dialog_acts": [
+        "closing"
+      ]
+    },
+    {
+      "n": 13,
+      "speaker": "agent",
+      "text": "thank you you too have a good day bye",
+      "asr_text": "thank you you too have a good day bye",
+      "start_ms": 46320,
+      "duration_ms": 2250,
+      "dialog_acts": [
+        "closing"
+      ]
+    }
+  ],
+  "source_fields": {
+    "task_assigned": [
+      "order checks"
+    ],
+    "task_logged_by_agent": [
+      "order checks"
+    ],
+    "labels": {
+      "lhvb_script": 5.0,
+      "caller_mos": 5.0,
+      "agent_mos": 5.0
+    },
+    "session": "Little Harper Valley 1"
+  },
+  "modifications": []
+}

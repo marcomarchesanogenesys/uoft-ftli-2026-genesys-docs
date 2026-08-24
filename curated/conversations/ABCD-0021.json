@@ -1,0 +1,228 @@
+{
+  "id": "ABCD-0021",
+  "source": {
+    "dataset": "ABCD",
+    "original_id": "234",
+    "licence": "MIT",
+    "url": "https://github.com/asappresearch/abcd",
+    "citation": "Chen et al. (2021), NAACL, arXiv:2104.00783"
+  },
+  "channel": "chat",
+  "customer_record": {
+    "customer_name": "sanya afzal",
+    "phone": "(237) 004-6472",
+    "member_level": "gold",
+    "address": {
+      "street": "2714 lincoln ave",
+      "city": "raleigh",
+      "state": "mi",
+      "zip_code": "76536",
+      "full_address": "2714 lincoln ave  raleigh, mi 76536"
+    },
+    "order": {
+      "order_id": "5954144916",
+      "num_products": "1",
+      "products": [
+        {
+          "brand": "tommy_hilfiger",
+          "product_type": "boots",
+          "amount": 54
+        }
+      ]
+    }
+  },
+  "turns": [
+    {
+      "n": 1,
+      "speaker": "customer",
+      "text": "hello?"
+    },
+    {
+      "n": 2,
+      "speaker": "agent",
+      "text": "Hello. Thank you for contacting AcmeBrands. How can I assist you today?"
+    },
+    {
+      "n": 3,
+      "speaker": "customer",
+      "text": "Hi, I had a question regarding my account."
+    },
+    {
+      "n": 4,
+      "speaker": "agent",
+      "text": "Okay. Can you tell me a little more about you need?"
+    },
+    {
+      "n": 5,
+      "speaker": "customer",
+      "text": "I wanted to check with someone because there seems to be an extra fee added for no reason to my order"
+    },
+    {
+      "n": 6,
+      "speaker": "agent",
+      "text": "I understand. May I please have your full name or Account ID in order to pull up your account?"
+    },
+    {
+      "n": 7,
+      "speaker": "customer",
+      "text": "ok, my name is Sanya Afzal"
+    },
+    {
+      "n": 8,
+      "speaker": "customer",
+      "text": "My account ID is UFLKTEZOWD"
+    },
+    {
+      "n": 9,
+      "speaker": "customer",
+      "text": "If it also helps, the order ID is 5954144916"
+    },
+    {
+      "n": 10,
+      "speaker": "agent",
+      "text": "Thank you. One moment please while I access your account. Thanks for your helpfulness. That definitely helps."
+    },
+    {
+      "n": 11,
+      "speaker": "customer",
+      "text": "ok cool"
+    },
+    {
+      "n": 12,
+      "speaker": "agent",
+      "text": "While I finish, can you please tell me what fee you're referring to?"
+    },
+    {
+      "n": 13,
+      "speaker": "customer",
+      "text": "Yeah, the boots I got was supposed to be $54 but as you can see there's extra fees attached to it. I wanted to know how come I'm not paying $54"
+    },
+    {
+      "n": 14,
+      "speaker": "agent",
+      "text": "Okay. That makes sense. Let me look into that for you."
+    },
+    {
+      "n": 15,
+      "speaker": "customer",
+      "text": "ok thanks"
+    },
+    {
+      "n": 16,
+      "speaker": "agent",
+      "text": "Do you know what your membership status is?"
+    },
+    {
+      "n": 17,
+      "speaker": "customer",
+      "text": "yup its gold"
+    },
+    {
+      "n": 18,
+      "speaker": "agent",
+      "text": "Gold. Great."
+    },
+    {
+      "n": 19,
+      "speaker": "agent",
+      "text": "And how much were you overcharged?"
+    },
+    {
+      "n": 20,
+      "speaker": "customer",
+      "text": "I'm not sure, I'm at work and don't have the invoice with me. I just remembered I was overcharged and wanted to talk to someone before i forget"
+    },
+    {
+      "n": 21,
+      "speaker": "agent",
+      "text": "Okay. That's fine."
+    },
+    {
+      "n": 22,
+      "speaker": "agent",
+      "text": "Let me see if I can remove this fee for you since you are a gold member. One moment please."
+    },
+    {
+      "n": 23,
+      "speaker": "customer",
+      "text": "ok cool"
+    },
+    {
+      "n": 24,
+      "speaker": "agent",
+      "text": "Okay. I have gone ahead and updated your order to deduct a $10 amount. Is that acceptable to you?"
+    },
+    {
+      "n": 25,
+      "speaker": "customer",
+      "text": "yes that's great. I appreciate it"
+    },
+    {
+      "n": 26,
+      "speaker": "agent",
+      "text": "You are quite welcome. I'm glad I could help. Is there anything else you need assistance with today?"
+    },
+    {
+      "n": 27,
+      "speaker": "customer",
+      "text": "no that was it."
+    },
+    {
+      "n": 28,
+      "speaker": "customer",
+      "text": "again thanks for your help on this"
+    },
+    {
+      "n": 29,
+      "speaker": "agent",
+      "text": "Okay. You're welcome. Well thank you for shopping with us."
+    },
+    {
+      "n": 30,
+      "speaker": "agent",
+      "text": "Have agreat day!"
+    },
+    {
+      "n": 31,
+      "speaker": "customer",
+      "text": "you too!"
+    },
+    {
+      "n": 32,
+      "speaker": "system_action",
+      "text": "Account has been pulled up for Sanya Afzal."
+    },
+    {
+      "n": 33,
+      "speaker": "system_action",
+      "text": "Identity verification in progess ..."
+    },
+    {
+      "n": 34,
+      "speaker": "system_action",
+      "text": "Querying the system for an answer ..."
+    },
+    {
+      "n": 35,
+      "speaker": "system_action",
+      "text": "Membership level of Gold has been noted."
+    },
+    {
+      "n": 36,
+      "speaker": "system_action",
+      "text": "Order has been updated with 10."
+    }
+  ],
+  "source_fields": {
+    "flow": "order_issue",
+    "subflow": "status_mystery_fee",
+    "actions_taken": [
+      "pull-up-account",
+      "verify-identity",
+      "ask-the-oracle",
+      "membership",
+      "update-order"
+    ]
+  },
+  "modifications": []
+}

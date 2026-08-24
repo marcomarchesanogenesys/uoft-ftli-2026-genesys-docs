@@ -1,0 +1,144 @@
+{
+  "id": "ABCD-0012",
+  "source": {
+    "dataset": "ABCD",
+    "original_id": "2029",
+    "licence": "MIT",
+    "url": "https://github.com/asappresearch/abcd",
+    "citation": "Chen et al. (2021), NAACL, arXiv:2104.00783"
+  },
+  "channel": "chat",
+  "customer_id": "sanyaa54",
+  "customer_record": {
+    "customer_name": "sanya afzal",
+    "username": "sanyaa54",
+    "email": "sanyaa54@email.com",
+    "member_level": "guest",
+    "address": {
+      "street": "1909 lexington ave",
+      "city": "brighton",
+      "state": "wa",
+      "zip_code": "39949",
+      "full_address": "1909 lexington ave  brighton, wa 39949"
+    },
+    "order": {
+      "order_id": "5216551944",
+      "num_products": "1",
+      "products": [
+        {
+          "brand": "calvin_klein",
+          "product_type": "boots",
+          "amount": 79
+        }
+      ]
+    }
+  },
+  "turns": [
+    {
+      "n": 1,
+      "speaker": "agent",
+      "text": "hello! how cna i help you today/?"
+    },
+    {
+      "n": 2,
+      "speaker": "customer",
+      "text": "Hello! I need to change my address on my account because it is showing incorrectly"
+    },
+    {
+      "n": 3,
+      "speaker": "agent",
+      "text": "sure ! i can helo you"
+    },
+    {
+      "n": 4,
+      "speaker": "agent",
+      "text": "what is your name please?"
+    },
+    {
+      "n": 5,
+      "speaker": "customer",
+      "text": "Sanya Afzal"
+    },
+    {
+      "n": 6,
+      "speaker": "system_action",
+      "text": "Account has been pulled up for Sanya Afzal."
+    },
+    {
+      "n": 7,
+      "speaker": "agent",
+      "text": "What is your current address?"
+    },
+    {
+      "n": 8,
+      "speaker": "customer",
+      "text": "1909 Lexington Ave  Brighton, WA 39949"
+    },
+    {
+      "n": 9,
+      "speaker": "customer",
+      "text": "I believe that is what is showing on my account"
+    },
+    {
+      "n": 10,
+      "speaker": "customer",
+      "text": "But it should be 1908"
+    },
+    {
+      "n": 11,
+      "speaker": "system_action",
+      "text": "A reason of 1909 Lexington Ave Brighton, WA 39949 has been recorded."
+    },
+    {
+      "n": 12,
+      "speaker": "agent",
+      "text": "what is your zip code, telephone number, user name, order id, or email"
+    },
+    {
+      "n": 13,
+      "speaker": "agent",
+      "text": "i just need 3 of them please"
+    },
+    {
+      "n": 14,
+      "speaker": "customer",
+      "text": "Zip is 39949, username is sanyaa54, and email is sanyaa54@email.com"
+    },
+    {
+      "n": 15,
+      "speaker": "system_action",
+      "text": "Identity verification in progess ..."
+    },
+    {
+      "n": 16,
+      "speaker": "system_action",
+      "text": "Account has been updated with 1908 Lexington Ave Brighton, WA 39949."
+    },
+    {
+      "n": 17,
+      "speaker": "agent",
+      "text": "I updated your address, od you need naything else?"
+    },
+    {
+      "n": 18,
+      "speaker": "customer",
+      "text": "No thank you"
+    },
+    {
+      "n": 19,
+      "speaker": "agent",
+      "text": "have a great dat"
+    }
+  ],
+  "source_fields": {
+    "flow": "manage_account",
+    "subflow": "manage_change_address",
+    "actions_taken": [
+      "pull-up-account",
+      "record-reason",
+      "verify-identity",
+      "update-account"
+    ]
+  },
+  "modifications": []
+}
