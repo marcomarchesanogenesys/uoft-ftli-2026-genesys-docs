@@ -65,6 +65,7 @@ accident. Each has a `PREVIEW.md` describing its layout once downloaded.
 | `curated/SCHEMA.md` | Field reference for those conversations. |
 | `curated/build/` | The script that generates them. Run it to regenerate, or extend `manifest.json` to add more. |
 | `scripts/download_data.py` | Fetches the datasets. Standard library only — no pip installs. |
+| `GLOSSARY.md` | Contact-centre and CX terminology — 102 terms. Worth skimming before you touch the data; the field names in these datasets assume it. |
 | `ATTRIBUTION.md` | Every dataset's licence, citation, and what you must credit. |
 | `LICENSE` | This repository's own licence (CC BY 4.0). Does **not** cover the datasets. |
 
