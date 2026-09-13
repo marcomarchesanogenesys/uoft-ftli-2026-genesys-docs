@@ -4,6 +4,26 @@
 > project's Confluence page, [FTLI (U of T) Genesys Partner Project](https://genesys-confluence.atlassian.net/wiki/spaces/~712020f73dd49b1bb047caa4878c0aeaaac98b/pages/2158592506/FTLI+U+of+T+Genesys+Partner+Project).
 > Confluence remains the source of truth — if the two disagree, trust Confluence.
 
+## Table of contents
+
+- [Why this matters](#why-this-matters)
+- [Part I — Foundations](#part-i--foundations)
+  - [1. CX and Contact Center Fundamentals](#1-cx-and-contact-center-fundamentals)
+  - [2. Conversation Data Model](#2-conversation-data-model)
+  - [3. Routing and Interaction Management](#3-routing-and-interaction-management)
+- [Part II — How Interactions Are Understood](#part-ii--how-interactions-are-understood)
+  - [4. Artificial Intelligence and Automation](#4-artificial-intelligence-and-automation)
+  - [5. Speech and Transcription](#5-speech-and-transcription)
+  - [6. Speech and Text Analytics](#6-speech-and-text-analytics)
+  - [7. Conversation Behaviors and Transcript Metrics](#7-conversation-behaviors-and-transcript-metrics)
+- [Part III — How People Are Managed](#part-iii--how-people-are-managed)
+  - [8. Workforce Engagement Management](#8-workforce-engagement-management)
+  - [9. Quality Management and Coaching](#9-quality-management-and-coaching)
+    - [Live supervisor assistance](#live-supervisor-assistance)
+- [Part IV — Measuring Results](#part-iv--measuring-results)
+  - [10. Contact Center Performance Metrics](#10-contact-center-performance-metrics)
+  - [11. Customer Experience Metrics](#11-customer-experience-metrics)
+
 ## Why this matters
 
 Every organization depends on how well it serves its customers. A **contact center (CC)** manages live interactions across voice and digital channels, while a **customer relationship management (CRM)** system stores customer information and history.
