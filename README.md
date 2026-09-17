@@ -16,7 +16,11 @@ improving over time.
 python3 --version
 ```
 
-Any **3.8 or newer** is fine. On Windows, use `python --version` instead.
+Any **3.8 or newer** is fine.
+
+> **On Windows, type `python` wherever this README says `python3`.** Windows
+> installs the command as `python`; `python3` either doesn't exist or opens the
+> Microsoft Store. So `python scripts\download_data.py`, and so on.
 
 <details>
 <summary><b>"command not found", or nothing printed? Click here.</b></summary>

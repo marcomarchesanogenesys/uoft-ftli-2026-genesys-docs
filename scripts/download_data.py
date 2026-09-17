@@ -127,8 +127,15 @@ def cert_help() -> str:
         msg += "     Install your distro's CA bundle:\n"
         msg += "       sudo apt install ca-certificates\n"
     else:
+        # Windows loads the OS certificate store, so an empty store is unusual --
+        # give something actionable rather than "reinstall and hope". certifi is
+        # checked first by ensure_ca_bundle(), so installing it is a real fix.
         msg += "     Windows normally uses the OS certificate store, so this is\n"
-        msg += "     unexpected. Reinstalling Python from python.org should fix it.\n"
+        msg += "     unusual. Either of these fixes it:\n"
+        msg += "       py -m pip install certifi     (this script will then use it)\n"
+        msg += "       reinstall Python from python.org\n"
+        msg += "     If you are on a corporate network that inspects HTTPS, ask IT\n"
+        msg += "     for the root certificate -- that is the usual cause.\n"
     return msg
 
 
@@ -267,16 +274,23 @@ def load_env_file() -> None:
     """Load KEY=VALUE pairs from the repo-root .env into the environment.
 
     Hand-rolled on purpose: python-dotenv is a pip install away and this script
-    has none. Real environment variables always win over the file, so
-    `KAGGLE_KEY=... python3 scripts/download_data.py --all` still overrides it.
+    has none. Real environment variables always win over the file, so an exported
+    KAGGLE_KEY still overrides it on any platform.
     """
     path = ROOT / ".env"
     if not path.exists():
         return
     try:
-        text = path.read_text(encoding="utf-8")
+        # utf-8-sig: Notepad writes a BOM by default, and a BOM would otherwise
+        # end up glued to the first key name, silently voiding the credentials.
+        text = path.read_text(encoding="utf-8-sig")
     except OSError as e:
         print(f"{BAD} could not read .env: {e}")
+        return
+    except UnicodeDecodeError:
+        # A .env saved in the Windows default code page rather than UTF-8. Do not
+        # take the whole download down over the optional dataset's credentials.
+        print(f"{BAD} .env is not UTF-8 -- ignoring it. Re-save it as UTF-8.")
         return
     for raw in text.splitlines():
         line = raw.strip()
@@ -322,7 +336,7 @@ def kaggle_credentials() -> tuple[str, str] | None:
     ):
         if p and p.exists():
             try:
-                d = json.loads(p.read_text())
+                d = json.loads(p.read_text(encoding="utf-8-sig"))
                 if d.get("username") and d.get("key"):
                     return d["username"], d["key"]
             except (ValueError, OSError):

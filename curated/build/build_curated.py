@@ -110,11 +110,11 @@ def hvb_index() -> list[dict]:
         tp = HVB / "transcript" / f"{sid}.json"
         if not tp.exists():
             continue
-        meta = json.loads(mp.read_text())
+        meta = json.loads(mp.read_text(encoding="utf-8"))
         tasks = [t.get("task_type") for t in (meta.get("tasks") or []) if t.get("task_type")]
         if not tasks:
             continue
-        segs = [s for s in json.loads(tp.read_text()) if (s.get("human_transcript") or "").strip()]
+        segs = [s for s in json.loads(tp.read_text(encoding="utf-8")) if (s.get("human_transcript") or "").strip()]
         if {s["speaker_role"] for s in segs} != {"agent", "caller"}:
             continue
         aid = (meta.get("agent") or {}).get("speaker_id")
@@ -132,8 +132,8 @@ def hvb_index() -> list[dict]:
 
 
 def hvb_load(sid: str) -> dict:
-    meta = json.loads((HVB / "metadata" / f"{sid}.json").read_text())
-    segs = json.loads((HVB / "transcript" / f"{sid}.json").read_text())
+    meta = json.loads((HVB / "metadata" / f"{sid}.json").read_text(encoding="utf-8"))
+    segs = json.loads((HVB / "transcript" / f"{sid}.json").read_text(encoding="utf-8"))
     agent = meta.get("agent") or {}
     caller = meta.get("caller") or {}
 
@@ -199,7 +199,7 @@ _ABCD_CACHE: dict[str, dict] = {}
 
 def _abcd_all() -> dict[str, dict]:
     if not _ABCD_CACHE:
-        for split in json.loads(ABCD.read_text()).values():
+        for split in json.loads(ABCD.read_text(encoding="utf-8")).values():
             for c in split:
                 _ABCD_CACHE[str(c["convo_id"])] = c
     return _ABCD_CACHE
@@ -311,7 +311,7 @@ _APPTEK_CACHE: dict[str, dict] = {}
 def _apptek_all() -> dict[str, dict]:
     if not _APPTEK_CACHE:
         for mp in sorted(APPTEK.glob("*/metadata.jsonl")):
-            for line in mp.read_text().splitlines():
+            for line in mp.read_text(encoding="utf-8").splitlines():
                 if not line.strip():
                     continue
                 c = json.loads(line)
@@ -716,7 +716,7 @@ def render_index(
 
 
 def main() -> int:
-    manifest = json.loads((Path(__file__).parent / "manifest.json").read_text())
+    manifest = json.loads((Path(__file__).parent / "manifest.json").read_text(encoding="utf-8"))
     rng = random.Random(manifest.get("seed", 0))
 
     # Build whatever is present. A student without Kaggle credentials has no twcs,
@@ -811,9 +811,10 @@ def main() -> int:
             )
             convo.setdefault("modifications", [])  # required key, [] is meaningful
             target = OUT_JSON if meta["redistributable"] else OUT_LOCAL
-            (target / f"{convo['id']}.json").write_text(
-                json.dumps(convo, indent=2, ensure_ascii=False) + "\n"
-            )
+            with (target / f"{convo['id']}.json").open(
+                "w", encoding="utf-8", newline="\n"
+            ) as fh:
+                fh.write(json.dumps(convo, indent=2, ensure_ascii=False) + "\n")
             convos.append(convo)
 
         by_ds[ds] = convos
@@ -822,15 +823,17 @@ def main() -> int:
 
         md = OUT_DIR / f"conversations-{ds.lower()}.md"
         if meta["redistributable"]:
-            md.write_text(render_dataset(ds, convos))
+            with md.open("w", encoding="utf-8", newline="\n") as fh:
+                fh.write(render_dataset(ds, convos))
             print(f"  wrote rendering -> {md.name}")
         else:
             if md.exists():
                 md.unlink()
 
-    (OUT_DIR / "CONVERSATIONS.md").write_text(
-        render_index(by_ds, agent_counts, [s["dataset"] for s in skipped])
-    )
+    with (OUT_DIR / "CONVERSATIONS.md").open(
+        "w", encoding="utf-8", newline="\n"
+    ) as fh:
+        fh.write(render_index(by_ds, agent_counts, [s["dataset"] for s in skipped]))
     total = sum(len(v) for v in by_ds.values())
     print(f"\n{'-' * 62}")
     print(f"{total} conversations across {len(by_ds)} datasets")

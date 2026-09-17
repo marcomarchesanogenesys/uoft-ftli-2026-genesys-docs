@@ -1,0 +1,10 @@
+# Keep line endings LF in the working tree on every platform.
+#
+# The build writes LF and the committed conversations are LF, so without this a
+# Windows checkout (core.autocrlf=true) gives CRLF working files that no longer
+# match what the build produces -- which reads as "I broke something" when the
+# student has done nothing wrong.
+* text=auto eol=lf
+
+# Never touch binaries.
+*.pdf binary
