@@ -102,34 +102,40 @@ production traffic.
 Flags: `--list` previews without writing, `--only abcd` fetches one, `--all`
 includes the optional fourth.
 
-<details>
-<summary><b>The optional fourth dataset needs a free Kaggle account. Click for the two-minute setup.</b></summary>
+### The optional fourth dataset
 
-Worth getting: it's the only one that is real production traffic rather than
-role-play, and **the only one with real dates** — so anything measuring change
-over genuine time has to come from there.
+`--all` adds the Twitter set. **No account needed** — it's out of the default run
+only because it's ~490 MB against 90 MB for the other three.
+
+```bash
+python3 scripts/download_data.py --all
+```
+
+Worth the wait: it's the only one that is real production traffic rather than
+role-play, and **the only one with real dates**, so anything measuring change over
+genuine time has to come from there.
+
+<details>
+<summary>If Kaggle ever starts asking for an account</summary>
+
+It currently serves this dataset anonymously. If that changes, the script says so
+and falls back to a free API token:
 
 ```bash
 python3 scripts/download_data.py --init-env   # creates .env in the repo root
 ```
 
-Then sign in at [kaggle.com](https://www.kaggle.com) → [Settings](https://www.kaggle.com/settings)
-→ **API** → **Create New Token**. A `kaggle.json` downloads; open it in any text
-editor and copy the two values into `.env`:
+Then [kaggle.com](https://www.kaggle.com) → [Settings](https://www.kaggle.com/settings)
+→ **API** → **Create New Token**, and copy the two values from the downloaded
+`kaggle.json` into `.env`:
 
 ```
 KAGGLE_USERNAME=your-username
 KAGGLE_KEY=your-key
 ```
 
-Then `python3 scripts/download_data.py --all`.
-
-`.env` is gitignored, so your key can't be committed by accident — `.env.example`
-is the committed template, so never put real credentials in it. An existing
+`.env` is gitignored, so your key can't be committed by accident. An existing
 `~/.kaggle/kaggle.json` works too.
-
-Without credentials the script just prints these steps and skips the dataset —
-**the build still produces 300 conversations** rather than failing.
 
 </details>
 

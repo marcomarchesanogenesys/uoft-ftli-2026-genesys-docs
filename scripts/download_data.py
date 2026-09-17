@@ -15,12 +15,14 @@ audio and about 600 MB without it.
 
 Already-downloaded files are skipped, so re-running resumes a partial download.
 
-The three core datasets are public HTTP and need no account. The Twitter set
-(twcs) is OPTIONAL: it lives on Kaggle and needs a free API token, which goes in
-a .env file in the repo root (run --init-env to create it). It is the only one of
-the four with real production traffic, real dates and per-agent identity, so it is
-worth the two minutes -- the script explains how to get the token and never
-blocks on it.
+All four datasets download without an account. The Twitter set (twcs) is not in
+the default run only because it is ~490 MB against 90 MB for the other three --
+add --all to get it. It is the only one of the four with real production traffic,
+real dates and per-agent identity, so it is worth the extra wait.
+
+Kaggle currently serves twcs anonymously. If that ever changes, the script falls
+back to a free API token in a .env file (run --init-env) and explains how to get
+one, so it keeps working either way.
 """
 
 from __future__ import annotations
@@ -340,7 +342,8 @@ TWCS_WHY = """
 """
 
 TWCS_HOWTO = """
-     HOW TO GET A FREE API TOKEN (about two minutes)
+     Kaggle normally serves this dataset without an account. If it is asking
+     for one, get a free API token (about two minutes):
        1. python3 scripts/download_data.py --init-env
           Creates .env in the repo root. It is gitignored.
        2. Sign in or sign up at https://www.kaggle.com
@@ -380,7 +383,7 @@ ENV_HOWTO = """
 
 
 def get_twcs(dry: bool) -> int:
-    """Customer Support on Twitter -- needs Kaggle credentials."""
+    """Customer Support on Twitter -- public, with a credentialed fallback."""
     out = ROOT / "03-twitter-twcs"
     dest = out / "twcs.csv"
     print("\n[4/4] Customer Support on Twitter  (CC BY-NC-SA 4.0)")
@@ -391,25 +394,39 @@ def get_twcs(dry: bool) -> int:
     if dry:
         return 0
 
-    creds = kaggle_credentials()
-    if not creds:
-        print(f"     {BAD} no Kaggle credentials found.")
-        print(TWCS_HOWTO)
-        return 1
-
-    user, key = creds
-    auth = base64.b64encode(f"{user}:{key}".encode()).decode()
     url = (
         "https://www.kaggle.com/api/v1/datasets/download/"
         "thoughtvector/customer-support-on-twitter"
     )
+
+    # Kaggle currently serves this dataset to anonymous requests, so try without
+    # credentials first -- that is one less account for a student to create. If
+    # Kaggle starts enforcing auth, fall back to a token and explain how to get
+    # one, so this keeps working either way.
     print("     downloading from Kaggle (this one is large, please wait) ...")
+    blob = None
     try:
-        blob = http_get(url, headers={"Authorization": f"Basic {auth}"}, timeout=1800)
+        blob = http_get(url, timeout=1800)
     except RuntimeError as e:
-        print(f"     {BAD} {e}")
-        print(TWCS_HOWTO)
-        return 1
+        needs_auth = any(c in str(e) for c in ("HTTP 401", "HTTP 403"))
+        if not needs_auth:
+            print(f"     {BAD} {e}")
+            return 1
+        creds = kaggle_credentials()
+        if not creds:
+            print(f"     {BAD} Kaggle now requires an account for this dataset.")
+            print(TWCS_HOWTO)
+            return 1
+        user, key = creds
+        auth = base64.b64encode(f"{user}:{key}".encode()).decode()
+        print("     retrying with your Kaggle token ...")
+        try:
+            blob = http_get(url, headers={"Authorization": f"Basic {auth}"},
+                            timeout=1800)
+        except RuntimeError as e2:
+            print(f"     {BAD} {e2}")
+            print(TWCS_HOWTO)
+            return 1
 
     out.mkdir(parents=True, exist_ok=True)
     with zipfile.ZipFile(io.BytesIO(blob)) as z:
@@ -450,7 +467,7 @@ def main() -> int:
     ap.add_argument(
         "--all",
         action="store_true",
-        help="also fetch the optional Twitter set (needs a free Kaggle token)",
+        help="also fetch the optional Twitter set (~490 MB, no account needed)",
     )
     ap.add_argument("--list", action="store_true", help="show what would be downloaded")
     ap.add_argument(
@@ -511,7 +528,9 @@ def main() -> int:
         print("OPTIONAL DATASET NOT INSTALLED: Customer Support on Twitter (twcs)")
         print("-" * 68)
         print(TWCS_WHY)
-        print(TWCS_HOWTO)
+        print("     TO GET IT\n       python3 scripts/download_data.py --all\n"
+              "     No account needed -- it is ~490 MB, which is the only reason\n"
+              "     it is not in the default run.\n")
     print("=" * 68)
     return 1 if failures else 0
 
