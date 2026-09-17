@@ -75,15 +75,18 @@ CA_BUNDLES = (
 
 
 def default_certs_work() -> bool:
-    """True if Python already has a CA bundle it can verify against."""
-    p = ssl.get_default_verify_paths()
-    if p.cafile and Path(p.cafile).exists():
-        return True
-    if p.capath:
-        d = Path(p.capath)
-        if d.is_dir() and any(d.iterdir()):
-            return True
-    return False
+    """True if Python already has CA certificates loaded.
+
+    Ask the SSL layer how many CAs it actually holds rather than looking for a
+    file on disk. On Windows the certificates come from the OS certificate
+    store, so cafile and capath are both empty even though verification works
+    perfectly -- a file-based check would wrongly call that broken and send
+    every Windows user down the fallback path.
+    """
+    try:
+        return ssl.create_default_context().cert_store_stats()["x509_ca"] > 0
+    except Exception:  # noqa: BLE001 - any failure here means "assume broken"
+        return False
 
 
 def ensure_ca_bundle() -> None:
@@ -124,7 +127,8 @@ def cert_help() -> str:
         msg += "     Install your distro's CA bundle:\n"
         msg += "       sudo apt install ca-certificates\n"
     else:
-        msg += "     Reinstall Python from python.org, which bundles certificates.\n"
+        msg += "     Windows normally uses the OS certificate store, so this is\n"
+        msg += "     unexpected. Reinstalling Python from python.org should fix it.\n"
     return msg
 
 
