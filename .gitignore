@@ -64,7 +64,8 @@ yarn-error.log*
 
 # ─────────────────────────────────────────────────────────────────────────────
 # Credentials — never commit. Datasets that need auth (e.g. Kaggle) read
-# these from the user's home directory, not from the repo.
+# these from .env in the repo root (see .env.example) or from the user's
+# home directory. .env.example is the committed template and holds no secrets.
 # ─────────────────────────────────────────────────────────────────────────────
 .env
 .env.*

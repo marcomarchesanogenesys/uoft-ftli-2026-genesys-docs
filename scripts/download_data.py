@@ -8,6 +8,7 @@ No pip installs, no git, no shell tools -- Python standard library only.
     python3 scripts/download_data.py --all        # core + the optional Twitter set
     python3 scripts/download_data.py --only abcd  # just one
     python3 scripts/download_data.py --list       # show what would be fetched
+    python3 scripts/download_data.py --init-env   # create .env for Kaggle creds
 
 Skipping audio is what makes this practical: the four datasets are ~55 GB with
 audio and about 600 MB without it.
@@ -15,10 +16,11 @@ audio and about 600 MB without it.
 Already-downloaded files are skipped, so re-running resumes a partial download.
 
 The three core datasets are public HTTP and need no account. The Twitter set
-(twcs) is OPTIONAL: it lives on Kaggle and needs a free API token. It is the only
-one of the four with real production traffic, real dates and per-agent identity,
-so it is worth the two minutes -- the script explains how to get the token and
-never blocks on it.
+(twcs) is OPTIONAL: it lives on Kaggle and needs a free API token, which goes in
+a .env file in the repo root (run --init-env to create it). It is the only one of
+the four with real production traffic, real dates and per-agent identity, so it is
+worth the two minutes -- the script explains how to get the token and never
+blocks on it.
 """
 
 from __future__ import annotations
@@ -51,20 +53,94 @@ OK, BAD, ARROW = "[ok]", "[!!]", "->"
 # ------------------------------------------------------------------ utilities
 
 
+# Set once at startup by ensure_ca_bundle(). None means "use Python's default",
+# which is correct on every platform that ships a working CA bundle.
+SSL_CONTEXT: ssl.SSLContext | None = None
+
+# Where the OS keeps its CA bundle. python.org macOS builds do not consult the
+# system keychain and ship no bundle of their own until you run their
+# Install Certificates.command -- the single most common reason a fresh machine
+# cannot download anything. Rather than make students fix their Python install,
+# find a bundle that is already on disk.
+CA_BUNDLES = (
+    "/etc/ssl/cert.pem",                               # macOS base system
+    "/opt/homebrew/etc/ca-certificates/cert.pem",       # Homebrew (Apple silicon)
+    "/usr/local/etc/ca-certificates/cert.pem",          # Homebrew (Intel)
+    "/etc/ssl/certs/ca-certificates.crt",               # Debian, Ubuntu
+    "/etc/pki/tls/certs/ca-bundle.crt",                 # Fedora, RHEL
+    "/etc/ssl/ca-bundle.pem",                           # openSUSE
+)
+
+
+def default_certs_work() -> bool:
+    """True if Python already has a CA bundle it can verify against."""
+    p = ssl.get_default_verify_paths()
+    if p.cafile and Path(p.cafile).exists():
+        return True
+    if p.capath:
+        d = Path(p.capath)
+        if d.is_dir() and any(d.iterdir()):
+            return True
+    return False
+
+
+def ensure_ca_bundle() -> None:
+    """Point SSL_CONTEXT at a usable CA bundle if Python has none of its own.
+
+    Called once, before any downloads, so the worker threads all share one
+    context and the explanation is printed at most once.
+    """
+    global SSL_CONTEXT
+    if default_certs_work():
+        return
+
+    try:  # certifi is not a dependency, but it is often already installed.
+        import certifi
+
+        bundle = certifi.where()
+    except ImportError:
+        bundle = next((c for c in CA_BUNDLES if Path(c).exists()), None)
+
+    if bundle:
+        SSL_CONTEXT = ssl.create_default_context(cafile=bundle)
+        print(f"     note: using the system CA bundle at {bundle}")
+        print("     (this Python install ships none of its own)")
+        return
+
+    raise SystemExit(cert_help())
+
+
+def cert_help() -> str:
+    """Last-resort message when no CA bundle exists anywhere on the machine."""
+    msg = f"\n{BAD} No CA certificates found, so HTTPS cannot be verified.\n\n"
+    if sys.platform == "darwin":
+        v = f"{sys.version_info.major}.{sys.version_info.minor}"
+        msg += "     Run this once, then re-run the download:\n"
+        msg += f'       "/Applications/Python {v}/Install Certificates.command"\n'
+        msg += "     (Adjust the version if that path does not exist.)\n"
+    elif sys.platform.startswith("linux"):
+        msg += "     Install your distro's CA bundle:\n"
+        msg += "       sudo apt install ca-certificates\n"
+    else:
+        msg += "     Reinstall Python from python.org, which bundles certificates.\n"
+    return msg
+
+
 def http_get(url: str, headers: dict | None = None, timeout: int = 60) -> bytes:
     req = urllib.request.Request(url, headers={**UA, **(headers or {})})
     try:
-        with urllib.request.urlopen(req, timeout=timeout) as r:
+        with urllib.request.urlopen(req, timeout=timeout, context=SSL_CONTEXT) as r:
             return r.read()
-    except ssl.SSLCertVerificationError:
-        raise SystemExit(
-            f"\n{BAD} SSL certificate verification failed.\n"
-            "  On macOS with a python.org build, run this once:\n"
-            '    /Applications/Python 3.x/Install Certificates.command\n'
-            "  (Substitute your Python version. Homebrew and system Python are fine.)\n"
-        )
-    except urllib.error.HTTPError as e:
+    except urllib.error.HTTPError as e:  # subclass of URLError -- must come first
         raise RuntimeError(f"HTTP {e.code} for {url}") from None
+    except urllib.error.URLError as e:
+        # urlopen wraps the cert failure, so `except ssl.SSLCertVerificationError`
+        # here would never fire -- the real error arrives as URLError.reason.
+        if isinstance(e.reason, ssl.SSLCertVerificationError):
+            # ensure_ca_bundle() runs first, so reaching here means the bundle
+            # it found is itself too old or incomplete for this host.
+            raise SystemExit(cert_help())
+        raise RuntimeError(f"{e.reason} for {url}") from None
 
 
 def download_many(jobs: list[tuple[str, Path]], label: str) -> int:
@@ -181,8 +257,54 @@ def get_apptek(dry: bool) -> int:
     return download_many([(base + f, out / f) for f in files], "apptek")
 
 
+def load_env_file() -> None:
+    """Load KEY=VALUE pairs from the repo-root .env into the environment.
+
+    Hand-rolled on purpose: python-dotenv is a pip install away and this script
+    has none. Real environment variables always win over the file, so
+    `KAGGLE_KEY=... python3 scripts/download_data.py --all` still overrides it.
+    """
+    path = ROOT / ".env"
+    if not path.exists():
+        return
+    try:
+        text = path.read_text(encoding="utf-8")
+    except OSError as e:
+        print(f"{BAD} could not read .env: {e}")
+        return
+    for raw in text.splitlines():
+        line = raw.strip()
+        if not line or line.startswith("#") or "=" not in line:
+            continue
+        key, _, val = line.partition("=")
+        key = key.strip()
+        if key.startswith("export "):  # tolerate `export FOO=bar`
+            key = key[len("export "):].strip()
+        val = val.strip()
+        if len(val) >= 2 and val[0] == val[-1] and val[0] in "\"'":
+            val = val[1:-1]
+        # Unfilled template lines (FOO=) must not mask ~/.kaggle/kaggle.json.
+        if key and val and key not in os.environ:
+            os.environ[key] = val
+
+
+def init_env() -> int:
+    """Copy .env.example to .env so only two values need filling in."""
+    example, dest = ROOT / ".env.example", ROOT / ".env"
+    if not example.exists():
+        print(f"{BAD} .env.example is missing -- re-clone the repo to restore it.")
+        return 1
+    if dest.exists():
+        print(f"{OK} .env already exists -- leaving it alone (nothing overwritten).")
+    else:
+        shutil.copyfile(example, dest)
+        print(f"{OK} created .env from .env.example")
+    print(ENV_HOWTO)
+    return 0
+
+
 def kaggle_credentials() -> tuple[str, str] | None:
-    """Look for Kaggle credentials in the two standard places."""
+    """Look for Kaggle credentials in all three supported places."""
     u, k = os.environ.get("KAGGLE_USERNAME"), os.environ.get("KAGGLE_KEY")
     if u and k:
         return u, k
@@ -219,18 +341,41 @@ TWCS_WHY = """
 
 TWCS_HOWTO = """
      HOW TO GET A FREE API TOKEN (about two minutes)
-       1. Sign in or sign up at https://www.kaggle.com
-       2. Go to https://www.kaggle.com/settings
-       3. Under "API", click "Create New Token" -- a kaggle.json file downloads
-       4. Move it to:
-            macOS / Linux   ~/.kaggle/kaggle.json
-            Windows         %USERPROFILE%\\.kaggle\\kaggle.json
-       5. Re-run:  python3 scripts/download_data.py --all
+       1. python3 scripts/download_data.py --init-env
+          Creates .env in the repo root. It is gitignored.
+       2. Sign in or sign up at https://www.kaggle.com
+       3. Go to https://www.kaggle.com/settings
+       4. Under "API", click "Create New Token" -- a kaggle.json file downloads.
+          Open it in any text editor; it holds your username and key.
+       5. Put both into .env:
+            KAGGLE_USERNAME=your-username
+            KAGGLE_KEY=your-key
+       6. Re-run:  python3 scripts/download_data.py --all
+
+     Already have ~/.kaggle/kaggle.json from another project? That works too --
+     it is still checked, and real environment variables win over both.
 
      Prefer not to make an account? Download it by hand instead -- open
        https://www.kaggle.com/datasets/thoughtvector/customer-support-on-twitter
      click Download, unzip, and put twcs.csv at
        03-twitter-twcs/twcs.csv
+"""
+
+ENV_HOWTO = """
+     NEXT -- put your Kaggle credentials in .env (about two minutes)
+       1. Sign in or sign up at https://www.kaggle.com
+       2. Go to https://www.kaggle.com/settings
+       3. Under "API", click "Create New Token" -- a kaggle.json file downloads.
+          Open it in any text editor; it holds your username and key.
+       4. Edit .env and fill in the two blanks:
+            KAGGLE_USERNAME=your-username
+            KAGGLE_KEY=your-key
+       5. Run:  python3 scripts/download_data.py --all
+
+     .env is gitignored -- your key cannot be committed by accident.
+     This is only for the optional Twitter dataset. The three core datasets
+     need no account, so you can skip all of this and just run:
+       python3 scripts/download_data.py
 """
 
 
@@ -308,10 +453,20 @@ def main() -> int:
         help="also fetch the optional Twitter set (needs a free Kaggle token)",
     )
     ap.add_argument("--list", action="store_true", help="show what would be downloaded")
+    ap.add_argument(
+        "--init-env",
+        action="store_true",
+        help="create .env from .env.example for your Kaggle credentials, then exit",
+    )
     args = ap.parse_args()
 
     if sys.version_info < (3, 8):
         raise SystemExit(f"{BAD} Python 3.8 or newer required (found {sys.version.split()[0]})")
+
+    if args.init_env:
+        return init_env()
+
+    load_env_file()
 
     if args.only:
         chosen = [c.strip().lower() for c in args.only.split(",") if c.strip()]
@@ -329,6 +484,8 @@ def main() -> int:
               + ("  + optional: twcs" if "twcs" in chosen else "  (twcs not requested)"))
     if args.list:
         print("\nDRY RUN -- nothing will be written\n")
+
+    ensure_ca_bundle()
 
     failures = 0
     for name in chosen:
